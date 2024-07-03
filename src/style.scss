@@ -1,0 +1,62 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+bg {
+  background-color: aqua;
+}
+
+bg {
+  // bg-pink-50 dark:bg-pink-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]"
+}
+
+.HeroBg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/FinalBg.svg");
+}
+.HeroBg2 {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/FinalBg2.svg");
+}
+
+.IsmsBg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/ImsiBg.png");
+}
+.IsmsBg2 {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/ImsiBg2.png");
+}
+.navBg {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./images/NavBg.png");
+  background-repeat: no-repeat;
+}
+
+.FormBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/FinalBg.svg");
+}
+
+.parentBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/parentHero.jpg");
+}
