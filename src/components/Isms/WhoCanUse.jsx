@@ -1,5 +1,6 @@
 import React from "react";
-import pic from "../../images/schoolReal.jpg";
+import pic from "../../images/IsmsTherapist.jpg";
+import pic2 from "../../images/TherapistIsms.jpg";
 
 const KeyContent = [
   {
@@ -59,14 +60,14 @@ const WhoCanUse = () => {
   return (
     <>
       <div className="IsmsBg2">
-        <h1 className="flex justify-center mt-28 mb-16 text-4xl font-bold">
-          Who can use Elina?
+        <h1 className="text-4xl animationHero flex justify-center mt-28 mb-16 md:text-5xl lg:text-6xl font-black text-indigo-600">
+          Who can use ISMS?
         </h1>
-        <div className="flex justify-center gap-[20%]">
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="flex flex-col md:flex-row justify-center gap-[20%]">
+          <div class="animationHero max-w-sm bg-transparent  rounded-lg  dark:bg-gray-800 dark:border-gray-700">
             <a className="flex justify-center" href="#">
               <img
-                class="rounded-full  lg:w-[200px] lg:h-[200px] object-cover"
+                class="rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
                 src={pic}
                 alt=""
               />
@@ -74,51 +75,49 @@ const WhoCanUse = () => {
             <div class="p-5 flex justify-center">
               <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Therapy centers
+                  Therapy <span className="text-blue-700">Centers</span>
                 </h5>
               </a>
             </div>
           </div>
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="animationHero max-w-sm bg-white  rounded-lg">
             <a className="flex justify-center" href="#">
               <img
-                class="rounded-full  lg:w-[200px] lg:h-[200px] object-cover"
-                src={pic}
+                class="rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
+                src={pic2}
                 alt=""
               />
             </a>
             <div class="p-5 flex justify-center">
               <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Individual Therapist
+                  Individual <span className="text-pink-600">Therapist</span>
                 </h5>
               </a>
             </div>
           </div>
         </div>
         {/* Key Benefits */}
-        <div className="flex justify-center text-4xl font-bold lg:mb-20 lg:mt-10">
+        <div className="animationHero text-4xl flex justify-center  md:text-5xl lg:text-6xl font-black text-indigo-600 mb-5 mt-10 md:mb-20 lg:mt-10">
           Key Benefits
         </div>
         <div className="flex justify-center">
-          <div className="flex justify-center content-center lg:gap-20 lg:w-[70%] rounded-3xl lg:p-10 bg-blue-100">
+          <div className="flex justify-center  flex-col md:flex-row content-center px-5 my-8 md:m-5 lg:shadow-2xl gap-5 lg:gap-20 lg:w-[70%] rounded-3xl lg:p-10 bg-white">
             <div className="flex flex-col gap-6">
               {KeyContent.map((item) => (
-                <div className="flex flex-row items-center gap-10">
+                <div className="animationHero  flex flex-row items-center gap-10">
                   <div className="w-8">{item.icon}</div>
-                  <p className="text-lg">{item.p}</p>
+                  <p className="text-base lg:text-lg">{item.p}</p>
                 </div>
               ))}
             </div>
-            <div className="flex justify-center gap-10">
-              <div className="flex flex-col gap-6">
-                {KeyContent2.map((item) => (
-                  <div className="flex flex-row items-center gap-10">
-                    <div className="w-8">{item.icon}</div>
-                    <p className="text-lg">{item.p}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col gap-6">
+              {KeyContent2.map((item) => (
+                <div className="animationHero  flex flex-row items-center gap-10">
+                  <div className="w-8">{item.icon}</div>
+                  <p className="text-base lg:text-lg">{item.p}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

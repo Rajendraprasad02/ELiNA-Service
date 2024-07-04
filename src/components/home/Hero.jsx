@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Carousel } from "flowbite-react";
 import heroimg from "../../images/teaching3.jpg";
 import { ArrowRightIcon, ChatIcon } from "@heroicons/react/outline";
+import BreadCrumbs from "../reuseable/BreadCrumbs";
 
 const HeroContent = [
   {
@@ -28,30 +29,26 @@ const HeroContent = [
 ];
 
 const Hero = () => {
-  const [currentPage, setCurrentPage] = useState("");
-  useEffect(() => {
-    const updateCurrentPage = () => {
-      const pathname = window.location.pathname;
-      setCurrentPage(pathname === "/" ? "Home" : pathname);
-    };
-    updateCurrentPage();
+  // const [currentPage, setCurrentPage] = useState("");
+  // useEffect(() => {
+  //   const updateCurrentPage = () => {
+  //     const pathname = window.location.pathname;
+  //     setCurrentPage(pathname === "/" ? "Home" : pathname);
+  //   };
+  //   updateCurrentPage();
 
-    // Listen to route changes
-    window.addEventListener("popstate", updateCurrentPage);
+  //   // Listen to route changes
+  //   window.addEventListener("popstate", updateCurrentPage);
 
-    return () => {
-      window.removeEventListener("popstate", updateCurrentPage);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("popstate", updateCurrentPage);
+  //   };
+  // }, []);
 
   return (
     <>
-      <div className="HeroBg">
-        <div className="flex   items-center">
-          <p className="text-gray-400 text-xs lg:text-sm underline cursor-pointer">
-            {currentPage}
-          </p>
-        </div>
+      <BreadCrumbs />
+      <div className="HeroBg ">
         <div className="fixed bottom-4 right-8  p-4 rounded-full  cursor-pointer lg:w-[50px] z-50">
           <ChatIcon className="w-14 text-blue-600" />
         </div>
@@ -67,8 +64,8 @@ const Hero = () => {
         </div>
 
         <div className=" flex flex-col lg:flex-row  lg:px-28 lg:pt-10 lg:pb-10 ">
-          <div className="flex flex-col justify-center text-start lg:text-start md:text-center gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">
-            <h1 className="text-3xl font-black text-gray-900 md:text-4xl lg:text-6xl">
+          <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">
+            <h1 className=" text-3xl font-black text-gray-900 md:text-4xl lg:text-6xl">
               If they can’t learn the way we teach,
               <br />
               <span className="text-4xl  text-indigo-600 md:text-6xl lg:text-6xl">
@@ -111,5 +108,4 @@ const Hero = () => {
     </>
   );
 };
-
 export default Hero;

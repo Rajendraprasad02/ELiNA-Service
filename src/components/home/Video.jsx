@@ -4,21 +4,21 @@ import { PlayIcon } from "@heroicons/react/outline";
 const Video = () => {
   return (
     <div className="lg:p-10 HeroBg">
-      <h1 className="flex justify-center text-5xl lg:text-6xl font-black text-indigo-600 lg:pb-5">
+      <h1 className="flex animationHero justify-center text-5xl lg:text-6xl font-black text-indigo-600 lg:pb-5">
         About ELiNA
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-10  content-center lg:justify-around lg:items-center lg:gap-0">
-        <div className="flex lg:justify-center">
+      <div className="grid  grid-cols-1 md:grid-cols-2 gap-12 p-10  content-center lg:justify-around lg:items-center lg:gap-0">
+        <div className="flex  lg:justify-center">
           <iframe
             src="https://www.youtube.com/embed/SXaZF4BE9l4"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="video"
-            className="rounded-2xl lg:w-[35rem] lg:h-[20rem]"
+            className="animationHero rounded-2xl lg:w-[35rem] lg:h-[20rem]"
           ></iframe>
         </div>
-        <div className="lg:pr-5">
+        <div className="animationHero lg:pr-5">
           <p className="text-sm lg:text-lg lg:font-semibold lg:pb-5">
             ELiNA was was conceived as a powerful concept of inclusion within{" "}
             <span>
@@ -43,7 +43,7 @@ const Video = () => {
           </button>
         </div>
       </div>
-      <div className="bg-pink-500 p-5 m-10 rounded-3xl text-white lg:mx-24 lg:p-8 lg:rounded-3xl lg:font-semibold">
+      <div className="bg-pink-500 animationHero p-5 m-10 rounded-3xl text-white lg:mx-24 lg:p-8 lg:rounded-3xl lg:font-semibold">
         <p className=" text-center text-sm pb-2 text md:text-xl md:pb-3 lg:text-2xl">
           "Inclusion is not a strategy to help people fit into the systems and
           structures that exist in our societies; it is about transforming those

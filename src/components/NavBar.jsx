@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logo from "../images/elinaservice.png";
+import logo from "../images/elinaservicelogo.png";
 import { MenuIcon, XIcon, ChevronDownIcon } from "@heroicons/react/outline";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import steps from "../images/StepsSvg.svg";
 const NavBar = () => {
   const [nav, SetNav] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -61,14 +61,14 @@ const NavBar = () => {
   return (
     <>
       <div className="relative h-[20%]">
-        <div className="flex justify-between items-center lg:px-14 lg:py-3 navBg">
+        <div className="flex justify-between items-center lg:px-10 lg:py-3 navBg">
           <div className="md:flex md:items-center">
             <img
-              className="w-10 mr-4 md:w-[10%] lg:w-16"
+              className="w-10 mr-4 md:w-[10%] lg:w-18"
               src={logo}
               alt=""
             ></img>
-            <ul className="lg:gap-10 md:flex gap-6 hidden lg:p-8 lg:items-baseline  text-gray-700">
+            <ul className="lg:gap-6 md:flex gap-6 hidden lg:p-8 lg:items-baseline  text-gray-700">
               <li
                 className="relative text-2xl hover:text-pink-600 cursor-pointer font-semibold"
                 onMouseEnter={handleDropdownToggle}
@@ -110,24 +110,48 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="hidden md:flex pr-4 lg:gap-4 md:gap-1 items-center">
-            <button className="flex lg:gap-2 items-center w-20 h-6 md:w-[5.5rem] md:text-xs md:h-fit md:font-light lg:h-10 lg:w-fit lg:px-5 lg:font-bold lg:text-base lg:rounded-2xl  bg-gradient-to-br from-indigo-500 to-pink-600 border-none">
+            {/* <button className="flex lg:gap-2 items-center w-20 h-6 md:w-[5.5rem] md:text-xs md:h-fit md:font-light lg:h-10 lg:w-fit lg:px-5 lg:font-bold lg:text-base lg:rounded-2xl  bg-gradient-to-br from-indigo-500 to-pink-600 border-none hover:text-white">
               Start your journey now
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white  opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
               </span>
+            </button> */}
+
+            <button className="gradient border-none rounded-3xl  hover:text-white">
+              <span className="p-1 rounded-3xl">
+                <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
+                  {" "}
+                  Get Started
+                </span>
+                <img src={steps} alt="steps" className="w-8" />
+              </span>
             </button>
+            {/* <button className="gradient border-none rounded-3xl  hover:text-white">
+              <span className="p-1 rounded-3xl">
+                <span className="!bg-gradient-to-r from-[#FCC201] to-[#b7841c] text-transparent !bg-clip-text">
+                  {" "}
+                  Start your journey
+                </span>
+                <img
+                  src={steps}
+                  alt="steps"
+                  className="w-5 stepsGradient !bg-gradient-to-r from-[#FCC201] to-[#ba8314]"
+                />
+              </span>
+            </button> */}
+
             {/* <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg border-2 bg-pink-600 group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
               <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Purple to pink
               </span>
             </button> */}
-            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-none ">
+            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-pink-600 hover:border-blue-700">
               Enroll
             </button>
             <button
               onClick={toggleForm}
-              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-transparent text-pink-500 border-pink-500"
+              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-white text-pink-500 border-pink-500 hover:border-blue-700"
             >
               Login
             </button>

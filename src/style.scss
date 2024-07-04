@@ -60,3 +60,151 @@ bg {
   background-position: center;
   background-image: url("./images/parentHero.jpg");
 }
+
+.HowItWorksPink {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/HowItWorksPink.png");
+}
+
+.HowItWorksBlue {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/HowItWorksBlue.png");
+}
+
+// .box {
+//   display: grid;
+//   place-content: center;
+
+//   --border-angle: 0turn; // For animation.
+//   --main-bg: conic-gradient(
+//     from var(--border-angle),
+//     #213,
+//     #112 5%,
+//     #112 60%,
+//     #213 95%
+//   );
+
+//   border: solid 5px transparent;
+//   border-radius: 2em;
+//   --gradient-border: conic-gradient(
+//     from var(--border-angle),
+//     transparent 0%,
+//     #08f,
+//     #f03 99%
+//   );
+
+//   background:
+//     // padding-box clip this background in to the overall element except the border.
+//     var(--main-bg) padding-box,
+//     // border-box extends this background to the border space
+//     var(--gradient-border) border-box,
+//     // Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background.
+//     var(--main-bg) border-box;
+
+//   background-position: center center;
+
+//   animation: bg-spin 10s linear forwards infinite;
+//   @keyframes bg-spin {
+//     to {
+//       --border-angle: 6turn;
+//     }
+//   }
+// }
+
+// @property --border-angle {
+//   syntax: "<angle>";
+//   inherits: true;
+//   initial-value: 0turn;
+// }
+
+.gradient {
+  margin: 0 auto;
+  width: calc(100% - 100px);
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  z-index: 2;
+  overflow: hidden;
+  padding: 4px;
+}
+.gradient span {
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  // background: rgb(72, 62, 255);
+  // background: #333333;
+  // background: #3138ff;
+  background: #0d47a1;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 5px;
+}
+.gradient:before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 800%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    #4de94c,
+    #f60000,
+    #cd00cd,
+    #ff8c00,
+    #ffee00,
+    #18d43f,
+    /* more colors*/ #4de94c,
+    #f60000,
+    #cd00cd,
+    #ff8c00,
+    #ffee00,
+    #4de94c,
+    #f60000,
+    #cd00cd,
+    #ff8c00,
+    #ffee00,
+    #4de94c,
+    #f60000,
+    #cd00cd
+  );
+  /*   background-size: 100% 100%; */
+}
+
+.gradient:before {
+  animation: gradient-animate 5s linear infinite;
+}
+
+@keyframes gradient-animate {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.stepGradient {
+  color: transparent;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.animationHero {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}

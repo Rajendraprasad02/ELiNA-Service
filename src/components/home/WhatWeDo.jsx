@@ -71,14 +71,14 @@ const WhatWeDoContent = [
 
 const WhatWeDo = () => {
   return (
-    <div className="WhatWeDoBg lg:w-full content-center lg:py-6 HeroBg2">
+    <div className="WhatWeDoBg  lg:w-full content-center lg:py-6 HeroBg2">
       <div className="flex flex-col">
         <div className="lg:pb-5 text-center">
-          <h1 className="text-5xl lg:text-6xl font-black text-indigo-600">
+          <h1 className="text-5xl lg:text-6xl animationHero font-black text-indigo-600">
             What we do?
           </h1>
         </div>
-        <div className="grid grid-cols-1 gap-16 p-5 md:grid-cols-1 md:gap-2 lg:px-10 lg:gap-10 justify-center sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid animationHero grid-cols-1 gap-16 p-5 md:grid-cols-1 md:gap-2 lg:px-10 lg:gap-10 justify-center sm:grid-cols-2 lg:grid-cols-3">
           {WhatWeDoContent.map((item) => (
             <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white lg:w-[100%]">
               <h1 className="text-3xl text-gray-800 font-black lg:text-3xl p-10">

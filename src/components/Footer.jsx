@@ -67,7 +67,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div class="space-y-2 text-sm flex justify-center">
+          <div class="space-y-2 text-sm flex justify-start md:justify-center">
             <div>
               <p class="text-base lg:pb-4 font-extrabold md:text-lg tracking-wide text-gray-900">
                 Links
@@ -127,7 +127,7 @@ const Footer = () => {
               <h1 className="text-base lg:pb-2 font-extrabold md:text-lg tracking-wide text-gray-900">
                 Address
               </h1>
-              <p>
+              <p className="text-gray-500">
                 C1 - 301, Pelican Nest, Creek Street, OMR Chennai Tamil Nadu
                 600097 India.
               </p>
@@ -141,7 +141,11 @@ const Footer = () => {
                   href="/"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  <svg viewBox="0 0 24 24" fill="#1DA1F2" class="h-10 w-8">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="#1DA1F2"
+                    class="h-8 w-8 lg:h-10 lg:w-8"
+                  >
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"></path>
                   </svg>
                 </a>
@@ -149,7 +153,11 @@ const Footer = () => {
                   href="/"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  <svg viewBox="0 0 30 30" fill="#E1306C" class="h-10 w-8">
+                  <svg
+                    viewBox="0 0 30 30"
+                    fill="#E1306C"
+                    class="h-8 w-8 lg:h-10 lg:w-8"
+                  >
                     <circle cx="15" cy="15" r="4"></circle>
                     <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"></path>
                   </svg>
@@ -158,7 +166,11 @@ const Footer = () => {
                   href="/"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  <svg viewBox="0 0 24 24" fill="#4267B2" class="h-8 w-7">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="#4267B2"
+                    class="h-8 w-8 lg:h-8 lg:w-7"
+                  >
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"></path>
                   </svg>
                 </a>
@@ -169,7 +181,7 @@ const Footer = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
-                    className="h-8 w-7"
+                    className="h-8 w-8 lg:h-8 lg:w-7"
                     fill="#0077B5"
                   >
                     <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
@@ -182,7 +194,7 @@ const Footer = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
-                    className="h-10 w-10"
+                    className="h-9 w-9 lg:h-10 lg:w-10"
                     fill="#FF0000"
                   >
                     <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />

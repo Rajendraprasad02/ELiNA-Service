@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import parentFamily from "../../images/parentFamily.jpg";
+import BreadCrumbs from "../reuseable/BreadCrumbs";
 const ParetnHero = () => {
   const [currentPage, setCurrentPage] = useState("");
 
@@ -21,12 +22,7 @@ const ParetnHero = () => {
 
   return (
     <>
-      <div className="flex lg:ml-[10%] items-center">
-        <p className="text-gray-500 text-sm underline cursor-pointer">
-          <a href="/">home</a>
-          {currentPage}
-        </p>
-      </div>
+      <BreadCrumbs />
       <div className="parentBg">
         <div className=" flex flex-col lg:gap-5 items-center text-white p-10 lg:px-[10%] lg:pt-[10%] lg:pb-[6%]">
           <h1 className="text-5xl lg:text-[4.75rem]  text-center font-black">
