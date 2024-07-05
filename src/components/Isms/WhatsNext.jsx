@@ -8,7 +8,7 @@ const WhatsNext = () => {
           So, What's Next?
         </h1>
         <p className=" font-extrabold text-sm md:text-lg">
-          Get Started with Kidaura Today.
+          Get Started with ISMS Today.
         </p>
         <h2 className="text-sm text-center lg:text-xl md:text-base font-normal">
           Create your organization account and start by exploring the features.

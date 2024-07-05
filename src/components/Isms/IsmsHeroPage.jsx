@@ -8,8 +8,9 @@ const IsmsHeroPage = () => {
       <div className="IsmsBg lg:h-fit">
         <div className="flex flex-col gap-10 items-center  justify-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-blue-700 content-center md:px lg:px-48 mt-[8%] font-black">
-            Platform For Delivering Inclusion Services To Special Childcare
-            Providers
+            {/* Platform For Delivering Inclusion Services To Special Childcare
+            Providers */}
+            Inclusive Service Platform for Special Childcare Providers
           </h1>
           <p className="text-center lg:px-[20%] text-lg]">
             Take your therapy experience online to enrich the lives of both

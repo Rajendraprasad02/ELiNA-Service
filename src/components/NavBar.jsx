@@ -29,6 +29,7 @@ const NavBar = () => {
     },
     {
       li: "Gallery",
+      href: "/gallery",
     },
     {
       li: "About",

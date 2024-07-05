@@ -1,6 +1,9 @@
 import React from "react";
 import pic from "../../images/IsmsTherapist.jpg";
 import pic2 from "../../images/TherapistIsms.jpg";
+import pic3 from "../../images/IsmsSchools.jpg";
+import pic4 from "../../images/IsmsParents.jpg";
+import pic5 from "../../images/IsmsRehabit.jpg";
 
 const KeyContent = [
   {
@@ -56,6 +59,37 @@ const KeyContent2 = [
   },
 ];
 
+const WhoCanUseContent = [
+  {
+    WhoCanUseImg: pic,
+    p: (
+      <span>
+        Therapy <span className="text-blue-700">Centers</span>
+      </span>
+    ),
+  },
+  {
+    WhoCanUseImg: pic2,
+    p: (
+      <span>
+        Individual<span className="text-pink-700"> Therapist </span>
+      </span>
+    ),
+  },
+  {
+    WhoCanUseImg: pic4,
+    p: <span className="text-green-500"> Parents</span>,
+  },
+  {
+    WhoCanUseImg: pic3,
+    p: <span className="text-violet-600"> Schools</span>,
+  },
+  {
+    WhoCanUseImg: pic5,
+    p: <span className="text-blue-600"> Rehabilitation</span>,
+  },
+];
+
 const WhoCanUse = () => {
   return (
     <>
@@ -63,39 +97,25 @@ const WhoCanUse = () => {
         <h1 className="text-4xl animationHero flex justify-center mt-28 mb-16 md:text-5xl lg:text-6xl font-black text-indigo-600">
           Who can use ISMS?
         </h1>
-        <div className="flex flex-col md:flex-row justify-center gap-[20%]">
-          <div class="animationHero max-w-sm bg-transparent  rounded-lg  dark:bg-gray-800 dark:border-gray-700">
-            <a className="flex justify-center" href="#">
-              <img
-                class="rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
-                src={pic}
-                alt=""
-              />
-            </a>
-            <div class="p-5 flex justify-center">
-              <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Therapy <span className="text-blue-700">Centers</span>
-                </h5>
+        <div className="flex flex-wrap flex-col md:flex-row justify-center mx-auto md:w-[70%] lg:w-[100%] lg:gap-8">
+          {WhoCanUseContent.map((item) => (
+            <div class="animationHero  bg-transparent md:p-3 lg:p-5 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
+              <a className="flex justify-center" href="#">
+                <img
+                  class="rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
+                  src={item.WhoCanUseImg}
+                  alt=""
+                />
               </a>
+              <div class="p-5 flex justify-center">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {item.p}
+                  </h5>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="animationHero max-w-sm bg-white  rounded-lg">
-            <a className="flex justify-center" href="#">
-              <img
-                class="rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
-                src={pic2}
-                alt=""
-              />
-            </a>
-            <div class="p-5 flex justify-center">
-              <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Individual <span className="text-pink-600">Therapist</span>
-                </h5>
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
         {/* Key Benefits */}
         <div className="animationHero text-4xl flex justify-center  md:text-5xl lg:text-6xl font-black text-indigo-600 mb-5 mt-10 md:mb-20 lg:mt-10">
@@ -105,7 +125,7 @@ const WhoCanUse = () => {
           <div className="flex justify-center  flex-col md:flex-row content-center px-5 my-8 md:m-5 lg:shadow-2xl gap-5 lg:gap-20 lg:w-[70%] rounded-3xl lg:p-10 bg-white">
             <div className="flex flex-col gap-6">
               {KeyContent.map((item) => (
-                <div className="animationHero  flex flex-row items-center gap-10">
+                <div className="animationHero flex flex-row items-center gap-10">
                   <div className="w-8">{item.icon}</div>
                   <p className="text-base lg:text-lg">{item.p}</p>
                 </div>
@@ -113,7 +133,7 @@ const WhoCanUse = () => {
             </div>
             <div className="flex flex-col gap-6">
               {KeyContent2.map((item) => (
-                <div className="animationHero  flex flex-row items-center gap-10">
+                <div className="animationHero flex flex-row items-center gap-10">
                   <div className="w-8">{item.icon}</div>
                   <p className="text-base lg:text-lg">{item.p}</p>
                 </div>

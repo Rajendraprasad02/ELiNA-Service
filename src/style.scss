@@ -74,6 +74,20 @@ bg {
   background-position: center;
   background-image: url("./images/HowItWorksBlue.png");
 }
+.galleryGradient {
+  background-color: hsla(0, 100%, 75%, 1);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(27, 0%, 100%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 88% 0%, hsla(189, 100%, 91%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 91%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(13, 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 91% 100%, hsla(240, 100%, 87%, 1) 0px, transparent 50%),
+    radial-gradient(at 1% 10%, hsla(343, 100%, 91%, 1) 0px, transparent 50%);
+}
 
 // .box {
 //   display: grid;
@@ -140,7 +154,8 @@ bg {
   // background: rgb(72, 62, 255);
   // background: #333333;
   // background: #3138ff;
-  background: #0d47a1;
+  // background: #0d47a1;
+  background: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   box-sizing: border-box;
