@@ -3,6 +3,10 @@ import elina from "../images/elinaservice.png";
 
 const FooterLi = [
   {
+    li: "Elina Service",
+    href: "/",
+  },
+  {
     li: "For Parents",
     href: "/parent",
   },

@@ -59,6 +59,44 @@ const NavBar = () => {
       href: "/professional",
     },
   ];
+  const ResponsiveLi = [
+    {
+      li: "Elina Service",
+      href: "/",
+    },
+    {
+      li: "For Parents",
+      href: "/parent",
+    },
+    {
+      li: "For Schools",
+      href: "/school",
+    },
+    {
+      li: "For Professional",
+      href: "/professional",
+    },
+    {
+      li: "ISMS",
+      href: "/isms",
+    },
+    {
+      li: "Gallery",
+      href: "/gallery",
+    },
+    {
+      li: "About",
+      href: "/about",
+    },
+    {
+      li: "Blog",
+      href: "/blog",
+    },
+    {
+      li: "Contact",
+      href: "/contact",
+    },
+  ];
 
   const onChange = () => {};
 
@@ -169,30 +207,19 @@ const NavBar = () => {
 
         <ul
           className={
-            !nav ? "hidden" : "absolute bg-indigo-50 w-full  md:hidden px-10"
+            !nav
+              ? "hidden"
+              : "absolute bg-indigo-50 w-full py-5  md:hidden px-10"
           }
         >
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            For Parents
-          </li>
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            For Schools
-          </li>
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            For Professional
-          </li>
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            Gallery
-          </li>
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            About
-          </li>
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            Blog
-          </li>
-          <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-            Contact
-          </li>
+          {ResponsiveLi.map((item) => (
+            <a href={item.href}>
+              <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
+                {item.li}
+              </li>
+            </a>
+          ))}
+
           <div className="flex gap-6 justify-center pt-6">
             <button className="w-32 h-8">Enroll</button>
             <button

@@ -3,7 +3,7 @@ import { PlayIcon } from "@heroicons/react/outline";
 
 const Video = () => {
   return (
-    <div className="lg:p-10 HeroBg">
+    <div className="pt-20 md:p-10 HeroBg">
       <h1 className="flex animationHero justify-center text-5xl lg:text-6xl font-black text-indigo-600 lg:pb-5">
         About ELiNA
       </h1>

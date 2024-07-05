@@ -38,12 +38,12 @@ const Hero = ({ HeroContent }) => {
           </svg>
         </div> */}
 
-        <div className=" flex flex-col lg:flex-row  lg:px-28 lg:pt-10 lg:pb-10 ">
+        <div className=" flex flex-col lg:flex-row  lg:px-28 pt-10 lg:pb-10 ">
           <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">
-            <h1 className=" text-3xl font-black text-gray-900 md:text-4xl lg:text-6xl">
+            <h1 className=" text-4xl font-black text-gray-900 md:text-4xl lg:text-6xl">
               If they can’t learn the way we teach,
               <br />
-              <span className="text-4xl  text-indigo-600 md:text-6xl lg:text-6xl">
+              <span className="text-5xl  text-indigo-600 md:text-6xl lg:text-6xl">
                 We teach the way they learn.
               </span>
             </h1>
