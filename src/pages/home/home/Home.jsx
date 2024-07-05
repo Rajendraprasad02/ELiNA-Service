@@ -6,11 +6,35 @@ import OurVision from "../../../components/home/OurVision";
 import Video from "../../../components/home/Video";
 import Footer from "../../../components/Footer";
 
+const HeroContent = [
+  {
+    HeroButtonText: "ADHD",
+  },
+  {
+    HeroButtonText: "Autism",
+  },
+  {
+    HeroButtonText: "Dyslexia",
+  },
+  {
+    HeroButtonText: "Dyspraxia",
+  },
+  {
+    HeroButtonText: "Dyscalculia",
+  },
+  {
+    HeroButtonText: "Learning Disability",
+  },
+  {
+    HeroButtonText: "Intellectual Disability",
+  },
+];
+
 const Home = () => {
   return (
     <>
       <NavBar />
-      <Hero />
+      <Hero HeroContent={HeroContent} />
       <WhatWeDo />
       <OurVision />
       <Video />

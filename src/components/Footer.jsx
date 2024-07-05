@@ -15,19 +15,23 @@ const FooterLi = [
     href: "/professional",
   },
   {
-    li: "For Gallery",
+    li: "ISMS",
+    href: "/isms",
+  },
+  {
+    li: "Gallery",
     href: "/gallery",
   },
   {
-    li: "For About",
+    li: "About",
     href: "/about",
   },
   {
-    li: "For Blog",
+    li: "Blog",
     href: "/blog",
   },
   {
-    li: "For Contact",
+    li: "Contact",
     href: "/contact",
   },
 ];

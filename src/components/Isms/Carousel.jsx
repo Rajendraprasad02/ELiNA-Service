@@ -20,7 +20,7 @@ const CarouselContent = [
   },
 ];
 
-const Carousel = () => {
+const Carousel = ({ CarouselContent }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {

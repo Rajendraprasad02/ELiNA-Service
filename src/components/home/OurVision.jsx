@@ -22,7 +22,7 @@ const OurVision = () => {
   return (
     <>
       <div className="flex justify-center HeroBg">
-        <h1 className="text-5xl lg:text-6xl font-black text-indigo-600 animationHero lg:p-5">
+        <h1 className="text-center text-5xl lg:text-6xl font-black text-indigo-600 animationHero p-5">
           Together For A Purpose
         </h1>
       </div>
@@ -32,7 +32,7 @@ const OurVision = () => {
             <div class=" flex flex-col items-center justify-between md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] HeroBg2 ">
               <div className="md:w-[50%] animationHero flex justify-center">
                 <img
-                  class="object-cover w-full rounded-3xl h-96 md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
+                  class="object-cover w-[90%] rounded-3xl h-96 md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
                   src={item.photo}
                   alt=""
                 />

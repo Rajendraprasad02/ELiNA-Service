@@ -5,6 +5,7 @@ import Home from "./pages/home/home/Home";
 import Parent from "./pages/home/parent/Parent";
 import Isms from "./pages/home/isms/Isms";
 import Gallery from "./pages/home/gallery/Gallery";
+import Blog from "./pages/home/blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/gallery",
     element: <Gallery />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
 ]);
 

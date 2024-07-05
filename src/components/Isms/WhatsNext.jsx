@@ -16,7 +16,6 @@ const WhatsNext = () => {
         <button className="bg-blue-700 text-lg p-2 py-1 md:px-5 md:py-3 border-blue-700 hover:text-white hover:border-white">
           Create account
         </button>
-        <p>7-day free trial</p>
         <p>or</p>
         <p className="font-semibold text-center lg:text-lg">
           Get in touch with us and Schedule a demo call.

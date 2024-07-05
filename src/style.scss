@@ -223,3 +223,13 @@ bg {
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
+
+.zoom {
+  transition: transform 0.2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(
+    1.75
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}

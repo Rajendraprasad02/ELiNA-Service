@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../images/elinaservicelogo.png";
+import logo from "../images/elinalogoSaturation.png";
 import { MenuIcon, XIcon, ChevronDownIcon } from "@heroicons/react/outline";
 import ReCAPTCHA from "react-google-recaptcha";
 import steps from "../images/StepsSvg.svg";
@@ -33,12 +33,15 @@ const NavBar = () => {
     },
     {
       li: "About",
+      href: "/about",
     },
     {
       li: "Blog",
+      href: "/blog",
     },
     {
       li: "Contact",
+      href: "contact",
     },
   ];
 
