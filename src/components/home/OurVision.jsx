@@ -21,7 +21,7 @@ const OurVision = () => {
   const { innerWidth } = window;
   return (
     <>
-      <div className="flex justify-center HeroBg">
+      <div className="flex justify-center md:HeroBg">
         <h1 className="text-center text-5xl lg:text-6xl font-black text-indigo-600 animationHero p-5">
           Together For A Purpose
         </h1>
