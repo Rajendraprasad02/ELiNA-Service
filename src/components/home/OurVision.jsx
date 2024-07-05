@@ -32,7 +32,7 @@ const OurVision = () => {
             <div class=" flex flex-col items-center justify-between md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] HeroBg2 ">
               <div className="md:w-[50%] animationHero flex justify-center">
                 <img
-                  class="object-cover w-[400px] rounded-3xl h-96 md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
+                  class="object-cover w-[300px] h-[200px] rounded-3xl  md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
                   src={item.photo}
                   alt=""
                 />
@@ -48,7 +48,7 @@ const OurVision = () => {
               </div>
             </div>
           ) : (
-            <div class=" flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] HeroBg">
+            <div class=" flex flex-col items-center justify-around md:flex-row p-10 lg:w-[100%] lg:h-[30%] HeroBg">
               <div class="animationHero flex flex-col justify-between p-4 leading-normal md:w-[50%] lg:pl-[15%]">
                 <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {item.h1}
@@ -60,7 +60,7 @@ const OurVision = () => {
               </div>
               <div className="md:w-[50%] animationHero flex justify-center">
                 <img
-                  class="object-cover w-[400px] rounded-2xl h-96 md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
+                  class="object-cover w-[300px] h-[200px] rounded-2xl  md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
                   src={item.photo}
                   alt=""
                 />
