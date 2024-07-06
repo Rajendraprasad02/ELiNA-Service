@@ -5,7 +5,7 @@ const GalleryHero = () => {
   return (
     <>
       <div className="IsmsBg p-10 pt-20 md:p-0 md:h-fit">
-        <div className="flex flex-col gap-10 items-center  justify-center pb-16">
+        <div className="flex flex-col gap-20 md:gap-10 items-center  justify-center pb-16">
           <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-blue-700 content-center md:px lg:px-48 mt-[8%] font-black">
             {/* Platform For Delivering Inclusion Services To Special Childcare
             Providers */}
@@ -16,7 +16,7 @@ const GalleryHero = () => {
             Explore memorable moments captured in our gallery.
           </p>
           <div>
-            <ArrowCircleDownIcon className="w-24 animate-bounce text-blue-700" />
+            <ArrowCircleDownIcon className="w-24 pb-16 md:pb-0 animate-bounce text-blue-600" />
           </div>
         </div>
       </div>

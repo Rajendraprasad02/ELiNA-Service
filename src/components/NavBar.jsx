@@ -103,10 +103,10 @@ const NavBar = () => {
   return (
     <>
       <div className="relative h-[20%]">
-        <div className="flex justify-between items-center lg:px-10 lg:py-3 navBg">
+        <div className="flex justify-center md:justify-between items-center lg:px-10 py-3 navBg">
           <div className="md:flex md:items-center">
             <img
-              className="w-10 mr-4 md:w-[10%] lg:w-18"
+              className="w-[20%] mr-4 md:w-[10%] lg:w-18"
               src={logo}
               alt=""
             ></img>

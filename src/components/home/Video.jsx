@@ -15,7 +15,7 @@ const Video = () => {
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="video"
-            className="animationHero rounded-2xl lg:w-[35rem] lg:h-[20rem]"
+            className="animationHero mx-auto rounded-2xl lg:w-[35rem] lg:h-[20rem]"
           ></iframe>
         </div>
         <div className="animationHero lg:pr-5">
@@ -44,12 +44,12 @@ const Video = () => {
         </div>
       </div>
       <div className="bg-pink-500 animationHero p-5 m-10 rounded-3xl text-white lg:mx-24 lg:p-8 lg:rounded-3xl lg:font-semibold">
-        <p className=" text-center text-sm pb-2 text md:text-xl md:pb-3 lg:text-2xl">
+        <p className=" text-center text-base font-bold pb-2 text md:text-xl md:pb-3 lg:text-2xl">
           "Inclusion is not a strategy to help people fit into the systems and
           structures that exist in our societies; it is about transforming those
           systems and structures to make it better for everyone."{" "}
         </p>
-        <h1 className="text-end mt-auto text-white lg:font-bold lg:text-lg">
+        <h1 className="text-end mt-auto font-semibold text-white lg:font-bold lg:text-lg">
           - DIANE RICHLER.
         </h1>
       </div>
