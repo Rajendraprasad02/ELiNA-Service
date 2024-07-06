@@ -21,7 +21,7 @@ const NavBar = () => {
   const toggleForm = () => {
     SetForm(!heroForm);
   };
-
+  //|DEBUG| attention: Nav Bar Content
   const NavBarContent = [
     {
       li: "ISMS",
@@ -44,7 +44,7 @@ const NavBar = () => {
       href: "contact",
     },
   ];
-
+  //|DEBUG| attention: Nav Bar Drop Down
   const NavBarDropDownContent = [
     {
       li: "For Parents",
@@ -59,6 +59,8 @@ const NavBar = () => {
       href: "/professional",
     },
   ];
+
+  // |DEBUG| attention: Mobile side bar content
   const ResponsiveLi = [
     {
       li: "Elina Service",
@@ -105,11 +107,14 @@ const NavBar = () => {
       <div className="relative h-[20%]">
         <div className="flex justify-center md:justify-between items-center lg:px-10 py-3 navBg">
           <div className="md:flex md:items-center">
-            <img
-              className="w-[20%] mr-4 md:w-[10%] lg:w-18"
-              src={logo}
-              alt=""
-            ></img>
+            <a href="/">
+              <img
+                className="w-[20%] md:w-[10%] lg:w-24"
+                src={logo}
+                alt=""
+              ></img>
+            </a>
+
             <ul className="lg:gap-6 md:flex gap-6 hidden lg:p-8 lg:items-baseline  text-gray-700">
               <li
                 className="relative text-2xl hover:text-pink-600 cursor-pointer font-semibold"
@@ -198,8 +203,7 @@ const NavBar = () => {
               Login
             </button>
           </div>
-
-          {/* DropDown */}
+          {/*  //|DEBUG| attention: Drop Down small screen */}
           <div className="md:hidden cursor-pointer" onClick={handleClick}>
             {!nav ? <MenuIcon className="w-5" /> : <XIcon className="w-5" />}
           </div>
@@ -231,7 +235,7 @@ const NavBar = () => {
           </div>
         </ul>
       </div>
-      {/* Nav Bar Form */}
+      {/* //|DEBUG| attention: Nav Bar Form */}
       {heroForm && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
           <div className="w-[90%] h-[100%] lg:w-[40%] lg:h-[100%] content-center rounded-xl bg-white FormBg md:w-[90%] md:h-[80%] ">

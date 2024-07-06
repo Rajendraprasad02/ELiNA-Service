@@ -74,7 +74,7 @@ const WhatWeDo = () => {
     <div className="WhatWeDoBg  lg:w-full content-center lg:py-6 HeroBg2">
       <div className="flex flex-col">
         <div className="lg:pb-5 text-center">
-          <h1 className="text-5xl lg:text-6xl animationHero font-black text-indigo-600">
+          <h1 className="text-5xl lg:text-6xl p-5 animationHero font-black text-indigo-600">
             What we do?
           </h1>
         </div>
@@ -89,9 +89,9 @@ const WhatWeDo = () => {
                 src={item.src}
               ></img>
               <p className="p-10 lg:text-xl  text-gray-600">{item.p}</p>
-              <button className="flex items-center bg-pink-500 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-1 lg:px-2">
+              <button className="flex items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-14">
                 {item.button}
-                <ArrowRightIcon className="w-5" />
+                <ArrowRightIcon className="w-4" />
               </button>
             </div>
           ))}

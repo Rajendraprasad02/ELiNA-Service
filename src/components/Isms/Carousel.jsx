@@ -38,7 +38,7 @@ const Carousel = ({ CarouselContent }) => {
   return (
     <>
       <div className="lg:max-w-full">
-        <p className="text-4xl text-center flex justify-center mt-24 mb-10 md:text-5xl lg:text-6xl font-black text-indigo-600">
+        <p className="text-4xl p-5 text-center flex justify-center mt-24 mb-10 md:text-5xl lg:text-6xl font-black text-indigo-600">
           What our users have to say?
         </p>
         <div className="flex justify-center gap-20">

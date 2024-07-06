@@ -227,9 +227,42 @@ bg {
 .zoom {
   transition: transform 0.2s; /* Animation */
 }
+.zoomIsms {
+  transition: transform 0.2s; /* Animation */
+}
 
 .zoom:hover {
   transform: scale(
     1.75
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.zoomIsms:hover {
+  transform: scale(
+    1.25
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.blockquote {
+  --padding: 1rem;
+  padding: var(--padding);
+  color: var(--text-color, rgb(255, 255, 255));
+  font-weight: 600;
+  background-color: var(--bg-color, rgb(255, 45, 122));
+  display: grid;
+  gap: 1rem;
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color, rgba(255, 255, 255, 0.31)) calc(25% - 1px),
+    transparent 25%
+  );
+  background-size: 0.5rem 0.5rem;
+}
+
+.IsmsWhatNext {
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color, rgba(255, 255, 255, 0.121)) calc(25% - 1px),
+    transparent 25%
+  );
+  background-size: 0.5rem 0.5rem;
 }

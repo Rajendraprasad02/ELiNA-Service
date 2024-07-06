@@ -16,7 +16,7 @@ const GalleryHero = () => {
             Explore memorable moments captured in our gallery.
           </p>
           <div>
-            <ArrowCircleDownIcon className="w-24 pb-16 md:pb-0 animate-bounce text-blue-600" />
+            <ArrowDownIcon className="w-16 pb-16 md:pb-0  text-blue-600" />
           </div>
         </div>
       </div>

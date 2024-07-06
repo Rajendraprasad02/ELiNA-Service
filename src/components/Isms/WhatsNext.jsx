@@ -3,7 +3,7 @@ import React from "react";
 const WhatsNext = () => {
   return (
     <>
-      <div className="animationHero WhatsNext text-white w-[90%] md:w-[80%] flex flex-col items-center p-8 m-20 gap-4 ml-auto mr-auto rounded-3xl  bg-purple-700">
+      <div className="IsmsWhatNext animationHero WhatsNext text-white w-[90%] md:w-[80%] flex flex-col items-center p-8 m-20 gap-4 ml-auto mr-auto rounded-3xl  bg-pink-500">
         <h1 className="mb-5 text-3xl md:text-5xl lg:text-6xl font-bold">
           So, What's Next?
         </h1>

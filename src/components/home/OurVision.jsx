@@ -4,13 +4,23 @@ import mission from "../../images/OurMission.png";
 
 const OurVisionContent = [
   {
-    h1: "Our Vision",
+    h1: (
+      <span>
+        Our{" "}
+        <span className="text-pink-500 text-4xl font-extrabold">Vision</span>
+      </span>
+    ),
     p: "To co-create a more empathetic and inclusive society while embracing neurodiversity.",
     photo: vision,
     leftImg: false,
   },
   {
-    h1: "Our Mission",
+    h1: (
+      <span>
+        Our{" "}
+        <span className="text-pink-500 text-4xl font-extrabold">Mission</span>
+      </span>
+    ),
     p: "To empower parents of children with neurodiverse needs, build a community of professionals to empower parents, and to provide structured holistic support to schools for becoming more inclusive.",
     photo: mission,
     leftImg: true,
@@ -22,7 +32,7 @@ const OurVision = () => {
   return (
     <>
       <div className="flex justify-center md:HeroBg">
-        <h1 className="text-center text-5xl lg:text-6xl font-black text-indigo-600 animationHero p-5">
+        <h1 className="navBg text-center HeroBg text-5xl lg:text-6xl font-black text-indigo-600 animationHero p-5">
           Together For A Purpose
         </h1>
       </div>
