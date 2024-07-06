@@ -38,8 +38,8 @@ const Hero = ({ HeroContent }) => {
           </svg>
         </div> */}
 
-        <div className=" flex flex-col lg:flex-row  lg:px-28 pt-[30%] md:pt-[4%]  lg:pb-10 ">
-          <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">
+        <div className=" flex flex-col  lg:flex-row  lg:px-28  md:pt-[4%]  lg:pb-10 ">
+          <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-16 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">
             <h1 className=" text-4xl font-black text-gray-800 md:text-4xl lg:text-6xl">
               If they can’t learn the way we teach,
               <br />
@@ -47,7 +47,7 @@ const Hero = ({ HeroContent }) => {
                 We teach the way they learn.
               </span>
             </h1>
-            <p className="text-pretty text-sm  md:text-xl ">
+            <p className="text-pretty pb-10 text-sm md:pb-0  md:text-xl ">
               <span className="text-pink-500 font-extrabold cursor-pointer">
                 Teaching
               </span>{" "}
