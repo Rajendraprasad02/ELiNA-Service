@@ -1,47 +1,26 @@
 import React from "react";
+import { ArrowRightIcon } from "@heroicons/react/outline";
 
 const ElinaBlog = ({ BlogContent }) => {
   return (
     <>
-      <div className="flex flex-row flex-wrap px-32 gap-5 justify-between">
+      <div className="grid  grid-cols-1 gap-16 p-5 md:grid-cols-1 md:gap-2 lg:px-10 lg:gap-5 items-center justify-center sm:grid-cols-2 lg:grid-cols-3">
         {BlogContent.map((item) => (
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg" src={item.blogImg} alt="" />
-            </a>
-            <div class="p-5">
-              <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {item.h1}
-                </h5>
-              </a>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {item.des.slice(0, 200) + "..."}
-              </p>
-              <div className="mt-auto">
-                <a
-                  href="#"
-                  class="inline-flex mt-auto items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Read more
-                  <svg
-                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
+          <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white lg:w-[80%] lg:h-auto mx-auto">
+            <h1 className="text-xl text-gray-800 text-center font-black lg:text-xl p-10">
+              {item.h1}
+            </h1>
+            <img
+              className="w-[60%] h-auto mt-auto lg:w-fit  lg:h-fit rounded-3xl"
+              src={item.blogImg}
+            ></img>
+            <p className="p-10 lg:text-base  text-gray-600">
+              {item.des.slice(0, 200) + "..."}
+            </p>
+            <button className="flex  items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-6">
+              Read more
+              <ArrowRightIcon className="w-4" />
+            </button>
           </div>
         ))}
       </div>

@@ -6,21 +6,25 @@ const BlogHero = () => {
   return (
     <>
       <BreadCrumbs />
-      <div className="h-fit HeroBg2 p-36">
-        <h1 className="text-7xl font-black text-blue-700 text-center">
+      <div className="h-fit HeroBg2 py-20 px-10 md:p-36">
+        <h1 className="text-5xl md:text-5xl lg:text-7xl font-black py-16 md:p-0 text-blue-700 text-center">
           Everyone has a story to tell.
         </h1>
-        <div className="text-xl font-semibold text-center p-24">
+        <div className="text-lg md:text-xl font-semibold text-center md:p-24">
           <p>Autism Spectrum Explained: Resources and Real-Life Experiences</p>
           <p>
-            "Journey with Autism: Understanding, Acceptance, and Empowerment"
+            "<span className="text-pink-600">Journey with Autism:</span>{" "}
+            Understanding, Acceptance, and Empowerment"
           </p>
-          <p>"Insights into Autism: Education, Advocacy, and Community"</p>
+          <p>
+            "<span className="text-pink-600">Insights into Autism:</span>{" "}
+            Education, Advocacy, and Community"
+          </p>
         </div>
-        <div className="text-center items-center flex justify-center">
-          <h1 className="font-black text-lg">Explore more</h1>
+        <div className="text-center items-center flex justify-center py-10">
+          <h1 className="font-black text-lg text-blue-800">Explore more</h1>
           <div className="items-center">
-            <ArrowDownIcon className="w-5" />
+            <ArrowDownIcon className="w-5 text-blue-800" />
           </div>
         </div>
       </div>
