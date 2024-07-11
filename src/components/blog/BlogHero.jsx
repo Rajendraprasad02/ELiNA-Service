@@ -21,10 +21,10 @@ const BlogHero = () => {
             Education, Advocacy, and Community"
           </p>
         </div>
-        <div className="text-center items-center flex justify-center py-10">
-          <h1 className="font-black text-lg text-blue-800">Explore more</h1>
+        <div className="text-center items-center flex justify-center py-10 lg:py-0">
+          <h1 className="font-black text-lg text-blue-700">Explore more</h1>
           <div className="items-center">
-            <ArrowDownIcon className="w-5 text-blue-800" />
+            <ArrowDownIcon className="w-5 text-blue-700" />
           </div>
         </div>
       </div>

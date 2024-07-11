@@ -8,6 +8,7 @@ import Gallery from "./pages/home/gallery/Gallery";
 import Blog from "./pages/home/blog/Blog";
 import About from "./pages/home/about/About";
 import ContactUs from "./pages/home/contactUs/ContactUs";
+import GetStarted from "./pages/home/forms/GetStarted";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactUs />,
+  },
+  {
+    path: "/forms",
+    element: <GetStarted />,
   },
 ]);
 

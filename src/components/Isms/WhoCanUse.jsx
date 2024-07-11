@@ -4,10 +4,10 @@ const WhoCanUse = ({ KeyContent, KeyContent2, WhoCanUseContent }) => {
   return (
     <>
       <div className="HeroBg">
-        <h1 className="text-4xl animationHero flex justify-center mt-28 lg:mt-0 lg:pt-10 mb-16 md:text-5xl lg:text-6xl font-black text-indigo-600">
+        <h1 className="text-4xl animationHero flex justify-center  pt-10 mb-16 md:text-5xl lg:text-6xl font-black text-indigo-600">
           Who can use ISMS?
         </h1>
-        <div className="flex flex-wrap flex-col md:flex-row justify-center mx-auto md:w-[80%] lg:w-[100%] lg:gap-8">
+        <div className="flex flex-wrap flex-col gap-5 md:gap-0 md:flex-row justify-center mx-auto md:w-[80%] lg:w-[100%] lg:gap-8">
           {WhoCanUseContent.map((item) => (
             // md:w-[50%] lg:w-96
             <div class="animationHero bg-transparent zoomIsms  md:p-3 lg:p-5 rounded-lg  dark:bg-gray-800 dark:border-gray-700">

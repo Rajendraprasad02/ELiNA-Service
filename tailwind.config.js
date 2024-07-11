@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "black-rgba": "rgba(0, 0, 0, 0.70)",
+      },
       screens: {
         sm: "640px",
         // => @media (min-width: 640px) { ... }

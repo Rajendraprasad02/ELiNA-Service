@@ -5,7 +5,7 @@ const IsmsHeroPage = () => {
   return (
     <>
       <BreadCrumbs />
-      <div className="HeroBg2 pt-[30%] lg:pb-36 md:pt-0 md:h-fit">
+      <div className="HeroBg2 pt-[30%] pb-36 md:pt-0 md:h-fit">
         <div className="flex flex-col gap-10 items-center  justify-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-blue-700 content-center md:px lg:px-48 mt-[8%] font-black">
             {/* Platform For Delivering Inclusion Services To Special Childcare
@@ -23,7 +23,7 @@ const IsmsHeroPage = () => {
           >
             Get started
           </button>
-          <button className="lg:p-3 lg:w-[15%] bg-white shadow-2xl border-none text-blue-700">
+          <button className="p-3 lg:w-[15%] bg-white shadow-2xl border-none text-blue-700">
             Schedule Demo
           </button>
         </div>

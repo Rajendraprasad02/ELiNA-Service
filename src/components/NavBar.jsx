@@ -189,12 +189,12 @@ const NavBar = () => {
                 Purple to pink
               </span>
             </button> */}
-            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-pink-600 hover:border-pink-600 hover:text-pink-600">
+            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-pink-600 hover:border-blue-700">
               Enroll
             </button>
             <button
               onClick={toggleForm}
-              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-white text-pink-500 border-pink-500 hover:border-pink-600 hover:text-pink-600 "
+              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-white text-pink-500 border-pink-500 hover:border-blue-700"
             >
               Login
             </button>
@@ -233,9 +233,9 @@ const NavBar = () => {
       </div>
       {/* //|DEBUG| attention: Nav Bar Form */}
       {heroForm && (
-        <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="w-[90%] h-[100%] lg:w-[40%] lg:h-[100%] content-center rounded-xl bg-white FormBg md:w-[90%] md:h-[80%] ">
-            <form class="p-5 md:p-0 max-w-lg mx-auto md:mt-10 lg:mt-0">
+        <div className="fixed top-0 left-0 w-screen h-fit bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+          <div className="w-[90%] h-[100%] lg:w-[50%] lg:h-fit content-center rounded-xl bg-white FormBg md:w-[90%] md:h-[80%] ">
+            <form class="p-5 md:p-16 ">
               <XIcon
                 onClick={toggleForm}
                 className="w-5 lg:pb-0 md:pb-8 ml-[95%] md:ml-[100%] lg:ml-[100%] text-gray-400 cursor-pointer hover:text-gray-900"

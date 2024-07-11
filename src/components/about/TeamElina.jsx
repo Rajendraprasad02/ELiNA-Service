@@ -1,52 +1,51 @@
+import { computePosition, Tooltip } from "@floating-ui/react";
 import React from "react";
 
 const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
   return (
     <>
-      <div className="flex flex-col items-center">
-        <h1 className="text-center text-5xl lg:text-6xl font-black text-blue-700 m-10">
+      <div className="p-10">
+        <h1 className="text-center text-5xl lg:text-6xl font-black text-blue-700 m-16">
           Team ELiNA
         </h1>
-        {teamElinaContent.map((item) => (
-          <a
-            href="#"
-            class="flex flex-col w-[80%] m-5 items-center bg-white rounded-3xl shadow-xl md:flex-row"
-          >
-            <img
-              class="object-cover w-full lg:w-[22%] lg:h-[300px] m-5 rounded-3xl"
-              src={item.pic}
-              alt=""
-            />
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {item.h1}
-              </h5>
-              <p class="mb-3 font-semibold text-blue-600 text-sm bg-blue-100 w-fit rounded-xl px-3 py-2">
+        <div className="flex justify-center gap-48">
+          {teamElinaContent.map((item) => (
+            <div className="flex flex-col relative">
+              <img
+                className="rounded-full w-[200px] h-[200px] "
+                src={item.pic}
+              ></img>
+              <h1 className="text-center text-lg font-bold">{item.h1}</h1>
+              <p className="mx-auto font-medium text-base text-gray-500">
+                {item.p}
+              </p>
+              <div className="absolute opacity-0 ease-in-out delay-150 hover:opacity-100 duration-300">
+                <p className=" w-[200px] h-[200px] text-xs font-bold text-white text-center p-8 rounded-full hover:bg-black-rgba ">
+                  Hai this is {item.h1}, {item.p} of ELiNA Service.
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="p-10">
+        <h1 className="text-center text-5xl lg:text-6xl font-black text-blue-700 m-16">
+          Member's ELiNA
+        </h1>
+        <div className="flex justify-center flex-wrap gap-10">
+          {teamElinaContent2.map((item) => (
+            <div className="flex flex-col w-[20%]">
+              <img
+                className="rounded-full w-[200px] mx-auto m-2"
+                src={item.pic}
+              ></img>
+              <h1 className="text-center text-lg font-bold">{item.h1}</h1>
+              <p className="mx-auto px-10 font-medium text-sm text-center text-gray-500">
                 {item.p}
               </p>
             </div>
-          </a>
-        ))}
-        {teamElinaContent2.map((item) => (
-          <a
-            href="#"
-            class="flex flex-col w-[80%] m-5 items-center bg-white rounded-3xl shadow-xl md:flex-row"
-          >
-            <img
-              class="object-cover w-full lg:w-[22%] lg:h-[350px] m-5 rounded-3xl"
-              src={item.pic}
-              alt=""
-            />
-            <div class="flex items-start flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {item.h1}
-              </h5>
-              <p class="mb-3 font-semibold text-blue-600 text-sm bg-blue-100 w-fit rounded-xl px-3 py-2">
-                {item.p}
-              </p>
-            </div>
-          </a>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
