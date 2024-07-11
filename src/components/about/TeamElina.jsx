@@ -5,12 +5,12 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
   return (
     <>
       <div className="p-10">
-        <h1 className="text-center text-5xl lg:text-6xl font-black text-blue-700 m-16">
+        <h1 className="text-center text-5xl lg:text-6xl font-black text-blue-700 my-10 lg:m-16">
           Team ELiNA
         </h1>
-        <div className="flex justify-center gap-48">
+        <div className="flex flex-wrap justify-center gap-10 lg:gap-48">
           {teamElinaContent.map((item) => (
-            <div className="flex flex-col relative">
+            <div className="flex flex-col  relative">
               <img
                 className="rounded-full w-[200px] h-[200px] "
                 src={item.pic}
@@ -29,12 +29,12 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
         </div>
       </div>
       <div className="p-10">
-        <h1 className="text-center text-5xl lg:text-6xl font-black text-blue-700 m-16">
+        <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-black text-blue-700 my-10 lg:m-16">
           Member's ELiNA
         </h1>
-        <div className="flex justify-center flex-wrap gap-10">
+        <div className="flex justify-center flex-wrap gap-5 md:gap-10  ">
           {teamElinaContent2.map((item) => (
-            <div className="flex flex-col w-[20%]">
+            <div className="flex flex-col w-fit md:w-[20%] ">
               <img
                 className="rounded-full w-[200px] mx-auto m-2"
                 src={item.pic}
