@@ -7,6 +7,7 @@ import Isms from "./pages/home/isms/Isms";
 import Gallery from "./pages/home/gallery/Gallery";
 import Blog from "./pages/home/blog/Blog";
 import About from "./pages/home/about/About";
+import ContactUs from "./pages/home/contactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />,
+  },
+  {
+    path: "/contact",
+    element: <ContactUs />,
   },
 ]);
 

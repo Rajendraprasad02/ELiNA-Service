@@ -108,11 +108,7 @@ const NavBar = () => {
         <div className="flex justify-center md:justify-between items-center lg:px-10 py-3 navBg">
           <div className="md:flex md:items-center">
             <a href="/">
-              <img
-                className="w-[20%] md:w-[10%] lg:w-24"
-                src={logo}
-                alt=""
-              ></img>
+              <img className="w-[20%] md:w-24" src={logo} alt=""></img>
             </a>
 
             <ul className="lg:gap-6 md:flex gap-6 hidden lg:p-8 lg:items-baseline  text-gray-700">
@@ -193,12 +189,12 @@ const NavBar = () => {
                 Purple to pink
               </span>
             </button> */}
-            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-pink-600 hover:border-blue-700">
+            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-pink-600 hover:border-pink-600 hover:text-pink-600">
               Enroll
             </button>
             <button
               onClick={toggleForm}
-              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-white text-pink-500 border-pink-500 hover:border-blue-700"
+              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-white text-pink-500 border-pink-500 hover:border-pink-600 hover:text-pink-600 "
             >
               Login
             </button>

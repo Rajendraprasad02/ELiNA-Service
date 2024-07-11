@@ -165,6 +165,11 @@ const WhoCanUseContent = [
       </span>
     ),
   },
+
+  {
+    WhoCanUseImg: pic5,
+    p: <span className="text-blue-600"> Rehabilitation</span>,
+  },
   {
     WhoCanUseImg: pic2,
     p: (
@@ -172,10 +177,6 @@ const WhoCanUseContent = [
         Individual<span className="text-pink-700"> Therapist </span>
       </span>
     ),
-  },
-  {
-    WhoCanUseImg: pic5,
-    p: <span className="text-blue-600"> Rehabilitation</span>,
   },
 ];
 

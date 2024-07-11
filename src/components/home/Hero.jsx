@@ -24,7 +24,7 @@ const Hero = ({ HeroContent }) => {
   return (
     <>
       <div className="HeroBg ">
-        {/* <div className="fixed bottom-4 right-8  p-4 rounded-full  cursor-pointer lg:w-[50px] z-50">
+        <div className="fixed bottom-4 right-8  p-4 rounded-full  cursor-pointer lg:w-[50px] z-50">
           <ChatIcon className="w-14 text-blue-600" />
         </div>
         <div className="fixed bottom-4 lg:ml-5 bg-blue-600 p-2 rounded-full shadow-md cursor-pointer z-50">
@@ -36,7 +36,7 @@ const Hero = ({ HeroContent }) => {
           >
             <path d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H152z" />
           </svg>
-        </div> */}
+        </div>
 
         <div className=" flex flex-col  lg:flex-row  lg:px-28  md:pt-[4%]  lg:pb-10 ">
           <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">

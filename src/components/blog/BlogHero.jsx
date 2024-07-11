@@ -1,10 +1,12 @@
 import React from "react";
 import { ArrowCircleDownIcon, ArrowDownIcon } from "@heroicons/react/outline";
+import BreadCrumbs from "../reuseable/BreadCrumbs";
 
 const BlogHero = () => {
   return (
     <>
-      <div className="h-fit HeroBg p-36">
+      <BreadCrumbs />
+      <div className="h-fit HeroBg2 p-36">
         <h1 className="text-7xl font-black text-blue-700 text-center">
           Everyone has a story to tell.
         </h1>

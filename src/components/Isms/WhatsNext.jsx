@@ -20,7 +20,7 @@ const WhatsNext = () => {
         <p className="font-semibold text-center lg:text-lg">
           Get in touch with us and Schedule a demo call.
         </p>
-        <button className="bg-white p-2 py-1 md:px-5 md:py-3 text-lg font-black text-blue-600 hover:text-white hover:bg-transparent hover:border-white">
+        <button className="bg-white p-2 border-white py-1 md:px-5 md:py-3 text-lg font-black text-blue-600 hover:text-white hover:bg-transparent hover:border-white">
           Schedule Demo
         </button>
       </div>

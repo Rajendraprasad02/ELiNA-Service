@@ -1,10 +1,13 @@
 import { ArrowDownIcon } from "@heroicons/react/outline";
 import React from "react";
+import BreadCrumbs from "../reuseable/BreadCrumbs";
 
 const HeroAbout = () => {
   return (
     <>
-      <div className="IsmsBg  md:h-fit">
+      <BreadCrumbs />
+      {/* IsmsBg */}
+      <div className=" HeroBg2  md:h-fit">
         <div className="flex flex-col gap-20 items-center  justify-center pb-16">
           <h1 className="text-3xl md:text-5xl lg:text-6xl text-center text-blue-600 content-center md:px lg:px-48 mt-[8%] font-black">
             {/* Platform For Delivering Inclusion Services To Special Childcare

@@ -3,8 +3,8 @@ import React from "react";
 const WhoCanUse = ({ KeyContent, KeyContent2, WhoCanUseContent }) => {
   return (
     <>
-      <div className="IsmsBg2">
-        <h1 className="text-4xl animationHero flex justify-center mt-28 mb-16 md:text-5xl lg:text-6xl font-black text-indigo-600">
+      <div className="HeroBg">
+        <h1 className="text-4xl animationHero flex justify-center mt-28 lg:mt-0 lg:pt-10 mb-16 md:text-5xl lg:text-6xl font-black text-indigo-600">
           Who can use ISMS?
         </h1>
         <div className="flex flex-wrap flex-col md:flex-row justify-center mx-auto md:w-[80%] lg:w-[100%] lg:gap-8">

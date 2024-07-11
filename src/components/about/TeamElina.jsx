@@ -13,7 +13,7 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
             class="flex flex-col w-[80%] m-5 items-center bg-white rounded-3xl shadow-xl md:flex-row"
           >
             <img
-              class="object-cover w-full lg:w-[22%] lg:h-[350px] m-5 rounded-3xl"
+              class="object-cover w-full lg:w-[22%] lg:h-[300px] m-5 rounded-3xl"
               src={item.pic}
               alt=""
             />
@@ -37,7 +37,7 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
               src={item.pic}
               alt=""
             />
-            <div class="flex flex-col justify-between p-4 leading-normal">
+            <div class="flex items-start flex-col justify-between p-4 leading-normal">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {item.h1}
               </h5>
