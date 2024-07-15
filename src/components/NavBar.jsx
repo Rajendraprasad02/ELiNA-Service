@@ -6,6 +6,7 @@ import steps from "../images/StepsSvg.svg";
 const NavBar = () => {
   const [nav, SetNav] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [navEnrollDropDown, SetNavEnrollDropDown] = useState(false);
 
   const handleClick = () => {
     SetNav(!nav);
@@ -15,12 +16,16 @@ const NavBar = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  // LoginForm
-  const [heroForm, SetForm] = useState(false);
-
-  const toggleForm = () => {
-    SetForm(!heroForm);
+  const handleNavDropdownToggle = () => {
+    SetNavEnrollDropDown(!navEnrollDropDown);
   };
+
+  // LoginForm
+  // const [heroForm, SetForm] = useState(false);
+
+  // const toggleForm = () => {
+  //   SetForm(!heroForm);
+  // };
   //|DEBUG| attention: Nav Bar Content
   const NavBarContent = [
     {
@@ -100,7 +105,20 @@ const NavBar = () => {
     },
   ];
 
-  const onChange = () => {};
+  const NavBarEnrollContent = [
+    {
+      li: "Parents",
+      href: "/parentform",
+    },
+    {
+      li: "Schools",
+      href: "/schoolforms",
+    },
+    {
+      li: "Service provider",
+      href: "/serviceforms",
+    },
+  ];
 
   return (
     <>
@@ -162,13 +180,15 @@ const NavBar = () => {
             </button> */}
 
             <button className="gradient border-none rounded-3xl  hover:text-white">
-              <span className="p-1 rounded-3xl">
-                <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
-                  {" "}
-                  Get Started
+              <a href="/forms">
+                <span className="p-1 rounded-3xl">
+                  <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
+                    {" "}
+                    Get Started
+                  </span>
+                  <img src={steps} alt="steps" className="w-8" />
                 </span>
-                <img src={steps} alt="steps" className="w-8" />
-              </span>
+              </a>
             </button>
             {/* <button className="gradient border-none rounded-3xl  hover:text-white">
               <span className="p-1 rounded-3xl">
@@ -189,12 +209,41 @@ const NavBar = () => {
                 Purple to pink
               </span>
             </button> */}
-            <button className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-600 border-pink-600 hover:border-blue-700">
-              Enroll
-            </button>
+            <div className="">
+              <ul className="lg:gap-6 md:flex gap-6 hidden lg:p-10 lg:items-baseline  text-gray-700">
+                <li
+                  className="relative text-2xl hover:text-pink-600 cursor-pointer font-semibold"
+                  onMouseEnter={handleNavDropdownToggle}
+                  onMouseLeave={handleNavDropdownToggle}
+                >
+                  <a href="/">
+                    <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]">
+                      Enroll <ChevronDownIcon className="w-5" />
+                    </span>
+                  </a>
+                  {navEnrollDropDown && (
+                    <div className="absolute left-0 mt-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
+                      <ul className="py-2 text-sm text-gray-700 dark:text-gray-800">
+                        {NavBarEnrollContent.map((item) => (
+                          <li>
+                            <a
+                              href={item.href}
+                              className="block px-4 lg:text-base py-2 hover:bg-gray-100 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
+                            >
+                              {item.li}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
+
             <button
-              onClick={toggleForm}
-              className="w-20 h-6 lg:w-24 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-white text-pink-500 border-pink-500 hover:border-blue-700"
+              // onClick={toggleForm}
+              className="w-20 h-6 lg:w-44 md:text-xs md:font-light lg:h-10 lg:font-bold lg:text-base bg-pink-500 text-white border-pink-500 hover:border-pink-600 hover:text-pink-600"
             >
               Login
             </button>
@@ -209,7 +258,7 @@ const NavBar = () => {
           className={
             !nav
               ? "hidden"
-              : "absolute bg-indigo-50 w-full py-5  md:hidden px-10"
+              : "absolute bg-indigo-50 w-full py-5 h-fit z-50  md:hidden px-10"
           }
         >
           {ResponsiveLi.map((item) => (
@@ -220,19 +269,30 @@ const NavBar = () => {
             </a>
           ))}
 
-          <div className="flex gap-6 justify-center pt-6">
+          <div className="flex gap-6 justify-center pt-6 pb-6">
             <button className="w-32 h-8">Enroll</button>
             <button
-              onClick={toggleForm}
+              // onClick={toggleForm}
               className="w-32 h-8 bg-transparent text-indigo-600 "
             >
               Login
             </button>
           </div>
+          <button className="gradient border-none rounded-3xl  hover:text-white">
+            <a href="/forms">
+              <span className="p-1  rounded-3xl">
+                <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
+                  {" "}
+                  Get Started
+                </span>
+                <img src={steps} alt="steps" className="w-8" />
+              </span>
+            </a>
+          </button>
         </ul>
       </div>
       {/* //|DEBUG| attention: Nav Bar Form */}
-      {heroForm && (
+      {/* {heroForm && (
         <div className="fixed top-0 left-0 w-screen h-fit bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
           <div className="w-[90%] h-[100%] lg:w-[50%] lg:h-fit content-center rounded-xl bg-white FormBg md:w-[90%] md:h-[80%] ">
             <form class="p-5 md:p-16 ">
@@ -429,7 +489,7 @@ const NavBar = () => {
             </form>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

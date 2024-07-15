@@ -9,6 +9,7 @@ import Blog from "./pages/home/blog/Blog";
 import About from "./pages/home/about/About";
 import ContactUs from "./pages/home/contactUs/ContactUs";
 import GetStarted from "./pages/home/forms/GetStarted";
+import ParentPageForm from "./pages/home/forms/ParentPageForm";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/forms",
     element: <GetStarted />,
+  },
+  {
+    path: "/parentform",
+    element: <ParentPageForm />,
   },
 ]);
 

@@ -16,7 +16,7 @@ const HowItWorks = ({ HowItWorksContent }) => {
         >
           <div>
             <img
-              className="animationHero mt-24 w-[350px] h-[250px] md:w-[573px] md:h-[326px]"
+              className="animationHero object-cover mt-24 w-[350px] h-[250px] md:w-[573px] md:h-[326px]"
               src={item.video}
             />
           </div>

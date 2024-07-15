@@ -74,6 +74,22 @@ bg {
   background-position: center;
   background-image: url("./images/HowItWorksBlue.png");
 }
+
+//FORMS
+
+.getStartedBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/bgForm.jpg");
+}
+.parentFormBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/parentForm.jpg");
+}
+
 .galleryGradient {
   background-color: hsla(0, 100%, 75%, 1);
   background-image: radial-gradient(

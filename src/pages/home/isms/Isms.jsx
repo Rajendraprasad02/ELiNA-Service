@@ -19,7 +19,9 @@ import workfromhome from "../../../images/work-from-home.png";
 import comfort from "../../../images/working-woman.png";
 import access from "../../../images/easy-access.png";
 
-import HowItWorksImg from "../../../images/HowItWorks.png";
+import activity from "../../../images/isms/activity.jpg";
+import calender from "../../../images/isms/calender.png";
+import manage from "../../../images/isms/manage.jpg";
 
 const CarouselContent = [
   {
@@ -41,7 +43,7 @@ const CarouselContent = [
 
 const HowItWorksContent = [
   {
-    video: HowItWorksImg,
+    video: manage,
     h1: "Manage Child Profile",
     li: [
       "Add Child history data, other details like conditions, therapy details",
@@ -53,7 +55,7 @@ const HowItWorksContent = [
     ImgDirection: "left",
   },
   {
-    video: HowItWorksImg,
+    video: calender,
     h1: "Calendar and Therapy Schedule",
     li: [
       "One-Time Session",
@@ -62,7 +64,7 @@ const HowItWorksContent = [
     ],
   },
   {
-    video: HowItWorksImg,
+    video: activity,
     h1: "Activities Library",
     li: [
       "Bring your own Activities and Assign them to children.",
@@ -73,7 +75,7 @@ const HowItWorksContent = [
     ImgDirection: "left",
   },
   {
-    video: HowItWorksImg,
+    video: activity,
     h1: "Analytics for Admin and Clinical Director",
     li: [
       "Keep track of events across the organization.",
