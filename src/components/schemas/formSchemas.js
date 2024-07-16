@@ -38,3 +38,18 @@ export const parentPageForm = yup.object().shape({
   schoolType: yup.string().required("This field is required"),
   studentRatio: yup.string().required("This field is required"),
 });
+
+export const serviceProviderPageForm = yup.object().shape({
+  serviceName: yup.string().required("This field is required"),
+  universityName: yup.string().required("This field is required"),
+  professionalCharges: yup.string().required("This field is required"),
+  yearOfCompletion: yup.date().required("This field is required"),
+  specialistIn: yup.string().required("This field is required"),
+  yearEstablishment: yup.string().required("This field is required"),
+  workExperience: yup.string().required("This field is required"),
+  phoneNumber: yup.string().required("This field is required"),
+  email: yup
+    .string()
+    .email("please enter valid email address")
+    .required("This field is required"),
+});

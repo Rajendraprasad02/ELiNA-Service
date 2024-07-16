@@ -112,11 +112,11 @@ const NavBar = () => {
     },
     {
       li: "Schools",
-      href: "/schoolforms",
+      href: "/schoolform",
     },
     {
       li: "Service provider",
-      href: "/serviceforms",
+      href: "/serviceform",
     },
   ];
 
@@ -216,7 +216,7 @@ const NavBar = () => {
                   onMouseEnter={handleNavDropdownToggle}
                   onMouseLeave={handleNavDropdownToggle}
                 >
-                  <a href="/">
+                  <a href="">
                     <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]">
                       Enroll <ChevronDownIcon className="w-5" />
                     </span>

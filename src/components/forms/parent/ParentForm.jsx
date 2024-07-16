@@ -80,6 +80,30 @@ const schoolPolicyContent3 = [
   },
 ];
 
+const schoolDetailsContent1 = [
+  {
+    li: "primary",
+  },
+  {
+    li: "HS",
+  },
+  {
+    li: "IE",
+  },
+];
+
+const schoolDetailsContent2 = [
+  {
+    li: "primary",
+  },
+  {
+    li: "Secondary",
+  },
+  {
+    li: "Higher Secondary",
+  },
+];
+
 const onSubmit = async (values, actions) => {
   setTimeout(() => actions.resetForm(), 1000);
 };
@@ -121,8 +145,8 @@ const ParentForm = () => {
 
   return (
     <>
-      <div class="flex items-center justify-center p-12">
-        <div class="mx-auto w-full max-w-[650px] bg-gray-200 rounded-3xl p-10">
+      <div class="flex items-center justify-center py-10 md:px-5 lg:p-12">
+        <div class="mx-auto w-full max-w-[90%] md:max-w-[100%] lg:max-w-[80%] bg-gray-200 rounded-3xl p-10">
           <form onSubmit={formik.handleSubmit}>
             {step === 1 && (
               <div className="step1">
@@ -131,7 +155,7 @@ const ParentForm = () => {
                 </h1>
                 <div class="mb-5 pt-3">
                   <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-[33.3%]">
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
                           School Name <span className="text-red-500">*</span>
@@ -158,7 +182,7 @@ const ParentForm = () => {
                           )}
                       </div>
                     </div>
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-[33.3%]">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
                         Principal Name <span className="text-red-500">*</span>
                       </label>
@@ -187,99 +211,7 @@ const ParentForm = () => {
                         )}
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="mb-5">
-                  <label
-                    for="name"
-                    class="mb-3 block text-base font-medium text-[#07074D]"
-                  >
-                    Building Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="buildingName"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.buildingName}
-                    placeholder="Building Name"
-                    class={`${
-                      formik.errors.buildingName && formik.touched.buildingName
-                        ? "border border-red-600"
-                        : ""
-                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                  />
-                  {formik.errors.buildingName && formik.touched.buildingName ? (
-                    <p className="text-sm font-semibold text-red-500">
-                      {formik.errors.buildingName}
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                </div>
-                <div class="mb-5">
-                  <label
-                    for="phone"
-                    class="mb-3 block text-base font-medium text-[#07074D]"
-                  >
-                    Building Address <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="buildingAddress"
-                    onChange={formik.handleChange}
-                    value={formik.values.buildingAddress}
-                    onBlur={formik.handleBlur}
-                    placeholder="Enter your Building Address"
-                    class={`${
-                      formik.errors.buildingAddress &&
-                      formik.touched.buildingAddress
-                        ? "border border-red-600"
-                        : ""
-                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                  />
-                  {formik.errors.buildingAddress &&
-                  formik.touched.buildingAddress ? (
-                    <p className="text-sm font-semibold text-red-500">
-                      {formik.errors.buildingAddress}
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                </div>
-                <div class="mb-5 pt-3">
-                  <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
-                      <label
-                        for="name"
-                        class="mb-3 block text-base font-medium text-[#07074D]"
-                      >
-                        Building State <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="buildingState"
-                        onChange={formik.handleChange}
-                        value={formik.values.buildingState}
-                        onBlur={formik.handleBlur}
-                        placeholder="Building state"
-                        class={`${
-                          formik.errors.buildingState &&
-                          formik.touched.buildingState
-                            ? "border border-red-600"
-                            : ""
-                        } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                      />
-                      {formik.errors.buildingState &&
-                      formik.touched.buildingState ? (
-                        <p className="text-sm font-semibold text-red-500">
-                          {formik.errors.buildingState}
-                        </p>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-[33.3%]">
                       <label
                         for="name"
                         class="mb-3 block text-base font-medium text-[#07074D]"
@@ -314,7 +246,106 @@ const ParentForm = () => {
                 </div>
                 <div class="mb-5 pt-3">
                   <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div className="px-3 w-full md:w-[33.3%]">
+                      <div class="mb-5">
+                        <label
+                          for="name"
+                          class="mb-3 block text-base font-medium text-[#07074D]"
+                        >
+                          Building Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="buildingName"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.buildingName}
+                          placeholder="Building Name"
+                          class={`${
+                            formik.errors.buildingName &&
+                            formik.touched.buildingName
+                              ? "border border-red-600"
+                              : ""
+                          } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                        />
+                        {formik.errors.buildingName &&
+                        formik.touched.buildingName ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.buildingName}
+                          </p>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                    </div>
+                    <div className="px-3 w-full md:w-[33.3%]">
+                      <div class="mb-5">
+                        <label
+                          for="phone"
+                          class="mb-3 block text-base font-medium text-[#07074D]"
+                        >
+                          Building Address{" "}
+                          <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="buildingAddress"
+                          onChange={formik.handleChange}
+                          value={formik.values.buildingAddress}
+                          onBlur={formik.handleBlur}
+                          placeholder="Enter your Building Address"
+                          class={`${
+                            formik.errors.buildingAddress &&
+                            formik.touched.buildingAddress
+                              ? "border border-red-600"
+                              : ""
+                          } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                        />
+                        {formik.errors.buildingAddress &&
+                        formik.touched.buildingAddress ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.buildingAddress}
+                          </p>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                    </div>
+                    <div class="px-3 w-full md:w-[33.3%]">
+                      <label
+                        for="name"
+                        class="mb-3 block text-base font-medium text-[#07074D]"
+                      >
+                        Building State <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="buildingState"
+                        onChange={formik.handleChange}
+                        value={formik.values.buildingState}
+                        onBlur={formik.handleBlur}
+                        placeholder="Building state"
+                        class={`${
+                          formik.errors.buildingState &&
+                          formik.touched.buildingState
+                            ? "border border-red-600"
+                            : ""
+                        } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                      />
+                      {formik.errors.buildingState &&
+                      formik.touched.buildingState ? (
+                        <p className="text-sm font-semibold text-red-500">
+                          {formik.errors.buildingState}
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-5 pt-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="px-3 w-full md:w-[33.3%]">
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
                           Building Contact{" "}
@@ -342,7 +373,7 @@ const ParentForm = () => {
                           )}
                       </div>
                     </div>
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-[33.3%]">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
                         Administration Contact{" "}
                         <span className="text-red-500">*</span>
@@ -372,11 +403,7 @@ const ParentForm = () => {
                         )}
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="mb-5 pt-3">
-                  <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-[33.3%]">
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
                           Phone Number <span className="text-red-500">*</span>
@@ -403,7 +430,12 @@ const ParentForm = () => {
                           )}
                       </div>
                     </div>
-                    <div class="w-full px-3 sm:w-1/2">
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="px-3 w-full md:w-1/2">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
                         Telephone Number <span className="text-red-500">*</span>
                       </label>
@@ -432,184 +464,207 @@ const ParentForm = () => {
                         )}
                       </div>
                     </div>
+                    <div class="px-3 w-full md:w-1/2">
+                      <label
+                        for="email"
+                        class="mb-3 block text-base font-medium text-[#07074D]"
+                      >
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.email}
+                        placeholder="Enter your email"
+                        class={`${
+                          formik.errors.email && formik.touched.email
+                            ? "border border-red-600"
+                            : ""
+                        } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                      />
+                      {formik.errors.email && formik.touched.email ? (
+                        <p className="text-sm font-semibold text-red-500">
+                          {formik.errors.email}
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div class="mb-5">
-                  <label
-                    for="email"
-                    class="mb-3 block text-base font-medium text-[#07074D]"
-                  >
-                    Email Address <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.email}
-                    placeholder="Enter your email"
-                    class={`${
-                      formik.errors.email && formik.touched.email
-                        ? "border border-red-600"
-                        : ""
-                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                  />
-                  {formik.errors.email && formik.touched.email ? (
-                    <p className="text-sm font-semibold text-red-500">
-                      {formik.errors.email}
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                </div>
-                <div class="mb-5 pt-3">
                   <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
-                      <div class="mb-5">
-                        <label class="mb-3 block text-base font-medium text-[#07074D]">
-                          Total No. of Students Population{" "}
-                          <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="number"
-                          id="studentPopulation"
-                          onBlur={formik.handleBlur}
-                          onChange={formik.handleChange}
-                          value={formik.values.studentPopulation}
-                          placeholder="Total No. of Population"
-                          class={`${
-                            formik.errors.studentPopulation &&
-                            formik.touched.studentPopulation
-                              ? "border border-red-600"
-                              : " "
-                          } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                        />
-                        {formik.errors.studentPopulation &&
-                          formik.touched.studentPopulation && (
-                            <p className="text-sm font-semibold text-red-500">
-                              {formik.errors.studentPopulation}
-                            </p>
-                          )}
-                      </div>
-                    </div>
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-1/2">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
-                        Total No. of Teacher Population{" "}
+                        Total Number of Student Population{" "}
                         <span className="text-red-500">*</span>
                       </label>
                       <div class="mb-5">
                         <input
                           type="number"
-                          id="teacherPopulation"
+                          id="studentPopulation"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.teacherPopulation}
-                          placeholder="Total No. of Population"
+                          value={formik.values.studentPopulation}
+                          placeholder="Total Number of Student Population"
                           class={`${
-                            formik.errors.teacherPopulation &&
-                            formik.touched.teacherPopulation
+                            formik.errors.studentPopulation &&
+                            formik.touched.studentPopulation
                               ? "border border-red-600"
                               : ""
                           } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                         />
-                        {formik.errors.teacherPopulation &&
-                        formik.touched.teacherPopulation ? (
+                        {formik.errors.studentPopulation &&
+                        formik.touched.studentPopulation ? (
                           <p className="text-sm font-semibold text-red-500">
-                            {formik.errors.teacherPopulation}
+                            {formik.errors.studentPopulation}
                           </p>
                         ) : (
                           ""
                         )}
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div class="mb-5 pt-3">
-                  <div class="-mx-3 flex flex-wrap">
-                    <div class="w-full px-3 sm:w-1/2">
+                    <div class="px-3 w-full md:w-1/2">
                       <label
-                        for="name"
+                        for="email"
                         class="mb-3 block text-base font-medium text-[#07074D]"
                       >
-                        School Type <span className="text-red-500">*</span>
+                        Total Number of Teacher Population{" "}
+                        <span className="text-red-500">*</span>
                       </label>
-                      <select
-                        id="schoolType"
+                      <input
+                        type="text"
+                        id="teacherPopulation"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.schoolType}
+                        value={formik.values.teacherPopulation}
+                        placeholder="Total Number of Teacher Population"
                         class={`${
-                          formik.touched.schoolType && formik.errors.schoolType
+                          formik.errors.teacherPopulation &&
+                          formik.touched.teacherPopulation
                             ? "border border-red-600"
                             : ""
-                        } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                      >
-                        <option>Select an option</option>
-                        <option>Primary</option>
-                        <option>HS</option>
-                        <option>IE</option>
-                      </select>
-                      {formik.errors.schoolType && formik.touched.schoolType ? (
+                        } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                      />
+                      {formik.errors.teacherPopulation &&
+                      formik.touched.teacherPopulation ? (
                         <p className="text-sm font-semibold text-red-500">
-                          {formik.errors.schoolType}
+                          {formik.errors.teacherPopulation}
                         </p>
                       ) : (
                         ""
                       )}
                     </div>
-                    <div class="w-full px-3 sm:w-1/2">
-                      <label
-                        for="name"
-                        class="mb-3 block text-base font-medium text-[#07074D]"
-                      >
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="px-3 w-full md:w-1/2">
+                      <label class="mb-5 block text-lg font-black text-[#07074D] ">
+                        School Type <span className="text-red-500">*</span>
+                      </label>
+                      <div class="w-full px-3 mb-5  grid grid-cols-1 lg:grid-cols-3 ">
+                        {schoolDetailsContent1.map((item) => (
+                          <div className="flex items-center gap-3">
+                            <input
+                              type="checkbox"
+                              id="checkBoxParentForm"
+                              onBlur={formik.handleBlur}
+                              onChange={formik.handleChange}
+                              value={formik.values.checkBoxParentForm}
+                              class={`${
+                                formik.errors.checkBoxParentForm &&
+                                formik.touched.checkBoxParentForm
+                                  ? "border border-red-600"
+                                  : " "
+                              }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                            />
+                            <label class="block text-base font-medium text-[#07074D]">
+                              {item.li}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="px-3 w-full md:w-1/2">
+                      <label class="mb-5 block text-lg font-black text-[#07074D] ">
                         Student Teacher-Ratio{" "}
                         <span className="text-red-500">*</span>
                       </label>
-                      <select
-                        id="studentRatio"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.studentRatio}
-                        class={`${
-                          formik.touched.studentRatio &&
-                          formik.errors.studentRatio
-                            ? "border border-red-600"
-                            : ""
-                        } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                      >
-                        <option>Select an option</option>
-                        <option>Primary</option>
-                        <option>Secondary</option>
-                        <option>Higher Secondary</option>
-                      </select>
-                      {formik.errors.studentRatio &&
-                      formik.touched.studentRatio ? (
-                        <p className="text-sm font-semibold text-red-500">
-                          {formik.errors.studentRatio}
-                        </p>
-                      ) : (
-                        ""
-                      )}
+                      <div class="w-full px-3 mb-5  grid grid-cols-1 lg:grid-cols-3 ">
+                        {schoolDetailsContent2.map((item) => (
+                          <div className="flex items-center gap-3">
+                            <input
+                              type="checkbox"
+                              id="checkBoxParentForm"
+                              onBlur={formik.handleBlur}
+                              onChange={formik.handleChange}
+                              value={formik.values.checkBoxParentForm}
+                              class={`${
+                                formik.errors.checkBoxParentForm &&
+                                formik.touched.checkBoxParentForm
+                                  ? "border border-red-600"
+                                  : " "
+                              }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                            />
+                            <label class="block text-base font-medium text-[#07074D]">
+                              {item.li}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             )}
+
             {step === 2 && (
               <div className="step2">
                 <>
-                  <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
+                  <h1 className="text-center font-black text-3xl md:text-4xl text-blue-950 pb-8 underline">
                     General Questions
                   </h1>
-                  <div class="mb-5 pt-3">
+                  <div class="mb-5 pt-3 flex flex-col gap-3 ">
                     <>
-                      <label class="mb-5 block text-lg font-black text-[#07074D] ">
-                        1.Infrastructure Facility{" "}
+                      <label class="mb-5 block text-lg md:text-xl font-black text-[#07074D] ">
+                        1. Infrastructure Facility{" "}
                         <span className="text-red-500">*</span>
                       </label>
-                      <div class="w-full px-3 mb-5  grid grid-cols-1 md:grid-cols-2 ">
+                      <div class="w-full px-3 mb-5  grid grid-cols-1 md:grid-cols-3 ">
                         {schoolPolicyContent1.map((item) => (
+                          <div className="flex items-center gap-3">
+                            <input
+                              type="checkbox"
+                              id="checkBoxParentForm"
+                              onBlur={formik.handleBlur}
+                              onChange={formik.handleChange}
+                              value={formik.values.checkBoxParentForm}
+                              class={`${
+                                formik.errors.checkBoxParentForm &&
+                                formik.touched.checkBoxParentForm
+                                  ? "border border-red-600"
+                                  : " "
+                              }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                            />
+                            <label class="block text-base md:text-lg font-medium text-[#07074D]">
+                              {item.li}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                    <>
+                      <label class="mb-5 block text-lg md:text-xl font-black text-[#07074D] ">
+                        2. Is the School Curriculam Supportive of these
+                        Educational Components
+                        <span className="text-red-500">*</span>
+                      </label>
+                      <div class="w-full px-3 mb-5  grid grid-cols-1 md:grid-cols-3 ">
+                        {schoolPolicyContent2.map((item) => (
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
@@ -625,7 +680,7 @@ const ParentForm = () => {
                                   : " "
                               }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
                             />
-                            <label class="block text-base font-medium text-[#07074D]">
+                            <label class="block text-base md:text-lg font-medium text-[#07074D]">
                               {item.li}
                             </label>
                           </div>
@@ -633,66 +688,32 @@ const ParentForm = () => {
                       </div>
                     </>
                     <>
-                      <label class="mb-5 block text-lg font-black text-[#07074D] ">
-                        2.Is the School Curriculam Supportive of these
-                        Educational Components
+                      <label class="mb-5 block text-lg md:text-xl font-black text-[#07074D] ">
+                        3. Has Your School Implemented the Policies
                         <span className="text-red-500">*</span>
                       </label>
-                      <div class="w-full px-3 sm:w-1/2">
-                        <div class="mb-5 flex flex-col flex-wrap">
-                          {schoolPolicyContent2.map((item) => (
-                            <div className="flex items-center gap-3">
-                              <input
-                                type="checkbox"
-                                id="childName"
-                                onBlur={formik.handleBlur}
-                                onChange={formik.handleChange}
-                                value={formik.values.childName}
-                                placeholder="Child name"
-                                class={`${
-                                  formik.errors.childName &&
-                                  formik.touched.childName
-                                    ? "border border-red-600"
-                                    : " "
-                                }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                              />
-                              <label class="block text-base font-medium text-[#07074D]">
-                                {item.li}
-                              </label>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </>
-                    <>
-                      <label class="mb-5 block text-lg font-black text-[#07074D] ">
-                        3.Has Your School Implemented the Policies
-                        <span className="text-red-500">*</span>
-                      </label>
-                      <div class="w-full px-3">
-                        <div class="mb-5 flex w-full flex-col flex-wrap">
-                          {schoolPolicyContent3.map((item) => (
-                            <div className="flex w-full items-center gap-3">
-                              <input
-                                type="checkbox"
-                                id="childName"
-                                onBlur={formik.handleBlur}
-                                onChange={formik.handleChange}
-                                value={formik.values.childName}
-                                placeholder="Child name"
-                                class={`${
-                                  formik.errors.childName &&
-                                  formik.touched.childName
-                                    ? "border border-red-600"
-                                    : " "
-                                }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                              />
-                              <label class="w-full block text-base font-medium text-[#161660]">
-                                {item.li}
-                              </label>
-                            </div>
-                          ))}
-                        </div>
+                      <div class="w-full px-3 grid grid-cols-1 md:grid-cols-2 ">
+                        {schoolPolicyContent3.map((item) => (
+                          <div className="flex w-full items-center gap-3">
+                            <input
+                              type="checkbox"
+                              id="childName"
+                              onBlur={formik.handleBlur}
+                              onChange={formik.handleChange}
+                              value={formik.values.childName}
+                              placeholder="Child name"
+                              class={`${
+                                formik.errors.childName &&
+                                formik.touched.childName
+                                  ? "border border-red-600"
+                                  : " "
+                              }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                            />
+                            <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
+                              {item.li}
+                            </label>
+                          </div>
+                        ))}
                       </div>
                     </>
                   </div>
@@ -707,7 +728,7 @@ const ParentForm = () => {
                   </h1>
                   <div className="flex flex-col gap-5 mb-10">
                     <div className="mb-5">
-                      <h1 className="font-bold text-xl mb-5">
+                      <h1 className="font-bold text-lg md:text-xl mb-5">
                         1. Does the School have an Inclusion Policy that
                         specifies action for including children with special
                         needs?
@@ -743,7 +764,7 @@ const ParentForm = () => {
                     </div>
 
                     <div className="mb-5">
-                      <h1 className="font-bold text-xl mb-5">
+                      <h1 className="font-bold text-lg md:text-xl mb-5">
                         2. Is a Multidisciplinary team approach in your school
                         to provide alternatives to suspension or expulsion for
                         students with complex needs?

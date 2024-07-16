@@ -24,14 +24,14 @@ const ParetnHero = () => {
     <>
       <BreadCrumbs />
       <div className="parentBg">
-        <div className=" flex flex-col lg:gap-5 items-center text-white p-10 lg:px-[10%] lg:pt-[10%] lg:pb-[6%]">
-          <h1 className="text-5xl lg:text-[4.75rem]  text-center font-black">
+        <div className=" flex flex-col lg:gap-5 items-center text-white px-5  lg:px-[10%] lg:pt-[10%] lg:pb-[6%]">
+          <h1 className="text-6xl lg:text-[4.75rem] text-white text-center font-black">
             No Parent Should feel alone EVER.
           </h1>
-          <h2 className="text-lg lg:text-2xl">
+          <h2 className="text-lg text-gray-200 lg:text-white lg:text-2xl">
             "Empowering Your Child's Journey to a Brighter Future!"
           </h2>
-          <p className="text-sm lg:text-lg">
+          <p className="text-sm text-gray-200 lg:text-white lg:text-lg">
             Join us today! Get personalized plans and expert guidance to help
             your neurodivergent child
           </p>
@@ -47,7 +47,7 @@ const ParetnHero = () => {
               alt=""
             />
             <div class="flex flex-col justify-between p-2 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Join us in our mission to empower parents and foster disability
                 inclusion in our communities.
               </h5>
@@ -55,7 +55,7 @@ const ParetnHero = () => {
                 Let's work together to support your child's growth and
                 engagement!"
               </p>
-              <button className="bg-pink-600 border-none lg:h-8 text-lg">
+              <button className="bg-pink-600 w-[60%] lg:w-full p-1 mx-auto border-none lg:h-8 text-lg">
                 join our program{" "}
               </button>
             </div>

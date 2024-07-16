@@ -110,18 +110,20 @@ const GetStartedForm = () => {
   return (
     <>
       <div className="getStartedBg">
-        <div className="flex flex-col p-36">
-          <div className="bg-black-bg rounded-3xl flex flex-col  gap-16 p-20">
-            <h1 className="text-center text-8xl font-black text-white">
+        <div className="flex flex-col p-10 lg:p-36">
+          <div className="bg-black-bg rounded-3xl flex flex-col gap-5 lg:gap-16 p-8 lg:p-20">
+            <h1 className="text-center text-4xl md:text-8xl font-black text-white">
               Get Started with ELiNA
             </h1>
-            <div className="flex justify-between w-full">
+            <div className="flex lg:justify-between justify-center  w-[100%]  flex-wrap">
               {getStartedContent.map((item, index) => (
-                <div className="flex flex-col items-center  gap-2">
+                <div className="flex flex-col w-1/2 md:w-[33.3%] lg:w-fit items-center mx-auto gap-2 mb-5">
                   <p className="bg-white rounded-full w-fit p-4">
                     {item.svgImg}
                   </p>
-                  <p className="text-white font-medium">{item.p}</p>
+                  <p className="text-white text-center font-medium text-xs md:text-sm">
+                    {item.p}
+                  </p>
                 </div>
               ))}
             </div>

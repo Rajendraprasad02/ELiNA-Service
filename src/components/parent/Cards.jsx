@@ -34,13 +34,13 @@ const Cards = () => {
               <div class="flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%]">
                 <div className="md:w-[50%]  flex justify-center">
                   <img
-                    class="object-cover w-full rounded-3xl h-96 md:h-auto md:w-48  lg:h-[50%] lg:w-[40%]"
+                    class="object-cover w-full rounded-3xl h-96 md:h-auto md:w-48  lg:h-[50%] lg:w-[60%]"
                     src={item.src}
                     alt=""
                   />
                 </div>
                 <div class="flex flex-col justify-around p-4 leading-normal md:w-[50%] lg:pr-[15%]">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 class="mb-2 text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {item.h1}
                   </h5>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -51,18 +51,18 @@ const Cards = () => {
               </div>
             ) : (
               <div class="flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%]">
-                <div class="flex flex-col justify-between p-4 leading-normal md:w-[50%] lg:pl-[15%]">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <div class="flex flex-col justify-between  p-8 leading-normal md:w-[50%] lg:pl-[15%]">
+                  <h5 class="mb-2 text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {item.h1}
                   </h5>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  <p class="mb-3 font-normal  text-gray-700 dark:text-gray-400">
                     {item.p}
                   </p>
                   <button className="">Learn more</button>
                 </div>
                 <div className="md:w-[50%] flex justify-center">
                   <img
-                    class="object-cover w-full rounded-2xl h-96 md:h-auto md:w-48  lg:h-[50%] lg:w-[40%]"
+                    class="object-cover w-[80%] rounded-2xl  md:h-auto md:w-48  lg:h-[50%] lg:w-[60%]"
                     src={item.src}
                     alt=""
                   />

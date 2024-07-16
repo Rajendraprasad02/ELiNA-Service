@@ -1,6 +1,6 @@
 import React from "react";
 import sail from "../../images/sail.jpg";
-import compass from "../../images/compass.jpg";
+import compass from "../../images/compass2.jpeg";
 const ProgramContent = [
   {
     h1: "SAIL",
@@ -18,7 +18,7 @@ const Programs = () => {
   return (
     <>
       <div className="HeroBg md:px-36 md:py-28">
-        <p className="md:px-0 md:pb-6 lg:px-14 lg:pb-10">
+        <p className="p-10 text-center md:px-0 md:pb-6 lg:px-14 lg:pb-10 text-[1rem] md:text-lg font-bold text-gray-800">
           Our carefully curated personalized intervention plans and expert
           guidance help parents like you make informed decisions, keeping your
           child's unique needs in mind. To ensure comprehensive support, we take
@@ -34,8 +34,11 @@ const Programs = () => {
               <h1 className="text-3xl text-gray-800 font-black lg:text-3xl p-10">
                 {item.h1}
               </h1>
-              <img className="w-[60%] h-auto rounded-3xl" src={item.src}></img>
-              <p className="p-10 lg:text-base text-gray-600">{item.p}</p>
+              <img
+                className="rounded-2xl w-[300px] h-[200px] object-cover"
+                src={item.src}
+              ></img>
+              <p className="p-10 lg:text-lg text-gray-600">{item.p}</p>
               <button className="flex items-center bg-pink-500 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-1 lg:px-2">
                 Read more
               </button>

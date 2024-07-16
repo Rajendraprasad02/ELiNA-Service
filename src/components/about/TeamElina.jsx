@@ -20,7 +20,7 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
                 {item.p}
               </p>
               <div className="absolute opacity-0 ease-in-out delay-150 hover:opacity-100 duration-300">
-                <p className=" w-[200px] h-[200px] ease-in-out delay-150 text-xs font-bold text-white text-center p-8 rounded-full hover:bg-black-rgba ">
+                <p className=" w-[200px] h-[200px] ease-in-out delay-150 text-xs font-bold text-white text-center flex items-center rounded-full hover:bg-black-rgba ">
                   Hai this is {item.h1}, {item.p} of ELiNA Service.
                 </p>
               </div>

@@ -1,5 +1,12 @@
 body {
   font-family: "DM Sans", sans-serif;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+.panel {
+  min-width: 100vw;
+  height: 100vh;
 }
 
 bg {
@@ -88,6 +95,21 @@ bg {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("./images/parentForm.jpg");
+}
+
+.ServiceProviderFormBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/serviceProviderBg.jpg");
+}
+
+.scheduleBg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/getStarted/scheduleAppoinment.jpg");
 }
 
 .galleryGradient {

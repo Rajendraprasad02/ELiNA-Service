@@ -4,9 +4,9 @@ const ParentFormHero = () => {
   return (
     <>
       <div className="parentFormBg">
-        <div className="flex flex-col p-36">
-          <div className="bg-black-bg rounded-3xl flex flex-col  p-14">
-            <h1 className="text-center text-8xl font-black text-white">
+        <div className="flex flex-col p-10 lg:p-36">
+          <div className="bg-black-bg rounded-3xl flex flex-col p-10 lg:p-14">
+            <h1 className="text-center text-5xl md:text-8xl font-black text-white">
               Enroll For Schools
             </h1>
 
