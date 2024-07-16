@@ -28,8 +28,8 @@ const FormGetStart = () => {
 
   return (
     <>
-      <div class="flex items-center justify-center p-12">
-        <div class="mx-auto w-full max-w-[650px] bg-gray-200 rounded-3xl p-10">
+      <div class="flex items-center justify-center p-5 md:p-12">
+        <div class="mx-auto max-w-[650px] bg-gray-200 rounded-3xl p-5 md:p-10">
           <form onSubmit={formik.handleSubmit}>
             <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
               Getting Started

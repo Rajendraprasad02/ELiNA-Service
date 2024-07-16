@@ -110,9 +110,9 @@ const GetStartedForm = () => {
   return (
     <>
       <div className="getStartedBg">
-        <div className="flex flex-col p-10 lg:p-36">
+        <div className="flex flex-col p-5 lg:p-36">
           <div className="bg-black-bg rounded-3xl flex flex-col gap-5 lg:gap-16 p-8 lg:p-20">
-            <h1 className="text-center text-4xl md:text-8xl font-black text-white">
+            <h1 className="text-center text-5xl md:text-8xl font-black text-white">
               Get Started with ELiNA
             </h1>
             <div className="flex lg:justify-between justify-center  w-[100%]  flex-wrap">
