@@ -150,7 +150,7 @@ const ParentForm = () => {
           <form onSubmit={formik.handleSubmit}>
             {step === 1 && (
               <div className="step1">
-                <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
+                <h1 className="text-center font-black text-4xl md:text-5xl text-blue-950 pb-8 ">
                   School Details
                 </h1>
                 <div class="mb-5 pt-3">
@@ -166,7 +166,7 @@ const ParentForm = () => {
                           onBlur={formik.handleBlur}
                           onChange={formik.handleChange}
                           value={formik.values.schoolName}
-                          placeholder="School name"
+                          placeholder="Enter School Name"
                           class={`${
                             formik.errors.schoolName &&
                             formik.touched.schoolName
@@ -193,7 +193,7 @@ const ParentForm = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.principalName}
-                          placeholder="principal Name"
+                          placeholder="Enter Principal Name"
                           class={`${
                             formik.errors.principalName &&
                             formik.touched.principalName
@@ -220,12 +220,12 @@ const ParentForm = () => {
                         <span className="text-red-500">*</span>
                       </label>
                       <input
-                        type="number"
+                        type="tel"
                         id="yearEstablishment"
                         onChange={formik.handleChange}
                         value={formik.values.yearEstablishment}
                         onBlur={formik.handleBlur}
-                        placeholder="Year of Establishment"
+                        placeholder="Enter Year of Establishment"
                         class={`${
                           formik.errors.yearEstablishment &&
                           formik.touched.yearEstablishment
@@ -260,7 +260,7 @@ const ParentForm = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.buildingName}
-                          placeholder="Building Name"
+                          placeholder="Enter Building Name"
                           class={`${
                             formik.errors.buildingName &&
                             formik.touched.buildingName
@@ -324,7 +324,7 @@ const ParentForm = () => {
                         onChange={formik.handleChange}
                         value={formik.values.buildingState}
                         onBlur={formik.handleBlur}
-                        placeholder="Building state"
+                        placeholder="Enter Building state"
                         class={`${
                           formik.errors.buildingState &&
                           formik.touched.buildingState
@@ -352,12 +352,12 @@ const ParentForm = () => {
                           <span className="text-red-500">*</span>
                         </label>
                         <input
-                          type="number"
+                          type="tel"
                           id="buildingContact"
                           onBlur={formik.handleBlur}
                           onChange={formik.handleChange}
                           value={formik.values.buildingContact}
-                          placeholder="Building Contact"
+                          placeholder="Enter Building Contact"
                           class={`${
                             formik.errors.buildingContact &&
                             formik.touched.buildingContact
@@ -380,12 +380,12 @@ const ParentForm = () => {
                       </label>
                       <div class="mb-5">
                         <input
-                          type="number"
+                          type="tel"
                           id="administrationContact"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.administrationContact}
-                          placeholder="Administration Contact"
+                          placeholder="Enter Administration Contact"
                           class={`${
                             formik.errors.administrationContact &&
                             formik.touched.administrationContact
@@ -409,12 +409,12 @@ const ParentForm = () => {
                           Phone Number <span className="text-red-500">*</span>
                         </label>
                         <input
-                          type="number"
+                          type="tel"
                           id="phoneNumber"
                           onBlur={formik.handleBlur}
                           onChange={formik.handleChange}
                           value={formik.values.phoneNumber}
-                          placeholder="Phone Number"
+                          placeholder="Enter Phone Number"
                           class={`${
                             formik.errors.phoneNumber &&
                             formik.touched.phoneNumber
@@ -441,12 +441,12 @@ const ParentForm = () => {
                       </label>
                       <div class="mb-5">
                         <input
-                          type="number"
+                          type="tel"
                           id="telephoneNumber"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.telephoneNumber}
-                          placeholder="Telephone Number"
+                          placeholder="Enter Telephone Number"
                           class={`${
                             formik.errors.telephoneNumber &&
                             formik.touched.telephoneNumber
@@ -503,7 +503,7 @@ const ParentForm = () => {
                       </label>
                       <div class="mb-5">
                         <input
-                          type="number"
+                          type="tel "
                           id="studentPopulation"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
@@ -535,7 +535,7 @@ const ParentForm = () => {
                         <span className="text-red-500">*</span>
                       </label>
                       <input
-                        type="text"
+                        type="tel"
                         id="teacherPopulation"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -816,7 +816,7 @@ const ParentForm = () => {
             {step > 1 && (
               <button
                 onClick={handlePrevious}
-                className="hover:shadow-form w-[50%] rounded-md bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >
                 Previous
               </button>
@@ -824,7 +824,7 @@ const ParentForm = () => {
 
             <button
               onClick={handleNext}
-              className="hover:shadow-form w-[50%] rounded-md bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+              className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
             >
               {step === 3 ? "Submit" : "Next"}
             </button>

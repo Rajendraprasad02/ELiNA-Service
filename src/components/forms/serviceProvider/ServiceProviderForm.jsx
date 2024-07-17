@@ -104,7 +104,7 @@ const ServiceProviderForm = () => {
             <div className="step1">
               {/* Personal Details */}
               <>
-                <h1 className="text-center font-black text-3xl md:text-4xl text-blue-950 pb-8 underline">
+                <h1 className="text-center font-black text-3xl md:text-5xl text-blue-950 pb-8 ">
                   Service Provider
                 </h1>
                 <div class="mb-5 pt-3">
@@ -214,7 +214,7 @@ const ServiceProviderForm = () => {
                           Phone Number <span className="text-red-500">*</span>
                         </label>
                         <input
-                          type="number"
+                          type="tel"
                           id="phoneNumber"
                           onBlur={formik.handleBlur}
                           onChange={formik.handleChange}
@@ -409,7 +409,7 @@ const ServiceProviderForm = () => {
                               <span className="text-red-500">*</span>
                             </label>
                             <input
-                              type="number"
+                              type="tel"
                               id="professionalCharges"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -508,7 +508,7 @@ const ServiceProviderForm = () => {
                       </label>
                       <div class="mb-5">
                         <input
-                          type="date"
+                          type="month"
                           id="yearOfCompletion"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}

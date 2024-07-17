@@ -28,10 +28,10 @@ const FormGetStart = () => {
 
   return (
     <>
-      <div class="flex items-center justify-center p-5 md:p-12">
-        <div class="mx-auto max-w-[650px] bg-gray-200 rounded-3xl p-5 md:p-10">
+      <div class="flex items-center justify-center p-5 md:p-12 HeroBg2">
+        <div class="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
           <form onSubmit={formik.handleSubmit}>
-            <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
+            <h1 className="text-center font-black text-4xl text-blue-950 pb-4 underline">
               Getting Started
             </h1>
             <div class="mb-5 pt-3">
@@ -39,7 +39,7 @@ const FormGetStart = () => {
                 Child information
               </label>
               <div class="-mx-3 flex flex-wrap">
-                <div class="w-full px-3 sm:w-1/2">
+                <div class="w-full px-3 sm:w-1/2 ">
                   <div class="mb-5">
                     <label class="mb-3 block text-base font-medium text-[#07074D]">
                       Child name
@@ -64,7 +64,7 @@ const FormGetStart = () => {
                     )}
                   </div>
                 </div>
-                <div class="w-full px-3 sm:w-1/2">
+                <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
                     Date of birth
                   </label>
@@ -91,7 +91,7 @@ const FormGetStart = () => {
                     )}
                   </div>
                 </div>
-                <div class="w-full px-3 sm:w-1/2">
+                <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
                     Child Gender
                   </label>
@@ -136,7 +136,7 @@ const FormGetStart = () => {
                   </div>
                 </div>
 
-                <div class="w-full px-3 sm:w-1/2">
+                <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
                     Relationship with child
                   </label>
@@ -161,165 +161,165 @@ const FormGetStart = () => {
                     ""
                   )}
                 </div>
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Name of the Parents/Guardian
+                  </label>
+                  <input
+                    type="text"
+                    id="parentName"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.parentName}
+                    placeholder="Name of the Parents/Guardian"
+                    class={`${
+                      formik.errors.parentName && formik.touched.parentName
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.parentName && formik.touched.parentName ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.parentName}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="phone"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="number"
+                    id="phoneNumber"
+                    onChange={formik.handleChange}
+                    value={formik.values.phoneNumber}
+                    onBlur={formik.handleBlur}
+                    placeholder="Enter your phone number"
+                    class={`${
+                      formik.errors.phoneNumber && formik.touched.phoneNumber
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.phoneNumber && formik.touched.phoneNumber ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.phoneNumber}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="email"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                    placeholder="Enter your email"
+                    class={`${
+                      formik.errors.email && formik.touched.email
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.email && formik.touched.email ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.email}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Child's current school (if attending)
+                  </label>
+                  <input
+                    type="text"
+                    id="schoolName"
+                    onChange={formik.handleChange}
+                    value={formik.values.schoolName}
+                    placeholder="School name"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  />
+                </div>
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    How do you know about us: *
+                  </label>
+                  <select
+                    id="howdoyouknow"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.howdoyouknow}
+                    class={`${
+                      formik.touched.howdoyouknow && formik.errors.howdoyouknow
+                        ? "border border-red-600"
+                        : ""
+                    } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  >
+                    <option>Select an option</option>
+                    <option>Elina Website</option>
+                    <option>Social Media</option>
+                    <option>Through HCL</option>
+                    <option>THrough other schools</option>
+                    <option>THrough other parents</option>
+                    <option>THrough friends</option>
+                    <option>THrough my therapists</option>
+                    <option>others</option>
+                  </select>
+                  {formik.errors.howdoyouknow && formik.touched.howdoyouknow ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.howdoyouknow}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Reason for contacting us
+                  </label>
+                  <textarea
+                    type="text"
+                    id="reason"
+                    onChange={formik.handleChange}
+                    value={formik.values.reason}
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  />
+                </div>
               </div>
             </div>
-            <div class="mb-5">
-              <label
-                for="name"
-                class="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                Name of the Parents/Guardian
-              </label>
-              <input
-                type="text"
-                id="parentName"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.parentName}
-                placeholder="Name of the Parents/Guardian"
-                class={`${
-                  formik.errors.parentName && formik.touched.parentName
-                    ? "border border-red-600"
-                    : ""
-                } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-              />
-              {formik.errors.parentName && formik.touched.parentName ? (
-                <p className="text-sm font-semibold text-red-500">
-                  {formik.errors.parentName}
-                </p>
-              ) : (
-                ""
-              )}
-            </div>
-            <div class="mb-5">
-              <label
-                for="phone"
-                class="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                Phone Number
-              </label>
-              <input
-                type="number"
-                id="phoneNumber"
-                onChange={formik.handleChange}
-                value={formik.values.phoneNumber}
-                onBlur={formik.handleBlur}
-                placeholder="Enter your phone number"
-                class={`${
-                  formik.errors.phoneNumber && formik.touched.phoneNumber
-                    ? "border border-red-600"
-                    : ""
-                } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-              />
-              {formik.errors.phoneNumber && formik.touched.phoneNumber ? (
-                <p className="text-sm font-semibold text-red-500">
-                  {formik.errors.phoneNumber}
-                </p>
-              ) : (
-                ""
-              )}
-            </div>
-            <div class="mb-5">
-              <label
-                for="email"
-                class="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
-                placeholder="Enter your email"
-                class={`${
-                  formik.errors.email && formik.touched.email
-                    ? "border border-red-600"
-                    : ""
-                } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-              />
-              {formik.errors.email && formik.touched.email ? (
-                <p className="text-sm font-semibold text-red-500">
-                  {formik.errors.email}
-                </p>
-              ) : (
-                ""
-              )}
-            </div>
-            <div class="mb-5">
-              <label
-                for="name"
-                class="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                Child's current school (if attending)
-              </label>
-              <input
-                type="text"
-                id="schoolName"
-                onChange={formik.handleChange}
-                value={formik.values.schoolName}
-                placeholder="School name"
-                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              />
-            </div>
-            <div class="mb-5">
-              <label
-                for="name"
-                class="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                How do you know about us: *
-              </label>
-              <select
-                id="howdoyouknow"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.howdoyouknow}
-                class={`${
-                  formik.touched.howdoyouknow && formik.errors.howdoyouknow
-                    ? "border border-red-600"
-                    : ""
-                } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
-              >
-                <option>Select an option</option>
-                <option>Elina Website</option>
-                <option>Social Media</option>
-                <option>Through HCL</option>
-                <option>THrough other schools</option>
-                <option>THrough other parents</option>
-                <option>THrough friends</option>
-                <option>THrough my therapists</option>
-                <option>others</option>
-              </select>
-              {formik.errors.howdoyouknow && formik.touched.howdoyouknow ? (
-                <p className="text-sm font-semibold text-red-500">
-                  {formik.errors.howdoyouknow}
-                </p>
-              ) : (
-                ""
-              )}
-            </div>
 
-            <div class="mb-5">
-              <label
-                for="name"
-                class="mb-3 block text-base font-medium text-[#07074D]"
-              >
-                Reason for contacting us
-              </label>
-              <textarea
-                type="text"
-                id="reason"
-                onChange={formik.handleChange}
-                value={formik.values.reason}
-                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              />
-            </div>
-
-            <div>
+            <div className="flex justify-end">
               <button
                 disabled={formik.isSubmitting}
-                class="hover:shadow-form w-full rounded-md bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                class="hover:shadow-form w-full md:w-[40%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >
                 Submit
               </button>

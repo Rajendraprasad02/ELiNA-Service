@@ -10,32 +10,38 @@ import interaction from "../../../images/getStarted/intraction.jpg";
 
 const getStartedContent = [
   {
-    h1: "Step 1 : Schedule Appointment",
+    key: 1,
+    h1: "Schedule Appointment",
     p: "Initial meeting with team ELiNA will be scheduled at a mutually convenient time and date",
     img: schedule,
   },
   {
-    h1: "Step 2 : Meeting with ELiNA",
+    key: 2,
+    h1: "Meeting with ELiNA",
     p: "Sharing your child's strengths, challenges, observations and concerns. Service briefing will be presented by team ELiNA. Questions from parents will be addressed",
     img: meeting,
   },
   {
-    h1: "Step 3 : Enrollment Decision",
+    key: 3,
+    h1: "Enrollment Decision",
     p: "Making enrollment decisions based on understanding gained from the meetings",
     img: enroll,
   },
   {
-    h1: "Step 4 : What is Sail & Compass",
+    key: 4,
+    h1: "What is Sail & Compass",
     p: "After enrollment, follow the steps for SAIL and COMPASS as explained during the meeting and guided by the team.",
     img: sail,
   },
   {
-    h1: "Step 5 : In-depth Interactions",
+    key: 5,
+    h1: "In-depth Interactions",
     p: "ELiNA conducts in-depth interactions with children and family",
     img: interaction,
   },
   {
-    h1: "Step 6 : Reports",
+    key: 6,
+    h1: "Reports",
     p: "Comprehensive, Assessment, Recommendation and Referrals shared by Elina",
     img: report,
   },
@@ -70,18 +76,24 @@ export default function Test() {
     <div className="" ref={component}>
       <div ref={slider} className="container w-[600vw] h-screen flex">
         {getStartedContent.map((item) => (
-          <div className="min-w-[100vw] panel h-screen HeroBg">
-            <div className="flex flex-col gap-8 pt-16 p-10 ">
-              <h1 className="text-center text-gray-900 text-2xl lg:text-6xl mx-auto bg-pink-400 p-2 rounded-2xl font-black">
+          <div
+            className={`min-w-[100vw] panel h-screen ${
+              item.key % 2 === 0 ? "getStartedBg1" : "getStartedBg2"
+            }`}
+          >
+            <div className="flex flex-col gap-20 pt-16 p-10 ">
+              <h1 className="text-center text-gray-900 text-2xl lg:text-4xl mx-auto bg-pink-300 p-3 md:px-10 md:py-2 rounded-2xl font-black">
                 {item.h1}
               </h1>
-              <img
-                className="rounded-2xl mx-auto w-[70%] lg:w-[35%] object-cover"
-                src={item.img}
-              />
-              <p className="text-center rounded-2xl text-sm md:text-xl font-medium bg-pink-200 w-fit mx-auto p-3">
-                {item.p}
-              </p>
+              <div className="flex flex-col md:flex-row">
+                <img
+                  className="rounded-2xl mx-auto w-[90%] lg:w-[35%] object-cover"
+                  src={item.img}
+                />
+                <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[30%] mx-auto p-3">
+                  {item.p}
+                </p>
+              </div>
               <p className="font-black text-black text-center">Scroll down</p>
             </div>
           </div>

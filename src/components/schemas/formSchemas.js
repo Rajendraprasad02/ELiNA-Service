@@ -24,11 +24,24 @@ export const parentPageForm = yup.object().shape({
   buildingName: yup.string().required("This field is required"),
   buildingAddress: yup.string().required("This field is required"),
   buildingState: yup.string().required("This field is required"),
-  yearEstablishment: yup.number().integer().required("This field is required"),
+  yearEstablishment: yup
+    .number()
+    .integer()
+    .max(9999, "Year of establishment must be 4 digits")
+    .required("This field is required"),
   buildingContact: yup.string().required("This field is required"),
   administrationContact: yup.string().required("This field is required"),
-  phoneNumber: yup.number().integer().required("This field is required"),
-  telephoneNumber: yup.number().integer().required("This field is required"),
+  phoneNumber: yup
+    .number()
+    .integer()
+    .typeError("Phone number must be a number")
+    .required("This field is required"),
+  telephoneNumber: yup
+    .number()
+    .integer()
+    .typeError("Telephone number must be a number")
+
+    .required("This field is required"),
   email: yup
     .string()
     .email("Please entry valid email address")
