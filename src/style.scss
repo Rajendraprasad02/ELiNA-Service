@@ -90,24 +90,29 @@ bg {
   background-position: center;
   background-image: url("./images/bgForm.jpg");
 }
-.getStartedBg1 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("./images/getStarted//getStartedBg1.png");
-}
-.getStartedBg2 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("./images/getStarted//getStartedBg2.png");
-}
-
+// .getStartedBg1 {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-image: url("./images/getStarted/getStartedBg1.png");
+// }
+// .getStartedBg2 {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-image: url("./images/getStarted/getStartedBg2.png");
+// }
 .parentFormBg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/parentForm.jpg");
+  background-image: url("./images/parent/parentFormBg.jpg");
+}
+.schoolFormBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/schoolForm.jpg");
 }
 
 .ServiceProviderFormBg {
@@ -117,13 +122,13 @@ bg {
   background-image: url("./images/serviceProviderBg.jpg");
 }
 
-.scheduleBg {
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("./images/getStarted/scheduleAppoinment.jpg");
-}
+// .scheduleBg {
+//   width: 100%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-image: url("./images/getStarted/scheduleAppoinment.jpg");
+// }
 
 .galleryGradient {
   background-color: hsla(0, 100%, 75%, 1);

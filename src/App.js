@@ -8,9 +8,10 @@ import Gallery from "./pages/home/gallery/Gallery";
 import Blog from "./pages/home/blog/Blog";
 import About from "./pages/home/about/About";
 import ContactUs from "./pages/home/contactUs/ContactUs";
-import GetStarted from "./pages/home/forms/GetStarted";
-import ParentPageForm from "./pages/home/forms/ParentPageForm";
 import ServiceProviderPageForm from "./pages/home/forms/ServiceProviderPageForm";
+import SchoolPageForm from "./pages/home/forms/SchoolPageForm";
+import ParentPageForm from "./pages/home/forms/ParentPageForm";
+import GetStartedPageForm from "./pages/home/forms/GetStartedPageForm";
 
 const router = createBrowserRouter([
   {
@@ -42,14 +43,17 @@ const router = createBrowserRouter([
     element: <ContactUs />,
   },
   {
-    path: "/forms",
-    element: <GetStarted />,
+    path: "/getstartedforms",
+    element: <GetStartedPageForm />,
+  },
+  {
+    path: "/schoolform",
+    element: <SchoolPageForm />,
   },
   {
     path: "/parentform",
     element: <ParentPageForm />,
   },
-
   {
     path: "/serviceform",
     element: <ServiceProviderPageForm />,

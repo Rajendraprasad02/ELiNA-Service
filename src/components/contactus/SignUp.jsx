@@ -3,12 +3,12 @@ import React from "react";
 const SignUp = () => {
   return (
     <>
-      <div className="bg-blue-600 lg:w-[90%] items-center mx-auto rounded-3xl blockquote m-5">
+      <div className="bg-blue-600 w-[90%] lg:w-[90%] items-center mx-auto rounded-3xl blockquote m-5">
         <div className="flex flex-col gap-10 py-10 w-full">
           <h1 className="text-4xl lg:text-6xl text-white font-black text-center ">
             Sign Up for our Newsletter
           </h1>
-          <form class="max-w-sm mx-auto">
+          <form class="md:max-w-sm max-w-xl md:mx-auto">
             <div class="relative">
               <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                 <svg
@@ -25,12 +25,12 @@ const SignUp = () => {
               <input
                 type="text"
                 id="email-address-icon"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-20 lg:w-96 ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-200 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:w-96 ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-200 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name@gmail.com"
               />
             </div>
           </form>
-          <button className="w-[10%] mx-auto py-2 text-xl bg-white text-pink-600 border-white hover:border-white hover:text-white">
+          <button className="w-[60%] md:w-[10%] mx-auto py-2 text-xl bg-white text-pink-600 border-white hover:border-white hover:text-white">
             Submit
           </button>
         </div>

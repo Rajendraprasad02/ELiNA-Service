@@ -2,8 +2,8 @@ const FAQsContactUs = ({}) => {
   return (
     <>
       <div className="HeroBg">
-        <div className="text-left flex flex-col lg:flex-row justify-between gap-10 px-10 lg:px-20">
-          <div className="w-full lg:w-[60%]">
+        <div className="text-left flex flex-col lg:flex-row justify-between gap-10  lg:px-20">
+          <div className="w-full lg:w-[60%] px-10">
             <h1 className="py-5 text-3xl lg:text-5xl text-blue-700 font-black">
               ELiNA is here for ALL parents, schools, therapist. Let’s connect.
             </h1>
@@ -30,9 +30,9 @@ const FAQsContactUs = ({}) => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col w-full lg:w-[40%]">
+          <div className="flex flex-col mx-auto w-[90%] lg:w-[40%]">
             <div className="flex flex-col gap-5  justify-start rounded-3xl bg-blue-600 text-center py-[10%]">
-              <h1 className="text-4xl lg:text-6xl text-white font-black">
+              <h1 className="text-5xl lg:text-6xl text-white font-black">
                 Let's connect
               </h1>
               <p className="text-gray-300">
@@ -42,7 +42,7 @@ const FAQsContactUs = ({}) => {
               <button className="w-fit ml-auto mr-auto items-center py-2 px-4 bg-white border-white text-blue-600 hover:border-white hover:text-white">
                 Get in touch
               </button>
-              <div className="flex flex-col text-sm gap-5 text-start px-10 lg:px-20 text-gray-100">
+              <div className="flex flex-col  text-sm gap-5 text-start px-10 lg:px-20 text-gray-100">
                 <p>
                   <span className="font-bold text-base lg:text-lg">
                     Location:{" "}

@@ -180,7 +180,7 @@ const NavBar = () => {
             </button> */}
 
             <button className="gradient border-none rounded-3xl  hover:text-white">
-              <a href="/forms">
+              <a href="/getstartedforms">
                 <span className="p-1 rounded-3xl">
                   <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
                     {" "}

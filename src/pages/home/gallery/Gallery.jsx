@@ -77,6 +77,47 @@ const GalleryPicContent = [
   },
 ];
 
+//adding all images to react
+const importAllEvent = (r, event) => {
+  console.log(r);
+  let imagesEvent = [];
+  r.keys().forEach((item, index) => {
+    imagesEvent.push({ pic: r(item), category: event });
+  });
+  return imagesEvent;
+};
+
+const imagesEvent1 = importAllEvent(
+  require.context(
+    "../../../images/gallery/event1",
+    false,
+    /gallery \(\d+\)\.(jpg|jpeg|png)$/
+  ),
+  "event1"
+);
+
+const imagesEvent2 = importAllEvent(
+  require.context(
+    "../../../images/gallery/event2",
+    false,
+    /gallery \(\d+\)\.(jpg|jpeg|png)$/
+  ),
+  "event2"
+);
+
+const imagesEvent3 = importAllEvent(
+  require.context(
+    "../../../images/gallery/event3",
+    false,
+    /gallery\d+\.(jpg|jpeg|png)$/
+  ),
+  "event3"
+);
+
+const GalleryObj = GalleryPicContent.concat(imagesEvent1)
+  .concat(imagesEvent2)
+  .concat(imagesEvent3);
+
 const picButtons = [
   {
     buttonCategory: "F2F",
@@ -85,6 +126,18 @@ const picButtons = [
   {
     buttonCategory: "Team outing",
     buttonOnClick: "teamouting",
+  },
+  {
+    buttonCategory: "Event1",
+    buttonOnClick: "event1",
+  },
+  {
+    buttonCategory: "Event2",
+    buttonOnClick: "event2",
+  },
+  {
+    buttonCategory: "Event3",
+    buttonOnClick: "event3",
   },
   {
     buttonCategory: "All photos",
@@ -97,10 +150,7 @@ const Gallery = () => {
     <>
       <NavBar />
       <GalleryHero />
-      <GalleryPhoto
-        GalleryPicContent={GalleryPicContent}
-        picButtons={picButtons}
-      />
+      <GalleryPhoto GalleryPicContent={GalleryObj} picButtons={picButtons} />
       <Footer />
     </>
   );
