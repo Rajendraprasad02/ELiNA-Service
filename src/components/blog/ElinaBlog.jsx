@@ -1,26 +1,42 @@
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/outline";
+import DatePicker from "react-datepicker";
 
 const ElinaBlog = ({ BlogContent }) => {
   return (
     <>
-      <div className="grid  grid-cols-1 gap-16 p-5 md:grid-cols-1 md:gap-2 lg:px-10 lg:gap-5 items-center justify-center sm:grid-cols-2 lg:grid-cols-3">
-        {BlogContent.map((item) => (
-          <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white lg:w-[80%] lg:h-auto mx-auto">
-            <h1 className="text-xl text-gray-800 text-center font-black lg:text-xl p-10">
-              {item.h1}
-            </h1>
-            <img
-              className="w-[60%] h-auto mt-auto lg:w-fit  lg:h-fit rounded-3xl"
-              src={item.blogImg}
-            ></img>
-            <p className="p-10 lg:text-base  text-gray-600">
-              {item.des.slice(0, 200) + "..."}
-            </p>
-            <button className="flex  items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-6">
-              Read more
-              <ArrowRightIcon className="w-4" />
-            </button>
+      <div className="grid grid-cols-3 p-10">
+        {BlogContent.map((item, index) => (
+          <div key={index} className="p-10 flex flex-col justify-between ">
+            <div className="px-4">
+              <img
+                className="w-full rounded-xl h-[230px]"
+                src={item.blogImg}
+                alt={item.h1}
+              />
+            </div>
+            <div className="h-full ">
+              <div className="p-4 flex flex-col gap-8 ">
+                <div className="">
+                  <p className="text-gray-500 text-sm">14 Jun 2024</p>
+                  <h1 className="font-black text-lg mt-2">{item.h1}</h1>
+                  <p className="text-gray-800 font-normal mt-2">
+                    {item.des.slice(0, 200) + "..."}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-auto pl-2 flex items-center">
+              <a
+                className="cursor-pointer px-2 py-1 self-end font-black text-blue-800"
+                href={`/blog/mainblog/${index}`}
+              >
+                Learn more
+              </a>
+              <p className="items-center">
+                <ArrowRightIcon className="w-4 text-blue-800" />
+              </p>
+            </div>
           </div>
         ))}
       </div>

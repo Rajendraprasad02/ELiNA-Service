@@ -3,7 +3,7 @@ import React from "react";
 const ContactUsForm = () => {
   return (
     <>
-      <div className="lg:pl-20 px-10 py-20">
+      <div className="lg:pl-[8%] px-10 py-20">
         <h1 className="text-5xl text-blue-700 font-black pb-5">
           New Inquiries
         </h1>

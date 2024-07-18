@@ -1,4 +1,10 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 import Footer from "./components/Footer";
 import Home from "./pages/home/home/Home";
@@ -12,6 +18,8 @@ import ServiceProviderPageForm from "./pages/home/forms/ServiceProviderPageForm"
 import SchoolPageForm from "./pages/home/forms/SchoolPageForm";
 import ParentPageForm from "./pages/home/forms/ParentPageForm";
 import GetStartedPageForm from "./pages/home/forms/GetStartedPageForm";
+import MainBlog from "./components/mainBlogPage/MainBlog";
+import MainBlogPage from "./pages/home/mainBlogPage/MainBlogPage";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />,
+  },
+  {
+    path: "/blog/mainblog/:id",
+    element: <MainBlogPage />,
   },
   {
     path: "/contact",

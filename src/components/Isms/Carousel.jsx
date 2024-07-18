@@ -50,9 +50,9 @@ const Carousel = ({ CarouselContent }) => {
               key={index}
               className={`max-w-lg ${
                 index === currentIndex ? "" : "hidden"
-              } transition-opacity duration-500 flex flex-col items-center h-[100%]`}
+              } transition-opacity duration-500 flex flex-col items-center h-[100%] bg-white shadow-2xl lg:p-10 rounded-xl`}
             >
-              <div className="lg:h-[200px] md:p-12 py-10 ">
+              <div className="lg:h-[200px] md:p-8 py-10 ">
                 <h1 className="text-center md:text-lg">{item.h1}</h1>
               </div>
               <p className="text-center font-semibold md:text-lg">{item.p}</p>
