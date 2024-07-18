@@ -118,6 +118,10 @@ const NavBar = () => {
       li: "Service provider",
       href: "/serviceform",
     },
+    {
+      li: "Interns",
+      href: "/internform",
+    },
   ];
 
   return (

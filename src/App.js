@@ -20,6 +20,7 @@ import ParentPageForm from "./pages/home/forms/ParentPageForm";
 import GetStartedPageForm from "./pages/home/forms/GetStartedPageForm";
 import MainBlog from "./components/mainBlogPage/MainBlog";
 import MainBlogPage from "./pages/home/mainBlogPage/MainBlogPage";
+import InternPageForm from "./pages/home/forms/InternPageForm";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
   {
     path: "/serviceform",
     element: <ServiceProviderPageForm />,
+  },
+  {
+    path: "/internform",
+    element: <InternPageForm />,
   },
 ]);
 

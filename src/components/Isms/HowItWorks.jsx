@@ -8,24 +8,24 @@ const HowItWorks = ({ HowItWorksContent }) => {
       </p>
       {HowItWorksContent.map((item) => (
         <div
-          className={`  lg:h-screen flex flex-col lg:flex-row ${
+          className={` my-20 lg:my-0 lg:h-screen flex flex-col lg:flex-row ${
             item.ImgDirection === "left" ? "" : "lg:flex-row-reverse"
-          } justify-center gap-[5%] items-center ${
+          } justify-center items-center ${
             item.ImgDirection === "left" ? "HowItWorksPink" : "HowItWorksBlue"
           }`}
         >
-          <div>
+          <div className="lg:w-1/2">
             <img
               className={`${
                 item.ImgDirection === "left" ? "leftToRight" : "rightToLeft"
-              } object-cover mt-24 w-[350px] h-[250px] md:w-[573px] md:h-[326px]`}
+              } object-cover  w-[350px] h-[250px] md:w-[573px] md:h-[326px] lg:mx-auto`} //
               src={item.video}
             />
           </div>
           <div
             className={`${
               item.ImgDirection === "left" ? "rightToLeft" : "leftToRight"
-            } p-10 lg:p-0`}
+            } pl-[10%] w-full lg:w-1/2 lg:mx-auto`} //
           >
             <h1 className="font-black text-xl md:text-3xl lg:text-4xl py-6">
               {item.h1}
