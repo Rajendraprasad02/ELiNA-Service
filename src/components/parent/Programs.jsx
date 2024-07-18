@@ -18,7 +18,7 @@ const Programs = () => {
   return (
     <>
       <div className="HeroBg md:px-36 md:py-28">
-        <p className="p-10 text-center md:px-0 md:pb-6 lg:px-14 lg:pb-10 text-[1rem] md:text-lg font-bold text-gray-800">
+        <p className="p-5 text-wrap md:px-0 md:pb-6 lg:px-14 lg:pb-10 text-[1rem] md:text-lg font-medium md:font-bold md:text-gray-800">
           Our carefully curated personalized intervention plans and expert
           guidance help parents like you make informed decisions, keeping your
           child's unique needs in mind. To ensure comprehensive support, we take
@@ -39,7 +39,7 @@ const Programs = () => {
                 src={item.src}
               ></img>
               <p className="p-10 lg:text-lg text-gray-600">{item.p}</p>
-              <button className="flex items-center bg-pink-500 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-1 lg:px-2">
+              <button className="flex items-center bg-pink-500 border-pink-500 hover:text-pink-600 p-2 lg:gap-1 rounded-lg mt-auto mb-4 lg:p-1 lg:px-2">
                 Read more
               </button>
             </div>

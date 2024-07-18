@@ -25,15 +25,18 @@ const ParetnHero = () => {
       <BreadCrumbs />
       <div className="parentBg">
         <div className=" flex flex-col lg:gap-5 items-center text-white px-5  lg:px-[10%] lg:pt-[10%] lg:pb-[6%]">
-          <h1 className="text-6xl lg:text-[4.75rem] text-white text-center font-black">
+          <h1 className="text-6xl lg:text-[4.75rem] text-white py-5 md:py-0 text-center font-black">
             No Parent Should feel alone EVER.
           </h1>
-          <h2 className="text-lg text-gray-200 lg:text-white lg:text-2xl">
+          <h2 className="text-lg text-center p-4 text-gray-200 lg:text-white lg:text-2xl">
             "Empowering Your Child's Journey to a Brighter Future!"
           </h2>
-          <p className="text-sm text-gray-200 lg:text-white lg:text-lg">
-            Join us today! Get personalized plans and expert guidance to help
-            your neurodivergent child
+          <p className="text-sm p-3 text-center text-gray-200 lg:text-white lg:text-lg">
+            <span className="underline font-bold cursor-pointer">
+              Join us today!
+            </span>{" "}
+            Get personalized plans and expert guidance to help your
+            neurodivergent child
           </p>
         </div>
         <div className="flex justify-center pb-8">
@@ -46,7 +49,7 @@ const ParetnHero = () => {
               src={parentFamily}
               alt=""
             />
-            <div class="flex flex-col justify-between p-2 leading-normal">
+            <div class="flex flex-col justify-between px-4 pb-3 leading-normal">
               <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Join us in our mission to empower parents and foster disability
                 inclusion in our communities.
@@ -55,8 +58,8 @@ const ParetnHero = () => {
                 Let's work together to support your child's growth and
                 engagement!"
               </p>
-              <button className="bg-pink-600 w-[60%] lg:w-full p-1 mx-auto border-none lg:h-8 text-lg">
-                join our program{" "}
+              <button className="bg-pink-600 w-[60%] lg:w-[50%] p-1 md:p-0 mx-auto lg:mx-0 border-pink-600 lg:h-8 text-lg hover:text-pink-600 hover:border-pink-600">
+                Join our program{" "}
               </button>
             </div>
           </a>

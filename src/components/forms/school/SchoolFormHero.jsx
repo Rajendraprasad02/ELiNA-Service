@@ -6,8 +6,10 @@ const SchoolFormHero = () => {
       <div className="schoolFormBg">
         <div className="flex flex-col p-10 lg:p-36">
           <div className="bg-black-bg rounded-3xl flex flex-col p-10 lg:p-14">
-            <h1 className="text-center text-5xl md:text-8xl font-black text-white">
-              Enroll For Schools
+            <h1 className="text-center text-5xl md:text-7xl font-black text-white">
+              Join Us For{" "}
+              <span className="underline">Skill Training Program</span> With
+              ELiNA
             </h1>
 
             {/* <p className="text-center text-white">

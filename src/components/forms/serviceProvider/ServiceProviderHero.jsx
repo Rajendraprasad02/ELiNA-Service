@@ -6,8 +6,8 @@ const ServiceProviderHero = () => {
       <div className="ServiceProviderFormBg">
         <div className="flex flex-col p-10 lg:p-36">
           <div className="bg-black-bg rounded-3xl flex flex-col p-10 lg:p-14">
-            <h1 className="text-center text-5xl md:text-8xl font-black text-white">
-              ELiNA For Service
+            <h1 className="text-center text-5xl md:text-7xl font-black text-white">
+              ELiNA For Service Provider
             </h1>
 
             {/* <p className="text-center text-white">
