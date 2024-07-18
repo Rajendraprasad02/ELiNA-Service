@@ -3,11 +3,11 @@ const FAQsContactUs = ({}) => {
     <>
       <div className="HeroBg">
         <div className="text-left flex flex-col lg:flex-row justify-between gap-10  lg:px-20">
-          <div className="w-full lg:w-[60%] px-10">
+          <div className="w-full lg:w-[60%] px-10 leftToRight">
             <h1 className="py-5 text-3xl lg:text-5xl text-blue-700 font-black">
               ELiNA is here for ALL parents, schools, therapist. Let’s connect.
             </h1>
-            <div className="text-left text-base flex flex-col gap-5 font-semibold text-gray-700">
+            <div className="text-left text-base flex flex-col gap-5 font-semibold text-gray-700 ">
               <p>
                 At ELiNA Service, we uncover the natural gifts of children by
                 unleashing the power of parents and caregivers. As a
@@ -31,7 +31,7 @@ const FAQsContactUs = ({}) => {
             </div>
           </div>
           <div className="flex flex-col mx-auto w-[90%] lg:w-[40%]">
-            <div className="flex flex-col gap-5  justify-start rounded-3xl bg-blue-600 text-center py-[10%]">
+            <div className="flex flex-col gap-5  justify-start rounded-3xl bg-blue-600 text-center py-[10%] rightToLeft">
               <h1 className="text-5xl lg:text-6xl text-white font-black">
                 Let's connect
               </h1>

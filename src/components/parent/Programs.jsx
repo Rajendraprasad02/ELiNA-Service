@@ -17,8 +17,8 @@ const ProgramContent = [
 const Programs = () => {
   return (
     <>
-      <div className="HeroBg md:px-36 md:py-28">
-        <p className="p-5 text-wrap md:px-0 md:pb-6 lg:px-14 lg:pb-10 text-[1rem] md:text-lg font-medium md:font-bold md:text-gray-800">
+      <div className="HeroBg md:px-36 md:py-28 ">
+        <p className="p-5 text-wrap md:px-0 md:pb-6 lg:px-14 lg:pb-10 text-[1rem] md:text-lg font-medium md:font-bold md:text-gray-800 animationHero">
           Our carefully curated personalized intervention plans and expert
           guidance help parents like you make informed decisions, keeping your
           child's unique needs in mind. To ensure comprehensive support, we take
@@ -30,7 +30,7 @@ const Programs = () => {
 
         <div className="grid grid-cols-1 gap-16 p-5 md:grid-cols-1 md:gap-2 lg:px-32 lg:gap-20 justify-center sm:grid-cols-2 lg:grid-cols-2">
           {ProgramContent.map((item) => (
-            <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white">
+            <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white animationHero">
               <h1 className="text-3xl text-gray-800 font-black lg:text-3xl p-10">
                 {item.h1}
               </h1>

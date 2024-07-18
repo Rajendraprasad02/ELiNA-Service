@@ -40,14 +40,14 @@ const OurVision = () => {
         <div className="">
           {item.leftImg && innerWidth > 430 ? (
             <div class=" flex flex-col items-center justify-between md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] HeroBg2 ">
-              <div className="md:w-[50%] animationHero flex justify-center">
+              <div className="md:w-[50%] leftToRight flex justify-center">
                 <img
                   class="object-cover w-[300px] h-[200px] rounded-3xl  md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
                   src={item.photo}
                   alt=""
                 />
               </div>
-              <div class="animationHero flex flex-col justify-around p-4 leading-normal md:w-[50%] lg:pr-[15%]">
+              <div class=" flex flex-col justify-around p-4 leading-normal md:w-[50%] lg:pr-[15%] rightToLeft">
                 <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {item.h1}
                 </h1>
@@ -59,7 +59,7 @@ const OurVision = () => {
             </div>
           ) : (
             <div class=" flex flex-col items-center justify-around md:flex-row p-10 lg:w-[100%] lg:h-[30%] HeroBg">
-              <div class="animationHero flex flex-col justify-between p-4 leading-normal md:w-[50%] lg:pl-[15%]">
+              <div class="leftToRight flex flex-col justify-between p-4 leading-normal md:w-[50%] lg:pl-[15%]">
                 <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {item.h1}
                 </h1>
@@ -68,7 +68,7 @@ const OurVision = () => {
                 </p>
                 {/* <button className="">Learn more</button> */}
               </div>
-              <div className="md:w-[50%] animationHero flex justify-center">
+              <div className="md:w-[50%] rightToLeft flex justify-center">
                 <img
                   class="object-cover w-[300px] h-[200px] rounded-2xl  md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
                   src={item.photo}

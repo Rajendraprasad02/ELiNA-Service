@@ -15,10 +15,10 @@ const Video = () => {
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="video"
-            className="animationHero mx-auto rounded-2xl lg:w-[35rem] lg:h-[20rem]"
+            className="leftToRight mx-auto rounded-2xl lg:w-[35rem] lg:h-[20rem]"
           ></iframe>
         </div>
-        <div className="animationHero lg:pr-5">
+        <div className="rightToLeft lg:pr-5">
           <p className="text-sm lg:text-lg lg:font-semibold lg:pb-5">
             ELiNA was was conceived as a powerful concept of inclusion within{" "}
             <span>

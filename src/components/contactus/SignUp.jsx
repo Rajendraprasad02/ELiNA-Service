@@ -3,7 +3,7 @@ import React from "react";
 const SignUp = () => {
   return (
     <>
-      <div className="bg-blue-600 w-[90%] lg:w-[90%] items-center mx-auto rounded-3xl blockquote m-5">
+      <div className="bg-blue-600 w-[90%] lg:w-[90%] items-center mx-auto rounded-3xl blockquote m-5 animationHero">
         <div className="flex flex-col gap-10 py-10 w-full">
           <h1 className="text-4xl lg:text-6xl text-white font-black text-center ">
             Sign Up for our Newsletter

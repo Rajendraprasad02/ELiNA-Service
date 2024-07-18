@@ -43,15 +43,15 @@ const Cards = () => {
         {CardContent.map((item) => (
           <div className="">
             {item.leftImg && innerWidth > 425 ? (
-              <div class="flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%]">
-                <div className="md:w-[50%]  flex justify-center">
+              <div class="flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] ">
+                <div className="md:w-[50%]  flex justify-center  leftToRight">
                   <img
                     class="object-cover w-full rounded-3xl h-96 md:h-auto md:w-48  lg:h-[50%] lg:w-[60%]"
                     src={item.src}
                     alt=""
                   />
                 </div>
-                <div class="flex flex-col justify-around p-4 leading-normal md:w-[50%] lg:pr-[15%]">
+                <div class="flex flex-col justify-around p-4 leading-normal md:w-[50%] lg:pr-[15%] rightToLeft">
                   <h5 class="mb-2 text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {item.h1}
                   </h5>
@@ -64,8 +64,8 @@ const Cards = () => {
                 </div>
               </div>
             ) : (
-              <div class="flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%]">
-                <div class="flex flex-col justify-between  p-8 leading-normal md:w-[50%] lg:pl-[15%]">
+              <div class="flex flex-col items-center justify-around md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] ">
+                <div class="flex flex-col justify-between  p-8 leading-normal md:w-[50%] lg:pl-[15%]  leftToRight">
                   <h5 class="mb-2 text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {item.h1}
                   </h5>
@@ -76,7 +76,7 @@ const Cards = () => {
                     Learn more
                   </button>
                 </div>
-                <div className="md:w-[50%] flex justify-center">
+                <div className="md:w-[50%] flex justify-center rightToLeft">
                   <img
                     class="object-cover w-[80%] rounded-2xl  md:h-auto md:w-48  lg:h-[50%] lg:w-[60%]"
                     src={item.src}

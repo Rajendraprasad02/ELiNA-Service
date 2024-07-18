@@ -16,11 +16,17 @@ const HowItWorks = ({ HowItWorksContent }) => {
         >
           <div>
             <img
-              className="animationHero object-cover mt-24 w-[350px] h-[250px] md:w-[573px] md:h-[326px]"
+              className={`${
+                item.ImgDirection === "left" ? "leftToRight" : "rightToLeft"
+              } object-cover mt-24 w-[350px] h-[250px] md:w-[573px] md:h-[326px]`}
               src={item.video}
             />
           </div>
-          <div className="animationHero p-10 lg:p-0">
+          <div
+            className={`${
+              item.ImgDirection === "left" ? "rightToLeft" : "leftToRight"
+            } p-10 lg:p-0`}
+          >
             <h1 className="font-black text-xl md:text-3xl lg:text-4xl py-6">
               {item.h1}
             </h1>
