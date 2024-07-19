@@ -15,7 +15,10 @@ import mem6 from "../../../images/about/mem6.png";
 import mem7 from "../../../images/about/mem7.png";
 import mem8 from "../../../images/about/mem8.png";
 import StoryOfElina from "../../../components/about/StoryOfElina";
-import img1 from "../../../images/gallery/office/IMG20240412111708.jpg";
+import story1 from "../../../images/about/storyofelina/story (1).jpg";
+import story2 from "../../../images/about/storyofelina/story (2).jpg";
+import story3 from "../../../images/about/storyofelina/story (3).jpg";
+import story4 from "../../../images/about/storyofelina/story (4).jpg";
 
 const teamElinaContent = [
   {
@@ -84,12 +87,21 @@ const teamElinaContent2 = [
 
 const storyOfElina = [
   {
-    src: img1,
-    p: "I'm Sadia, and I started Pick Up Limes sometime around 2014 when I was making the transition to a vegan lifestyle. I had just graduated from university, and was working as a dietitian at a local hospital in Vancouver, Canada. I started to post recipes as a hobby, and wasn't sharing what I made with anyone aside from my own family.",
+    src: story4,
+    p: "Elina emerged from a decade of extensive knowledge gathering and real-life experiences within HLC, inspired by the visionary leadership of Mr. Naveen Mahesh and Ms. Padma Naveen, and driven by Ramalakshmi's passion. Officially established as a separate organization in 2020, Elina is dedicated to supporting neurodivergent children—those with autism, ADHD, and learning disabilities—and their families.",
   },
   {
-    src: img1,
-    p: "I'm Sadia, and I started Pick Up Limes sometime around 2014 when I was making the transition to a vegan lifestyle. I had just graduated from university, and was working as a dietitian at a local hospital in Vancouver, Canada. I started to post recipes as a hobby, and wasn't sharing what I made with anyone aside from my own family.",
+    src: story3,
+    p: "Ramalakshmi identified two critical gaps in the intervention system: the lack of communication between professionals and the lack of clarity among parents. To bridge these gaps, she founded an advisory and referral center, which quickly became a beacon of hope for families navigating the challenges of raising neurodivergent children. The center's impact grew as it conducted assessments and training programs, providing educators and parents with strategies to create inclusive environments.",
+    ImgDirection: "left",
+  },
+  {
+    src: story2,
+    p: "The COVID-19 pandemic highlighted the power of technology to overcome physical barriers. Elina leveraged this potential, unveiling groundbreaking programs like SAIL and CoMPASS, designed to offer comprehensive support through technology-driven assessments and personalized intervention plans. Collaborations with schools, therapy centers, and pediatric units, alongside the development of a custom-designed Intervention Services Management System (ISMS), led to the creation of a web portal and boosted their social media presence.",
+  },
+  {
+    src: story1,
+    p: "Achieving legal status as Vimarshi Solutions Private Limited solidified Elina's commitment to fostering a more inclusive society. Today, Elina continues to empower neurodivergent children and their families, ensuring every child can reach their full potential in a world where neurodivergence is celebrated.",
     ImgDirection: "left",
   },
 ];

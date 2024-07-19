@@ -7,6 +7,10 @@ import enroll from "../../../images/parent/enroll.jpg";
 import sail from "../../../images/parent/sail.jpg";
 import report from "../../../images/parent/report.jpg";
 import interaction from "../../../images/parent/intraction.jpg";
+
+import sailprocess from "../../../images/parent/sailprocess.jpg";
+
+import depth from "../../../images/parent/reportsss.jpg";
 import { ArrowDownIcon } from "@heroicons/react/outline";
 
 const ParentContent = [
@@ -50,21 +54,21 @@ const ParentContent = [
     h1: "SAIL Process",
     h2: "Once your child is enrolled, we will guide you through the SAIL (Support and Inclusion Learning) process. This includes specific steps and activities designed to support your child's development and integration.",
     p: "Follow the steps as guided by Team ELiNA.",
-    img: report,
+    img: sailprocess,
   },
   {
     key: 7,
     h1: "In-depth Interactions",
     h2: "Elina conducts in-depth interactions with the child and the family to better understand their needs. These interactions help refine our approach and ensure we provide the most effective support.",
     p: "Participate in in-depth interactions with the child and family.",
-    img: report,
+    img: interaction,
   },
   {
     key: 8,
     h1: "Reports",
     h2: "We provide comprehensive assessment reports that include recommendations and referrals if needed. These reports are designed to offer a clear picture of your child's progress and any additional support they might need.",
     p: "Review and utilize comprehensive assessment, recommendation, and referral reports.",
-    img: report,
+    img: depth,
   },
   {
     key: 9,

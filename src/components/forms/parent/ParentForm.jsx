@@ -21,6 +21,9 @@ const ParentForm = () => {
       schoolName: "",
       howdoyouknow: "",
       expectation: "",
+      password: "",
+      confirmPassword: "",
+      agree: false,
     },
     validationSchema: gettingStartedForm,
     onSubmit,
@@ -335,6 +338,9 @@ const ParentForm = () => {
                         : ""
                     } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   />
+                  <div className="text-red-600 text-sm font-semibold">
+                    Note: You can use this Email to login.
+                  </div>
                   {formik.errors.email && formik.touched.email ? (
                     <p className="text-sm font-semibold text-red-500">
                       {formik.errors.email}
@@ -491,6 +497,32 @@ const ParentForm = () => {
                         </p>
                       )}
                   </div>
+                </div>
+                <div className="ml-3 text-red-600 text-sm font-semibold">
+                  Note : Please ensure the accuracy of the email address and
+                  password before proceeding.
+                </div>
+                <div className="lg:px-[1%] lg:py-[3%]">
+                  <p className="text-gray-700">
+                    I hereby agree to be part of Elina network for Professionals
+                    who enable inclusion. By being part of Elina network for
+                    professionals, I understand that
+                    <span className="text-red-500">*</span>
+                  </p>
+
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="agree"
+                    checked={formik.values.agree}
+                    onChange={formik.handleChange}
+                  ></input>
+                  <label className="ml-3 text-[#07074D]">I Agrees</label>
+                  {formik.touched.agree && formik.errors.agree && (
+                    <p className="text-sm text-red-600">
+                      {formik.errors.agree}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

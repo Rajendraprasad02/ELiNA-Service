@@ -41,6 +41,10 @@ export const gettingStartedForm = yup.object().shape({
       [yup.ref("password"), null],
       "password and confirm password not matching"
     ),
+  agree: yup
+    .bool()
+    .oneOf([true], "You need to accept the terms and conditions")
+    .required("You need to accept the terms and conditions"),
 });
 
 export const parentPageForm = yup.object().shape({

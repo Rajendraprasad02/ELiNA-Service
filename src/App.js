@@ -21,6 +21,7 @@ import GetStartedPageForm from "./pages/home/forms/GetStartedPageForm";
 import MainBlog from "./components/mainBlogPage/MainBlog";
 import MainBlogPage from "./pages/home/mainBlogPage/MainBlogPage";
 import InternPageForm from "./pages/home/forms/InternPageForm";
+import SchoolPage from "./pages/home/schoolPage/SchoolPage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/parent",
     element: <Parent />,
+  },
+  {
+    path: "/school",
+    element: <SchoolPage />,
   },
   {
     path: "/isms",

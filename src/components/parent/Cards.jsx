@@ -40,6 +40,9 @@ const Cards = () => {
   return (
     <>
       <div className="HeroBg2">
+        <div className="text-center text-4xl md:text-5xl lg:text-6xl font-black text-blue-700 animationHero py-12">
+          <h1>How We Empower Your Child's Journey</h1>
+        </div>
         {CardContent.map((item) => (
           <div className="">
             {item.leftImg && innerWidth > 425 ? (
