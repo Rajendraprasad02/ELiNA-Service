@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { gettingStartedForm } from "../../schemas/formSchemas";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const onSubmit = (values, actions) => {
   setTimeout(() => actions.resetForm(), 1000);
@@ -12,13 +13,14 @@ const ParentForm = () => {
       childName: "",
       dob: "",
       gender: "",
-      relation: "",
-      parentName: "",
+      fatherName: "",
+      motherName: "",
       phoneNumber: "",
+      alternativephoneNumber: "",
       email: "",
       schoolName: "",
       howdoyouknow: "",
-      reason: "",
+      expectation: "",
     },
     validationSchema: gettingStartedForm,
     onSubmit,
@@ -32,17 +34,18 @@ const ParentForm = () => {
         <div class="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
           <form onSubmit={formik.handleSubmit}>
             <h1 className="text-center font-black text-4xl text-blue-950 pb-4 underline">
-              Getting Started
+              Enrollment Form - Parent
             </h1>
             <div class="mb-5 pt-3">
               <label class="mb-5 block text-lg font-black text-[#07074D] ">
                 Child information
               </label>
               <div class="-mx-3 flex flex-wrap">
+                {/* CHILD NAME */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <div class="mb-5">
                     <label class="mb-3 block text-base font-medium text-[#07074D]">
-                      Child name
+                      Child name<span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -64,9 +67,10 @@ const ParentForm = () => {
                     )}
                   </div>
                 </div>
+                {/* D.O.B */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Date of birth
+                    Date of birth<span className="text-red-500">*</span>
                   </label>
                   <div class="mb-5">
                     <input
@@ -91,9 +95,10 @@ const ParentForm = () => {
                     )}
                   </div>
                 </div>
+                {/* GENDER */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Child Gender
+                    Child Gender<span className="text-red-500">*</span>
                   </label>
                   <div class="my-auto">
                     <input
@@ -135,8 +140,8 @@ const ParentForm = () => {
                     )}
                   </div>
                 </div>
-
-                <div class="w-full px-3 sm:w-1/2 ">
+                {/* RELATIONSHIP WITH CHILD */}
+                {/* <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
                     Relationship with child
                   </label>
@@ -160,41 +165,102 @@ const ParentForm = () => {
                   ) : (
                     ""
                   )}
-                </div>
+                </div> */}
+                {/* Child's Current School Name and Address */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
                   <label
                     for="name"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Name of the Parents/Guardian
+                    Child's Current School Name and Address
+                    <span className="text-red-500">*</span>
                   </label>
-                  <input
+                  <textarea
                     type="text"
-                    id="parentName"
+                    id="schoolName"
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.parentName}
-                    placeholder="Name of the Parents/Guardian"
+                    value={formik.values.schoolName}
+                    placeholder="School name"
                     class={`${
-                      formik.errors.parentName && formik.touched.parentName
+                      formik.errors.schoolName && formik.touched.schoolName
                         ? "border border-red-600"
                         : ""
                     } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   />
-                  {formik.errors.parentName && formik.touched.parentName ? (
+                  {formik.errors.schoolName && formik.touched.schoolName ? (
                     <p className="text-sm font-semibold text-red-500">
-                      {formik.errors.parentName}
+                      {formik.errors.schoolName}
                     </p>
                   ) : (
                     ""
                   )}
                 </div>
+                {/* Child's Father/Guardian Name */}
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Child's Father/Guardian Name
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="fatherName"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.fatherName}
+                    placeholder="Name of the Parents/Guardian"
+                    class={`${
+                      formik.errors.fatherName && formik.touched.fatherName
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.fatherName && formik.touched.fatherName ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.fatherName}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                {/* Child's Mother/Primary Caretaker's Name */}
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Child's Mother/Primary Caretaker's Name
+                  </label>
+                  <input
+                    type="text"
+                    id="motherName"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.motherName}
+                    placeholder="Enter name of the Mother/Primary Caretaker's Name"
+                    class={`${
+                      formik.errors.motherName && formik.touched.motherName
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.motherName && formik.touched.motherName ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.motherName}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                {/* PHONE NUMBER */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
                   <label
                     for="phone"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Phone Number
+                    Phone Number<span className="text-red-500">*</span>
                   </label>
                   <input
                     type="number"
@@ -217,12 +283,44 @@ const ParentForm = () => {
                     ""
                   )}
                 </div>
+                {/* ALTERNATIVE PHONE NUMBER */}
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="phone"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    Alternative Phone Number
+                  </label>
+                  <input
+                    type="number"
+                    id="alternativephoneNumber"
+                    onChange={formik.handleChange}
+                    value={formik.values.alternativephoneNumber}
+                    onBlur={formik.handleBlur}
+                    placeholder="Enter your alternative phone number"
+                    class={`${
+                      formik.errors.alternativephoneNumber &&
+                      formik.touched.alternativephoneNumber
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.alternativephoneNumber &&
+                  formik.touched.alternativephoneNumber ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.alternativephoneNumber}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                {/* EMAIL ADDRESS */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
                   <label
                     for="email"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Email Address
+                    Email Address<span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -245,28 +343,14 @@ const ParentForm = () => {
                     ""
                   )}
                 </div>
+                {/* How do you know about us */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
                   <label
                     for="name"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Child's current school (if attending)
-                  </label>
-                  <input
-                    type="text"
-                    id="schoolName"
-                    onChange={formik.handleChange}
-                    value={formik.values.schoolName}
-                    placeholder="School name"
-                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  />
-                </div>
-                <div class="w-full px-3 sm:w-1/2 mb-5">
-                  <label
-                    for="name"
-                    class="mb-3 block text-base font-medium text-[#07074D]"
-                  >
-                    How do you know about us: *
+                    How do you know about us
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="howdoyouknow"
@@ -297,29 +381,126 @@ const ParentForm = () => {
                     ""
                   )}
                 </div>
-
+                {/* ADDRESS */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
                   <label
                     for="name"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Reason for contacting us
+                    Address<span className="text-red-500">*</span>
                   </label>
                   <textarea
                     type="text"
-                    id="reason"
+                    id="address"
                     onChange={formik.handleChange}
-                    value={formik.values.reason}
-                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    onBlur={formik.handleBlur}
+                    value={formik.values.address}
+                    class={`${
+                      formik.errors.address && formik.touched.address
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   />
+                  {formik.errors.address && formik.touched.address ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.address}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                {/* What is your expectation from Elina? */}
+                <div class="w-full px-3 sm:w-1/2 mb-5">
+                  <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-[#07074D]"
+                  >
+                    What is your expectation from Elina?
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    type="text"
+                    id="expectation"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.expectation}
+                    class={`${
+                      formik.errors.expectation && formik.touched.expectation
+                        ? "border border-red-600"
+                        : ""
+                    } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  />
+                  {formik.errors.expectation && formik.touched.expectation ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.expectation}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                {/* PASSWORD */}
+                <div class="w-full px-3 sm:w-1/2 ">
+                  <div class="mb-5">
+                    <label class="mb-3 block text-base font-medium text-[#07074D]">
+                      Password<span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      onBlur={formik.handleBlur}
+                      onChange={formik.handleChange}
+                      value={formik.values.password}
+                      placeholder="Enter password"
+                      class={`${
+                        formik.errors.password && formik.touched.password
+                          ? "border border-red-600"
+                          : " "
+                      } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                    />
+                    {formik.errors.password && formik.touched.password && (
+                      <p className="text-sm font-semibold text-red-500">
+                        {formik.errors.password}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                {/* CONFIRM PASSWORD */}
+                <div class="w-full px-3 sm:w-1/2 ">
+                  <div class="mb-5">
+                    <label class="mb-3 block text-base font-medium text-[#07074D]">
+                      Confirm Password<span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      onBlur={formik.handleBlur}
+                      onChange={formik.handleChange}
+                      value={formik.values.confirmPassword}
+                      placeholder="Confirm Password"
+                      class={`${
+                        formik.errors.confirmPassword &&
+                        formik.touched.confirmPassword
+                          ? "border border-red-600"
+                          : " "
+                      } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                    />
+                    {formik.errors.confirmPassword &&
+                      formik.touched.confirmPassword && (
+                        <p className="text-sm font-semibold text-red-500">
+                          {formik.errors.confirmPassword}
+                        </p>
+                      )}
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div className="flex justify-end">
+            <div className="py-">
+              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+            </div>
+            <div className="flex justify-center">
               <button
                 disabled={formik.isSubmitting}
-                class="hover:shadow-form w-full md:w-[40%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                class="hover:shadow-form w-full md:w-[30%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >
                 Submit
               </button>

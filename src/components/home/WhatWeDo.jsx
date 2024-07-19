@@ -12,6 +12,7 @@ const WhatWeDoContent = [
       </span>
     ),
     src: parents,
+    href: "/parentform",
     p: (
       <span>
         Over the years, our conversations with numerous parents have helped u
@@ -32,6 +33,7 @@ const WhatWeDoContent = [
       </span>
     ),
     src: schools,
+    href: "/schoolform",
     p: (
       <span>
         Supporting neurodivergent children in schools and giving them the
@@ -53,6 +55,7 @@ const WhatWeDoContent = [
       </span>
     ),
     src: Professionals,
+    href: "/serviceform",
     p: (
       <span>
         ELiNA offers over two decades of experience in creating inclusive
@@ -89,8 +92,9 @@ const WhatWeDo = () => {
                 src={item.src}
               ></img>
               <p className="p-10 lg:text-xl  text-gray-600">{item.p}</p>
+
               <button className="flex items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-14">
-                {item.button}
+                <a href={item.href}>{item.button}</a>
                 <ArrowRightIcon className="w-4" />
               </button>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { serviceProviderPageForm } from "../../schemas/formSchemas";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const serviceProviderContent1 = [
   {
@@ -92,6 +93,7 @@ const ServiceProviderForm = () => {
       workExperience: "",
       phoneNumber: "",
       email: "",
+      agree: false,
     },
     validationSchema: serviceProviderPageForm,
   });
@@ -112,6 +114,7 @@ const ServiceProviderForm = () => {
                     Personal Details<span className="text-red-500">*</span>
                   </h1>
                   <div class="-mx-3 flex flex-wrap">
+                    {/* NAME */}
                     <div class="px-3 w-full md:w-1/2">
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
@@ -139,6 +142,7 @@ const ServiceProviderForm = () => {
                           )}
                       </div>
                     </div>
+                    {/* GENDER */}
                     <div class="px-3 w-full md:w-1/2">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
                         Gender<span className="text-red-500">*</span>
@@ -155,7 +159,7 @@ const ServiceProviderForm = () => {
                         />
                         <label
                           htmlFor="genderM"
-                          className="mr-5 text-[#33373d] font-semibold"
+                          className="mr-5 text-[#07074D] font-medium"
                         >
                           Male
                         </label>
@@ -170,7 +174,7 @@ const ServiceProviderForm = () => {
                         />
                         <label
                           htmlFor="genderF"
-                          className="mr-5 text-[#33373d] font-semibold"
+                          className="mr-5 text-[#07074D] font-medium"
                         >
                           Female
                         </label>
@@ -183,6 +187,7 @@ const ServiceProviderForm = () => {
                         )}
                       </div>
                     </div>
+                    {/* EMAIL ADDRESS */}
                     <div class="px-3 w-full md:w-1/2">
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
@@ -208,6 +213,7 @@ const ServiceProviderForm = () => {
                         )}
                       </div>
                     </div>
+                    {/* PHONE NUMBER */}
                     <div class="px-3 w-full md:w-1/2">
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
@@ -241,6 +247,7 @@ const ServiceProviderForm = () => {
                   <h1 className="font-medium text-[#07074D] mb-5">
                     Specialization <span className="text-red-500">*</span>
                   </h1>
+                  {/* Specialization  */}
                   <div class="w-full px-3 grid grid-cols-1 md:grid-cols-3 ">
                     {serviceProviderContent1.map((item) => (
                       <div className="flex w-full items-center gap-3">
@@ -273,6 +280,7 @@ const ServiceProviderForm = () => {
                     Service Details
                     <span className="text-red-500">*</span>
                   </h1>
+                  {/* Mode of operation */}
                   <div className="-mx-3 flex flex-wrap ">
                     <div class="px-3 w-full md:w-1/2 mb-5">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
@@ -292,7 +300,7 @@ const ServiceProviderForm = () => {
                         />
                         <label
                           htmlFor="modeOfOperation"
-                          className="mr-5 text-[#33373d] font-semibold"
+                          className="mr-5 text-[#07074D] font-medium"
                         >
                           Individual
                         </label>
@@ -309,7 +317,7 @@ const ServiceProviderForm = () => {
                         />
                         <label
                           htmlFor="modeOfOperation2"
-                          className="mr-5 text-[#33373d] font-semibold"
+                          className="mr-5 text-[#07074D] font-medium"
                         >
                           Organisation
                         </label>
@@ -323,6 +331,7 @@ const ServiceProviderForm = () => {
                         )}
                       </div>
                     </div>
+                    {/* MODE OF DELIVERY */}
                     <div class="px-3 w-full md:w-1/2">
                       <label class="mb-3 block text-base font-medium text-[#07074D]">
                         Mode of delivery<span className="text-red-500">*</span>
@@ -339,7 +348,7 @@ const ServiceProviderForm = () => {
                         />
                         <label
                           htmlFor="yes"
-                          className="mr-5 text-[#33373d] font-semibold"
+                          className="mr-5 text-[#07074D] font-medium"
                         >
                           Yes
                         </label>
@@ -354,7 +363,7 @@ const ServiceProviderForm = () => {
                         />
                         <label
                           htmlFor="no"
-                          className="mr-5 text-[#33373d] font-semibold"
+                          className="mr-5 text-[#07074D] font-medium"
                         >
                           No
                         </label>
@@ -370,6 +379,7 @@ const ServiceProviderForm = () => {
                   </div>
                   <div className="mb-5 pt-3">
                     <div className="flex flex-col md:flex-row">
+                      {/* Mode of Service */}
                       <div className="flex flex-col w-full md:w-1/2">
                         <h1
                           className="font-medium
@@ -401,6 +411,7 @@ const ServiceProviderForm = () => {
                           ))}
                         </div>
                       </div>
+                      {/* Professional Charges Per Session */}
                       <div className="w-full mt-5 md:w-1/2">
                         <div class="md:px-3 p-0 w-full ">
                           <div class="mb-5">
@@ -585,8 +596,8 @@ const ServiceProviderForm = () => {
                           )}
                       </div>
                     </div>
-                    <div className="w-full">
-                      <p>
+                    <div className="w-full p-5">
+                      <p className="text-[#07074D]">
                         I hereby agree to be part of Elina network for
                         Professionals who enable inclusion. By being part of
                         Elina network for professionals, I understand that
@@ -594,15 +605,31 @@ const ServiceProviderForm = () => {
                       {serviceProviderContent4.map((item) => (
                         <li className="text-gray-600">{item.li}</li>
                       ))}
-                      <input type="checkbox"></input>
-                      <label className="ml-3">I Agrees</label>
+                      <input
+                        type="checkbox"
+                        id="agree"
+                        name="agree"
+                        checked={formik.values.agree}
+                        onChange={formik.handleChange}
+                      ></input>
+                      <label className="ml-3 text-[#07074D]">I Agrees</label>
+                      {formik.touched.agree && formik.errors.agree && (
+                        <p className="text-sm text-red-600">
+                          {formik.errors.agree}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
               </>
             </div>
+            <div className="pb-">
+              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+            </div>
             <div className="flex justify-center">
-              <button className="md:w-[20%] w-[90%] p-3">Submit</button>
+              <button className="md:w-[20%] w-[90%] p-3 bg-blue-950 border-blue-950 hover:text-blue-950 hover:bg-transparent">
+                Submit
+              </button>
             </div>
           </form>
         </div>

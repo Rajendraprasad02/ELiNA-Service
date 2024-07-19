@@ -42,7 +42,7 @@ const GetStartedForm = () => {
                 <div class="w-full px-3 sm:w-1/2 ">
                   <div class="mb-5">
                     <label class="mb-3 block text-base font-medium text-[#07074D]">
-                      Child name
+                      Child name<span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -66,7 +66,7 @@ const GetStartedForm = () => {
                 </div>
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Date of birth
+                    Date of birth<span className="text-red-500">*</span>
                   </label>
                   <div class="mb-5">
                     <input
@@ -93,7 +93,7 @@ const GetStartedForm = () => {
                 </div>
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Child Gender
+                    Child Gender<span className="text-red-500">*</span>
                   </label>
                   <div class="my-auto">
                     <input
@@ -139,6 +139,7 @@ const GetStartedForm = () => {
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
                     Relationship with child
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="relation"
@@ -167,6 +168,7 @@ const GetStartedForm = () => {
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
                     Name of the Parents/Guardian
+                    <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -194,7 +196,7 @@ const GetStartedForm = () => {
                     for="phone"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Phone Number
+                    Phone Number<span className="text-red-500">*</span>
                   </label>
                   <input
                     type="number"
@@ -222,7 +224,7 @@ const GetStartedForm = () => {
                     for="email"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    Email Address
+                    Email Address<span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -266,7 +268,8 @@ const GetStartedForm = () => {
                     for="name"
                     class="mb-3 block text-base font-medium text-[#07074D]"
                   >
-                    How do you know about us: *
+                    How do you know about us:{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="howdoyouknow"
@@ -277,7 +280,7 @@ const GetStartedForm = () => {
                       formik.touched.howdoyouknow && formik.errors.howdoyouknow
                         ? "border border-red-600"
                         : ""
-                    } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                    }  w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   >
                     <option>Select an option</option>
                     <option>Elina Website</option>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { serviceProviderPageForm } from "../../schemas/formSchemas";
 
 const serviceProviderContent1 = [
@@ -434,14 +436,21 @@ const InternForm = () => {
                       </p>
 
                       <input type="checkbox"></input>
-                      <label className="ml-3 font-bold">I Agrees</label>
+                      <label className="ml-3 font-bold text-[#07074D]">
+                        I Agrees
+                      </label>
+                      <div className="py-5">
+                        <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </>
             </div>
             <div className="flex justify-center">
-              <button className="md:w-[20%] w-[90%] p-3">Submit</button>
+              <button className="md:w-[20%] w-[90%] p-3 bg-blue-950 border-blue-950 hover:text-blue-950 hover:bg-transparent">
+                Submit
+              </button>
             </div>
           </form>
         </div>

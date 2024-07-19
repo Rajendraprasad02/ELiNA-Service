@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { parentPageForm } from "../../schemas/formSchemas";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const schoolPolicyContent1 = [
   {
@@ -807,6 +808,13 @@ const SchoolForm = () => {
               </div>
             )}
           </form>
+          {step === 3 ? (
+            <div className="pb-5">
+              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+            </div>
+          ) : (
+            ""
+          )}
 
           <div
             className={`${

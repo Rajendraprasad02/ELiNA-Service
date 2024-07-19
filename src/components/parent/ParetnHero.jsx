@@ -33,7 +33,7 @@ const ParetnHero = () => {
           </h2>
           <p className="text-sm p-3 text-center text-gray-200 lg:text-white lg:text-lg">
             <span className="underline font-bold cursor-pointer">
-              Join us today!
+              <a href="/parentform">Join us today!</a>
             </span>{" "}
             Get personalized plans and expert guidance to help your
             neurodivergent child
@@ -59,7 +59,7 @@ const ParetnHero = () => {
                 engagement!"
               </p>
               <button className="bg-pink-600 w-[60%] lg:w-[50%] p-1 md:p-0 mx-auto lg:mx-0 border-pink-600 lg:h-8 text-lg hover:text-pink-600 hover:border-pink-600">
-                Join our program{" "}
+                <a href="/parentform">Join our program </a>
               </button>
             </div>
           </a>

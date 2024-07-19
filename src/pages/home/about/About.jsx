@@ -39,7 +39,8 @@ const teamElinaContent2 = [
   {
     pic: mem1,
     h1: "Aparna RaviKannan",
-    p: "(Program Manager -Intervention Services)",
+    p: "(Manager -Intervention Services)",
+    des: "Aparna oversees our intervention services with a keen eye for detail and a deep understanding of neurodivergent needs. Her extensive experience as a thought leader at HLC and her role in leading various relationship-building initiatives ensure a pleasant journey for parents and educators. Aparna’s approach efficiently supports each child's needs, creating a collaborative and effective program.",
   },
   {
     pic: mem2,
@@ -54,7 +55,8 @@ const teamElinaContent2 = [
   {
     pic: mem4,
     h1: "Malini.R",
-    p: "(Sail and Compass Navigator/Program Analyst)",
+    p: "(Intervention Services Navigator)",
+    des: "Malini guides families through their journey with compassion and expertise. Her keen observation skills, combined with her knowledge in special education and development, ensure precise assessments and recommendations. Malini makes sure that each family has access to the resources and support they need, helping them navigate the complexities of raising a neurodivergent child.",
   },
   {
     pic: mem5,
@@ -69,12 +71,14 @@ const teamElinaContent2 = [
   {
     pic: mem7,
     h1: "Alka Dalmia",
-    p: "(Social Media Innovator)",
+    p: "(Social Media and Marketing Lead)",
+    des: "Alka drives our social media and marketing efforts, amplifying Elina's mission and message to a broader audience. Her creative strategies and dynamic approach help raise awareness about neurodivergence and effectively promote our programs and initiatives.",
   },
   {
     pic: mem8,
     h1: "Narmatha Vinodh",
-    p: "(Digital Transformations Lead)",
+    p: "(Digital Transformation Lead)",
+    des: "Narmatha leads our digital transformation initiatives, ensuring that our technology solutions are cutting-edge and user-friendly. With expertise in physiotherapy and a keen interest in digital systems, Narmatha enhances our ability to provide seamless and accessible support to families and professionals alike.",
   },
 ];
 
