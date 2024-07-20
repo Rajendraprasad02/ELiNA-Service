@@ -1,16 +1,19 @@
 import React from "react";
-import img from "../../images/vision.jpg";
+import img from "../../images/parent/sailprocess.jpg";
+import img2 from "../../images/parent/sail.jpg";
+import CareGivers from "./CareGivers";
+import OutComes from "./OutComes";
 
 const schoolHeroContent = [
   {
-    h1: "vision",
+    h1: "Sail",
     src: img,
     P: "content",
     href: "",
   },
   {
     h1: "vision",
-    src: img,
+    src: img2,
     P: "content",
     href: "",
   },
@@ -24,11 +27,11 @@ const schoolHeroContent = [
 const OurPrograms = () => {
   return (
     <>
-      <div className="">
-        <h1 className="navBg text-center HeroBg text-5xl lg:text-6xl font-black text-indigo-600 animationHero p-5">
+      <div className="HeroBg">
+        <h1 className=" text-center  text-5xl lg:text-6xl font-black text-blue-600 animationHero p-5">
           Our Programs
         </h1>
-        <div className="grid grid-cols-3 p-10">
+        <div className="grid grid-cols-3 px-[5%] py-[3%]">
           {schoolHeroContent.map((item, index) => (
             <div key={index} className="p-10 flex flex-col justify-between ">
               <div className="px-4">
@@ -59,6 +62,8 @@ const OurPrograms = () => {
             </div>
           ))}
         </div>
+        <CareGivers />
+        <OutComes />
       </div>
     </>
   );

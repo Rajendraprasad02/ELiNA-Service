@@ -3,7 +3,7 @@ import hero from "../../images/school/hero.jpg";
 
 const SchoolHero = () => {
   return (
-    <div className="HeroBg flex justify-center items-center py-[10%] gap-10">
+    <div className="HeroBg2 flex justify-center items-center py-[5%] gap-10">
       <div className="w-[50%]  flex flex-col justify-center  pl-[8%]">
         <h1 className="text-7xl font-bold mb-4 text-blue-600">
           School Programs
@@ -17,7 +17,7 @@ const SchoolHero = () => {
         </p>
       </div>
       <div className="w-[50%]  flex justify-center items-center pr-[8%]">
-        <img src={hero} alt="Hero" className="max-h-screen" />
+        <img src={hero} alt="Hero" className="max-h-screen rounded-3xl" />
       </div>
     </div>
   );
