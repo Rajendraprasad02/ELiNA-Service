@@ -3,7 +3,7 @@ import React from "react";
 const StoryOfElina = ({ storyOfElina }) => {
   return (
     <>
-      <div className="">
+      <div id="scroll" className="">
         {storyOfElina.map((item) => (
           <div
             className={`p-16  lg:h-screen flex flex-col lg:flex-row ${

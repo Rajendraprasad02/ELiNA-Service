@@ -3,6 +3,10 @@ import React from "react";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
 
 const HeroAbout = () => {
+  const scrollToNextScreen = () => {
+    document.getElementById("scroll").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <BreadCrumbs />
@@ -21,7 +25,7 @@ const HeroAbout = () => {
             innovation, and unwavering passion for consistently delivering
             exceptional results to our valued clients.{" "}
           </p>
-          <div>
+          <div onClick={scrollToNextScreen} className="cursor-pointer">
             <ArrowDownIcon className="w-10 text-blue-600" />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroAbout from "../../../components/about/HeroAbout";
 import TeamElina from "../../../components/about/TeamElina";
 import NavBar from "../../../components/NavBar";

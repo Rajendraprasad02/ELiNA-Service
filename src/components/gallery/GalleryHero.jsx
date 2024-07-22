@@ -3,6 +3,11 @@ import React from "react";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
 
 const GalleryHero = () => {
+  const contentScroll = () => {
+    document
+      .getElementById("galleryScroll")
+      .scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <BreadCrumbs />
@@ -18,7 +23,7 @@ const GalleryHero = () => {
           <p className="text-center text-2xl text-gray-800">
             Explore memorable moments captured in our gallery.
           </p>
-          <div>
+          <div onClick={contentScroll} className="cursor-pointer">
             <ArrowDownIcon className="w-16 pb-16 md:pb-0  text-blue-600" />
           </div>
         </div>
