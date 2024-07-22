@@ -7,7 +7,7 @@ const CareGivers = () => {
         <h1 className="text-5xl font-semibold text-blue-600">
           Caregiver and Educator Workshops
         </h1>
-        <p className="text-lg px-[20%]">
+        <p className="text-lg px-5 lg:px-[20%]">
           Join our free caregiver workshops and educator professional
           development for partner districts in New York City and the San
           Francisco Bay Area.

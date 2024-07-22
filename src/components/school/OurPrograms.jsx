@@ -31,9 +31,12 @@ const OurPrograms = () => {
         <h1 className=" text-center  text-5xl lg:text-6xl font-black text-blue-600 animationHero p-5">
           Our Programs
         </h1>
-        <div className="grid grid-cols-3 px-[5%] py-[3%]">
+        <div className="grid grid-flow-row lg:grid-cols-3 md:px-[20%] lg:px-[5%] md:py-[3%]">
           {schoolHeroContent.map((item, index) => (
-            <div key={index} className="p-10 flex flex-col justify-between ">
+            <div
+              key={index}
+              className="p-5 lg:p-10 flex flex-col justify-between "
+            >
               <div className="px-4">
                 <img
                   className="w-full rounded-xl h-[230px] object-cover"

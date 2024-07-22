@@ -226,7 +226,7 @@ const NavBar = () => {
                     </span>
                   </a>
                   {navEnrollDropDown && (
-                    <div className="absolute left-0 mt-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
+                    <div className="absolute mt-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
                       <ul className="py-2 text-sm text-gray-700 dark:text-gray-800">
                         {NavBarEnrollContent.map((item) => (
                           <li>

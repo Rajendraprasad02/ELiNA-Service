@@ -70,7 +70,7 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
           <button
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastItem >= filteredPhotos.length}
-            className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
+            className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-"
           >
             Next
             <ArrowRightIcon className="w-3" />

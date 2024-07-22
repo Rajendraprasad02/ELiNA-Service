@@ -26,8 +26,8 @@ import manage from "../../../images/isms/manage.jpg";
 const CarouselContent = [
   {
     icon: "",
-    h1: "The pain areas true... Home Reinforcement is actually a major concern in the whole learning process.",
-    p: "MCHP (Manipal University)",
+    h1: "Elina's journey has been a guiding and helpful experience throughout theassessment process of my child. It helped me understand the strengths and lacking areas of development of my child. Systematic and simple assessment activities were given to my child to assess the child's level of development in every areas of development. We had done SAIL's assessment activities in our home without much difficulty. Interactions with the Elina team was always been seemless.",
+    p: "- Sugitha Vidyasagar, mother of Vidyuth",
   },
   {
     icon: "",
