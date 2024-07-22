@@ -15,8 +15,6 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredPhotos.slice(indexOfFirstItem, indexOfLastItem);
-  console.log(indexOfFirstItem);
-  console.log(indexOfLastItem);
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -59,22 +57,28 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
         </div>
         {/* Pagination controls */}
         <div className="flex justify-center mt-4">
-          <button
-            onClick={() => paginate(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
-          >
-            <ArrowLeftIcon className="w-3" />
-            Previous
-          </button>
-          <button
-            onClick={() => paginate(currentPage + 1)}
-            disabled={indexOfLastItem >= filteredPhotos.length}
-            className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-"
-          >
-            Next
-            <ArrowRightIcon className="w-3" />
-          </button>
+          {currentPage === 1 ? (
+            ""
+          ) : (
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
+            >
+              <ArrowLeftIcon className="w-3" />
+              Previous
+            </button>
+          )}
+          {indexOfLastItem >= filteredPhotos.length ? (
+            ""
+          ) : (
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-"
+            >
+              Next
+              <ArrowRightIcon className="w-3" />
+            </button>
+          )}
         </div>
       </div>
     </>

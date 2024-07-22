@@ -3,12 +3,12 @@ import React from "react";
 const HowItWorks = ({ HowItWorksContent }) => {
   return (
     <>
-      <p className="animationHero  flex justify-center mt-28  text-5xl lg:text-6xl font-black text-indigo-600">
+      <p className="animationHero  flex justify-center mt-28 text-5xl lg:text-6xl font-black text-indigo-600">
         How It Works?
       </p>
       {HowItWorksContent.map((item) => (
         <div
-          className={` my-20 lg:my-0 lg:h-screen flex flex-col lg:flex-row ${
+          className={`lg:p-28 lg:gap-8  my-20 lg:my-0 lg:h-screen flex flex-col lg:flex-row ${
             item.ImgDirection === "left" ? "" : "lg:flex-row-reverse"
           } justify-center items-center ${
             item.ImgDirection === "left" ? "HowItWorksPink" : "HowItWorksBlue"
@@ -17,15 +17,17 @@ const HowItWorks = ({ HowItWorksContent }) => {
           <div className="lg:w-1/2">
             <img
               className={`${
-                item.ImgDirection === "left" ? "leftToRight" : "rightToLeft"
-              } object-cover  w-[350px] h-[250px] md:w-[573px] md:h-[326px] lg:mx-auto`} //
+                item.ImgDirection === "left"
+                  ? "leftToRight lg:ml-auto"
+                  : "rightToLeft lg:mr-auto"
+              } object-cover  w-[350px] h-[250px] md:w-[573px] md:h-[326px] `} //
               src={item.video}
             />
           </div>
           <div
             className={`${
               item.ImgDirection === "left" ? "rightToLeft" : "leftToRight"
-            } pl-[10%] w-full lg:w-1/2 lg:mx-auto`} //
+            }  w-full lg:w-1/2 lg:mx-auto`} //
           >
             <h1 className="font-black text-xl md:text-3xl lg:text-4xl py-6">
               {item.h1}

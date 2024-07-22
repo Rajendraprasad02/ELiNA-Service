@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { gettingStartedForm } from "../../schemas/formSchemas";
 import ReCAPTCHA from "react-google-recaptcha";
+import BreadCrumbs from "../../reuseable/BreadCrumbs";
 
 const onSubmit = (values, actions) => {
   setTimeout(() => actions.resetForm(), 1000);
@@ -29,10 +30,11 @@ const ParentForm = () => {
     onSubmit,
   });
 
-  console.log(formik);
-
   return (
     <>
+      <div className="md:ml-14 md:pt-5">
+        <BreadCrumbs />
+      </div>
       <div class="flex items-center justify-center p-5 md:p-12 HeroBg2">
         <div class="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
           <form onSubmit={formik.handleSubmit}>
@@ -512,6 +514,7 @@ const ParentForm = () => {
 
                   <input
                     type="checkbox"
+                    className="rounded-md"
                     id="agree"
                     name="agree"
                     checked={formik.values.agree}

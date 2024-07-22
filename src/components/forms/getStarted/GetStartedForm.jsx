@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { gettingStartedForm } from "../../schemas/formSchemas";
+import BreadCrumbs from "../../reuseable/BreadCrumbs";
+
+import ReCAPTCHA from "react-google-recaptcha";
 
 const onSubmit = (values, actions) => {
   setTimeout(() => actions.resetForm(), 1000);
@@ -24,10 +27,11 @@ const GetStartedForm = () => {
     onSubmit,
   });
 
-  console.log(formik);
-
   return (
     <>
+      <div className="md:ml-14 md:pt-5">
+        <BreadCrumbs />
+      </div>
       <div class="flex items-center justify-center p-5 md:p-12 HeroBg2">
         <div class="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
           <form onSubmit={formik.handleSubmit}>
@@ -201,6 +205,7 @@ const GetStartedForm = () => {
                   <input
                     type="number"
                     id="phoneNumber"
+                    inputProps={{ maxLength: "10" }}
                     onChange={formik.handleChange}
                     value={formik.values.phoneNumber}
                     onBlur={formik.handleBlur}
@@ -318,7 +323,9 @@ const GetStartedForm = () => {
                 </div>
               </div>
             </div>
-
+            <div className="">
+              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+            </div>
             <div className="flex justify-end">
               <button
                 disabled={formik.isSubmitting}

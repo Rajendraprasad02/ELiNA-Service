@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 const ElinaBlog = ({ BlogContent }) => {
   return (
     <>
-      <div className="grid grid-cols-3 p-10">
+      <div id="blogScroll" className="grid grid-cols-3 p-10">
         {BlogContent.map((item, index) => (
           <div key={index} className="p-10 flex flex-col justify-between ">
             <div className="px-4">

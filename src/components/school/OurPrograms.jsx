@@ -35,7 +35,7 @@ const OurPrograms = () => {
           {schoolHeroContent.map((item, index) => (
             <div
               key={index}
-              className="p-5 lg:p-10 flex flex-col justify-between "
+              className="p-5 lg:p-10 flex flex-col justify-between animationHero"
             >
               <div className="px-4">
                 <img

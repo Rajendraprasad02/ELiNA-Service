@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { parentPageForm } from "../../schemas/formSchemas";
 import ReCAPTCHA from "react-google-recaptcha";
+import BreadCrumbs from "../../reuseable/BreadCrumbs";
 
 const schoolPolicyContent1 = [
   {
@@ -146,6 +147,9 @@ const SchoolForm = () => {
 
   return (
     <>
+      <div className="md:ml-14 md:pt-5">
+        <BreadCrumbs />
+      </div>
       <div class="flex items-center justify-center py-10 md:px-5 lg:p-12">
         <div class="mx-auto w-full max-w-[90%] md:max-w-[100%] lg:max-w-[80%] bg-gray-200 rounded-3xl p-10">
           <form onSubmit={formik.handleSubmit}>
@@ -572,6 +576,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
+                              className="rounded-[25%] border-none "
                               id="checkBoxParentForm"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -600,6 +605,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
+                              className="rounded-[25%] border-none"
                               id="checkBoxParentForm"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -640,6 +646,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
+                              className="rounded-[25%] border-none"
                               id="checkBoxParentForm"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -669,6 +676,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
+                              className="rounded-[25%] border-none"
                               id="childName"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -698,6 +706,7 @@ const SchoolForm = () => {
                           <div className="flex w-full items-center gap-3">
                             <input
                               type="checkbox"
+                              className="rounded-[25%] border-none"
                               id="childName"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -808,12 +817,10 @@ const SchoolForm = () => {
               </div>
             )}
           </form>
-          {step === 3 ? (
+          {step === 3 && (
             <div className="pb-5">
               <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
             </div>
-          ) : (
-            ""
           )}
 
           <div

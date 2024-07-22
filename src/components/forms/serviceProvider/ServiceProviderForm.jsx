@@ -253,6 +253,7 @@ const ServiceProviderForm = () => {
                       <div className="flex w-full items-center gap-3">
                         <input
                           type="checkbox"
+                          className="rounded-[25%]"
                           id="specialization"
                           onBlur={formik.handleBlur}
                           onChange={formik.handleChange}
@@ -392,6 +393,7 @@ const ServiceProviderForm = () => {
                             <div className="flex w-full items-center gap-3">
                               <input
                                 type="checkbox"
+                                className="rounded-[25%]"
                                 id="childName"
                                 onBlur={formik.handleBlur}
                                 onChange={formik.handleChange}
@@ -491,6 +493,7 @@ const ServiceProviderForm = () => {
                             <div className="flex w-full items-center gap-3">
                               <input
                                 type="checkbox"
+                                className="rounded-[25%]"
                                 id="childName"
                                 onBlur={formik.handleBlur}
                                 onChange={formik.handleChange}
@@ -607,6 +610,7 @@ const ServiceProviderForm = () => {
                       ))}
                       <input
                         type="checkbox"
+                        className="rounded-[25%]"
                         id="agree"
                         name="agree"
                         checked={formik.values.agree}

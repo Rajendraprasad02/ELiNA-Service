@@ -113,6 +113,11 @@ export default function Test() {
               item.key % 2 === 0 ? "getStartedBg1" : "getStartedBg2"
             }`}
           >
+            <div className=" absolute flex justify-start pt-10 ml-20">
+              <p className="text-3xl   rounded-full p-6 font-bold underline">
+                Step: {item.key}
+              </p>
+            </div>
             <div className="flex flex-col p-16 gap-20 items-center">
               <h1 className="text-center text-gray-900 text-2xl lg:text-4xl mx-auto bg-pink-300 p-3 md:px-10 md:py-2 rounded-2xl font-black">
                 {item.h1}

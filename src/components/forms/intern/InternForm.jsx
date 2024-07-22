@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
+import BreadCrumbs from "../../reuseable/BreadCrumbs";
 
 import { serviceProviderPageForm } from "../../schemas/formSchemas";
+const onSubmit = (values, actions) => {
+  setTimeout(() => actions.resetForm(), 1000);
+};
 
 const serviceProviderContent1 = [
   {
@@ -100,6 +104,9 @@ const InternForm = () => {
 
   return (
     <>
+      <div className="md:ml-14 md:pt-5">
+        <BreadCrumbs />
+      </div>
       <div class="flex items-center justify-center py-10 md:px-5 lg:p-12">
         <div class="mx-auto w-full max-w-[90%] md:max-w-[100%] lg:max-w-[80%] bg-gray-200 rounded-3xl p-10">
           <form onSubmit={formik.handleSubmit}>
@@ -435,7 +442,7 @@ const InternForm = () => {
                         <span className="text-red-500">*</span>
                       </p>
 
-                      <input type="checkbox"></input>
+                      <input type="checkbox" className="rounded-md"></input>
                       <label className="ml-3 font-bold text-[#07074D]">
                         I Agrees
                       </label>
