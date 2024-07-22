@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
 const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
   const [currentCategory, setCurrentCategory] = useState("f2f");
+  //For Gallery
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12); // Number of items per page
-
+  //For Gallery buttons
+  const [currentButton, setCurrentButton] = useState(1);
+  const [buttonsPerPage] = useState(12); // Number of items per page
   // Filter photos based on category
   const filteredPhotos =
     currentCategory === "all"
