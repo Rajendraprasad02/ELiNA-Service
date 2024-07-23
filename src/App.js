@@ -22,6 +22,7 @@ import MainBlog from "./components/mainBlogPage/MainBlog";
 import MainBlogPage from "./pages/home/mainBlogPage/MainBlogPage";
 import InternPageForm from "./pages/home/forms/InternPageForm";
 import SchoolPage from "./pages/home/schoolPage/SchoolPage";
+import ProfessionalsPage from "./pages/home/professionalPage/ProfessionalsPage";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/school",
     element: <SchoolPage />,
+  },
+  {
+    path: "/professional",
+    element: <ProfessionalsPage />,
   },
   {
     path: "/isms",

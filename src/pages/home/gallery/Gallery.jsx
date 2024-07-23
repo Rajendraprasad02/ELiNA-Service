@@ -120,30 +120,25 @@ const GalleryObj = GalleryPicContent.concat(imagesEvent1)
 
 const picButtons = [
   {
+    key: 1,
     buttonCategory: "F2F",
     buttonOnClick: "f2f",
   },
   {
+    key: 2,
     buttonCategory: "Team outing",
     buttonOnClick: "teamouting",
   },
   {
+    key: 3,
     buttonCategory: "Event1",
     buttonOnClick: "event1",
   },
-  {
-    buttonCategory: "Event2",
-    buttonOnClick: "event2",
-  },
-  {
-    buttonCategory: "Event3",
-    buttonOnClick: "event3",
-  },
-
-  {
-    buttonCategory: "All photos",
-    buttonOnClick: "all",
-  },
+  { key: 4, buttonCategory: "Event2", buttonOnClick: "event2" },
+  { key: 5, buttonCategory: "Event3", buttonOnClick: "event3" },
+  { key: 6, buttonCategory: "Event4", buttonOnClick: "event4" },
+  { key: 7, buttonCategory: "Event5", buttonOnClick: "event5" },
+  { key: 8, buttonCategory: "Event6", buttonOnClick: "event6" },
 ];
 
 const Gallery = () => {

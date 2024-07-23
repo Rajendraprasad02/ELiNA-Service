@@ -66,7 +66,6 @@ const OurPrograms = () => {
           ))}
         </div>
         <CareGivers />
-        <OutComes />
       </div>
     </>
   );
