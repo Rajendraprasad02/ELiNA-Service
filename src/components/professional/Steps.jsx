@@ -2,7 +2,7 @@ import React from "react";
 
 const stepsContent = [
   {
-    h1: "Fill Out the Intake Forms",
+    h1: "Fill Out the Intake Form",
     p: "Download, complete, and send in your intake forms by email or mail.",
   },
   {
