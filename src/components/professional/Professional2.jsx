@@ -23,7 +23,7 @@ const Professional2 = () => {
         <div className="flex items-center justify-center p-20">
           <div className="flex flex-col w-1/2 gap-6">
             <h1 className="font-black text-6xl text-blue-700">
-              Find the Support Your Child Deserves
+              How to Help the Children Who Deserve Your Assistance{" "}
             </h1>
             <p className="text-base">
               Hearts and Hands Therapy offers special needs therapy in Georgia

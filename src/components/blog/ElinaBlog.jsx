@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArrowRightIcon } from "@heroicons/react/outline";
-import DatePicker from "react-datepicker";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
 const ElinaBlog = ({ BlogContent }) => {
+  const [blogPerPage] = useState(6); // Number of blogs per page
+  const [blogContentPerPage, setBlogContentPerPage] = useState(1); // Initial page number
+
+  // Calculate indices for pagination
+  const indexOfLastBlog = blogContentPerPage * blogPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogPerPage;
+  const currentBlog = BlogContent.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  // Function to handle pagination
+  const paginateBlog = (pageNumber) => {
+    setBlogContentPerPage(pageNumber);
+  };
+
   return (
     <>
-      <div id="blogScroll" className="grid grid-cols-3 p-10">
-        {BlogContent.map((item, index) => (
-          <div key={index} className="p-10 flex flex-col justify-between ">
+      <h1
+        id="blogScroll"
+        className="text-center underline text-6xl font-black text-blue-700 pt-10"
+      >
+        Our Blog
+      </h1>
+      <div className="grid grid-cols-3 p-20 gap-5">
+        {currentBlog.map((item, index) => (
+          <div
+            key={index}
+            className="p-10 flex flex-col justify-between shadow-xl rounded-2xl"
+          >
             <div className="px-4">
               <img
                 className="w-full rounded-xl h-[230px]"
@@ -15,9 +37,9 @@ const ElinaBlog = ({ BlogContent }) => {
                 alt={item.h1}
               />
             </div>
-            <div className="h-full ">
-              <div className="p-4 flex flex-col gap-8 ">
-                <div className="">
+            <div className="h-full">
+              <div className="p-4 flex flex-col gap-8">
+                <div>
                   <p className="text-gray-500 text-sm">14 Jun 2024</p>
                   <h1 className="font-black text-lg mt-2">{item.h1}</h1>
                   <p className="text-gray-800 font-normal mt-2">
@@ -39,6 +61,34 @@ const ElinaBlog = ({ BlogContent }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center gap-5">
+        {blogContentPerPage === 1 ? (
+          ""
+        ) : (
+          <div>
+            <button
+              onClick={() => paginateBlog(blogContentPerPage - 1)}
+              className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
+            >
+              <ChevronLeftIcon className="w-3" />
+              Previous
+            </button>
+          </div>
+        )}
+        {indexOfLastBlog >= BlogContent.length ? (
+          ""
+        ) : (
+          <div>
+            <button
+              onClick={() => paginateBlog(blogContentPerPage + 1)}
+              className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
+            >
+              Next
+              <ChevronRightIcon className="w-3" />
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
 const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
+  // For Gallery photo pagination
   const [currentCategory, setCurrentCategory] = useState("f2f");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12); // Number of items per page
@@ -56,9 +57,9 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
             onClick={prevButton}
             className={`${
               firstIndex === 0 ? "hidden" : ""
-            } cursor-pointer text-indigo-600 mx-1 flex items-center gap-2`}
+            } cursor-pointer text-black mx-1 flex items-center gap-2`}
           >
-            <ArrowLeftIcon className="w-5" />
+            <ChevronLeftIcon className="w-5" />
           </p>
           {picButtons.slice(firstIndex, lastIndex).map((item, index) => (
             <>
@@ -81,9 +82,9 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
             onClick={nextButton}
             className={`${
               lastIndex >= picButtons.length ? "hidden" : ""
-            } cursor-pointer text-indigo-600 flex items-center gap-2`}
+            } cursor-pointer text-black  flex items-center gap-2`}
           >
-            <ArrowRightIcon className="w-5" />
+            <ChevronRightIcon className="w-5" />
           </p>
           <button
             onClick={() => setCurrentCategory("all")}
@@ -119,7 +120,7 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
               onClick={() => paginate(currentPage - 1)}
               className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
             >
-              <ArrowLeftIcon className="w-3" />
+              <ChevronLeftIcon className="w-3" />
               Previous
             </button>
           )}
@@ -131,7 +132,7 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
               className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
             >
               Next
-              <ArrowRightIcon className="w-3" />
+              <ChevronRightIcon className="w-3" />
             </button>
           )}
         </div>

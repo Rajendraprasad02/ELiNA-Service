@@ -2,7 +2,7 @@ import React from "react";
 
 const stepsContent = [
   {
-    h1: "Fill Out the Intake Forms",
+    h1: "Fill Out the Intake Form",
     p: "Download, complete, and send in your intake forms by email or mail.",
   },
   {
@@ -26,7 +26,7 @@ const Steps = () => {
           <div className="flex items-center py-[6%]">
             <div className="flex gap-28  justify-end text-center py-10">
               {stepsContent.map((item, index) => (
-                <div className="w-1/2 flex flex-col gap-5 bg-blue-300 rounded-3xl p-10">
+                <div className="w-1/2 flex flex-col gap-5 bg-blue-600 bg-opacity-10 rounded-3xl p-10">
                   <div className="flex flex-col gap-5">
                     <h1 className="text-4xl font-black">{index + 1}</h1>
                     <h1 className="text-2xl font-bold">{item.h1}</h1>

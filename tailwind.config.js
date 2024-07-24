@@ -8,6 +8,8 @@ module.exports = {
       colors: {
         "black-rgba": "rgba(0, 0, 0, 0.70)",
         "black-bg": "rgba(0, 0, 0, 0.50)",
+        "black-bg1": "rgba(0, 0, 0, 0.25)",
+        "black-bg2": "rgba(0, 0, 0, 0.10)",
       },
       screens: {
         sm: "640px",
