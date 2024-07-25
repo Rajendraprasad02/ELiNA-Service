@@ -17,15 +17,20 @@ const IsmsHeroPage = () => {
             caregivers and children, facilitating improved support and
             reinforcing skills in the comfort of home.
           </p>
-          <button
-            type="button"
-            class="lg:p-3 lg:w-[15%] text-white bg-gradient-to-r border-none from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 hover:text-white lg:font-black lg:text-xl"
-          >
-            Get started
-          </button>
-          <button className="p-3 lg:w-[15%] bg-white shadow-2xl border-none text-blue-700">
-            Schedule Demo
-          </button>
+          <div className="flex justify-center w-full">
+            <button
+              type="button"
+              class="lg:p-3 lg:w-1/5 text-white bg-gradient-to-r border-none from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 hover:text-white lg:font-black lg:text-xl"
+            >
+              Get Started
+            </button>
+            <button
+              type="button"
+              class="lg:p-3 lg:w-1/5 text-white bg-gradient-to-r border-none from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 hover:text-white lg:font-black lg:text-xl"
+            >
+              Schedule Demo
+            </button>
+          </div>
         </div>
       </div>
     </>

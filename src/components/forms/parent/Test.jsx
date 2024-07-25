@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import schedule from "../../../images/parent/scheduleAppoinment.jpg";
 import meeting from "../../../images/parent//meeting.jpg";
 import enroll from "../../../images/parent/enroll.jpg";
@@ -104,8 +104,22 @@ export default function Test() {
     return () => ctx.revert();
   });
 
+  const [currentStep, setCurrentStep] = useState("");
+
   return (
     <div className="" ref={component}>
+      {/* <div className="">
+        <div className="stepper flex items-center justify-between relative">
+          {ParentContent.map((item) => (
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-800 text-center flex justify-center items-center z-[2] rounded-full w-[30px] h-[30px]">
+                {item.key}
+              </div>
+              <div className="">{item.h1}</div>
+            </div>
+          ))}
+        </div>
+      </div> */}
       <div ref={slider} className="container w-[600vw] h-screen flex">
         {ParentContent.map((item) => (
           <div
@@ -136,9 +150,9 @@ export default function Test() {
                   </p>
                 </div>
               </div>
-              <p className="w-7 animate-bounce">
+              {/* <p className="w-7 animate-bounce">
                 <ArrowDownIcon />
-              </p>
+              </p> */}
             </div>
           </div>
         ))}

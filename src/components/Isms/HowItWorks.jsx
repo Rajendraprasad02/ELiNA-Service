@@ -29,12 +29,12 @@ const HowItWorks = ({ HowItWorksContent }) => {
               item.ImgDirection === "left" ? "rightToLeft" : "leftToRight"
             }  w-full lg:w-1/2 lg:mx-auto`} //
           >
-            <h1 className="font-black text-xl md:text-3xl lg:text-4xl py-6">
+            <h1 className="font-bold text-xl md:text-3xl lg:text-4xl py-6">
               {item.h1}
             </h1>
             <ol className="list-decimal lg:pl-4">
               {item.li.map((items) => (
-                <li className="font-medium text-base md:text-lg lg:text-xl">
+                <li className="font-normal text-base md:text-lg lg:text-xl">
                   {items}
                 </li>
               ))}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
 const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
+  // For Gallery photo pagination
   const [currentCategory, setCurrentCategory] = useState("f2f");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12); // Number of items per page
@@ -52,14 +53,19 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
 
         {/* Category Buttons */}
         <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">
-          <p
-            onClick={prevButton}
-            className={`${
-              firstIndex === 0 ? "hidden" : ""
-            } cursor-pointer text-indigo-600 mx-1 flex items-center gap-2`}
-          >
-            <ArrowLeftIcon className="w-5" />
-          </p>
+          <div className="group relative inline-block">
+            <p
+              onClick={prevButton}
+              className={`${
+                firstIndex === 0 ? "hidden" : ""
+              } cursor-pointer text-black mx-1 flex items-center gap-2`}
+            >
+              <ChevronLeftIcon className="w-5" />
+            </p>
+            <p className="text-xs invisible items-center group-hover:visible opacity-0 group-hover:opacity-100 transition absolute bottom-full left-1/2 transform -translate-x-1/2 mt-2 whitespace-nowrap bg-black text-white p-1 rounded-md">
+              Previous
+            </p>
+          </div>
           {picButtons.slice(firstIndex, lastIndex).map((item, index) => (
             <>
               <button
@@ -76,15 +82,19 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
               </button>
             </>
           ))}
-
-          <p
-            onClick={nextButton}
-            className={`${
-              lastIndex >= picButtons.length ? "hidden" : ""
-            } cursor-pointer text-indigo-600 flex items-center gap-2`}
-          >
-            <ArrowRightIcon className="w-5" />
-          </p>
+          <div className="group relative inline-block">
+            <p
+              onClick={nextButton}
+              className={`${
+                lastIndex >= picButtons.length ? "hidden" : ""
+              } cursor-pointer text-black  flex items-center gap-2`}
+            >
+              <ChevronRightIcon className="w-5" />
+            </p>
+            <p className="text-xs invisible items-center group-hover:visible opacity-0 group-hover:opacity-100 transition absolute bottom-full left-1/2 transform -translate-x-1/2 mt-2 whitespace-nowrap bg-black text-white p-1 rounded-md">
+              Next
+            </p>
+          </div>
           <button
             onClick={() => setCurrentCategory("all")}
             type="button"
@@ -119,7 +129,7 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
               onClick={() => paginate(currentPage - 1)}
               className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
             >
-              <ArrowLeftIcon className="w-3" />
+              <ChevronLeftIcon className="w-3" />
               Previous
             </button>
           )}
@@ -131,7 +141,7 @@ const GalleryPhoto = ({ GalleryPicContent, picButtons }) => {
               className="bg-blue-600 text-white px-4 py-2 mx-1 rounded-md focus:outline-none flex items-center gap-2"
             >
               Next
-              <ArrowRightIcon className="w-3" />
+              <ChevronRightIcon className="w-3" />
             </button>
           )}
         </div>

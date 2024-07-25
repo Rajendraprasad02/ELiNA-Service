@@ -133,15 +133,15 @@ const NavBar = () => {
               <img className="w-[20%] md:w-24" src={logo} alt=""></img>
             </a>
 
-            <ul className="lg:gap-6 md:flex gap-6 hidden lg:p-8 lg:items-baseline  text-gray-700">
+            <ul className="lg:gap-6 md:flex gap-4 hidden lg:p-8 md:items-baseline  text-gray-700">
               <li
-                className="relative text-2xl hover:text-pink-600 cursor-pointer font-semibold"
+                className="relative text-2xl  hover:text-pink-600 cursor-pointer font-semibold"
                 onMouseEnter={handleDropdownToggle}
                 onMouseLeave={handleDropdownToggle}
               >
                 <a href="/">
-                  <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-[#11375b]">
-                    ELiNA Services <ChevronDownIcon className="w-5" />
+                  <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg md:font-extrabold text-[#11375b]">
+                    ELiNA Services <ChevronDownIcon className="w-3 lg:w-5" />
                   </span>
                 </a>
                 {dropdownOpen && (
@@ -151,7 +151,7 @@ const NavBar = () => {
                         <li>
                           <a
                             href={item.href}
-                            className="block px-4 lg:text-base py-2 hover:bg-gray-100 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
+                            className="block px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
                           >
                             {item.li}
                           </a>
@@ -174,7 +174,7 @@ const NavBar = () => {
               ))}
             </ul>
           </div>
-          <div className="hidden md:flex pr-4 lg:gap-4 md:gap-1 items-center">
+          <div className="hidden md:flex lg:pr-4  md:gap-1 items-center">
             {/* <button className="flex lg:gap-2 items-center w-20 h-6 md:w-[5.5rem] md:text-xs md:h-fit md:font-light lg:h-10 lg:w-fit lg:px-5 lg:font-bold lg:text-base lg:rounded-2xl  bg-gradient-to-br from-indigo-500 to-pink-600 border-none hover:text-white">
               Start your journey now
               <span class="relative flex h-3 w-3">
@@ -220,19 +220,17 @@ const NavBar = () => {
                   onMouseEnter={handleNavDropdownToggle}
                   onMouseLeave={handleNavDropdownToggle}
                 >
-                  <a href="">
-                    <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]">
-                      Enroll <ChevronDownIcon className="w-5" />
-                    </span>
-                  </a>
+                  <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]">
+                    Enroll <ChevronDownIcon className="w-3 lg:w-5" />
+                  </span>
                   {navEnrollDropDown && (
-                    <div className="absolute mt-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
+                    <div className="absolute  -left-12 md:left-10 lg:right-0 transform -translate-x-1/2 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
                       <ul className="py-2 text-sm text-gray-700 dark:text-gray-800">
                         {NavBarEnrollContent.map((item) => (
                           <li>
                             <a
                               href={item.href}
-                              className="block px-4 lg:text-base py-2 hover:bg-gray-100 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
+                              className="block px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
                             >
                               {item.li}
                             </a>

@@ -30,14 +30,16 @@ const Carousel = ({ CarouselContent }) => {
             key={index}
             className={`max-w-lg ${
               index === currentIndex ? "" : "hidden"
-            } transition-opacity duration-500 flex flex-col items-center h-[100%] bg-white shadow-2xl lg:p-10 rounded-3xl`}
+            } transition-opacity duration-500 flex flex-col items-center h-[100%]   bg-pink-600 shadow-2xl lg:p-10 rounded-3xl`}
           >
-            <div className="lg:h-[300px] md:p-2 py-10 flex flex-col justify-center items-center">
-              <h1 className="text-center md:text-base align-middle">
+            <div className="lg:h-[300px] md:p-2 py-10 flex flex-col justify-center items-center ">
+              <h1 className="text-center text-white md:text-base align-middle">
                 {item.h1}
               </h1>
             </div>
-            <p className="text-center font-semibold md:text-lg">{item.p}</p>
+            <p className="text-center text-white font-semibold md:text-lg">
+              {item.p}
+            </p>
           </div>
         ))}
         <button className="bg-transparent border-none" onClick={nextSlide}>
