@@ -45,6 +45,7 @@ export const gettingStartedForm = yup.object().shape({
     .bool()
     .oneOf([true], "You need to accept the terms and conditions")
     .required("You need to accept the terms and conditions"),
+  captcha: yup.string().required("Captcha is required"),
 });
 
 export const parentPageForm = yup.object().shape({
@@ -80,11 +81,13 @@ export const parentPageForm = yup.object().shape({
   teacherPopulation: yup.number().integer().required("This field is required"),
   schoolType: yup.string().required("This field is required"),
   studentRatio: yup.string().required("This field is required"),
+  captcha: yup.string().required("Captcha is required"),
 });
 
 export const serviceProviderPageForm = yup.object().shape({
   serviceName: yup.string().required("This field is required"),
   universityName: yup.string().required("This field is required"),
+  gender: yup.string().required("Select any one option"),
   professionalCharges: yup.string().required("This field is required"),
   yearOfCompletion: yup.date().required("This field is required"),
   specialistIn: yup.string().required("This field is required"),
@@ -104,4 +107,31 @@ export const serviceProviderPageForm = yup.object().shape({
     .bool()
     .oneOf([true], "You need to accept the terms and conditions")
     .required("You need to accept the terms and conditions"),
+  captcha: yup.string().required("Captcha is required"),
+});
+
+export const internPageForm = yup.object().shape({
+  internName: yup.string().required("This field is required"),
+  phoneNumber: yup
+    .string()
+    .matches(phoneRegExp, "Phone number is not valid")
+    .min(10, "Must be exactly 10 digits")
+    .max(10, "Must be exactly 10 digits")
+    .required("This field is required"),
+  email: yup
+    .string()
+    .email("please enter valid email address")
+    .required("This field is required"),
+  dob: yup.date().required("This field is required"),
+  internDob: yup.string().required("This field is required"),
+  workinghour: yup.string().required("This field is required"),
+  parentName: yup.string().required("This field is required"),
+  agree: yup
+    .bool()
+    .oneOf([true], "You need to accept the terms and conditions")
+    .required("You need to accept the terms and conditions"),
+  captcha: yup.string().required("Captcha is required"),
+  shortAboutElina: yup.string().required("This field is required"),
+  knowAboutElina: yup.string().required("This field is required"),
+  lookingAboutElina: yup.string().required("This field is required"),
 });

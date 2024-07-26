@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import BreadCrumbs from "../../reuseable/BreadCrumbs";
 
-import { serviceProviderPageForm } from "../../schemas/formSchemas";
+import { internPageForm } from "../../schemas/formSchemas";
 const onSubmit = (values, actions) => {
   setTimeout(() => actions.resetForm(), 1000);
 };
@@ -89,17 +89,20 @@ const serviceProviderContent4 = [
 const InternForm = () => {
   const formik = useFormik({
     initialValues: {
-      serviceName: "",
-      universityName: "",
-      professionalCharges: "",
-      yearOfCompletion: "",
-      specialistIn: "",
-      yearEstablishment: "",
-      workExperience: "",
+      internName: "",
+      dob: "",
       phoneNumber: "",
+      parentName: "",
       email: "",
+      internDob: "",
+      workinghour: "",
+      agree: false,
+      captcha: "",
+      shortAboutElina: "",
+      knowAboutElina: "",
+      lookingAboutElina: "",
     },
-    validationSchema: serviceProviderPageForm,
+    validationSchema: internPageForm,
   });
 
   return (
@@ -127,26 +130,26 @@ const InternForm = () => {
                       <div class="px-3 w-full md:w-1/2">
                         <div class="mb-5">
                           <label class="mb-3 block text-base font-medium text-[#07074D]">
-                            Name <span className="text-red-500">*</span>
+                            Name<span className="text-red-500">*</span>
                           </label>
                           <input
                             type="text"
-                            id="serviceName"
+                            id="internName"
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
-                            value={formik.values.serviceName}
-                            placeholder="School name"
+                            value={formik.values.internName}
+                            placeholder="Enter your name"
                             class={`${
-                              formik.errors.serviceName &&
-                              formik.touched.serviceName
+                              formik.errors.internName &&
+                              formik.touched.internName
                                 ? "border border-red-600"
                                 : " "
                             } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                           />
-                          {formik.errors.serviceName &&
-                            formik.touched.serviceName && (
+                          {formik.errors.internName &&
+                            formik.touched.internName && (
                               <p className="text-sm font-semibold text-red-500">
-                                {formik.errors.serviceName}
+                                {formik.errors.internName}
                               </p>
                             )}
                         </div>
@@ -183,7 +186,7 @@ const InternForm = () => {
                       <div class="px-3 w-full md:w-1/2">
                         <div class="mb-5">
                           <label class="mb-3 block text-base font-medium text-[#07074D]">
-                            Phone Number <span className="text-red-500">*</span>
+                            Phone Number<span className="text-red-500">*</span>
                           </label>
                           <input
                             type="tel"
@@ -257,20 +260,22 @@ const InternForm = () => {
                         <div class="mb-5">
                           <input
                             type="date"
-                            id="dob"
+                            id="internDob"
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
-                            value={formik.values.dob}
+                            value={formik.values.internDob}
                             placeholder="D.O.B"
                             class={`${
-                              formik.errors.dob && formik.touched.dob
+                              formik.errors.internDob &&
+                              formik.touched.internDob
                                 ? "border border-red-600"
                                 : ""
                             } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                           />
-                          {formik.errors.dob && formik.touched.dob ? (
+                          {formik.errors.internDob &&
+                          formik.touched.internDob ? (
                             <p className="text-sm font-semibold text-red-500">
-                              {formik.errors.dob}
+                              {formik.errors.internDob}
                             </p>
                           ) : (
                             ""
@@ -282,7 +287,7 @@ const InternForm = () => {
                       <div class="px-3 w-full md:w-1/2">
                         <div class="mb-5">
                           <label class="mb-3 block text-base font-medium text-[#07074D]">
-                            How Many Hours Can you Intern with Elina per week{" "}
+                            How Many Hours Can you Intern with Elina per week
                             <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -311,8 +316,7 @@ const InternForm = () => {
                       <div class="px-3 w-full md:w-1/2">
                         <div class="mb-5">
                           <label class="mb-3 block text-base font-medium text-[#07074D]">
-                            Email Address{" "}
-                            <span className="text-red-500">*</span>
+                            Email Address<span className="text-red-500">*</span>
                           </label>
                           <input
                             type="email"
@@ -342,8 +346,7 @@ const InternForm = () => {
               <>
                 <div className="mb-5 pt-3">
                   <h1 className="font-black text-2xl text-[#07074D] mb-5">
-                    Acknowledgement
-                    <span className="text-red-500">*</span>
+                    Acknowledgement<span className="text-red-500">*</span>
                   </h1>
                   <div className="-mx-3 flex flex-wrap ">
                     {/* A Short Introduction about Yourself? */}
@@ -409,8 +412,7 @@ const InternForm = () => {
                       <div class="mb-5">
                         <label class="mb-3 block text-base font-medium text-[#07074D]">
                           What are you looking forward to while interning with
-                          Elina?
-                          <span className="text-red-500">*</span>
+                          Elina?<span className="text-red-500">*</span>
                         </label>
                         <input
                           type="file"
@@ -442,12 +444,30 @@ const InternForm = () => {
                         <span className="text-red-500">*</span>
                       </p>
 
-                      <input type="checkbox" className="rounded-md"></input>
+                      <input
+                        id="agree"
+                        onChange={formik.handleChange}
+                        value={formik.values.agree}
+                        type="checkbox"
+                      ></input>
                       <label className="ml-3 font-bold text-[#07074D]">
-                        I Agrees
+                        I Agree
                       </label>
-                      <div className="py-5">
+                      {formik.touched.agree && formik.errors.agree && (
+                        <p className="text-sm text-red-600">
+                          {formik.errors.agree}
+                        </p>
+                      )}
+                      <div id="captcha" className="py-5">
                         <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+
+                        {formik.errors.captcha && formik.touched.captcha ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.captcha}
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                   </div>

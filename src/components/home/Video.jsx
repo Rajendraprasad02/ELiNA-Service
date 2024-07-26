@@ -48,7 +48,7 @@ const Video = () => {
             organisations, offering transformative programs like SAIL, CoMPASS,
             ANCHOR, and BUOYANCY.
           </p>
-          <button className="text-xs font-normal p-2 mt-5 lg:w-[30%] lg:h-8 flex justify-center items-center lg:gap-2 bg-[#FF0000] border-none lg:text-lg lg:p-6 lg:rounded-3xl lg:m-0">
+          <button className="text-xs hover:text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000] font-normal p-2 mt-5 lg:w-[30%] lg:h-8 flex justify-center items-center lg:gap-2 bg-[#FF0000]  lg:text-lg lg:p-6 lg:rounded-3xl lg:m-0">
             YouTube
             <PlayIcon className="w-5 lg:w-8" />
           </button>

@@ -32,10 +32,10 @@ const WeHelpKids = () => {
     <>
       <div className="HeroBg">
         <div className="flex flex-col items-center ">
-          <h1 className="text-center text-5xl font-bold text-blue-700 w-1/2 p-10">
+          <h1 className="text-center text-3xl lg:text-5xl font-bold text-blue-700 w-full lg:w-1/2 p-10">
             We Help Special Kiddos Thrive and Reach Their Maximum Potential
           </h1>
-          <div className="grid grid-cols-2 gap-16 px-[20%]">
+          <div className="grid grid-flow-row lg:grid-cols-2 gap-16 px:[5%] lg:px-[20%]">
             {weHelpKidContent.map((item) => (
               <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white w-fit">
                 <img className="w-[400px] rounded-3xl" src={item.src}></img>

@@ -25,6 +25,7 @@ const ParentForm = () => {
       password: "",
       confirmPassword: "",
       agree: false,
+      captcha: "",
     },
     validationSchema: gettingStartedForm,
     onSubmit,
@@ -103,74 +104,32 @@ const ParentForm = () => {
                 {/* GENDER */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Child Gender<span className="text-red-500">*</span>
-                  </label>
-                  <div class="my-auto">
-                    <input
-                      type="radio"
-                      id="genderM"
-                      name="gender"
-                      onChange={formik.handleChange}
-                      value="male"
-                      checked={formik.values.gender === "male"}
-                      class="mr-2"
-                    />
-                    <label
-                      htmlFor="genderM"
-                      className="mr-5 text-[#33373d] font-semibold"
-                    >
-                      Male
-                    </label>
-                    <input
-                      type="radio"
-                      id="genderF"
-                      name="gender"
-                      onChange={formik.handleChange}
-                      value="female"
-                      checked={formik.values.gender === "female"}
-                      class="mr-2"
-                    />
-                    <label
-                      htmlFor="genderF"
-                      className="mr-5 text-[#33373d] font-semibold"
-                    >
-                      Female
-                    </label>
-                    {formik.errors.gender && formik.touched.gender ? (
-                      <p className="text-sm font-semibold text-red-500">
-                        {formik.errors.gender}
-                      </p>
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                </div>
-                {/* RELATIONSHIP WITH CHILD */}
-                {/* <div class="w-full px-3 sm:w-1/2 ">
-                  <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Relationship with child
+                    Child Gender
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
-                    id="relation"
+                    id="gender"
                     onChange={formik.handleChange}
-                    value={formik.values.relation}
+                    value={formik.values.gender}
                     onBlur={formik.handleBlur}
-                    class="mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    class={`${
+                      formik.errors.gender && formik.touched.gender
+                        ? "border border-red-600"
+                        : ""
+                    } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   >
                     <option>Select an option</option>
-                    <option>Father</option>
-                    <option>Mother</option>
-                    <option>Guardian</option>
-                    <option>Other</option>
+                    <option>Male</option>
+                    <option>Female</option>
                   </select>
-                  {formik.errors.relation && formik.touched.relation ? (
+                  {formik.errors.gender && formik.touched.gender ? (
                     <p className="text-sm font-semibold text-red-500">
-                      {formik.errors.relation}
+                      {formik.errors.gender}
                     </p>
                   ) : (
                     ""
                   )}
-                </div> */}
+                </div>
                 {/* Child's Current School Name and Address */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
                   <label
@@ -529,8 +488,15 @@ const ParentForm = () => {
                 </div>
               </div>
             </div>
-            <div className="py-">
+            <div id="captcha" className="py-">
               <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+              {formik.errors.captcha && formik.touched.captcha ? (
+                <p className="text-sm font-semibold text-red-500">
+                  {formik.errors.captcha}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="flex justify-center">
               <button

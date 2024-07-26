@@ -12,7 +12,6 @@ const BreadCrumbs = () => {
     .map((item) => {
       breadCrumb += item;
     });
-  console.log(breadCrumb);
   return (
     <>
       <nav class="flex ml-[10%]" aria-label="Breadcrumb">

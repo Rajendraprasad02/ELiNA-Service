@@ -5,10 +5,6 @@ import BreadCrumbs from "../../reuseable/BreadCrumbs";
 
 import ReCAPTCHA from "react-google-recaptcha";
 
-const onSubmit = (values, actions) => {
-  setTimeout(() => actions.resetForm(), 1000);
-};
-
 const GetStartedForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -22,9 +18,14 @@ const GetStartedForm = () => {
       schoolName: "",
       howdoyouknow: "",
       reason: "",
+      captcha: "",
     },
     validationSchema: gettingStartedForm,
-    onSubmit,
+    onSubmit: (values, actions) => {
+      actions.resetForm();
+      alert("Form submitted successfully");
+      console.log("submitted");
+    },
   });
 
   return (
@@ -43,6 +44,7 @@ const GetStartedForm = () => {
                 Child information
               </label>
               <div class="-mx-3 flex flex-wrap">
+                {/* Child Name */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <div class="mb-5">
                     <label class="mb-3 block text-base font-medium text-[#07074D]">
@@ -68,6 +70,7 @@ const GetStartedForm = () => {
                     )}
                   </div>
                 </div>
+                {/* Date of birth */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
                     Date of birth<span className="text-red-500">*</span>
@@ -95,49 +98,34 @@ const GetStartedForm = () => {
                     )}
                   </div>
                 </div>
+                {/* child gender */}
                 <div class="w-full px-3 sm:w-1/2 ">
                   <label class="mb-3 block text-base font-medium text-[#07074D]">
-                    Child Gender<span className="text-red-500">*</span>
+                    Child Gender
+                    <span className="text-red-500">*</span>
                   </label>
-                  <div class="my-auto">
-                    <input
-                      type="radio"
-                      id="genderM"
-                      name="gender"
-                      onChange={formik.handleChange}
-                      value="male"
-                      checked={formik.values.gender === "male"}
-                      class="mr-2"
-                    />
-                    <label
-                      htmlFor="genderM"
-                      className="mr-5 text-[#33373d] font-semibold"
-                    >
-                      Male
-                    </label>
-                    <input
-                      type="radio"
-                      id="genderF"
-                      name="gender"
-                      onChange={formik.handleChange}
-                      value="female"
-                      checked={formik.values.gender === "female"}
-                      class="mr-2"
-                    />
-                    <label
-                      htmlFor="genderF"
-                      className="mr-5 text-[#33373d] font-semibold"
-                    >
-                      Female
-                    </label>
-                    {formik.errors.gender && formik.touched.gender ? (
-                      <p className="text-sm font-semibold text-red-500">
-                        {formik.errors.gender}
-                      </p>
-                    ) : (
-                      ""
-                    )}
-                  </div>
+                  <select
+                    id="gender"
+                    onChange={formik.handleChange}
+                    value={formik.values.gender}
+                    onBlur={formik.handleBlur}
+                    class={`${
+                      formik.errors.gender && formik.touched.gender
+                        ? "border border-red-600"
+                        : ""
+                    } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
+                  >
+                    <option>Select an option</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  {formik.errors.relation && formik.touched.relation ? (
+                    <p className="text-sm font-semibold text-red-500">
+                      {formik.errors.relation}
+                    </p>
+                  ) : (
+                    ""
+                  )}
                 </div>
 
                 <div class="w-full px-3 sm:w-1/2 ">
@@ -150,7 +138,11 @@ const GetStartedForm = () => {
                     onChange={formik.handleChange}
                     value={formik.values.relation}
                     onBlur={formik.handleBlur}
-                    class="mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    class={`${
+                      formik.errors.relation && formik.touched.relation
+                        ? "border border-red-600"
+                        : ""
+                    } mb-5 w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   >
                     <option>Select an option</option>
                     <option>Father</option>
@@ -323,11 +315,19 @@ const GetStartedForm = () => {
                 </div>
               </div>
             </div>
-            <div className="">
+            <div id="captcha" className="">
               <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+              {formik.errors.captcha && formik.touched.captcha ? (
+                <p className="text-sm font-semibold text-red-500">
+                  {formik.errors.captcha}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="flex justify-end">
               <button
+                type="submit"
                 disabled={formik.isSubmitting}
                 class="hover:shadow-form w-full md:w-[40%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >

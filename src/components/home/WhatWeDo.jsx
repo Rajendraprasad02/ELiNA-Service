@@ -84,14 +84,14 @@ const WhatWeDo = () => {
         <div className="grid animationHero grid-cols-1 gap-16 p-5 md:grid-cols-1 md:gap-2 lg:px-10 lg:gap-10 justify-center sm:grid-cols-2 lg:grid-cols-3">
           {WhatWeDoContent.map((item) => (
             <div className="flex flex-col items-center drop-shadow-xl rounded-3xl bg-white lg:w-[100%]">
-              <h1 className="text-3xl text-gray-800 font-black lg:text-3xl p-10">
+              <h1 className="text-3xl text-gray-800 font-black lg:text-3xl py-5 px-3 lg:p-10">
                 {item.h1}
               </h1>
               <img
-                className="w-[60%] h-auto lg:w-[350px] lg:h-[230px] rounded-3xl"
+                className="w-[85%] h-auto lg:w-[350px] lg:h-[230px] rounded-3xl"
                 src={item.src}
               ></img>
-              <p className="p-10 lg:text-xl  text-gray-600">{item.p}</p>
+              <p className="p-5 lg:p-10 lg:text-xl  text-gray-600">{item.p}</p>
 
               <button className="flex items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-14">
                 <a href={item.href}>{item.button}</a>

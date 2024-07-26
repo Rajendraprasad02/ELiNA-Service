@@ -30,6 +30,36 @@ const BlogContent = [
     title: "WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?",
     des: "Have you witnessed grandparents excitedly sharing sweet treats to celebrate their grandchild’s grand achievement—turning over for the",
   },
+  {
+    h1: "DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?",
+    blogImg: pic1,
+    title: "WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?",
+    des: "Have you witnessed grandparents excitedly sharing sweet treats to celebrate their grandchild’s grand achievement—turning over for the",
+  },
+  {
+    h1: "DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?",
+    blogImg: pic1,
+    title: "WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?",
+    des: "Have you witnessed grandparents excitedly sharing sweet treats to celebrate their grandchild’s grand achievement—turning over for the",
+  },
+  {
+    h1: "DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?",
+    blogImg: pic1,
+    title: "WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?",
+    des: "Have you witnessed grandparents excitedly sharing sweet treats to celebrate their grandchild’s grand achievement—turning over for the",
+  },
+  {
+    h1: "DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?",
+    blogImg: pic1,
+    title: "WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?",
+    des: "Have you witnessed grandparents excitedly sharing sweet treats to celebrate their grandchild’s grand achievement—turning over for the",
+  },
+  {
+    h1: "DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?",
+    blogImg: pic1,
+    title: "WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?",
+    des: "Have you witnessed grandparents excitedly sharing sweet treats to celebrate their grandchild’s grand achievement—turning over for the",
+  },
 ];
 
 const Blog = () => {

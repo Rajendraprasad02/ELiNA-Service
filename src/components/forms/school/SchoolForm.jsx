@@ -127,6 +127,7 @@ const SchoolForm = () => {
       teacherPopulation: "",
       schoolType: "",
       studentRatio: "",
+      captcha: "",
     },
     validationSchema: parentPageForm,
     onSubmit,
@@ -576,7 +577,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
-                              className="rounded-[25%] border-none "
+                              className="rounded-[25%]    "
                               id="checkBoxParentForm"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -605,7 +606,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
-                              className="rounded-[25%] border-none"
+                              className="rounded-[25%] "
                               id="checkBoxParentForm"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -646,7 +647,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
-                              className="rounded-[25%] border-none"
+                              className="rounded-[25%]  "
                               id="checkBoxParentForm"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -676,7 +677,7 @@ const SchoolForm = () => {
                           <div className="flex items-center gap-3">
                             <input
                               type="checkbox"
-                              className="rounded-[25%] border-none"
+                              className="rounded-[25%]  "
                               id="childName"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -706,7 +707,7 @@ const SchoolForm = () => {
                           <div className="flex w-full items-center gap-3">
                             <input
                               type="checkbox"
-                              className="rounded-[25%] border-none"
+                              className="rounded-[25%]  "
                               id="childName"
                               onBlur={formik.handleBlur}
                               onChange={formik.handleChange}
@@ -818,8 +819,15 @@ const SchoolForm = () => {
             )}
           </form>
           {step === 3 && (
-            <div className="pb-5">
+            <div id="captcha" className="pb-5">
               <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+              {formik.errors.captcha && formik.touched.captcha ? (
+                <p className="text-sm font-semibold text-red-500">
+                  {formik.errors.captcha}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
           )}
 

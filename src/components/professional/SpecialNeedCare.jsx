@@ -5,16 +5,16 @@ const SpecialNeedCare = () => {
     <>
       <div className="HeroBg2">
         <div className="flex flex-col text-center items-center gap-10 p-[5%]">
-          <h1 className="text-5xl font-semibold text-blue-700">
+          <h1 className="text-4xl lg:text-5xl font-semibold text-blue-700">
             As a Special Needs Caregiver, You Wear Many Hats
           </h1>
-          <p className="px-[20%] text-lg">
+          <p className="lg:px-[20%] px-[5%] text-lg">
             Every day feels like new territory. There are more decisions to
             make, challenges to address, and responsibilities to balance with
             the needs of your family and career.
           </p>
           <p>It can feel overwhelming.</p>
-          <p className="px-[20%] text-lg">
+          <p className="lg:px-[20%] px-[5%] text-lg">
             At Hearts and Hands Therapy, we believe you should be able to focus
             on being a caregiver to your kiddo, not also their therapist and
             teacher.

@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import schedule from "../../../images/parent/scheduleAppoinment.jpg";
 import meeting from "../../../images/parent//meeting.jpg";
 import enroll from "../../../images/parent/enroll.jpg";
@@ -84,11 +84,12 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Test() {
   const component = useRef();
   const slider = useRef();
+  console.log(component);
+  console.log(slider);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
-
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
@@ -104,43 +105,60 @@ export default function Test() {
     return () => ctx.revert();
   });
 
+  const [currentStep, setCurrentStep] = useState("");
+
   return (
     <div className="" ref={component}>
+      <div className=""></div>
       <div ref={slider} className="container w-[600vw] h-screen flex">
         {ParentContent.map((item) => (
-          <div
-            className={`min-w-[100vw] panel h-screen  ${
-              item.key % 2 === 0 ? "getStartedBg1" : "getStartedBg2"
-            }`}
-          >
-            <div className=" absolute flex justify-start pt-10 ml-20">
-              <p className="text-3xl   rounded-full p-6 font-bold underline">
-                Step: {item.key}
-              </p>
-            </div>
-            <div className="flex flex-col p-16 gap-20 items-center">
-              <h1 className="text-center text-gray-900 text-2xl lg:text-4xl mx-auto bg-pink-300 p-3 md:px-10 md:py-2 rounded-2xl font-black">
-                {item.h1}
-              </h1>
-              <div className="flex flex-col items-center md:flex-row">
-                <img
-                  className="rounded-2xl mx-auto w-[90%] lg:w-[35%] object-cover"
-                  src={item.img}
-                />
-                <div className="items-center">
-                  <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
-                    {item.h2}
-                  </p>
-                  <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
-                    {item.p}
-                  </p>
+          <>
+            <div
+              className={`min-w-[100vw] panel h-screen  ${
+                item.key % 2 === 0 ? "getStartedBg1" : "getStartedBg2"
+              }`}
+            >
+              <div className="">
+                <div className="stepper flex items-center justify-between p-10">
+                  {ParentContent.map((item) => (
+                    <div className="flex flex-col items-center">
+                      <div className="bg-gray-800 text-center flex justify-center items-center rounded-full w-[30px] h-[30px]">
+                        {item.key}
+                      </div>
+                      <div className="">{item.h1}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <p className="w-7 animate-bounce">
+              <div className=" absolute flex justify-start pt-10 ml-20">
+                <p className="text-3xl   rounded-full p-6 font-bold underline">
+                  Step: {item.key}
+                </p>
+              </div>
+              <div className="flex flex-col p-16 gap-20 items-center">
+                <h1 className="text-center text-gray-900 text-2xl lg:text-4xl mx-auto bg-pink-300 p-3 md:px-10 md:py-2 rounded-2xl font-black">
+                  {item.h1}
+                </h1>
+                <div className="flex flex-col items-center md:flex-row">
+                  <img
+                    className="rounded-2xl mx-auto w-[90%] lg:w-[35%] object-cover"
+                    src={item.img}
+                  />
+                  <div className="items-center">
+                    <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
+                      {item.h2}
+                    </p>
+                    <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
+                      {item.p}
+                    </p>
+                  </div>
+                </div>
+                {/* <p className="w-7 animate-bounce">
                 <ArrowDownIcon />
-              </p>
+              </p> */}
+              </div>
             </div>
-          </div>
+          </>
         ))}
       </div>
     </div>
