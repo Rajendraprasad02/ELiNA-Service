@@ -9,6 +9,7 @@ const NavBar = () => {
   const [nav, SetNav] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navEnrollDropDown, SetNavEnrollDropDown] = useState(false);
+  const [phoneEnrollDropDown, SetPhoneEnrollDropDown] = useState(false);
 
   const handleClick = () => {
     SetNav(!nav);
@@ -20,6 +21,11 @@ const NavBar = () => {
 
   const handleNavDropdownToggle = () => {
     SetNavEnrollDropDown(!navEnrollDropDown);
+  };
+
+  const toggleDropDownForms = () => {
+    SetPhoneEnrollDropDown(!phoneEnrollDropDown);
+    console.log(phoneEnrollDropDown);
   };
 
   //LoginForm;
@@ -110,19 +116,19 @@ const NavBar = () => {
   const NavBarEnrollContent = [
     {
       li: "Parents",
-      href: "/parentform",
+      href: "/parent-form",
     },
     {
       li: "Schools",
-      href: "/schoolform",
+      href: "/school-form",
     },
     {
       li: "Service provider",
-      href: "/serviceform",
+      href: "/service-form",
     },
     {
       li: "Interns",
-      href: "/internform",
+      href: "/intern-form",
     },
   ];
 
@@ -186,7 +192,7 @@ const NavBar = () => {
             </button> */}
 
             <button className="gradient border-none rounded-3xl  hover:text-white">
-              <a href="/getstartedforms">
+              <a href="/get-started-form">
                 <span className="p-1 rounded-3xl">
                   <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
                     {" "}
@@ -265,16 +271,19 @@ const NavBar = () => {
               : "absolute bg-indigo-50 w-full py-5 h-fit z-50  md:hidden px-10"
           }
         >
-          {ResponsiveLi.map((item) => (
-            <a href={item.href}>
-              <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
-                {item.li}
-              </li>
-            </a>
-          ))}
+          <div className=" flex gap-6 justify-center pt-6 pb-6">
+            <button className="gradient border-none rounded-3xl  hover:text-white">
+              <a href="/forms">
+                <span className="p-1  rounded-3xl">
+                  <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
+                    {" "}
+                    Get Started
+                  </span>
+                  <img src={steps} alt="steps" className="w-8" />
+                </span>
+              </a>
+            </button>
 
-          <div className="flex gap-6 justify-center pt-6 pb-6">
-            <button className="w-32 h-8">Enroll</button>
             <button
               onClick={toggleForm}
               className="w-32 h-8 bg-transparent text-indigo-600 "
@@ -282,17 +291,24 @@ const NavBar = () => {
               Login
             </button>
           </div>
-          <button className="gradient border-none rounded-3xl  hover:text-white">
-            <a href="/forms">
-              <span className="p-1  rounded-3xl">
-                <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
-                  {" "}
-                  Get Started
-                </span>
-                <img src={steps} alt="steps" className="w-8" />
-              </span>
+          <p
+            onClick={toggleDropDownForms}
+            className="p-4 w-32 h-8 cursor-pointer flex items-center"
+          >
+            Enroll <ChevronDownIcon className="w-5" />
+          </p>
+          {/* {toggleDropDownForms && (
+            <ul className="">
+              <li>{item.li}</li>
+            </ul>
+          )} */}
+          {ResponsiveLi.map((item) => (
+            <a href={item.href}>
+              <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
+                {item.li}
+              </li>
             </a>
-          </button>
+          ))}
         </ul>
       </div>
       {/* //|DEBUG| attention: Nav Bar Form */}

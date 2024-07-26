@@ -5,10 +5,12 @@ import Footer from "../../../components/Footer";
 import OurPrograms from "../../../components/school/OurPrograms";
 import LeadYourTeacher from "../../../components/school/LeadYourTeacher";
 import OutComes from "../../../components/school/OutComes";
+import SchoolActualHero from "../../../components/school/SchoolActualHero";
 const SchoolPage = () => {
   return (
     <>
       <NavBar />
+      <SchoolActualHero />
       <SchoolHero />
       <LeadYourTeacher />
       <OurPrograms />

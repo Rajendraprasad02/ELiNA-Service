@@ -68,23 +68,23 @@ const router = createBrowserRouter([
     element: <ContactUs />,
   },
   {
-    path: "/getstartedforms",
+    path: "/get-started-form",
     element: <GetStartedPageForm />,
   },
   {
-    path: "/schoolform",
+    path: "/school-form",
     element: <SchoolPageForm />,
   },
   {
-    path: "/parentform",
+    path: "/parent-form",
     element: <ParentPageForm />,
   },
   {
-    path: "/serviceform",
+    path: "/service-form",
     element: <ServiceProviderPageForm />,
   },
   {
-    path: "/internform",
+    path: "/intern-form",
     element: <InternPageForm />,
   },
   {

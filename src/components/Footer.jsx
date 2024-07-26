@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
           <div class="space-y-2 text-sm flex justify-start md:justify-center">
             <div>
-              <p class="text-base lg:pb-4 font-extrabold md:text-lg tracking-wide text-gray-900">
+              <p class="text-base pb-4 font-extrabold md:text-lg tracking-wide text-gray-900">
                 Links
               </p>
               <div class="flex flex-col justify-center space-y-4">

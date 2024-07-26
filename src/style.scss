@@ -107,7 +107,18 @@ bg {
   background-position: center;
   background-image: url("./images/parentHero.jpg");
 }
-
+.professionalBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/professional/professionalHero.jpg");
+}
+.schoolBgHero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/school/schoolHero.jpg");
+}
 .schoolBg {
   background-size: cover;
   background-repeat: no-repeat;
