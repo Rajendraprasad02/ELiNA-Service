@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from "flowbite-react";
-import heroimg from "../../images/teaching3.jpg";
+// import heroimg from "../../images/teaching3.jpg";
+import heroimg from "../../images/compressed/hero/teaching3-min.jpg";
 import { ArrowRightIcon, ChatIcon } from "@heroicons/react/outline";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import vision from "../../images/RealVision.jpg";
-import mission from "../../images/OurMission.png";
+import vision from "../../images/compressed/hero/RealVision-min.jpg";
+import mission from "../../images/compressed/hero/RealMission-min.jpg";
 
 const OurVisionContent = [
   {

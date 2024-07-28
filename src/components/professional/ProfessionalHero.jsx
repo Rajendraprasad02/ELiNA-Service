@@ -15,9 +15,11 @@ const ProfessionalHero = () => {
             every child’s journey.
           </p>
           <div className="flex gap-5">
-            <button className="bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:text-white hover:border-white p-2 lg:p-4 text-xl rounded-xl">
-              Join Us on This Journey
-            </button>
+            <a href="/service-form">
+              <button className="bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:text-white hover:border-white p-2 lg:p-4 text-xl rounded-xl">
+                Join Us on This Journey
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -19,9 +19,11 @@ const SchoolActualHero = () => {
             <button className="bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:text-white hover:border-white p-2 lg:p-4 text-xl rounded-xl">
               Learn More
             </button>
-            <button className="bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:text-white hover:border-white p-2 lg:p-4 text-xl rounded-xl">
-              Get Involved
-            </button>
+            <a href="/school-form">
+              <button className="bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:text-white hover:border-white p-2 lg:p-4 text-xl rounded-xl">
+                Get Involved
+              </button>
+            </a>
           </div>
         </div>
       </div>

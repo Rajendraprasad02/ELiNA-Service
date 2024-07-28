@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import logo from "../images/elinalogoSaturation.png";
-import { MenuIcon, XIcon, ChevronDownIcon } from "@heroicons/react/outline";
+import {
+  MenuIcon,
+  XIcon,
+  ChevronDownIcon,
+  ArrowLeftIcon,
+} from "@heroicons/react/outline";
 import ReCAPTCHA from "react-google-recaptcha";
 import steps from "../images/StepsSvg.svg";
 import google from "../images/google-icon.svg";
@@ -10,6 +15,7 @@ const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navEnrollDropDown, SetNavEnrollDropDown] = useState(false);
   const [phoneEnrollDropDown, SetPhoneEnrollDropDown] = useState(false);
+  const [openForgetPassword, setOpenForgetPassword] = useState(false);
 
   const handleClick = () => {
     SetNav(!nav);
@@ -25,7 +31,10 @@ const NavBar = () => {
 
   const toggleDropDownForms = () => {
     SetPhoneEnrollDropDown(!phoneEnrollDropDown);
-    console.log(phoneEnrollDropDown);
+  };
+
+  const toggleForgetPassword = () => {
+    setOpenForgetPassword(!openForgetPassword);
   };
 
   //LoginForm;
@@ -228,7 +237,10 @@ const NavBar = () => {
                   onMouseEnter={handleNavDropdownToggle}
                   onMouseLeave={handleNavDropdownToggle}
                 >
-                  <span className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]">
+                  <span
+                    onClick={handleNavDropdownToggle}
+                    className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]"
+                  >
                     Enroll <ChevronDownIcon className="w-3 lg:w-5" />
                   </span>
                   {navEnrollDropDown && (
@@ -262,6 +274,21 @@ const NavBar = () => {
           <div className="md:hidden cursor-pointer" onClick={handleClick}>
             {!nav ? <MenuIcon className="w-5" /> : <XIcon className="w-5" />}
           </div>
+          {/* //|DEBUG| Forget password  */}
+          {/* <div className="">
+            {openForgetPassword && (
+              <>
+                <ArrowLeftIcon className="w-5" />
+                <div className="">
+                  <form action="">
+                    <div class="relative z-0 w-full mb-5 group">
+                      
+                    </div>
+                  </form>
+                </div>
+              </>
+            )}
+          </div> */}
         </div>
 
         <ul
@@ -293,7 +320,7 @@ const NavBar = () => {
           </div>
           <p
             onClick={toggleDropDownForms}
-            className="p-4 w-32 h-8 cursor-pointer flex items-center"
+            className="p-4 w-32 h-8 cursor-pointer flex items-center font-black text-xl"
           >
             Enroll <ChevronDownIcon className="w-5" />
           </p>
@@ -302,6 +329,21 @@ const NavBar = () => {
               <li>{item.li}</li>
             </ul>
           )} */}
+          {phoneEnrollDropDown && (
+            <ul>
+              {NavBarEnrollContent.map((item) => (
+                <li
+                  key={item.href}
+                  className="p-4  hover:text-indigo-500 cursor-pointer font-black border-b-2 border-zinc-200 text-blue-600 "
+                >
+                  <a className="" href={item.href}>
+                    {item.li}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+
           {ResponsiveLi.map((item) => (
             <a href={item.href}>
               <li className="p-4 hover:text-indigo-500 cursor-pointer font-medium border-b-2 border-zinc-200">
@@ -315,70 +357,119 @@ const NavBar = () => {
       {heroForm && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
           <div className="w-[90%] h-fit lg:w-[50%] lg:h-fit content-center rounded-xl  FormBg  md:w-[90%] md:h-fit ">
-            <form class="p-5 md:p-16 ">
-              <XIcon
-                onClick={toggleForm}
-                className="w-5 lg:pb-0 md:pb-8 ml-[95%] md:ml-[100%] lg:ml-[100%] text-pink-600 cursor-pointer hover:text-gray-900"
-              />
-              <div className="flex">
-                <div className="w-1/2 ">
-                  <div className="w-fit flex flex-col gap-5 lg:gap-10">
-                    <p className="font-bold">Or login with :</p>
-                    <button className="flex gap-3 items-center text-blue-700 bg-gray-100 border-none shadow-md rounded-xl    font-normal text-xs lg:text-sm  sm:w-auto px-5 py-2.5 text-center">
-                      <img className="w-5" src={google} />
-                      <span className="">
-                        Sign in with <span className="font-bold">Google</span>
-                      </span>
-                    </button>
-                    <button className="flex gap-3 items-center text-blue-700 bg-gray-100 border-none shadow-md rounded-xl    font-normal text-xs  lg:text-sm  sm:w-auto px-5 py-2.5 text-center">
-                      <img className="w-5" src={face} />
-                      <span className="">
-                        Sign in with <span className="font-bold">Facebook</span>
-                      </span>
-                    </button>
+            <form class="p-5 md:px-16 relative">
+              {openForgetPassword ? (
+                <ArrowLeftIcon
+                  onClick={toggleForgetPassword}
+                  className="absolute text-pink-600 top-0 left-0 m-5 w-5 cursor-pointer hover:text-gray-900"
+                />
+              ) : (
+                <XIcon
+                  onClick={toggleForm}
+                  className="absolute w-5 right-0 top-0 m-5 text-pink-600 cursor-pointer hover:text-gray-900"
+                />
+              )}
+              {openForgetPassword ? (
+                <>
+                  <div className="px-14 py-16">
+                    <div className="flex flex-col gap-12">
+                      <div className="">
+                        <h1 className="text-4xl font-bold">
+                          Forgot your password?
+                        </h1>
+                        <p className="text-base">
+                          Please enter the email address you'd like your
+                          password reset information sent to
+                        </p>
+                      </div>
+                      <div className="flex flex-col">
+                        <label className="font-bold" for="forgetEmail">
+                          Enter email address
+                        </label>
+                        <input to="forgetEmail" id="forgetEmail" type="email" />
+                      </div>
+                      <button className="py-3 text-xl  bg-pink-600 text-white font-bold border-pink-600 hover:text-pink-600 hover:bg-transparent hover:border-pink-600 rounded-lg">
+                        Send reset request link
+                      </button>
+                      <p
+                        onClick={toggleForgetPassword}
+                        className="underline font-bold text-blue-700 cursor-pointer flex justify-center"
+                      >
+                        Back to login
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="flex w-1/2 flex-col md:gap-6 items-center">
-                  <div class="relative z-0 w-full mb-5 group">
-                    <input
-                      type="text"
-                      name="floating_parent_name"
-                      id="floating_parent_name"
-                      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                      placeholder=" "
-                      required
-                    />
-                    <label
-                      for="floating_parent_name"
-                      class="peer-focus:font-medium absolute text-sm text-gray-600  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                    >
-                      Email
-                    </label>
+                </>
+              ) : (
+                <>
+                  <div className="flex  justify-center py-[20%]">
+                    <div className="w-1/2 ">
+                      <div className="w-fit flex flex-col gap-5 lg:gap-10">
+                        <p className="font-bold">Or login with :</p>
+                        <button className="flex gap-3 items-center text-blue-700 bg-gray-100 border-none shadow-md rounded-xl    font-normal text-xs lg:text-sm  sm:w-auto px-5 py-2.5 text-center">
+                          <img className="w-5" src={google} />
+                          <span className="">
+                            Sign in with{" "}
+                            <span className="font-bold">Google</span>
+                          </span>
+                        </button>
+                        <button className="flex gap-3 items-center text-blue-700 bg-gray-100 border-none shadow-md rounded-xl    font-normal text-xs  lg:text-sm  sm:w-auto px-5 py-2.5 text-center">
+                          <img className="w-5" src={face} />
+                          <span className="">
+                            Sign in with{" "}
+                            <span className="font-bold">Facebook</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex w-1/2 flex-col md:gap-6 items-center">
+                      <div class="relative z-0 w-full mb-5 group">
+                        <input
+                          type="text"
+                          name="floating_parent_name"
+                          id="floating_parent_name"
+                          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                          placeholder=" "
+                          required
+                        />
+                        <label
+                          for="floating_parent_name"
+                          class="peer-focus:font-medium absolute text-sm text-gray-600  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                          Email
+                        </label>
+                      </div>
+                      <div class="relative z-0 w-full mb-5 group">
+                        <input
+                          type="password"
+                          name="floating_parent_name"
+                          id="floating_parent_name"
+                          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                          placeholder=" "
+                          required
+                        />
+                        <label
+                          for="floating_parent_name"
+                          class="peer-focus:font-medium absolute text-sm text-gray-600  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        >
+                          password
+                        </label>
+                        <button className="bg-pink-600 text-white font-bold border-pink-600 hover:text-pink-600 hover:bg-transparent hover:border-pink-600 rounded-lg w-full py-1 lg:py-2 mt-5 lg:mt-10">
+                          Login
+                        </button>
+                        <p
+                          onClick={() =>
+                            setOpenForgetPassword(!openForgetPassword)
+                          }
+                          className="py-[1%] cursor-pointer text-xs lg:text-sm font-bold text-gray-600 hover:text-gray-800 underline"
+                        >
+                          Forget Password?
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="relative z-0 w-full mb-5 group">
-                    <input
-                      type="password"
-                      name="floating_parent_name"
-                      id="floating_parent_name"
-                      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                      placeholder=" "
-                      required
-                    />
-                    <label
-                      for="floating_parent_name"
-                      class="peer-focus:font-medium absolute text-sm text-gray-600  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                    >
-                      password
-                    </label>
-                    <button className="bg-pink-600 text-white font-bold border-pink-600 hover:text-pink-600 hover:bg-transparent hover:border-pink-600 rounded-lg w-full py-1 lg:py-2 mt-5 lg:mt-10">
-                      Login
-                    </button>
-                    <p className="py-[1%] cursor-pointer text-xs lg:text-sm font-bold text-gray-600 hover:text-gray-800 underline">
-                      Forget Password?
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </>
+              )}
 
               {/* <ReCAPTCHA
                 sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3"

@@ -1,5 +1,6 @@
 import React from "react";
-import learn from "../../images/school/learn.jpg";
+// import learn from "../../images/school/learn.jpg";
+import learn from "../../images/school/schoolCompressed/learn-min.jpg";
 
 const LeadYourTeacher = () => {
   return (

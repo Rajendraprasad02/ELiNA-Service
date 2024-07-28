@@ -1,7 +1,12 @@
 import React from "react";
-import parents from "../../images/teaching2.jpg";
-import schools from "../../images/school2.jpg";
-import Professionals from "../../images/teaching.jpg";
+// import parents from "../../images/teaching2.jpg";
+// import schools from "../../images/school2.jpg";
+// import Professionals from "../../images/teaching.jpg";
+import parents from "../../images/compressed/hero/teaching2-min.jpg";
+import schools from "../../images/compressed/hero/school2-min.jpg";
+
+import Professionals from "../../images/compressed/hero/teaching-min.jpg";
+
 import { ArrowRightIcon } from "@heroicons/react/outline";
 
 const WhatWeDoContent = [

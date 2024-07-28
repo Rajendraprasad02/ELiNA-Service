@@ -1,5 +1,6 @@
 import React from "react";
-import professional2 from "../../../src/images/professional/professional2.jpg";
+// import professional2 from "../../../src/images/professional/professional2.jpg";
+import professional2 from "../../../src/images/professional/professionalCompressed/professional2-min.jpg";
 
 const professionalLiContent = [
   {

@@ -105,19 +105,19 @@ bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/parentHero.jpg");
+  background-image: url("./images/compressed/parent/parentHero-min.jpg");
 }
 .professionalBg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/professional/professionalHero.jpg");
+  background-image: url("./images/professional/professionalCompressed/professionalHero-min.jpg");
 }
 .schoolBgHero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/school/schoolHero.jpg");
+  background-image: url("./images/school/schoolCompressed/schoolHero-min.jpg");
 }
 .schoolBg {
   background-size: cover;
@@ -177,7 +177,7 @@ bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/school/outcomes.jpg");
+  background-image: url("./images/school/schoolCompressed/outcomes-min.jpg");
 }
 
 .ServiceProviderFormBg {

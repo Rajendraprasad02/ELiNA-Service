@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import parentFamily from "../../images/parentFamily.jpg";
+// import parentFamily from "../../images/parentFamily.jpg";
+import parentFamily from "../../images/compressed/parent/parentFamily-min.jpg";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
 const ParetnHero = () => {
   const [currentPage, setCurrentPage] = useState("");

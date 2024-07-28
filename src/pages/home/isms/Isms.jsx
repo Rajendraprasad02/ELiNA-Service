@@ -31,8 +31,8 @@ const CarouselContent = [
   },
   {
     icon: "",
-    h1: "It is helping us to complete the activities in a stepwise manner and through checklist able to communicate progress as well as feedback to go about in activities.",
-    p: "Parent of a 6 year old Kid with Autism.",
+    h1: "Hi all, I just wanted to share my experience with Elina and how it helped me to figure out which method of learning helps my son to move forward. Their assessment pattern was very elaborate which covers all the skills which I've never experienced anywhere. As per their advice I've changed his mode of learning and I feel it's helping him a lot.The SAIL program and it's detailed report was very helpful. Thank you so much to the team for their constant support throughout the program and guiding me in the proper streamline.",
+    p: "Priyadarshini, Mother of Pranav Sathya.",
   },
   {
     icon: "",
