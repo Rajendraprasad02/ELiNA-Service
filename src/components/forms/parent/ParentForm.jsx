@@ -37,7 +37,7 @@ const ParentForm = () => {
         <BreadCrumbs />
       </div>
       <div class="flex items-center justify-center p-5 md:p-12 HeroBg2">
-        <div class="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
+        <div class="mx-auto max-w-[650px] lg:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
           <form onSubmit={formik.handleSubmit}>
             <h1 className="text-center font-black text-4xl text-blue-950 pb-4 underline">
               Enrollment Form - Parent
@@ -463,7 +463,7 @@ const ParentForm = () => {
                   Note : Please ensure the accuracy of the email address and
                   password before proceeding.
                 </div>
-                <div className="lg:px-[1%] lg:py-[3%]">
+                <div className="px-[4%] lg:px-[1%] py-[3%]">
                   <p className="text-gray-700">
                     I hereby agree to be part of Elina network for Professionals
                     who enable inclusion. By being part of Elina network for

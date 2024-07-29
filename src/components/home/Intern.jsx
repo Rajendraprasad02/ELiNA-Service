@@ -1,7 +1,7 @@
 import React from "react";
 import Quote from "./Quote";
 import Lottie from "lottie-react";
-import internAnimation from "../../images/animation/intern (3).json";
+import internAnimation from "../../images/compressed/hero/intern.jpg";
 
 const Intern = () => {
   return (
@@ -27,7 +27,8 @@ const Intern = () => {
             </a>
           </div>
           <div className="w-full md:w-1/2">
-            <Lottie animationData={internAnimation}></Lottie>
+            <img className="" src={internAnimation} />
+            {/* <Lottie animationData={internAnimation}></Lottie> */}
           </div>
         </div>
 

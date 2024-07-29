@@ -9,11 +9,16 @@ const SchoolHero = () => {
           School Programs
         </h1>
         <p className="lg:text-lg text-lg md:text-sm">
-          The School and Community Programs team at the Child Mind Institute
-          brings evidence-based mental health care to high-need school
-          communities through skill-building programs and direct clinical
-          services for students, professional training for educators and
-          school-based clinicians, and resources that support caregivers.
+          <span className="font-extrabold">
+            Integrating Efforts for Comprehensive Support
+            <br />
+          </span>
+          At Elina, we understand the pivotal role that schools play in a
+          child's development. We work closely with educational institutions to
+          ensure that every child receives the support they need to thrive. Our
+          approach integrates the efforts of schools with those of families and
+          professionals, creating a holistic and inclusive learning environment.
+          Here's how we support you:
         </p>
       </div>
       <div className="md:w-[50%] w-full flex justify-center items-center p-5 md:pr-[8%]">

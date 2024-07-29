@@ -12,15 +12,37 @@ const LeadYourTeacher = () => {
           </div>
           <div className="lg:w-1/2 w-full flex flex-col gap-6 p-[2%] rightToLeft">
             <h1 className="text-5xl md:text-4xl text-blue-700 font-bold">
-              Lead your teachers, your students, and your day
+              Supporting Your Teachers
             </h1>
             <p className="text-lg ">
-              Being pulled in so many different directions doesn’t help your
-              students – and makes it harder to be the leader your school needs.
-              You should be free to spend the best hours of your day investing
-              in your people. Over 80,000 schools trust Frontline Education
-              software to help them be more efficient and effective, and to
-              support teaching and learning at every level.
+              <span className="font-black text-xl">
+                Inclusive Education Strategies:
+                <br />
+              </span>
+              <span className="font-semibold">Customized Curricula: </span> We
+              help design and implement curricula that cater to the diverse
+              learning needs of all students. Our strategies ensure that
+              children with ADHD, Autism, and Learning Disabilities are included
+              and supported in the classroom. Professional Development
+              Workshops: Our workshops equip teachers with the latest research,
+              techniques, and resources to effectively support children with
+              special needs. We cover topics such as behavior management,
+              sensory integration, and adaptive teaching methods.
+            </p>
+            <p className="text-lg ">
+              <span className="font-black text-xl">
+                Ongoing Support:
+                <br />
+              </span>
+              <p></p>
+              <span className="font-semibold"> Resource Library:</span> Resource
+              Library: Access a wide range of materials, from practical guides
+              to research articles, to enhance your teaching practice.
+            </p>
+            <p className="text-lg ">
+              <span className="font-semibold">On-Demand Consultation: </span>{" "}
+              Our team of experts is available for consultation, providing
+              guidance and support to address any challenges you may encounter.
             </p>
           </div>
         </div>

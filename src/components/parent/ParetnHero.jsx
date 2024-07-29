@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // import parentFamily from "../../images/parentFamily.jpg";
-import parentFamily from "../../images/compressed/parent/parentFamily-min.jpg";
+import parentFamily from "../../images/compressed/parent/parentHero-min2.jpg";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
 const ParetnHero = () => {
   const [currentPage, setCurrentPage] = useState("");

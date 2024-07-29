@@ -4,6 +4,18 @@ body {
   overflow-x: hidden;
 }
 
+// @keyframes appearFade {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// .animationHero {
+//   animation: appearFade 1s linear;
+// }
 .animationHero {
   animation: appear linear;
   animation-timeline: view();
@@ -105,7 +117,7 @@ bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/compressed/parent/parentHero-min.jpg");
+  background-image: url("./images/compressed/parent/parentHero-min1.jpg");
 }
 .professionalBg {
   background-size: cover;

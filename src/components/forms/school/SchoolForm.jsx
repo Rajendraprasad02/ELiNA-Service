@@ -839,7 +839,7 @@ const SchoolForm = () => {
             {step > 1 && (
               <button
                 onClick={handlePrevious}
-                className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none"
               >
                 Previous
               </button>
@@ -847,7 +847,7 @@ const SchoolForm = () => {
 
             <button
               onClick={handleNext}
-              className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+              className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none"
             >
               {step === 3 ? "Submit" : "Next"}
             </button>

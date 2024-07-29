@@ -39,8 +39,8 @@ const Hero = ({ HeroContent }) => {
           </svg>
         </div>
 
-        <div className=" flex flex-col  lg:flex-row  lg:px-28  md:pt-[4%]  lg:pb-10 ">
-          <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:px-10 lg:m-0">
+        <div className=" flex flex-col  lg:flex-row  lg:px-28  md:pt-[3%]  lg:pb-10 ">
+          <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:pr-10 lg:m-0">
             <h1 className=" text-4xl font-black text-gray-800 md:text-4xl lg:text-6xl">
               If they can’t learn the way we teach,
               <br />
@@ -67,7 +67,7 @@ const Hero = ({ HeroContent }) => {
             alt=""
           />
         </div>
-        <div className="flex flex-wrap gap-3 px-10 pb-20 justify-start md:justify-center lg:justify-start lg:pl-36 lg:pr-0 lg:pb-10 lg:gap-5">
+        <div className="flex flex-wrap gap-3 px-10 pb-20 justify-start md:justify-center lg:justify-start lg:pl-[7%] lg:pr-0 lg:pb-10 lg:gap-5">
           {HeroContent.map((item) => (
             <button className="text-white bg-pink-600 border-pink-700 hover:border-pink-700 hover:text-pink-600 rounded-2xl text-sm p-1 px-3 md:px-7 md:py-2 md:text-lg lg:px-4 lg:py-1 lg:text-2xl">
               {item.HeroButtonText}

@@ -15,10 +15,10 @@ import mem6 from "../../../images/about/mem6.png";
 import mem7 from "../../../images/about/mem7.png";
 import mem8 from "../../../images/about/mem8.png";
 import StoryOfElina from "../../../components/about/StoryOfElina";
-import story1 from "../../../images/about/storyofelina/story (1).jpg";
-import story2 from "../../../images/about/storyofelina/story (2).jpg";
-import story3 from "../../../images/about/storyofelina/story (3).jpg";
-import story4 from "../../../images/about/storyofelina/story (4).jpg";
+import story1 from "../../../images/about/storyofelina/compressed/story (1).jpg";
+import story2 from "../../../images/about/storyofelina/compressed/story (2).jpg";
+import story3 from "../../../images/about/storyofelina/compressed/story (3).jpg";
+import story4 from "../../../images/about/storyofelina/compressed/story (4).jpg";
 
 const teamElinaContent = [
   {

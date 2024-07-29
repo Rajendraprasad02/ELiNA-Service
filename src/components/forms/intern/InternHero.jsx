@@ -3,7 +3,7 @@ import React from "react";
 const InternHero = () => {
   return (
     <>
-      <div className="h-screen internShipBg">
+      <div className="lg:h-screen internShipBg">
         <div className="flex flex-col p-5 lg:p-36">
           <div className="bg-black-bg rounded-3xl flex flex-col gap-5 lg:gap-16 p-8 lg:p-20">
             <h1 className="text-center text-5xl md:text-8xl font-black text-white">
