@@ -24,7 +24,6 @@ import InternPageForm from "./pages/home/forms/InternPageForm";
 import SchoolPage from "./pages/home/schoolPage/SchoolPage";
 import ProfessionalsPage from "./pages/home/professionalPage/ProfessionalsPage";
 import PartnershipPageContent from "./pages/home/partnershipPage/PartnershipPageContent";
-import BlogContent from "./components/blog/BlogContent";
 
 const router = createBrowserRouter([
   {
@@ -90,10 +89,6 @@ const router = createBrowserRouter([
   {
     path: "/partnership",
     element: <PartnershipPageContent />,
-  },
-  {
-    path: "/blogcontent",
-    element: <BlogContent />,
   },
 ]);
 

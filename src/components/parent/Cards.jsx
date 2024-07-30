@@ -61,9 +61,6 @@ const Cards = () => {
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                     {item.p}
                   </p>
-                  <button className="bg-pink-600 border-pink-600 hover:text-pink-600 w-fit px-3 py-1">
-                    Learn more
-                  </button>
                 </div>
               </div>
             ) : (
@@ -75,9 +72,6 @@ const Cards = () => {
                   <p class="mb-3 font-normal  text-gray-700 dark:text-gray-400">
                     {item.p}
                   </p>
-                  <button className="bg-pink-600 border-pink-600 hover:text-pink-600 w-fit px-3 py-1">
-                    Learn more
-                  </button>
                 </div>
                 <div className="md:w-[50%] flex justify-center rightToLeft">
                   <img

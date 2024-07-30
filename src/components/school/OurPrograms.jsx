@@ -2,7 +2,6 @@ import React from "react";
 import img from "../../images/parent/sailprocess.jpg";
 import img2 from "../../images/parent/sail.jpg";
 import CareGivers from "./CareGivers";
-import OutComes from "./OutComes";
 
 const schoolHeroContent = [
   {

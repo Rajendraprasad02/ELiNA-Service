@@ -8,12 +8,10 @@ import pic2 from "../../../images/about/team2.png";
 import pic3 from "../../../images/about/team3.png";
 import mem1 from "../../../images/about/mem1.png";
 import mem2 from "../../../images/about/mem2.png";
-import mem3 from "../../../images/about/mem3.png";
-import mem4 from "../../../images/about/mem4.png";
+import mem4 from "../../../images/about/mem4.jpg";
 import mem5 from "../../../images/about/mem5.png";
-import mem6 from "../../../images/about/mem6.png";
-import mem7 from "../../../images/about/mem7.png";
-import mem8 from "../../../images/about/mem8.png";
+import mem6 from "../../../images/about/mem7.png";
+import mem7 from "../../../images/about/mem8.png";
 import StoryOfElina from "../../../components/about/StoryOfElina";
 import story1 from "../../../images/about/storyofelina/compressed/story (1).jpg";
 import story2 from "../../../images/about/storyofelina/compressed/story (2).jpg";
@@ -24,7 +22,8 @@ const teamElinaContent = [
   {
     pic: pic1,
     h1: "Ramalakshmi Kannan",
-    p: "(Co-founder/CEO)",
+    p: "(Founder/CEO)",
+    des: "Ramalakshmi Kannan is a seasoned special educator and counselor with extensive experience in fostering inclusive environments for neurodiverse individuals. As the co-founder and CEO of Elina, she leads the organization in promoting empathy and inclusion through customized programs for homes, schools, and workplaces.",
   },
   {
     pic: pic2,
@@ -48,12 +47,8 @@ const teamElinaContent2 = [
   {
     pic: mem2,
     h1: "Sumithra Shailesh",
-    p: "(Care Navigator/Outreach and Enablement Navigator)",
-  },
-  {
-    pic: mem3,
-    h1: "Krishna Kumari",
-    p: "(Program Manager- Enablement Services)",
+    p: "(Dynamic Special Educator and Consultant)",
+    des: "With nearly three decades of experience, Sumithra is a dynamic and hands-on special educator whose rich knowledge greatly enhances our team. As a consultant, she brings invaluable expertise to specific assignments, ensuring that our programs are tailored to meet the unique needs of each child. Sumithra's dedication and comprehensive understanding of special education make her an essential part of our mission to empower children and families.",
   },
   {
     pic: mem4,
@@ -63,22 +58,18 @@ const teamElinaContent2 = [
   },
   {
     pic: mem5,
-    h1: "Sowmya Ragupathy",
-    p: "(Sail and Compass Navigator)",
+    h1: "Sowmya Raghupathy",
+    p: "( Experienced Special Educator and Consultant)",
+    des: "Sowmya Raghupathy brings over a decade of experience as a special educator, having worked with various organizations.",
   },
   {
     pic: mem6,
-    h1: "K.B.Sukanya",
-    p: "(Program Manager- Enablement Services)",
-  },
-  {
-    pic: mem7,
     h1: "Alka Dalmia",
     p: "(Social Media and Marketing Lead)",
     des: "Alka drives our social media and marketing efforts, amplifying Elina's mission and message to a broader audience. Her creative strategies and dynamic approach help raise awareness about neurodivergence and effectively promote our programs and initiatives.",
   },
   {
-    pic: mem8,
+    pic: mem7,
     h1: "Narmatha Vinodh",
     p: "(Digital Transformation Lead)",
     des: "Narmatha leads our digital transformation initiatives, ensuring that our technology solutions are cutting-edge and user-friendly. With expertise in physiotherapy and a keen interest in digital systems, Narmatha enhances our ability to provide seamless and accessible support to families and professionals alike.",

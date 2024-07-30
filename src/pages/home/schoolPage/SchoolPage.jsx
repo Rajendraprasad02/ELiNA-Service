@@ -4,8 +4,8 @@ import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
 import OurPrograms from "../../../components/school/OurPrograms";
 import LeadYourTeacher from "../../../components/school/LeadYourTeacher";
-import OutComes from "../../../components/school/OutComes";
 import SchoolActualHero from "../../../components/school/SchoolActualHero";
+import StepsSchools from "../../../components/school/StepsSchools";
 const SchoolPage = () => {
   return (
     <>
@@ -14,7 +14,7 @@ const SchoolPage = () => {
       <SchoolHero />
       <LeadYourTeacher />
       <OurPrograms />
-      <OutComes />
+      <StepsSchools />
       <Footer />
     </>
   );

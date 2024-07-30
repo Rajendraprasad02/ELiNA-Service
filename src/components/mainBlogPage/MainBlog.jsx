@@ -1,5 +1,6 @@
 import React from "react";
-const MainBlog = () => {
+import blogContent from "./blogContent.js";
+const MainBlog = ({ id }) => {
   return <></>;
 };
 

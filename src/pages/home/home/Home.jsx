@@ -6,6 +6,7 @@ import OurVision from "../../../components/home/OurVision";
 import Video from "../../../components/home/Video";
 import Footer from "../../../components/Footer";
 import Intern from "../../../components/home/Intern";
+import OutComes from "../../../components/home/OutComes";
 
 const HeroContent = [
   {
@@ -39,6 +40,7 @@ const Home = () => {
       <WhatWeDo />
       <OurVision />
       <Video />
+      <OutComes />
       <Intern />
       <Footer />
     </>

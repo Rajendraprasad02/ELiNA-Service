@@ -4,17 +4,20 @@ body {
   overflow-x: hidden;
 }
 
-// @keyframes appearFade {
-//   0% {
+// @keyframes appearOpacity {
+//   from {
 //     opacity: 0;
 //   }
-//   100% {
+//   to {
 //     opacity: 1;
 //   }
 // }
 
 // .animationHero {
-//   animation: appearFade 1s linear;
+//   animation-name: appearOpacity;
+//   animation-duration: 1s; /* Adjust the duration as needed */
+//   animation-timing-function: linear;
+//   animation-fill-mode: forwards; /* Keeps the final state of the animation */
 // }
 .animationHero {
   animation: appear linear;
@@ -462,5 +465,66 @@ $animationSpeed: 40s;
   .slide {
     height: 100px;
     width: fit-content;
+  }
+}
+
+.blog1 {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-top: 20px;
+    color: #db196d;
+    padding-bottom: 20px;
+  }
+  span {
+    font-weight: 800;
+    font-size: large;
+  }
+  section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.blog2 {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-top: 20px;
+    color: #db196d;
+    padding-bottom: 20px;
+  }
+  span {
+    font-weight: 800;
+    font-size: large;
+  }
+  section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  a {
+    font-weight: 800;
+    text-decoration: underline;
+    color: #172554;
+  }
+}
+.blog3 {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-top: 20px;
+    color: #db196d;
+    padding-bottom: 20px;
+  }
+  span {
+    font-weight: 800;
+    font-size: large;
+  }
+  section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  li {
+    list-style-type: decimal;
   }
 }

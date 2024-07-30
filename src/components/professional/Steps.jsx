@@ -2,16 +2,28 @@ import React from "react";
 
 const stepsContent = [
   {
-    h1: "Fill Out the Intake Form",
-    p: "Download, complete, and send in your intake forms by email or mail.",
+    h1: "Fill out the registration form",
+    p: "Express interest and provide professional details Consultation Meeting",
   },
   {
-    h1: "We Prepare Your Therapy Team",
-    p: "The Hearts and Hands team plans for your child to begin therapy, verifies insurance benefits, gathers your therapy team, and schedules appointments.",
+    h1: "Schedule and attend a consultation",
+    p: "Discuss potential roles, contributions, and areas of expertise Choose Collaboration Path",
   },
   {
-    h1: "Find the Support Your Child Deserves",
-    p: " Watch your child grow and gain greater independence in a welcoming community.",
+    h1: "Participate in orientation and training sessions",
+    p: "Understand Elina's approach and tools, including the ISMS Engage in Collaboration",
+  },
+  {
+    h1: "Start collaborating on specific assignments",
+    p: "Coordinated efforts with other professionals Regular updates and meetings Utilize ISMS Tool",
+  },
+  {
+    h1: "Use the ISMS tool for seamless communication and tracking",
+    p: "Ensure consistent and aligned support across all professionals Continuous Professional Development",
+  },
+  {
+    h1: " Access resources and training for ongoing development",
+    p: "Stay updated with best practices and new strategies",
   },
 ];
 
@@ -24,9 +36,9 @@ const Steps = () => {
             Getting Started is Simple
           </h1>
           <div className="flex items-center py-[6%]">
-            <div className="flex lg:flex-row flex-col gap-20 lg:gap-28  justify-end text-center py-10">
+            <div className="flex lg:flex-row flex-col w-full gap-5 flex-wrap  justify-center text-center py-10">
               {stepsContent.map((item, index) => (
-                <div className="lg:w-1/2 w-full flex flex-col gap-5 bg-blue-600 bg-opacity-10 rounded-3xl p-10">
+                <div className="lg:w-[32%] w-full flex flex-col gap-5 bg-blue-600 bg-opacity-10 rounded-3xl p-10">
                   <div className="flex flex-col gap-5">
                     <h1 className="text-4xl font-black">{index + 1}</h1>
                     <h1 className="text-2xl font-bold">{item.h1}</h1>

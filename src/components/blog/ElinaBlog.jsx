@@ -53,7 +53,7 @@ const ElinaBlog = ({ BlogContent }) => {
             <div className="mt-auto pl-2 flex items-center">
               <a
                 className="cursor-pointer px-2 py-1 self-end font-black text-blue-800"
-                href={`/blog/mainblog/${index}`}
+                href={`/blog/mainblog/${item.id}`}
               >
                 Learn more
               </a>
