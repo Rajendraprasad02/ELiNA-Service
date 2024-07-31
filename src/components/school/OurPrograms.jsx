@@ -1,71 +1,105 @@
 import React from "react";
-import img from "../../images/parent/sailprocess.jpg";
-import img2 from "../../images/parent/sail.jpg";
+import img1 from "../../images/professional/card1.jpg";
+import img2 from "../../images/professional/card2.jpg";
+import img3 from "../../images/professional/card3.jpg";
+import img4 from "../../images/professional/card4.jpg";
+
 import CareGivers from "./CareGivers";
 
-const schoolHeroContent = [
+const div1Content = [
   {
-    h1: "Sail",
-    src: img,
-    P: "content",
-    href: "",
+    h1: "Regular Updates and Meetings:",
+    src: img1,
+    P: "We ensure open communication between schools, families, and professionals. Regular updates and meetings keep everyone aligned and informed about each child's progress. ",
   },
   {
-    h1: "vision",
+    h1: "Integrated Efforts:",
     src: img2,
-    P: "content",
-    href: "",
+    P: "Our collaborative approach integrates efforts across various environments, preventing challenges from escalating and ensuring timely and effective interventions. ",
+  },
+];
+const div2Content = [
+  {
+    h1: "Community Workshops and Events:",
+    src: img4,
+    P: "We organize informative workshops and engaging events for the entire school community, fostering awareness and understanding of ADHD, Autism, and Learning Disabilities. ",
   },
   {
-    h1: "vision",
-    src: img,
-    P: "content",
-    href: "",
+    h1: "Collaboration Opportunities:",
+    src: img3,
+    P: "Partner with leading experts to develop comprehensive care plans and strategies tailored to your students' needs. These collaborations enhance the support provided to each student, ensuring a holistic approach to their development.",
   },
 ];
 const OurPrograms = () => {
   return (
     <>
       <div className="HeroBg">
-        <h1 className=" text-center  text-5xl lg:text-6xl font-black text-blue-600 animationHero p-5">
-          Our Programs
+        <h1 className=" text-center  text-3xl lg:text-4xl font-black text-blue-600 animationHero p-5">
+          Holistic Collaboration: Supporting Your School Community
         </h1>
-        <div className="grid grid-flow-row lg:grid-cols-3 md:px-[20%] lg:px-[5%] md:py-[3%]">
-          {schoolHeroContent.map((item, index) => (
-            <div
-              key={index}
-              className="p-5 lg:p-10 flex flex-col justify-between animationHero"
-            >
-              <div className="px-4">
-                <img
-                  className="w-full rounded-xl h-[230px] object-cover"
-                  src={item.src}
-                  alt={item.h1}
-                />
-              </div>
-              <div className="h-full ">
-                <div className="p-4 flex flex-col gap-8 ">
-                  <div className="">
-                    <p className="text-gray-500 text-sm">14 Jun 2024</p>
-                    <h1 className="font-black text-lg mt-2">{item.h1}</h1>
-                    <p className="text-gray-800 font-normal mt-2">{item.des}</p>
+        <div className="flex flex-col justify-center items-center md:px-[20%] lg:px-[5%] md:py-[3%]">
+          <p className="text-3xl font-bold text-center text-blue-950 p-10">
+            Seamless Communication
+          </p>
+          <div className="flex flex-col lg:flex-row w-full lg:w-[80%]">
+            {div1Content.map((item, index) => (
+              <div
+                key={index}
+                className="p-5 lg:p-10 flex w-full lg:w-1/2 flex-col justify-between animationHero"
+              >
+                <div className="px-4">
+                  <img
+                    className="w-full rounded-xl h-[230px] object-cover"
+                    src={item.src}
+                    alt={item.h1}
+                  />
+                </div>
+                <div className="h-full ">
+                  <div className="p-4 flex flex-col gap-8 ">
+                    <div className="">
+                      <h1 className="font-black text-lg mt-2 text-blue-600">
+                        {item.h1}
+                      </h1>
+                      <p className="text-gray-800 font-normal mt-2">{item.P}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-auto pl-2 flex items-center">
-                <a
-                  className="cursor-pointer px-2 py-1 self-end font-black text-blue-800"
-                  href={`/blog/mainblog/${index}`}
-                >
-                  Learn more
-                </a>
-                <p className="items-center"></p>
+            ))}
+          </div>
+          <p className="text-3xl font-bold text-center text-blue-950 p-10">
+            {" "}
+            Empowering the School Community
+          </p>
+          <div className="flex flex-col lg:flex-row w-full lg:w-[80%]">
+            {div2Content.map((item, index) => (
+              <div
+                key={index}
+                className="p-5 lg:p-10 flex flex-col justify-between animationHero w-full lg:w-1/2"
+              >
+                <div className="px-4">
+                  <img
+                    className="w-full rounded-xl h-[230px] object-cover"
+                    src={item.src}
+                    alt={item.h1}
+                  />
+                </div>
+                <div className="h-full ">
+                  <div className="p-4 flex flex-col gap-8 ">
+                    <div className="">
+                      <h1 className="font-black text-lg mt-2 text-blue-600">
+                        {item.h1}
+                      </h1>
+                      <p className="text-gray-800 font-normal mt-2">{item.P}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <CareGivers />
       </div>
+      <CareGivers />
     </>
   );
 };

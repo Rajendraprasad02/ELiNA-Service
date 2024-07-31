@@ -27,7 +27,7 @@ const Intern = () => {
             </a>
           </div>
           <div className="w-full md:w-1/2">
-            <img className="" src={internAnimation} />
+            <img className="rounded-2xl" src={internAnimation} />
             {/* <Lottie animationData={internAnimation}></Lottie> */}
           </div>
         </div>

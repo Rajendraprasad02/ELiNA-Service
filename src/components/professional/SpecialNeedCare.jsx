@@ -64,9 +64,11 @@ const SpecialNeedCare = () => {
               ))}
             </ul>
           </div>
-          <button className="p-3 rounded-2xl text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700">
-            Join our Therapy Team
-          </button>
+          <a href="/#/service-form">
+            <button className="p-3 rounded-2xl text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700">
+              Join our Therapy Team
+            </button>
+          </a>
         </div>
       </div>
     </>

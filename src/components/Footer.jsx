@@ -8,35 +8,35 @@ const FooterLi = [
   },
   {
     li: "For Parents",
-    href: "/parent",
+    href: "/#/parent",
   },
   {
     li: "For Schools",
-    href: "/school",
+    href: "/#/school",
   },
   {
     li: "For Professional",
-    href: "/professional",
+    href: "/#/professional",
   },
   {
     li: "ISMS",
-    href: "/isms",
+    href: "/#/isms",
   },
   {
     li: "Gallery",
-    href: "/gallery",
+    href: "/#/gallery",
   },
   {
     li: "About",
-    href: "/about",
+    href: "/#/about",
   },
   {
     li: "Blog",
-    href: "/blog",
+    href: "/#/blog",
   },
   {
     li: "Contact",
-    href: "/contact",
+    href: "/#/contact",
   },
 ];
 

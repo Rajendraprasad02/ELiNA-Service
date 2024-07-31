@@ -135,3 +135,19 @@ export const internPageForm = yup.object().shape({
   knowAboutElina: yup.string().required("This field is required"),
   lookingAboutElina: yup.string().required("This field is required"),
 });
+
+export const comments = yup.object().shape({
+  name: yup.string().required("This field is required"),
+  phonenumber: yup
+    .string()
+    .matches(phoneRegExp, "Phone number is not valid")
+    .min(10, "Must be exactly 10 digits")
+    .max(10, "Must be exactly 10 digits")
+    .required("This field is required"),
+  email: yup
+    .string()
+    .email("please enter valid email address")
+    .required("This field is required"),
+  comment: yup.string().required("This field is required"),
+  captcha: yup.string().required("Captcha is required"),
+});

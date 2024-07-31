@@ -39,9 +39,9 @@ const Programs = () => {
                 src={item.src}
               ></img>
               <p className="p-10 lg:text-lg text-gray-600">{item.p}</p>
-              <button className="flex items-center bg-pink-500 border-pink-500 hover:text-pink-600 p-2 lg:gap-1 rounded-lg mt-auto mb-4 lg:p-1 lg:px-2">
+              {/* <button className="flex items-center bg-pink-500 border-pink-500 hover:text-pink-600 p-2 lg:gap-1 rounded-lg mt-auto mb-4 lg:p-1 lg:px-2">
                 Read more
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

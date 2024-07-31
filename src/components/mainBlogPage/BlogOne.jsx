@@ -2,6 +2,7 @@ import React from "react";
 import blog1 from "../../images/blog/blog1/blog.jpg";
 import blog2 from "../../images/blog/blog1/blog1.jpg";
 import blog3 from "../../images/blog/blog1/blog2.jpg";
+import Comments from "../reuseable/Comments";
 
 const BlogOne = () => {
   return (
@@ -10,7 +11,7 @@ const BlogOne = () => {
         <div className="HeroBg">
           <div className="lg:h-screen h-fit">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl  text-blue-950 font-bold text-center">
                 Nurturing a Lifelong Love for Reading in Children: Embracing
                 Neurodiversity
               </h1>
@@ -259,6 +260,7 @@ const BlogOne = () => {
             </p>
           </section>
         </div>
+        <Comments />
       </div>
     </>
   );

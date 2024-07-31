@@ -11,13 +11,13 @@ const WhoCanUse = ({ KeyContent, KeyContent2, WhoCanUseContent }) => {
           {WhoCanUseContent.map((item) => (
             // md:w-[50%] lg:w-96
             <div class="animationHero bg-transparent zoomIsms  md:p-3 lg:p-5 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
-              <a className="flex justify-center" href="#">
+              <div className="flex justify-center">
                 <img
                   class="rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
                   src={item.WhoCanUseImg}
                   alt=""
                 />
-              </a>
+              </div>
               <div class="p-5 flex justify-center">
                 <a href="#">
                   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

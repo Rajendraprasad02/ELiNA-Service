@@ -20,15 +20,25 @@ const stepsContent = [
   },
   {
     img: recommendation,
-    head: <span className="font-bold">SAIL Program:</span>,
-    main: "Comprehensive assessments and personalized recommendations",
+    head: (
+      <span>
+        <span className="font-bold text-3xl">SAIL Program:</span>
+        <br />
+        "Comprehensive assessments and personalized recommendations"
+      </span>
+    ),
     h1: "Refer students for detailed assessments",
     p: "Receive individualized learning plans and recommendations",
   },
   {
     img: support,
-    head: <span className="font-bold">CoMPASS Program:</span>,
-    main: "Integrated support and collaboration",
+    head: (
+      <span>
+        <span className="font-bold text-3xl">CoMPASS Program:</span>
+        <br />
+        "Integrated support and collaboration"
+      </span>
+    ),
     h1: "Engage in continuous collaboration",
     li: [
       "Central coordination by Elina",
@@ -68,16 +78,18 @@ const StepsSchools = () => {
                   <h1 className="text-2xl font-bold">{item.h1}</h1>
 
                   {item.li && (
-                    <div className="">
+                    <div className="text-left ">
                       {item.li.map((i) => (
                         <li>{i}</li>
                       ))}
                     </div>
                   )}
                 </div>
-                <div className="my-auto">
-                  <p className="text-lg">{item.p}</p>
-                </div>
+                {!item.li && (
+                  <div className="my-auto ">
+                    <p className="text-lg">{item.p}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

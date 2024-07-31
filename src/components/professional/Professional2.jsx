@@ -44,9 +44,11 @@ const Professional2 = () => {
                 ))}
               </ul>
             </div> */}
-            <button className="w-1/2 py-3 rounded-2xl text-sm lg:text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700">
-              Join our Therapy Team
-            </button>
+            <a href="/#/service-form">
+              <button className="w-1/2 py-3 rounded-2xl text-sm lg:text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700">
+                Join our Therapy Team
+              </button>
+            </a>
           </div>
           <div className="flex w-full lg:w-1/2 py-5">
             <img className="rounded-3xl" src={professional2} />

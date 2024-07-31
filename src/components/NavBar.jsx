@@ -47,38 +47,38 @@ const NavBar = () => {
   const NavBarContent = [
     {
       li: "ISMS",
-      href: "/isms",
+      href: "/#/isms",
     },
     {
       li: "Gallery",
-      href: "/gallery",
+      href: "/#/gallery",
     },
     {
       li: "About",
-      href: "/about",
+      href: "/#/about",
     },
     {
       li: "Blog",
-      href: "/blog",
+      href: "/#/blog",
     },
     {
       li: "Contact",
-      href: "contact",
+      href: "/#/contact",
     },
   ];
   //|DEBUG| attention: Nav Bar Drop Down
   const NavBarDropDownContent = [
     {
       li: "For Parents",
-      href: "/parent",
+      href: "/#/parent",
     },
     {
       li: "For Schools",
-      href: "/school",
+      href: "/#/school",
     },
     {
       li: "For Professional",
-      href: "/professional",
+      href: "/#/professional",
     },
   ];
 
@@ -86,58 +86,58 @@ const NavBar = () => {
   const ResponsiveLi = [
     {
       li: "Elina Service",
-      href: "/",
+      href: "/#/",
     },
     {
       li: "For Parents",
-      href: "/parent",
+      href: "/#/parent",
     },
     {
       li: "For Schools",
-      href: "/school",
+      href: "/#/school",
     },
     {
       li: "For Professional",
-      href: "/professional",
+      href: "/#/professional",
     },
     {
       li: "ISMS",
-      href: "/isms",
+      href: "/#/isms",
     },
     {
       li: "Gallery",
-      href: "/gallery",
+      href: "/#/gallery",
     },
     {
       li: "About",
-      href: "/about",
+      href: "/#/about",
     },
     {
       li: "Blog",
-      href: "/blog",
+      href: "/#/blog",
     },
     {
       li: "Contact",
-      href: "/contact",
+      href: "/#/contact",
     },
   ];
 
   const NavBarEnrollContent = [
     {
       li: "Parents",
-      href: "/parent-form",
+      href: "/#/parent-form",
     },
     {
       li: "Schools",
-      href: "/school-form",
+      href: "/#/school-form",
     },
     {
       li: "Service provider",
-      href: "/service-form",
+      href: "/#/service-form",
     },
     {
       li: "Interns",
-      href: "/intern-form",
+      href: "/#/intern-form",
     },
   ];
 
@@ -201,7 +201,7 @@ const NavBar = () => {
             </button> */}
 
             <button className="gradient border-none rounded-3xl  hover:text-white">
-              <a href="/get-started-form">
+              <a href="/#/get-started-form">
                 <span className="p-1 rounded-3xl">
                   <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
                     {" "}
@@ -300,7 +300,7 @@ const NavBar = () => {
         >
           <div className=" flex gap-6 justify-center pt-6 pb-6">
             <button className="gradient border-none rounded-3xl  hover:text-white">
-              <a href="/forms">
+              <a href="/#/get-started-form">
                 <span className="p-1  rounded-3xl">
                   <span className="text-xs lg:text-xl !bg-gradient-to-r from-[#FCC201] to-[#ffb92d] text-transparent !bg-clip-text">
                     {" "}
@@ -403,8 +403,8 @@ const NavBar = () => {
               ) : (
                 <>
                   <div className="flex  justify-center py-[20%]">
-                    <div className="w-1/2 ">
-                      <div className="w-fit flex flex-col gap-5 lg:gap-10">
+                    <div className="w-1/2 flex justify-center items-center">
+                      {/* <div className="w-fit flex flex-col gap-5 lg:gap-10">
                         <p className="font-bold">Or login with :</p>
                         <button className="flex gap-3 items-center text-blue-700 bg-gray-100 border-none shadow-md rounded-xl    font-normal text-xs lg:text-sm  sm:w-auto px-5 py-2.5 text-center">
                           <img className="w-5" src={google} />
@@ -420,7 +420,8 @@ const NavBar = () => {
                             <span className="font-bold">Facebook</span>
                           </span>
                         </button>
-                      </div>
+                      </div> */}
+                      <img className="w-1/2" src={logo} />
                     </div>
                     <div class="flex w-1/2 flex-col md:gap-6 items-center">
                       <div class="relative z-0 w-full mb-5 group">

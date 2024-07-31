@@ -3,7 +3,7 @@ import React from "react";
 const CareGivers = () => {
   return (
     <>
-      <div className="flex text-center flex-col justify-center items-center py-28 gap-10">
+      <div className="flex text-center flex-col justify-center items-center py-28 gap-10 HeroBg2">
         <h1 className="text-5xl md:text-6xl font-semibold text-blue-600 animationHero">
           Together We Thrive: Partnering for Success
         </h1>
@@ -19,13 +19,13 @@ const CareGivers = () => {
           potential.
         </p>
         <a
-          href="/schoolform"
+          href="/#/schoolform"
           className="md:text-base text-sm px-5 lg:px-[18%] cursor-pointer underline font-bold text-blue-800 animationHero"
         >
           Contact us today to learn more about how we can support your school
           community.
         </a>
-        <a href="/schoolform">
+        <a href="/#/schoolform">
           <button className="animationHero bg-blue-600 border-blue-600 text-white hover:bg-transparent hover:border-blue-600 hover:text-blue-600 py-2 px-4 rounded-full">
             Learn more and Register
           </button>

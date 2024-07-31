@@ -3,14 +3,13 @@ import HeroAbout from "../../../components/about/HeroAbout";
 import TeamElina from "../../../components/about/TeamElina";
 import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
-import pic1 from "../../../images/about/team1.png";
 import pic2 from "../../../images/about/team2.png";
 import pic3 from "../../../images/about/team3.png";
 import mem1 from "../../../images/about/mem1.png";
 import mem2 from "../../../images/about/mem2.png";
 import mem4 from "../../../images/about/mem4.jpg";
 import mem5 from "../../../images/about/mem5.png";
-import mem6 from "../../../images/about/mem7.png";
+import mem6 from "../../../images/about/mem7.jpg";
 import mem7 from "../../../images/about/mem8.png";
 import StoryOfElina from "../../../components/about/StoryOfElina";
 import story1 from "../../../images/about/storyofelina/compressed/story (1).jpg";
@@ -19,12 +18,6 @@ import story3 from "../../../images/about/storyofelina/compressed/story (3).jpg"
 import story4 from "../../../images/about/storyofelina/compressed/story (4).jpg";
 
 const teamElinaContent = [
-  {
-    pic: pic1,
-    h1: "Ramalakshmi Kannan",
-    p: "(Founder/CEO)",
-    des: "Ramalakshmi Kannan is a seasoned special educator and counselor with extensive experience in fostering inclusive environments for neurodiverse individuals. As the co-founder and CEO of Elina, she leads the organization in promoting empathy and inclusion through customized programs for homes, schools, and workplaces.",
-  },
   {
     pic: pic2,
     h1: "Naveen Mahesh",
@@ -42,19 +35,19 @@ const teamElinaContent2 = [
     pic: mem1,
     h1: "Aparna RaviKannan",
     p: "(Manager -Intervention Services)",
-    des: "Aparna oversees our intervention services with a keen eye for detail and a deep understanding of neurodivergent needs. Her extensive experience as a thought leader at HLC and her role in leading various relationship-building initiatives ensure a pleasant journey for parents and educators. Aparna’s approach efficiently supports each child's needs, creating a collaborative and effective program.",
+    des: "Aparna, with her extensive experience at HLC, expertly oversees our intervention services. Her deep understanding of neurodivergent needs and relationship-building skills ensure a smooth and collaborative experience for parents and educators, supporting each child's unique needs effectively.",
   },
   {
     pic: mem2,
     h1: "Sumithra Shailesh",
     p: "(Dynamic Special Educator and Consultant)",
-    des: "With nearly three decades of experience, Sumithra is a dynamic and hands-on special educator whose rich knowledge greatly enhances our team. As a consultant, she brings invaluable expertise to specific assignments, ensuring that our programs are tailored to meet the unique needs of each child. Sumithra's dedication and comprehensive understanding of special education make her an essential part of our mission to empower children and families.",
+    des: "With nearly three decades of experience, Sumithra is a dynamic special educator whose expertise significantly enriches our team. As a consultant, she tailors programs to each child's unique needs, making her an essential contributor to our mission of empowering children and families.",
   },
   {
     pic: mem4,
     h1: "Malini.R",
     p: "(Intervention Services Navigator)",
-    des: "Malini guides families through their journey with compassion and expertise. Her keen observation skills, combined with her knowledge in special education and development, ensure precise assessments and recommendations. Malini makes sure that each family has access to the resources and support they need, helping them navigate the complexities of raising a neurodivergent child.",
+    des: "Malini provides compassionate guidance to families with her expertise in special education and development. Her keen observation ensures accurate assessments and recommendations, while her support helps families navigate the complexities of raising a neurodivergent child.",
   },
   {
     pic: mem5,
@@ -66,7 +59,7 @@ const teamElinaContent2 = [
     pic: mem6,
     h1: "Alka Dalmia",
     p: "(Social Media and Marketing Lead)",
-    des: "Alka drives our social media and marketing efforts, amplifying Elina's mission and message to a broader audience. Her creative strategies and dynamic approach help raise awareness about neurodivergence and effectively promote our programs and initiatives.",
+    des: "Alka spearheads our social media and marketing, using creative strategies to amplify Elina's mission. Her dynamic approach raises awareness about neurodivergence and promotes our programs effectively.",
   },
   {
     pic: mem7,

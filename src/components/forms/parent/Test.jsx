@@ -200,9 +200,9 @@ export default function Test() {
 
   return (
     <div className="" ref={component}>
-      <div ref={slider} className="container w-[600vw] h-screen flex">
-        <div className="fixed top-0 w-[5%] md:w-full md:h-fit h-screen bg-white z-50">
-          <div className="flex flex-col md:flex-row gap-10 md:gap-0 pt-[2%]  text-center items-center justify-between p-0 md:p-10">
+      <div ref={slider} className="container w-[600vw] h-fit flex">
+        <div className="fixed top-0 w-[5%] md:w-screen md:h-fit h-screen bg-white z-50">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-0 pt-[2%]  text-center items-center justify-between p-0 lg:p-10">
             {ParentContent.map((item) => (
               <div
                 key={item.key}
@@ -212,13 +212,13 @@ export default function Test() {
               >
                 <div
                   className={`bg-gray-100 text-center font-bold flex justify-center items-center rounded-full w-[30px] h-[30px] ${
-                    currentStep === item.key ? "bg-blue-900 text-white" : ""
+                    currentStep === item.key ? "bg-blue-900 text-blue-900" : ""
                   }`}
                 >
                   {item.key}
                 </div>
                 <div
-                  className={`font-black text-xs md:text-sm ${
+                  className={`font-black text-xs lg:text-sm ${
                     currentStep === item.key ? "text-blue-900 " : ""
                   }`}
                 >
@@ -231,25 +231,25 @@ export default function Test() {
         {ParentContent.map((item) => (
           <div
             key={item.key}
-            className={`min-w-[100vw] panel h-screen ${
+            className={`min-w-[100vw] panel h-fit ${
               item.key % 2 === 0 ? "getStartedBg1" : "getStartedBg2"
             }`}
           >
-            <div className="flex flex-col ml-[15%] md:ml-0 p-16 gap-20 items-center">
-              <h1 className="text-center text-gray-900 text-2xl lg:text-4xl mx-auto bg-pink-300 p-3 md:px-10 md:py-2 rounded-2xl font-black">
-                {item.h1}
-              </h1>
-              <div className="flex flex-col items-center lg:flex-row">
+            <div className="flex flex-col ml-[15%] md:ml-0 p-16 gap-20 items-center justify-center">
+              <div className="flex flex-col lg:flex-row items-center justify-center pt-[10%]">
                 <img
                   className="rounded-2xl mx-auto w-[90%] lg:w-[35%] object-cover"
                   src={item.img}
                   alt={item.h1}
                 />
-                <div className="items-center">
-                  <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
+                <div className="flex flex-col items-center justify-center text-center">
+                  <h1 className="text-gray-900 text-2xl lg:text-4xl mx-auto bg-pink-300 p-3 md:px-10 md:py-2 rounded-2xl font-black">
+                    {item.h1}
+                  </h1>
+                  <p className="text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
                     {item.h2}
                   </p>
-                  <p className="text-center my-auto rounded-2xl text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
+                  <p className="text-sm md:text-xl font-medium w-full md:w-[80%] mx-auto p-3">
                     {item.p}
                   </p>
                 </div>

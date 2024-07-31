@@ -6,6 +6,7 @@ import OurPrograms from "../../../components/school/OurPrograms";
 import LeadYourTeacher from "../../../components/school/LeadYourTeacher";
 import SchoolActualHero from "../../../components/school/SchoolActualHero";
 import StepsSchools from "../../../components/school/StepsSchools";
+import According from "../../../components/school/According";
 const SchoolPage = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const SchoolPage = () => {
       <SchoolActualHero />
       <SchoolHero />
       <LeadYourTeacher />
+      <According />
       <OurPrograms />
       <StepsSchools />
       <Footer />

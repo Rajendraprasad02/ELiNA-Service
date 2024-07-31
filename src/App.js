@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
+  createHashRouter,
 } from "react-router-dom";
 
 import Footer from "./components/Footer";
@@ -25,7 +26,7 @@ import SchoolPage from "./pages/home/schoolPage/SchoolPage";
 import ProfessionalsPage from "./pages/home/professionalPage/ProfessionalsPage";
 import PartnershipPageContent from "./pages/home/partnershipPage/PartnershipPageContent";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
