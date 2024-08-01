@@ -1,13 +1,14 @@
 import React from "react";
+import Comments from "../reuseable/Comments";
 
 const BlogTen = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog10">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl text-white font-bold text-center">
                 FOOD AFFECTS NEURODIVERGENCE!!
               </h1>
             </div>
@@ -15,7 +16,7 @@ const BlogTen = () => {
         </div>
       </>
       <>
-        <div className="mx-[15%] blog2">
+        <div className="mx-[5%] md:mx-[15%] blog2">
           <section>
             <h1>
               WHAT ARE YOUR FIRST THOUGHTS WHEN HEARING THE WORDS NEURODIVERSITY
@@ -188,6 +189,7 @@ const BlogTen = () => {
           </section>
         </div>
       </>
+      <Comments />
     </>
   );
 };

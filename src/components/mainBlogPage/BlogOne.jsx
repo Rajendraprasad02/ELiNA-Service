@@ -8,10 +8,10 @@ const BlogOne = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog1">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl  text-blue-950 font-bold text-center">
+              <h1 className="lg:text-6xl text-5xl  text-white font-bold text-center">
                 Nurturing a Lifelong Love for Reading in Children: Embracing
                 Neurodiversity
               </h1>
@@ -19,7 +19,7 @@ const BlogOne = () => {
           </div>
         </div>
       </>
-      <div className="mx-[15%] ">
+      <div className="lg:mx-[15%] mx-[1%]">
         <div className="blog1">
           <section>
             <h1>Introduction</h1>
@@ -75,8 +75,8 @@ const BlogOne = () => {
           </section>
           <section>
             <h1>Addressing Developmental Delays and Red Flags:</h1>
-            <div className="flex gap-10 ">
-              <div className="w-[50%]">
+            <div className="flex lg:flex-row flex-col-reverse gap-10 ">
+              <div className="lg:w-[50%]">
                 <p>
                   Sometimes, kids might take a bit longer to reach certain steps
                   in their growing-up journey, and that's totally okay. What's
@@ -105,7 +105,7 @@ const BlogOne = () => {
                   </li>
                 </ul>
               </div>
-              <div className="w-[40%] flex justify-start items-center">
+              <div className="lg:w-[40%] w-full flex justify-start items-center">
                 <img className="rounded-2xl" src={blog1} />
               </div>
             </div>
@@ -121,8 +121,8 @@ const BlogOne = () => {
           </section>
           <section>
             <h1>Parenting Tips and Strategies:</h1>
-            <div className="flex flex-row-reverse gap-10">
-              <div className="w-[50%]">
+            <div className="flex flex-col-reverse lg:flex-row-reverse gap-10">
+              <div className="lg:w-[50%] w-full">
                 <p>
                   <span>Provide a Supportive Framework:</span> Being there for
                   parents and offering guidance is crucial. Parents need to know
@@ -150,7 +150,7 @@ const BlogOne = () => {
                   reading a more enjoyable and memorable experience.
                 </p>
               </div>
-              <div className="w-[50%] ">
+              <div className="lg:w-[50%] w-full">
                 <img src={blog2} className="rounded-2xl" />
               </div>
             </div>
@@ -203,8 +203,8 @@ const BlogOne = () => {
           </section>
           <section>
             <h1>Embracing Neurodiversity for a Lifelong Reading Journey:</h1>
-            <div className="flex flex-col lg:flex-row">
-              <div className="w-[50%]">
+            <div className="flex flex-col-reverse lg:flex-row">
+              <div className="lg:w-[50%] w-full">
                 <p>
                   <span>Consider Developmental Milestones:</span> Be aware of a
                   child's developmental milestones and how they might differ
@@ -241,7 +241,7 @@ const BlogOne = () => {
                   will enrich their lives for years to come.
                 </p>
               </div>
-              <div className="w-[50%]">
+              <div className="lg:w-[50%] w-full">
                 <img className="rounded-2xl" src={blog3} />
               </div>
             </div>
@@ -260,8 +260,8 @@ const BlogOne = () => {
             </p>
           </section>
         </div>
-        <Comments />
       </div>
+      <Comments />
     </>
   );
 };

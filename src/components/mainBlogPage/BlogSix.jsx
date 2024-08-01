@@ -1,13 +1,14 @@
 import React from "react";
+import Comments from "../reuseable/Comments";
 
 const BlogSix = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog6">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl text-white font-bold text-center">
                 The Crucial Role of Parental Engagement in Early Years:
                 Nurturing Neurodivergent Potential{" "}
               </h1>
@@ -16,7 +17,7 @@ const BlogSix = () => {
         </div>
       </>
       <>
-        <div className="mx-[15%] blog2">
+        <div className="mx-[5%] md:mx-[15%] blog2">
           <section>
             <h1>Parental Engagement</h1>
             <p>
@@ -154,6 +155,7 @@ const BlogSix = () => {
           </section>
         </div>
       </>
+      <Comments />
     </>
   );
 };

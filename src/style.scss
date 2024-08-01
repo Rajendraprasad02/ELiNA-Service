@@ -120,7 +120,8 @@ bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/compressed/parent/parentHero-min1.jpg");
+  // background-image: url("./images/compressed/parent/parentHero-min1.jpg");
+  background-image: url("./images/parent/bg.png");
 }
 .professionalBg {
   background-size: cover;
@@ -192,7 +193,8 @@ bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/school/schoolCompressed/outcomes-min.jpg");
+  // background-image: url("./images/school/schoolCompressed/outcomes-min.jpg");
+  background-image: url("./images/compressed/parent/parentHero-min1.jpg");
 }
 
 .ServiceProviderFormBg {
@@ -207,6 +209,62 @@ bg {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("./images/internShipBg.jpg");
+}
+
+///////BLOG//////
+.bgBlog8 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/brain.jpg");
+}
+.bgBlog2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/familyPlaying.jpg");
+}
+.bgBlog10 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/food.jpg");
+}
+.bgBlog1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/motherReading.jpg");
+}
+.bgBlog6 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/parenting.jpg");
+}
+.bgBlog4 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/plan.jpg");
+}
+.bgBlog5 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/play.jpg");
+}
+.bgBlog7 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/reading.jpg");
+}
+.bgBlog9 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/sleep.jpg");
 }
 
 // .scheduleBg {

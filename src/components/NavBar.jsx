@@ -231,18 +231,18 @@ const NavBar = () => {
               </span>
             </button> */}
             <div className="">
-              <ul className="lg:gap-6 md:flex gap-6 hidden lg:p-10 lg:items-baseline  text-gray-700">
+              <ul className="lg:gap-6 md:flex gap-6 hidden  lg:items-baseline  text-gray-700">
                 <li
                   className="relative text-2xl hover:text-pink-600 cursor-pointer font-semibold"
                   onMouseEnter={handleNavDropdownToggle}
                   onMouseLeave={handleNavDropdownToggle}
                 >
-                  <span
+                  <button
                     onClick={handleNavDropdownToggle}
-                    className="flex lg:gap-1 md:gap-0 text-xs lg:text-lg lg:font-extrabold text-pink-600 hover:text-[#11375b]"
+                    className="flex items-center justify-center w-16  lg:w-32 lg:p-[0.35rem] p-1 lg:gap-2 md:gap-0 text-xs lg:text-lg lg:font-extrabold bg-pink-500 text-white hover:text-pink-500 hover:bg-white hover:border-pink-600 border-pink-500"
                   >
                     Enroll <ChevronDownIcon className="w-3 lg:w-5" />
-                  </span>
+                  </button>
                   {navEnrollDropDown && (
                     <div className="absolute  -left-12 md:left-10 lg:right-0 transform -translate-x-1/2 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
                       <ul className="py-2 text-sm text-gray-700 dark:text-gray-800">

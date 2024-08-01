@@ -2,22 +2,23 @@ import React from "react";
 import blog from "../../images/blog/blog3/blog.png";
 import blog1 from "../../images/blog/blog3/blog1.jpg";
 import blog2 from "../../images/blog/blog3/blog2.jpg";
+import Comments from "../reuseable/Comments";
 
 const BlogThree = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog1">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl text-white font-bold text-center">
                 dst of chaos, there is also opportunity.” - Sun Tzu
               </h1>
             </div>
           </div>
         </div>
       </>
-      <div className="mx-[15%] blog3">
+      <div className="lg:mx-[15%] mx-[1%] blog3">
         <section>
           <h1>Introduction</h1>
           <p>
@@ -32,8 +33,8 @@ const BlogThree = () => {
           </p>
         </section>
         <section>
-          <div className="flex">
-            <div className="w-[60%]">
+          <div className="flex flex-col-reverse lg:flex-row">
+            <div className="w-full lg:w-[60%]">
               <h1>All Behavior Is a Way of Talking</h1>
               <p>
                 In how we interact with each other, the big idea that "All
@@ -48,7 +49,7 @@ const BlogThree = () => {
                 us see the wide range of human feelings and actions.
               </p>
             </div>
-            <div className="w-[40%]">
+            <div className="w-full md:w-[40%]">
               <img src={blog} />
             </div>
           </div>
@@ -76,8 +77,8 @@ const BlogThree = () => {
             patient, care about how others feel, and look beyond what's usually
             considered normal.
           </p>
-          <div className="flex">
-            <div className="w-[60%]">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-[60%]">
               <li>
                 <span>Watch and Learn:</span> See if there are things that make
                 someone act a certain way. Maybe certain places, things they
@@ -106,7 +107,7 @@ const BlogThree = () => {
                 world that isn't always easy.
               </li>
             </div>
-            <div className="w-[40%]">
+            <div className="w-full lg:w-[40%]">
               <img className="rounded-2xl" src={blog1} />
             </div>
           </div>
@@ -148,8 +149,8 @@ const BlogThree = () => {
             Guiding parents to understand their child's growth and behavior is
             important. Here's how:
           </p>
-          <div className="flex">
-            <div className="w-[60%]">
+          <div className="flex flex-col-reverse lg-flex-row">
+            <div className="w-full lg:w-[60%]">
               <li>
                 <span>Talk to Experts:</span> Have regular talks with doctors,
                 therapists, and teachers. They can help with understanding
@@ -181,7 +182,7 @@ const BlogThree = () => {
                 reduces worry.
               </li>
             </div>
-            <div className="w-[40%]">
+            <div className="w-full lg:w-[40%]">
               <img src={blog2} />
             </div>
           </div>
@@ -234,6 +235,7 @@ const BlogThree = () => {
           </p>
         </section>
       </div>
+      <Comments />
     </>
   );
 };

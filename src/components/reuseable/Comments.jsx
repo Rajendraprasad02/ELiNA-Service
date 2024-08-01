@@ -21,10 +21,10 @@ const Comments = () => {
   return (
     <>
       <div className="comments">
-        <div className="w-full border-gray-900 bg-gray-200 rounded-3xl my-10">
+        <div className="lg:mx-[15%]   border-gray-900 bg-gray-200 rounded-3xl my-10">
           <form
             onSubmit={formik.handleSubmit}
-            className="flex flex-col justify-center  w-full p-10 gap-5"
+            className="flex flex-col justify-center  w-full p-10 gap-3 lg:gap-5"
           >
             <p className="flex justify-left text-4xl font-black text-blue-950">
               Leave a comment
@@ -114,7 +114,7 @@ const Comments = () => {
                 {formik.errors.comment}
               </p>
             )}
-            <div id="captcha" className="py-5">
+            <div id="captcha" className="lg:py-5 py-2">
               <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
 
               {formik.errors.captcha && formik.touched.captcha ? (

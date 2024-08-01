@@ -19,7 +19,6 @@ import ServiceProviderPageForm from "./pages/home/forms/ServiceProviderPageForm"
 import SchoolPageForm from "./pages/home/forms/SchoolPageForm";
 import ParentPageForm from "./pages/home/forms/ParentPageForm";
 import GetStartedPageForm from "./pages/home/forms/GetStartedPageForm";
-import MainBlog from "./components/mainBlogPage/MainBlog";
 import MainBlogPage from "./pages/home/mainBlogPage/MainBlogPage";
 import InternPageForm from "./pages/home/forms/InternPageForm";
 import SchoolPage from "./pages/home/schoolPage/SchoolPage";

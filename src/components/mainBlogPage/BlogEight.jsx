@@ -1,13 +1,14 @@
 import React from "react";
+import Comments from "../reuseable/Comments";
 
 const BlogEight = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog8">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl text-white font-bold text-center">
                 Gut-Brain Connection
               </h1>
             </div>
@@ -15,7 +16,7 @@ const BlogEight = () => {
         </div>
       </>
       <>
-        <div className="mx-[15%] blog2">
+        <div className="mx-[5%] md:mx-[15%] blog2">
           <section>
             <h1>Gut-Our Second Brain</h1>
             <div className="flex flex-col md:flex-row">
@@ -78,6 +79,7 @@ const BlogEight = () => {
           </section>
         </div>
       </>
+      <Comments />
     </>
   );
 };

@@ -1,13 +1,14 @@
 import React from "react";
+import Comments from "../reuseable/Comments";
 
 const BlogFive = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog5">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl text-white font-bold text-center">
                 The Power Of Play
               </h1>
             </div>
@@ -15,7 +16,7 @@ const BlogFive = () => {
         </div>
       </>
       <>
-        <div className="mx-[15%] blog2">
+        <div className="mx-[5%] md:mx-[15%] blog2">
           <section>
             <h1>What does play mean to you as an adult?</h1>
             <p>
@@ -116,6 +117,7 @@ const BlogFive = () => {
           </section>
         </div>
       </>
+      <Comments />
     </>
   );
 };

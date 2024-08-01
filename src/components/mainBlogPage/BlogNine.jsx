@@ -1,13 +1,14 @@
 import React from "react";
+import Comments from "../reuseable/Comments";
 
 const BlogNine = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog9">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="text-6xl text-white font-bold text-center">
                 Recognizing the power of sleep for neurodivergent children and
                 its impact on milestone achievement
               </h1>
@@ -16,7 +17,7 @@ const BlogNine = () => {
         </div>
       </>
       <>
-        <div className="mx-[15%] blog2">
+        <div className="mx-[5%] md:mx-[15%] blog2">
           <section>
             <h1>The role of sleep in neurodivergent child development</h1>
             <div className="flex flex-col md:flex-row">
@@ -138,6 +139,7 @@ const BlogNine = () => {
           </section>
         </div>
       </>
+      <Comments />
     </>
   );
 };

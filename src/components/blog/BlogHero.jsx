@@ -7,10 +7,10 @@ const BlogHero = () => {
     <>
       <BreadCrumbs />
       <div className="h-fit HeroBg2 py-20 px-10 md:p-36">
-        <h1 className="text-5xl md:text-5xl lg:text-7xl font-black py-16 md:p-0 text-blue-700 text-center">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black py-16 md:p-0 text-blue-700 text-center">
           Everyone has a story to tell.
         </h1>
-        <div className="text-lg md:text-xl font-semibold text-center md:p-24">
+        <div className="text-lg md:text-xl font-semibold text-center py-24 lg:p-24">
           <p>Autism Spectrum Explained: Resources and Real-Life Experiences</p>
           <p>
             "<span className="text-pink-600">Journey with Autism:</span>{" "}

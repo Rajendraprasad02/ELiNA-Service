@@ -2,15 +2,16 @@ import React from "react";
 import blog from "../../images/blog/blog2/blog.jpg";
 import blog1 from "../../images/blog/blog2/blog2.jpg";
 import blog2 from "../../images/blog/blog2/blog3.jpg";
+import Comments from "../reuseable/Comments";
 
 const BlogTwo = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
+        <div className="bgBlog2">
+          <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+              <h1 className="md:text-6xl text-5xl text-white font-bold text-center">
                 The Crucial Role of Parental Engagement in Early Years:
                 Nurturing Neurodivergent Potential.
               </h1>
@@ -18,7 +19,7 @@ const BlogTwo = () => {
           </div>
         </div>
       </>
-      <div className="mx-[15%]">
+      <div className="lg:mx-[15%] mx-[1%]">
         <div className="blog2">
           <section>
             <h1>Introduction</h1>
@@ -39,8 +40,8 @@ const BlogTwo = () => {
           </section>
           <section>
             <h1>Understanding Developmental Milestones</h1>
-            <div className="flex gap-10">
-              <div className="w-[60%]">
+            <div className="flex flex-col-reverse lg:flex-row gap-10">
+              <div className="w-full lg:w-[60%]">
                 <p>
                   The journey of parenting is filled with countless 'firsts'—the
                   first step, the first word, and the first day at school. These
@@ -51,7 +52,7 @@ const BlogTwo = () => {
                   phases of their child's growth.
                 </p>
               </div>
-              <div className="w-[40%]">
+              <div className="w-full lg:w-[40%]">
                 <img src={blog} />
               </div>
             </div>
@@ -79,8 +80,8 @@ const BlogTwo = () => {
           </section>
           <section>
             <h1>Connection with Learning and Development</h1>
-            <div className="flex flex-row-reverse gap-10">
-              <div className="w-[60%]">
+            <div className="flex flex-col-reverse md:flex-row-reverse gap-10">
+              <div className="w-full md:w-[60%]">
                 <p>
                   The connection between developmental milestones and later
                   learning is akin to a strong bridge connecting two vital
@@ -91,7 +92,7 @@ const BlogTwo = () => {
                   throughout life.
                 </p>
               </div>
-              <div className="w-[40%]">
+              <div className="w-full md:w-[40%]">
                 <img src={blog2} />
               </div>
             </div>
@@ -131,8 +132,8 @@ const BlogTwo = () => {
           </section>
           <section>
             <h1>Guiding Parents: Tips for Nurturing Milestones</h1>
-            <div className="flex gap-10">
-              <div className="w-[60%]">
+            <div className="flex flex-col-reverse md:flex-row gap-10">
+              <div className="w-full md:w-[60%]">
                 <p>
                   Parenting is a voyage filled with uncertainty, and navigating
                   developmental concerns can be challenging. However, with the
@@ -142,7 +143,7 @@ const BlogTwo = () => {
                   developmental concerns is crucial.
                 </p>
               </div>
-              <div className="w-[40%]">
+              <div className="w-full md:w-[40%]">
                 <img src={blog1} />
               </div>
             </div>
@@ -188,6 +189,7 @@ const BlogTwo = () => {
           </section>
         </div>
       </div>
+      <Comments />
     </>
   );
 };

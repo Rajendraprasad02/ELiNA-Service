@@ -3,6 +3,13 @@ import card1 from "../../images/professional/1.jpg";
 import card2 from "../../images/professional/2.jpg";
 import card3 from "../../images/professional/3.jpg";
 import card4 from "../../images/professional/4.jpg";
+import TR from "../../images/professional/cardImg/TargetedReferrals.png";
+import SR from "../../images/professional/cardImg/SpecializedReferrals.png";
+import IP from "../../images/professional/cardImg/IntegratedPerspective2.png";
+import CS from "../../images/professional/cardImg/CollaborativeSuccess.png";
+import EV from "../../images/professional/cardImg/EnhancedVisibility.png";
+import CT from "../../images/professional/cardImg/CommunicationandTracking.png";
+import SC from "../../images/professional/cardImg/seemlesscommunication.png";
 import card5 from "../../images/professional/5.jpg";
 import card6 from "../../images/professional/6.jpg";
 import card7 from "../../images/professional/7.jpg";
@@ -16,17 +23,17 @@ const weHelpKidContent = [
   {
     h1: "Targeted Referrals",
     decs: "Specialized Referrals: Elina connects professionals with referrals for children with ADHD, Autism, and Learning Disabilities who can benefit from your expertise. Our system ensures children receive the specialized care they need from the most suitable professionals.",
-    src: card4,
+    src: TR,
   },
   {
     h1: "Specialized Referrals",
     decs: "Elina connects professionals with referrals for children with ADHD, Autism, and Learning Disabilities who can benefit from your specific expertise. Our referral system ensures that children receive the specialized care they need from the most suitable professionals.",
-    src: card2,
+    src: SR,
   },
   {
     h1: "Integrated Perspective",
     decs: "Gain a holistic view of the child's needs across all environments, including home, school, and therapy settings. This comprehensive understanding enables more targeted and effective interventions, ensuring that every aspect of the child's development is addressed.",
-    src: card6,
+    src: IP,
   },
   {
     h1: "Effective Intervention",
@@ -36,12 +43,12 @@ const weHelpKidContent = [
   {
     h1: "Collaborative Success",
     decs: "Experience the satisfaction of delivering effective interventions through a coordinated approach. Our program integrates the expertise of various professionals, ensuring a cohesive strategy that maximizes the impact of your work.",
-    src: card5,
+    src: CS,
   },
   {
     h1: "Enhanced Visibility",
     decs: "Interdisciplinary Insights: Elina provides visibility into the broader scope of care through collaboration with doctors, therapists, and educators. This interdisciplinary approach enriches your understanding of the child's overall needs and the strategies being implemented.",
-    src: card1,
+    src: EV,
   },
   {
     h1: "Interdisciplinary Insights",
@@ -61,12 +68,12 @@ const weHelpKidContent = [
   {
     h1: "Communication and Tracking",
     decs: "Seamless Communication: Benefit from structured communication channels via our ISMS tool, enabling ongoing dialogue between all stakeholders. Regular updates, progress tracking, and shared insights allow for real-time adjustments to support strategies based on the child's evolving needs.",
-    src: card9,
+    src: CT,
   },
   {
     h1: "Seamless Communication",
     decs: "Benefit from structured communication channels facilitated by our ISMS tool, which enables ongoing dialogue between all stakeholders. This includes regular updates, progress tracking, and shared insights, allowing for real-time adjustments to support strategies based on the child's evolving needs.",
-    src: card10,
+    src: SC,
   },
 ];
 

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Carousel } from "flowbite-react";
 // import heroimg from "../../images/teaching3.jpg";
 import heroimg from "../../images/compressed/hero/teaching3-min.jpg";
+import heroimg2 from "../../images/heroPage/1.jpg";
+import heroimg3 from "../../images/heroPage/2.jpg";
+
 import { ArrowRightIcon, ChatIcon } from "@heroicons/react/outline";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
 
@@ -42,43 +45,51 @@ const Hero = ({ HeroContent }) => {
         <div className=" flex flex-col  lg:flex-row  lg:px-28  md:pt-[3%]  lg:pb-10 ">
           <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:pr-10 lg:m-0">
             <h1 className=" text-4xl font-black text-gray-800 md:text-4xl lg:text-6xl">
-              If they can’t learn the way we teach,
+              Welcome to Elina's World:
               <br />
               <span className="text-5xl  text-indigo-600 md:text-6xl lg:text-6xl">
-                We teach the way they learn.
+                Empowering Families and Shaping Futures
               </span>
             </h1>
             <p className="text-pretty pb-10 text-sm md:pb-0  md:text-xl ">
-              <span className="text-pink-500 font-extrabold cursor-pointer">
-                Teaching
+              At Elina, we envision a world where every child is provided with
+              the tools and support to realize their full potential. We are
+              dedicated to offering comprehensive resources, guidance, and
+              support to children with{" "}
+              <span className="text-pink-600 font-black">ADHD ,</span>{" "}
+              <span className="text-pink-600 font-black">Autism ,</span>
+              <span className="text-pink-600 font-black">
+                Learning Disabilities ,
               </span>{" "}
-              is a profound act of empathy and empowerment. It's about fostering
-              growth, igniting passion for learning, and guiding individuals
-              toward their fullest potential.{" "}
-              <span className="text-pink-500 font-extrabold cursor-pointer">
-                Each student's journey is a testament
-              </span>{" "}
-              to the transformative power of education.
+              <span className="text-pink-600 font-black">Dyslexia ,</span>
+              <span className="text-pink-600 font-black">Dyspraxia ,</span>{" "}
+              <span className="text-pink-600 font-black">Dyscalculia ,</span>
+              <span className="text-pink-600 font-black">
+                Intellectual Disability ,
+              </span>
+              along with their families, schools, and professionals. Our mission
+              is to empower families and shape brighter futures through
+              personalized programs and inclusive practices.
             </p>
           </div>
           <img
-            className="hidden rounded-3xl lg:block lg:w-[40%]"
-            src={heroimg}
+            className="hidden rounded-3xl object-cover lg:block lg:w-[40%]"
+            src={heroimg2}
             alt=""
           />
         </div>
         <div className="flex flex-wrap gap-3 px-10 pb-20 justify-start md:justify-center lg:justify-start lg:pl-[7%] lg:pr-0 lg:pb-10 lg:gap-5">
           {HeroContent.map((item) => (
-            <button className="text-white bg-pink-600 border-pink-700 hover:border-pink-700 hover:text-pink-600 rounded-2xl text-sm p-1 px-3 md:px-7 md:py-2 md:text-lg lg:px-4 lg:py-1 lg:text-2xl">
+            <button className="text-white cursor-default bg-pink-600 border-pink-700 hover:border-pink-700 hover:text-pink-600 rounded-2xl text-sm p-1 px-3 md:px-7 md:py-2 md:text-lg lg:px-4 lg:py-1 lg:text-2xl">
               {item.HeroButtonText}
             </button>
           ))}
-          <div className="items-center flex gap-2 cursor-pointer transition duration-300 ease-in-out hover:scale-110">
+          {/* <div className="items-center flex gap-2 cursor-pointer transition duration-300 ease-in-out hover:scale-110">
             <p className="text-pink-600 text-lg font-bold md:text-xl">
               See all resource
             </p>
             <ArrowRightIcon className="w-5 text-pink-600 font-bold text-xl" />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

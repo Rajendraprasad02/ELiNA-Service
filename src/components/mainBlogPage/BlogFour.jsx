@@ -1,13 +1,14 @@
+import Comments from "../reuseable/Comments";
 import React from "react";
 
 const BlogFour = () => {
   return (
     <>
       <>
-        <div className="HeroBg">
-          <div className="lg:h-screen h-fit">
-            <div className="h-screen flex items-center justify-center p-4">
-              <h1 className="text-6xl text-blue-950 font-bold text-center">
+        <div className="bgBlog4 ">
+          <div className="lg:h-screen h-fit bg-black-bg">
+            <div className="h-screen flex items-center justify-center  md:p-4">
+              <h1 className="text-4xl md:text-6xl text-white font-bold text-center">
                 DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?
               </h1>
             </div>
@@ -15,7 +16,7 @@ const BlogFour = () => {
         </div>
       </>
       <>
-        <div className="blog2 mx-[15%]">
+        <div className="blog2 mx-[5%] md:mx-[15%]">
           <section>
             <h1>
               WHAT ARE DEVELOPMENTAL MILESTONES, AND WHY ARE THEY IMPORTANT?
@@ -203,6 +204,7 @@ const BlogFour = () => {
           </section>
         </div>
       </>
+      <Comments />
     </>
   );
 };

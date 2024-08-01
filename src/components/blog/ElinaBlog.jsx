@@ -24,11 +24,11 @@ const ElinaBlog = ({ BlogContent }) => {
       >
         Our Blog
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 p-8 md:p-20 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-8 lg:p-20 gap-5">
         {currentBlog.map((item, index) => (
           <div
             key={index}
-            className="py-5 md:p-10 flex flex-col justify-between shadow-xl rounded-2xl"
+            className="py-5 lg:p-10 flex flex-col justify-between shadow-xl rounded-2xl"
           >
             <div className="px-4">
               <img
