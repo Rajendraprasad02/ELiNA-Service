@@ -3,6 +3,9 @@ import blog1 from "../../images/blog/blog1/blog.jpg";
 import blog2 from "../../images/blog/blog1/blog1.jpg";
 import blog3 from "../../images/blog/blog1/blog2.jpg";
 import Comments from "../reuseable/Comments";
+import RecentBlog from "../reuseable/RecentBlog";
+import BlogContent from "../../utils/blogContent.js";
+import Author from "../reuseable/Author.jsx";
 
 const BlogOne = () => {
   return (
@@ -11,6 +14,7 @@ const BlogOne = () => {
         <div className="bgBlog1">
           <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
+              <Author />
               <h1 className="lg:text-6xl text-5xl  text-white font-bold text-center">
                 Nurturing a Lifelong Love for Reading in Children: Embracing
                 Neurodiversity
@@ -19,8 +23,9 @@ const BlogOne = () => {
           </div>
         </div>
       </>
-      <div className="lg:mx-[15%] mx-[1%]">
-        <div className="blog1">
+      <div className="lg:ml-[10%] mx-[1%] flex flex-row-reverse">
+        <RecentBlog BlogContent={BlogContent} />
+        <div className="blog2 md:w-[80%]">
           <section>
             <h1>Introduction</h1>
             <p>

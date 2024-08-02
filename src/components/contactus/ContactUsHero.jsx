@@ -15,7 +15,7 @@ const ContactUsHero = () => {
         </div>
         <div className=" pb-[14%] items-center flex justify-center">
           <button className="px-6 py-3 bg-blue-600 border-blue-600 hover:text-blue-600 hover:border-blue-600">
-            Learn More
+            Get In Touch
           </button>
         </div>
       </div>

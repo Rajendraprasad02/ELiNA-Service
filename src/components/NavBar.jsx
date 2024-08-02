@@ -5,6 +5,7 @@ import {
   XIcon,
   ChevronDownIcon,
   ArrowLeftIcon,
+  ChevronLeftIcon,
 } from "@heroicons/react/outline";
 import ReCAPTCHA from "react-google-recaptcha";
 import steps from "../images/StepsSvg.svg";
@@ -16,7 +17,7 @@ const NavBar = () => {
   const [navEnrollDropDown, SetNavEnrollDropDown] = useState(false);
   const [phoneEnrollDropDown, SetPhoneEnrollDropDown] = useState(false);
   const [openForgetPassword, setOpenForgetPassword] = useState(false);
-
+  const [side, setSide] = useState(false);
   const handleClick = () => {
     SetNav(!nav);
   };
@@ -35,6 +36,10 @@ const NavBar = () => {
 
   const toggleForgetPassword = () => {
     setOpenForgetPassword(!openForgetPassword);
+  };
+
+  const handleSideToggle = () => {
+    setSide(!side);
   };
 
   //LoginForm;
@@ -62,6 +67,10 @@ const NavBar = () => {
       href: "/#/blog",
     },
     {
+      li: "FAQ",
+      href: "/#/contact",
+    },
+    {
       li: "Contact",
       href: "/#/contact",
     },
@@ -79,6 +88,21 @@ const NavBar = () => {
     {
       li: "For Professional",
       href: "/#/professional",
+    },
+  ];
+  //|DEBUG| attention: Nav Bar Drop Down
+  const MultiLevelDropDown = [
+    {
+      li: "Beyond 8",
+      href: "",
+    },
+    {
+      li: "HCL",
+      href: "",
+    },
+    {
+      li: "Others",
+      href: "",
     },
   ];
 
@@ -140,7 +164,6 @@ const NavBar = () => {
       href: "/#/intern-form",
     },
   ];
-
   return (
     <>
       <div className="relative h-[20%]">
@@ -245,14 +268,40 @@ const NavBar = () => {
                   </button>
                   {navEnrollDropDown && (
                     <div className="absolute  -left-12 md:left-10 lg:right-0 transform -translate-x-1/2 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-100">
-                      <ul className="py-2 text-sm text-gray-700 dark:text-gray-800">
-                        {NavBarEnrollContent.map((item) => (
+                      <ul className="py-2 text-sm text-gray-700 dark:text-gray-800 relative">
+                        <li
+                          className="relative"
+                          onMouseEnter={handleSideToggle}
+                          onMouseLeave={handleSideToggle}
+                        >
+                          <a className="block relative px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white">
+                            <div className="flex justify-between items-center">
+                              <div className="mr-5">
+                                <ChevronLeftIcon className="w-4" />
+                              </div>
+                              Parents
+                            </div>
+                          </a>
+                          {side && (
+                            <ul className="absolute right-[100%] top-0 flex flex-col w-44 justify-center transform  items-center rounded-lg shadow-lg bg-white mt-2">
+                              {MultiLevelDropDown.map((item) => (
+                                <li className="px-4 lg:text-base py-2 w-full flex justify-center hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white">
+                                  {item.li}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+
+                        {NavBarEnrollContent.slice(1).map((item) => (
                           <li>
                             <a
                               href={item.href}
-                              className="block px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
+                              className={`${
+                                item.li === "parents" && ""
+                              } block px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white`}
                             >
-                              {item.li}
+                              <div className="flex justify-end">{item.li}</div>
                             </a>
                           </li>
                         ))}
@@ -261,6 +310,11 @@ const NavBar = () => {
                   )}
                 </li>
               </ul>
+              {/* <p>
+                {MultiLevelDropDown.map((item) => (
+                  <a className="absolute  top-1 left-1">{item.li}</a>
+                ))}
+              </p> */}
             </div>
 
             <button

@@ -266,6 +266,12 @@ bg {
   background-position: center;
   background-image: url("./images/blog/blogHero/sleep.jpg");
 }
+.bgBlog3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/blog/blogHero/author.jpg");
+}
 
 // .scheduleBg {
 //   width: 100%;
@@ -545,6 +551,7 @@ $animationSpeed: 40s;
 }
 
 .blog2 {
+  text-align: justify;
   h1 {
     font-size: 2.5rem;
     font-weight: 500;

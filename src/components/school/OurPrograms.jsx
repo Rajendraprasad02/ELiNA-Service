@@ -1,8 +1,8 @@
 import React from "react";
-import img1 from "../../images/professional/card1.jpg";
-import img2 from "../../images/professional/card2.jpg";
-import img3 from "../../images/professional/card3.jpg";
-import img4 from "../../images/professional/card4.jpg";
+import img1 from "../../images/school/card1.png";
+import img2 from "../../images/school/card2.png";
+import img3 from "../../images/school/card3.png";
+import img4 from "../../images/school/card4.png";
 
 import CareGivers from "./CareGivers";
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Carousel } from "flowbite-react";
 // import heroimg from "../../images/teaching3.jpg";
 import heroimg from "../../images/compressed/hero/teaching3-min.jpg";
@@ -7,6 +7,8 @@ import heroimg3 from "../../images/heroPage/2.jpg";
 
 import { ArrowRightIcon, ChatIcon } from "@heroicons/react/outline";
 import BreadCrumbs from "../reuseable/BreadCrumbs";
+
+// const heroimg2 = lazy(import("../../images/heroPage/1.jpg"));
 
 const Hero = ({ HeroContent }) => {
   // const [currentPage, setCurrentPage] = useState("");

@@ -133,7 +133,7 @@ const WhatWeDo = () => {
               <h1 className="text-3xl text-gray-800 font-black lg:text-3xl py-5 px-3 lg:px-10 lg:pt-10 ">
                 {item.h1}
               </h1>
-              <p className="font-bold lg:pb-5">{item.sh}</p>
+              <p className="font-bold lg:pb-5 text-blue-900">{item.sh}</p>
               <img
                 className="w-[85%] h-auto lg:w-[350px] lg:h-[230px] rounded-3xl"
                 src={item.src}

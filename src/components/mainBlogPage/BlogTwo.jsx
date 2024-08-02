@@ -3,6 +3,9 @@ import blog from "../../images/blog/blog2/blog.jpg";
 import blog1 from "../../images/blog/blog2/blog2.jpg";
 import blog2 from "../../images/blog/blog2/blog3.jpg";
 import Comments from "../reuseable/Comments";
+import RecentBlog from "../reuseable/RecentBlog";
+import BlogContent from "../../utils/blogContent";
+import Author from "../reuseable/Author";
 
 const BlogTwo = () => {
   return (
@@ -11,6 +14,8 @@ const BlogTwo = () => {
         <div className="bgBlog2">
           <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
+              <Author />
+
               <h1 className="md:text-6xl text-5xl text-white font-bold text-center">
                 The Crucial Role of Parental Engagement in Early Years:
                 Nurturing Neurodivergent Potential.
@@ -19,8 +24,9 @@ const BlogTwo = () => {
           </div>
         </div>
       </>
-      <div className="lg:mx-[15%] mx-[1%]">
-        <div className="blog2">
+      <div className="lg:ml-[10%] mx-[1%] flex flex-row-reverse">
+        <RecentBlog BlogContent={BlogContent} />
+        <div className="blog2 md:w-[80%]">
           <section>
             <h1>Introduction</h1>
             <p>

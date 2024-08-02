@@ -9,7 +9,7 @@ const StoryOfElina = ({ storyOfElina }) => {
             className={`p-16  lg:h-screen flex flex-col lg:flex-row ${
               item.ImgDirection === "left" ? "" : "lg:flex-row-reverse"
             } justify-center gap-10 md:gap-[5%] px-8  md:px-20 items-center ${
-              item.ImgDirection === "left" ? "bg-[#f0f2fc]" : ""
+              item.ImgDirection === "left" ? "HeroBg" : "HeroBg2"
             }`}
           >
             <div className="w-[100%] md:w-[50%] ">

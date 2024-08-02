@@ -33,7 +33,7 @@ const ElinaBlog = ({ BlogContent }) => {
             <div className="px-4">
               <img
                 className="w-full h-[230px] rounded-xl md:h-[230px]"
-                src={item.blogImg}
+                src={item?.blogImg}
                 alt={item.h1}
               />
             </div>

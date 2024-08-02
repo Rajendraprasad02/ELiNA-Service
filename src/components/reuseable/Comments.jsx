@@ -21,7 +21,7 @@ const Comments = () => {
   return (
     <>
       <div className="comments">
-        <div className="lg:mx-[15%]   border-gray-900 bg-gray-200 rounded-3xl my-10">
+        <div className="lg:mx-[10%]   border-gray-900 bg-gray-200 rounded-3xl my-10">
           <form
             onSubmit={formik.handleSubmit}
             className="flex flex-col justify-center  w-full p-10 gap-3 lg:gap-5"
