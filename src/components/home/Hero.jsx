@@ -44,7 +44,7 @@ const Hero = ({ HeroContent }) => {
           </svg>
         </div>
 
-        <div className=" flex flex-col  lg:flex-row  lg:px-28  md:pt-[3%]  lg:pb-10 ">
+        <div className=" flex flex-col  lg:flex-row mx:[4%] lg:mx-[6%] lg:pxg-28  md:pt-[3%]  lg:pb-10 ">
           <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:pr-10 lg:m-0">
             <h1 className=" text-4xl font-black text-gray-800 md:text-4xl lg:text-6xl">
               Welcome to Elina's World:
@@ -58,17 +58,17 @@ const Hero = ({ HeroContent }) => {
               the tools and support to realize their full potential. We are
               dedicated to offering comprehensive resources, guidance, and
               support to children with{" "}
-              <span className="text-pink-600 font-black">ADHD ,</span>{" "}
-              <span className="text-pink-600 font-black">Autism ,</span>
+              <span className="text-pink-600 font-black">ADHD,</span>{" "}
+              <span className="text-pink-600 font-black">Autism,</span>{" "}
               <span className="text-pink-600 font-black">
-                Learning Disabilities ,
+                Learning Disabilities,
               </span>{" "}
-              <span className="text-pink-600 font-black">Dyslexia ,</span>
-              <span className="text-pink-600 font-black">Dyspraxia ,</span>{" "}
-              <span className="text-pink-600 font-black">Dyscalculia ,</span>
+              <span className="text-pink-600 font-black">Dyslexia,</span>{" "}
+              <span className="text-pink-600 font-black">Dyspraxia,</span>{" "}
+              <span className="text-pink-600 font-black">Dyscalculia,</span>{" "}
               <span className="text-pink-600 font-black">
-                Intellectual Disability ,
-              </span>
+                Intellectual Disability,
+              </span>{" "}
               along with their families, schools, and professionals. Our mission
               is to empower families and shape brighter futures through
               personalized programs and inclusive practices.
@@ -80,7 +80,7 @@ const Hero = ({ HeroContent }) => {
             alt=""
           />
         </div>
-        <div className="flex flex-wrap gap-3 px-10 pb-20 justify-start md:justify-center lg:justify-start lg:pl-[7%] lg:pr-0 lg:pb-10 lg:gap-5">
+        <div className="flex flex-wrap gap-3 pxh-10 pb-20 justify-start md:justify-center lg:justify-start mx-[10%] lg:mx-[6%] lg:pr-0 lg:pb-10 lg:gap-5">
           {HeroContent.map((item) => (
             <button className="text-white cursor-default bg-pink-600 border-pink-700 hover:border-pink-700 hover:text-pink-600 rounded-2xl text-sm p-1 px-3 md:px-7 md:py-2 md:text-lg lg:px-4 lg:py-1 lg:text-2xl">
               {item.HeroButtonText}

@@ -97,7 +97,12 @@ const NavBar = () => {
       href: "",
     },
     {
-      li: "HCL",
+      li: "HLC",
+      href: "",
+    },
+
+    {
+      li: "SSN",
       href: "",
     },
     {

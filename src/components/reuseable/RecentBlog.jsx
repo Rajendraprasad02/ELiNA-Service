@@ -52,6 +52,9 @@ const RecentBlog = ({ BlogContent }) => {
               </div>
             </div>
           </div>
+          <p className="flex justify-left items-center text-gray-700 font-bold">
+            Archived Blog:
+          </p>
           <div className="overflow-x-auto flex-1 p-1">
             {updatedBlogContent?.map((item) => (
               <a href={`/#/blog/mainblog/${item.id}`}>

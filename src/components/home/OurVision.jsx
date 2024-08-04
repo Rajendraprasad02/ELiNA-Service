@@ -53,15 +53,15 @@ const OurVision = () => {
       {OurVisionContent.map((item) => (
         <div className="">
           {item.leftImg && innerWidth > 430 ? (
-            <div class=" flex flex-col items-center justify-between md:flex-row md:p-10 lg:w-[100%] lg:h-[30%] HeroBg2 ">
-              <div className="md:w-[50%] leftToRight flex justify-center">
+            <div class=" flex flex-col items-center justify-between lg:flex-row md:flex-col-reverse md:p-10 lg:w-[100%] lg:h-[30%] HeroBg2 ">
+              <div className="md:w-[60%] lg:w-[50%] leftToRight flex justify-center">
                 <img
-                  class="object-cover w-[300px] h-[200px] rounded-3xl  md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
+                  class="object-cover w-full rounded-3xl    lg:h-[350px] lg:w-[600px]"
                   src={item.photo}
                   alt=""
                 />
               </div>
-              <div class=" flex flex-col justify-around lg:p-4 leading-normal md:w-[50%] lg:pr-[15%] rightToLeft">
+              <div class=" flex flex-col justify-around lg:p-4 leading-normal lg:w-[50%] md:w-full lg:pr-[5%] rightToLeft">
                 <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {item.h1}
                 </h1>
@@ -72,8 +72,8 @@ const OurVision = () => {
               </div>
             </div>
           ) : (
-            <div class=" flex flex-col items-center justify-around md:flex-row p-0 md:p-10 lg:w-[100%] lg:h-[30%] HeroBg">
-              <div class="leftToRight flex flex-col justify-between p-4 leading-normal md:w-[50%] lg:pl-[15%]">
+            <div class=" flex flex-col items-center justify-around lg:flex-row p-0 md:p-10 lg:w-[100%] lg:h-[30%] HeroBg">
+              <div class="leftToRight flex flex-col justify-between p-4 leading-normal lg:w-[50%] md:w-full lg:pl-[5%]">
                 <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {item.h1}
                 </h1>
@@ -82,9 +82,9 @@ const OurVision = () => {
                 </p>
                 {/* <button className="">Learn more</button> */}
               </div>
-              <div className="md:w-[50%] rightToLeft flex justify-center">
+              <div className="md:w-[60%] lg:w-[50%] rightToLeft flex justify-center">
                 <img
-                  class="object-cover w-[300px] h-[200px] rounded-2xl  md:h-auto md:w-48  lg:h-[350px] lg:w-[600px]"
+                  class="object-cover w-full rounded-2xl  md:h-auto md:w-full  lg:h-[350px] lg:w-[600px]"
                   src={item.photo}
                   alt=""
                 />
