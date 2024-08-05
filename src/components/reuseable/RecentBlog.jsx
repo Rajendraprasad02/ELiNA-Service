@@ -18,11 +18,15 @@ const RecentBlog = ({ BlogContent }) => {
   const findBlogById = (id) => {
     return BlogContent.find((blog) => blog.id === id);
   };
-  const blogPost = findBlogById(Number(location.pathname.slice(-1)));
+
+  const id =
+    location.pathname.split("/")[location.pathname.split("/").length - 1];
+  const blogPost = findBlogById(Number(id));
 
   const updatedBlogContent = BlogContent.filter(
-    (blog) => blog.id !== Number(location.pathname.slice(-1))
+    (blog) => blog.id !== Number(id)
   );
+
   return (
     <div className="w-0 md:w-[50%] lg:w-[40%]">
       <div className="py-[10%] px-[3%]">

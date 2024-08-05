@@ -6,11 +6,11 @@ import Footer from "../../../components/Footer";
 import pic2 from "../../../images/about/team2.png";
 import pic3 from "../../../images/about/team3.png";
 import mem1 from "../../../images/about/mem1.png";
-import mem2 from "../../../images/about/mem2.png";
+import mem2 from "../../../images/about/mem2.jpeg";
 import mem4 from "../../../images/about/mem4.jpg";
-import mem5 from "../../../images/about/mem5.png";
+import mem5 from "../../../images/about/mem5.jpeg";
 import mem6 from "../../../images/about/mem7.jpg";
-import mem7 from "../../../images/about/mem8.png";
+import mem7 from "../../../images/about/mem8.jpeg";
 import StoryOfElina from "../../../components/about/StoryOfElina";
 import story1 from "../../../images/about/storyofelina/compressed/story (1).jpg";
 import story2 from "../../../images/about/storyofelina/compressed/story (2).jpg";
@@ -22,11 +22,13 @@ const teamElinaContent = [
     pic: pic2,
     h1: "Naveen Mahesh",
     p: "(Co-founder)",
+    des: "Co-Founder, Beyond8.in & Elina; Managing Director & Trustee, HLC International School; Board Member,Nalanda Way; VP, Association of Cambridge Schools in Tamil Nadu.“Uncommon Leader,” Madras Management Association, 2019.",
   },
   {
     pic: pic3,
     h1: "Raaji Naveen",
     p: "(Co-founder)",
+    des: "Co-Founder, Beyond8.in & Elina; Director & Trustee, HLC International School. Ambassador, Harvard Graduate School of Education; Purple Squirrel, Harvard, May 2024; “Uncommon Leader,” Madras Management Association, 2019.",
   },
 ];
 

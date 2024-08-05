@@ -11,6 +11,7 @@ const BlogEight = () => {
         <div className="bgBlog8">
           <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
+              <Author />
               <h1 className="text-6xl text-white font-bold text-center">
                 Gut-Brain Connection
               </h1>
@@ -23,7 +24,6 @@ const BlogEight = () => {
           <RecentBlog BlogContent={BlogContent} />
           <div className="blog2 md:w-[80%]">
             <section>
-              <Author />
               <h1>Gut-Our Second Brain</h1>
               <div className="flex flex-col md:flex-row">
                 <img src="" />
