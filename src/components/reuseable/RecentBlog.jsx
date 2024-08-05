@@ -73,14 +73,21 @@ const RecentBlog = ({ BlogContent }) => {
                   <div className="flex flex-col">
                     <p className="font-black text-sm lg:text-bases">
                       {window.innerWidth < 1024 ? (
-                        <>{item?.h1.slice(0, 20) + "..."}</>
+                        <>
+                          {item.id}. {item?.h1.slice(0, 20) + "..."}
+                        </>
                       ) : (
-                        <>{item?.h1}</>
+                        <>
+                          {item.id}. {item?.h1}
+                        </>
                       )}
                     </p>
                     <p className="flex items-center font-medium text-xs lg:text-sm">
                       <p className="">Read more</p>
                       <ChevronRightIcon className="w-3" />
+                      <p className="text-gray-600 font-black text-xs ">
+                        14 July 2024
+                      </p>
                     </p>
                   </div>
                 </div>

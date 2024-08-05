@@ -74,6 +74,7 @@ const Hero = ({ HeroContent }) => {
               personalized programs and inclusive practices.
             </p>
           </div>
+
           <img
             className="hidden rounded-3xl object-cover lg:block lg:w-[40%]"
             src={heroimg2}
