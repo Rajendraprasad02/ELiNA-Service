@@ -479,7 +479,7 @@ const ParentForm = () => {
                     checked={formik.values.agree}
                     onChange={formik.handleChange}
                   ></input>
-                  <label className="ml-3 text-[#07074D]">I Agrees</label>
+                  <label className="ml-3 text-[#07074D]">I Agree</label>
                   {formik.touched.agree && formik.errors.agree && (
                     <p className="text-sm text-red-600">
                       {formik.errors.agree}

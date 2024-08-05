@@ -279,7 +279,10 @@ const NavBar = () => {
                           onMouseEnter={handleSideToggle}
                           onMouseLeave={handleSideToggle}
                         >
-                          <a className="block relative px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white">
+                          <a
+                            href="/#/parent-form"
+                            className="block relative px-4 lg:text-base py-2 hover:bg-gray-200 dark:hover:bg-indigo-600 font-bold dark:hover:text-white"
+                          >
                             <div className="flex justify-between items-center">
                               <div className="mr-5">
                                 <ChevronLeftIcon className="w-4" />
