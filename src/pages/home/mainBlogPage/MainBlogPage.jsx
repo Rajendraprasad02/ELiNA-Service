@@ -14,6 +14,9 @@ import BlogSeven from "../../../components/mainBlogPage/BlogSeven";
 import BlogEight from "../../../components/mainBlogPage/BlogEight";
 import BlogNine from "../../../components/mainBlogPage/BlogNine";
 import BlogTen from "../../../components/mainBlogPage/BlogTen";
+import BlogTwelve from "../../../components/mainBlogPage/BlogTwelve";
+import BlogThirteen from "../../../components/mainBlogPage/BlogThirteen";
+import BlogFourteen from "../../../components/mainBlogPage/BlogFourteen";
 
 const MainBlogPage = () => {
   const params = useParams();
@@ -29,6 +32,9 @@ const MainBlogPage = () => {
     BlogNine,
     BlogTen,
     BlogEleven,
+    BlogTwelve,
+    BlogThirteen,
+    BlogFourteen,
   ];
 
   return (

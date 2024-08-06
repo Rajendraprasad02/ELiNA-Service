@@ -14,6 +14,7 @@ import pic11 from "../images/blog/blogHero/eleven.jpg";
 
 const BlogContent = [
   {
+    //done
     id: 1,
     h1: "Nurturing a Lifelong Love for Reading in Children: Embracing Neurodiversity",
     blogImg: pic7,
@@ -30,14 +31,16 @@ const BlogContent = [
     gender: "male",
   },
   {
+    //done
     id: 3,
-    h1: "In the midst of chaos, there is also opportunity - Sun Tzu",
+    h1: "Tantrums Tears and Tempers:Behaviour is communication",
     blogImg: pic10,
     des: "A child in a store aisle, stomping their feet, face red and screaming loudly. People nearby give disapproving looks, parents feel embarrassed, and dealing with the child's frustration seems really hard. But under all these strong feelings, there's an important truth: behavior is a way of talking. This becomes even clearer when we think about neurodivergence – that's when people's brains work in different ways, like with autism or ADHD.",
-    author: "Miridula",
-    gender: "female",
+    author: "prahalad",
+    gender: "male",
   },
   {
+    //done
     id: 4,
     h1: "DEVELOPMENT MILESTONES:CELEBRATION OR CHECKLIST?",
     blogImg: pic4,
@@ -46,6 +49,7 @@ const BlogContent = [
     gender: "female",
   },
   {
+    //done
     id: 5,
     h1: "The Power Of Play",
     blogImg: pic5,
@@ -54,6 +58,7 @@ const BlogContent = [
     gender: "female",
   },
   {
+    //done
     id: 6,
     h1: "The Crucial Role of Parental Engagement in Early Years: Nurturing Neurodivergent Potential",
     blogImg: pic9,
@@ -62,6 +67,7 @@ const BlogContent = [
     gender: "male",
   },
   {
+    //done
     id: 7,
     h1: "Nurturing reading habits in children",
     blogImg: pic6,
@@ -70,6 +76,7 @@ const BlogContent = [
     gender: "male",
   },
   {
+    //done
     id: 8,
     h1: "Gut-Brain Connection",
     blogImg: pic2,
@@ -78,6 +85,7 @@ const BlogContent = [
     gender: "male",
   },
   {
+    //done
     id: 9,
     h1: "Recognizing the power of sleep for neurodivergent children and its impact on milestone achievement",
     blogImg: pic1,
@@ -86,6 +94,7 @@ const BlogContent = [
     gender: "male",
   },
   {
+    //done
     id: 10,
     h1: "FOOD AFFECTS NEURODIVERGENCE!!",
     blogImg: pic3,
@@ -94,6 +103,7 @@ const BlogContent = [
     gender: "male",
   },
   {
+    //done
     id: 11,
     h1: "Role of Environment in the Communication of Children on the Autism Spectrum",
     blogImg: pic11,
@@ -101,6 +111,41 @@ const BlogContent = [
     author: "Pramitha Sivaprakash",
     gender: "female",
   },
+  {
+    //done
+    id: 12,
+    h1: "How much screen time is too much for a child's brain and its relevance to Adhd and Autism",
+    blogImg: pic11,
+    des: "“Screen time” is a term used for activities done in front of any screen such as televisions, computers, I-pads or even video games. “Screen time is a sedentary activity meaning you are being physically inactive while sitting down. Very little energy is used during screen time”",
+    author: "Niharika",
+    gender: "female",
+  },
+  //blog 12
+  // https://drive.google.com/file/d/18WRkRdJ7eYGqfgXzWvhA83DaFrQV6EEx/view?ts=66b0d198&pli=1
+
+  {
+    //done
+    id: 13,
+    h1: "LETTING LEARNING FLOURISH",
+    blogImg: pic11,
+    des: "The key to understanding this is to acknowledge everyone needs support and help. As one of my facilitators at Elina put it- It is not a suggestion its a right of every student to recieve help and enthusiastic support from their teachers, parents and mentors. You might have been told from previous experiences that help or customised aid is preventing children from growing or learning the harshness of the real world but this couldn't be farther from the truth!",
+    author: "Niharika",
+    gender: "female",
+  },
+  //blog 13
+  // https://drive.google.com/file/d/15C4D83aXysDizQN2TIL4rhrim55f0689/view?ts=66b0d21f
+  {
+    //done
+    id: 14,
+    h1: "Equity In Education",
+    blogImg: pic11,
+    des: "The key to understanding this is to acknowledge everyone needs support and help. As one of my facilitators at Elina put it- It is not a suggestion its a right of every student to recieve help and enthusiastic support from their teachers, parents and mentors. You might have been told from previous experiences that help or customised aid is preventing children from growing or learning the harshness of the real world but this couldn't be farther from the truth!",
+    author: "Niharika",
+    gender: "female",
+  },
+
+  //blog 14
+  // https://drive.google.com/file/d/17c1TD9HveuUECT_y3wjt8mEzAy8MPZH7/view?ts=66b0d2be
 ];
 
 export default BlogContent;
