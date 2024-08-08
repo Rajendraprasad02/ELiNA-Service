@@ -6,6 +6,7 @@ import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent.js";
 import Author from "../reuseable/Author.jsx";
+import BlogButtons from "../reuseable/BlogButtons.jsx";
 
 const BlogOne = () => {
   useEffect(() => {
@@ -267,9 +268,10 @@ const BlogOne = () => {
               written word.
             </p>
           </section>
+          <BlogButtons BlogContent={BlogContent} />
         </div>
       </div>
-      <Comments />
+      <Comments BlogContent={BlogContent} />
     </>
   );
 };

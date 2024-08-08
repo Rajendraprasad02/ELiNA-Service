@@ -65,7 +65,7 @@ const SpecialNeedCare = () => {
             </ul>
           </div>
           <a href="/#/service-form">
-            <button className="p-3 rounded-2xl text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700">
+            <button className="p-3 rounded-2xl text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700 lg:px-5 lg:text-2xl">
               Join our Therapy Team
             </button>
           </a>

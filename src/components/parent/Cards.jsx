@@ -84,7 +84,7 @@ const Cards = () => {
             )}
           </div>
         ))} */}
-        <div className="flex flex-col-reverse justify-center items-center md:flex-row-reverse p-5 md:p-10 gap-[5%]">
+        <div className="flex flex-col-reverse justify-center items-start md:flex-row-reverse p-5 md:p-10 gap-[5%]">
           <div className="lg:w-[60%] w-full">
             <li className="text-lg">
               <span className="text-pink-600 font-black text-xl">

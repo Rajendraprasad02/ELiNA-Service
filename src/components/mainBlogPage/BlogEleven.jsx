@@ -3,6 +3,7 @@ import Comments from "../reuseable/Comments";
 import BlogContent from "../../utils/blogContent";
 import RecentBlog from "../reuseable/RecentBlog";
 import Author from "../reuseable/Author";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogEleven = () => {
   useEffect(() => {
@@ -180,6 +181,7 @@ const BlogEleven = () => {
                 and special educators, are provided with the tools that can
                 revolutionize learning spaces.
               </p>
+              <BlogButtons BlogContent={BlogContent} />
             </section>
             {/* <section>
               <div className="flex flex-col">

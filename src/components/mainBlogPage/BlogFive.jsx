@@ -3,6 +3,7 @@ import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import Author from "../reuseable/Author";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogFive = () => {
   useEffect(() => {
@@ -125,6 +126,7 @@ const BlogFive = () => {
                   play is what gives meaning to children.
                 </p>
               </div>
+              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

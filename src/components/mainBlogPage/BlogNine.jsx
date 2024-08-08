@@ -4,6 +4,7 @@ import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import one from "../../images/blog/blog9/1.jpg";
 import Author from "../reuseable/Author";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogNine = () => {
   useEffect(() => {
@@ -147,6 +148,7 @@ const BlogNine = () => {
                   Link2
                 </a>
               </div>
+              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

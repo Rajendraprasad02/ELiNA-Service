@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SchoolHero from "../../../components/school/SchoolHero";
 import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
@@ -8,6 +8,9 @@ import SchoolActualHero from "../../../components/school/SchoolActualHero";
 import StepsSchools from "../../../components/school/StepsSchools";
 import According from "../../../components/school/According";
 const SchoolPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <SchoolActualHero />

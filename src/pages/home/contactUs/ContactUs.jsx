@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactUsHero from "../../../components/contactus/ContactUsHero";
 import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
@@ -22,6 +22,9 @@ const blogContent = [
 ];
 
 const ContactUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ContactUsHero />

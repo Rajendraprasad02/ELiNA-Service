@@ -4,6 +4,7 @@ import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import one from "../../images/blog/blog13/one.jpg";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogThirteen = () => {
   useEffect(() => {
@@ -168,6 +169,7 @@ const BlogThirteen = () => {
                   </a>
                 </li>
               </div>
+              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

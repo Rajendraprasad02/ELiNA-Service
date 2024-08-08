@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../../../components/NavBar";
 import Hero from "../../../components/home/Hero";
 import WhatWeDo from "../../../components/home/WhatWeDo";
@@ -33,11 +33,15 @@ const HeroContent = [
 ];
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero HeroContent={HeroContent} />
       <WhatWeDo />
       <OurVision />
+
       <Video />
       <OutComes />
       <Intern />

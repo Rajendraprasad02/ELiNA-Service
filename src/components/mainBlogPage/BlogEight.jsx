@@ -3,6 +3,7 @@ import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import Author from "../reuseable/Author";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogEight = () => {
   useEffect(() => {
@@ -85,6 +86,7 @@ const BlogEight = () => {
                 person you know who is neurodivergent. Be supportive and adjust
                 to their needs.
               </li>
+              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

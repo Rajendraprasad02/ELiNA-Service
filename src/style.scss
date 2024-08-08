@@ -624,3 +624,34 @@ $animationSpeed: 40s;
     opacity: 90%;
   }
 }
+
+/* Define the blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Style for the details summary */
+summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 30px; /* Add space for the arrow */
+}
+
+/* Arrow style */
+summary::before {
+  content: "↓"; /* Unicode arrow or use any arrow character */
+  position: absolute;
+  right: 10px; /* Adjust position as needed */
+  font-size: 1.2em;
+  color: black; /* Adjust color as needed */
+  animation: blink 2s infinite; /* Apply blinking animation */
+}

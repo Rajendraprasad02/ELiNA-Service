@@ -3,6 +3,7 @@ import Comments from "../reuseable/Comments";
 import BlogContent from "../../utils/blogContent";
 import RecentBlog from "../reuseable/RecentBlog";
 import Author from "../reuseable/Author";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogSeven = () => {
   useEffect(() => {
@@ -121,6 +122,7 @@ const BlogSeven = () => {
                 behaviour, emotions, etc. Work with your child’s needs and
                 reluctance and slowly instill the habit of reading.
               </p>
+              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

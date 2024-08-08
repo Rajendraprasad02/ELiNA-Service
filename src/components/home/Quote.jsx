@@ -3,7 +3,7 @@ import React from "react";
 const Quote = () => {
   return (
     <>
-      <div className="p-5 md:p-0">
+      <div className="p-5 lg:py-[10%] md:p-0">
         <div className="blockquote  bg-pink-500 animationHero p-5  rounded-3xl text-white lg:mx-24 lg:p-8 lg:rounded-3xl lg:font-semibold">
           <svg
             class="w-10 h-10 mx-auto mb-3 text-white "

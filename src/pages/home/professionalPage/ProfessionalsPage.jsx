@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProfessionalHero from "../../../components/professional/ProfessionalHero";
 import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
@@ -8,6 +8,9 @@ import WeHelpKids from "../../../components/professional/WeHelpKids";
 import Steps from "../../../components/professional/Steps";
 
 const ProfessionalsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <ProfessionalHero />

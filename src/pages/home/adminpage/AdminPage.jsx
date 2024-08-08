@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AdminScreen from "../../../components/adminScreen/AdminScreen";
 import SideBar from "../../../components/adminScreen/SideBar";
 import AdminNavBar from "../../../components/adminScreen/AdminNavBar";
@@ -7,6 +7,9 @@ import Testimonials from "../../../components/adminScreen/Testimonials";
 import { useParams } from "react-router-dom";
 
 const AdminPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {

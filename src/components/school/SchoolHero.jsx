@@ -3,7 +3,7 @@ import hero from "../../images/school/schoolCompressed/hero-min.jpg";
 
 const SchoolHero = () => {
   return (
-    <div className="HeroBg2 flex flex-col md:flex-row justify-center items-center md:py-[5%] lg:gap-10">
+    <div className="HeroBg2 flex flex-col md:flex-row justify-center items-start md:py-[10%] lg:gap-10">
       <div className="md:w-[50%]  flex  flex-col justify-center p-5 md:pl-[8%]">
         <h1 className="text-5xl lg:text-7xl font-bold mb-4 text-blue-600">
           School Programs

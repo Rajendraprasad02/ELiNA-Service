@@ -75,7 +75,7 @@ const ProgramContent = [
 const Programs = () => {
   return (
     <>
-      <div className="HeroBg md:px-36 md:py-28 ">
+      <div className="HeroBg md:px-36 py-28 ">
         <h1 className="flex justify-center items-center text-5xl font-black  text-pink-600">
           Welcome to Elina
         </h1>

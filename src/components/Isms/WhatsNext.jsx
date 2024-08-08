@@ -14,14 +14,14 @@ const WhatsNext = () => {
         <h2 className="text-sm text-center lg:text-xl md:text-base font-normal">
           Create your organization account and start by exploring the features.
         </h2>
-        <button className="bg-blue-600 text-lg p-2 py-1 md:px-5 md:py-3 border-blue-600 hover:text-white hover:border-white">
+        <button className="bg-blue-600 text-lg p-2 py-1 md:px-5 md:py-3 border-blue-600 hover:text-white lg:text-2xl hover:border-white">
           Create account
         </button>
         <p>or</p>
         <p className="font-semibold text-center lg:text-lg">
           Get in touch with us and Schedule a demo call.
         </p>
-        <button className="bg-white flex items-center p-2 border-white py-1 md:px-5 md:py-3 text-lg font-black text-blue-600 hover:text-white hover:bg-transparent hover:border-white">
+        <button className="bg-white flex items-center p-2 border-white py-1 md:px-5 md:py-3 text-lg lg:text-2xl font-black text-blue-600 hover:text-white hover:bg-transparent hover:border-white">
           {/* <span>
             <img className="w-5" src={calender} />
           </span> */}

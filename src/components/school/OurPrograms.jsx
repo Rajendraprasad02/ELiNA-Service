@@ -34,11 +34,11 @@ const OurPrograms = () => {
   return (
     <>
       <div className="HeroBg">
-        <h1 className=" text-center  text-3xl lg:text-4xl font-black text-blue-600 animationHero p-5">
+        <h1 className=" text-center  text-3xl lg:text-6xl font-black text-blue-600 animationHero p-5">
           Holistic Collaboration: Supporting Your School Community
         </h1>
         <div className="flex flex-col justify-center items-center md:px-[20%] lg:px-[5%] md:py-[3%]">
-          <p className="text-3xl font-bold text-center text-blue-950 p-10">
+          <p className="text-3xl lg:text-4xl font-bold text-center text-blue-950 p-10">
             Seamless Communication
           </p>
           <div className="flex flex-col lg:flex-row w-full lg:w-[80%]">
@@ -67,7 +67,7 @@ const OurPrograms = () => {
               </div>
             ))}
           </div>
-          <p className="text-3xl font-bold text-center text-blue-950 p-10">
+          <p className="text-3xl lg:text-4xl  font-bold text-center text-blue-950 p-10">
             {" "}
             Empowering the School Community
           </p>

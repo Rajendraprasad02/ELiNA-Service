@@ -5,13 +5,13 @@ import learn from "../../images/school/schoolCompressed/learn-min.jpg";
 const LeadYourTeacher = () => {
   return (
     <>
-      <div className="HeroBg md:px-[8%] py-[8%]">
-        <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 p-5 md:p-0">
+      <div className="HeroBg md:px-[8%] py-[8%] lg:py-[1%]">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-start gap-10 p-5 md:p-0">
           <div className="lg:w-1/2 w-full leftToRight">
             <img src={learn} className="rounded-3xl" />
           </div>
-          <div className="lg:w-1/2 w-full flex flex-col gap-6 p-[2%] rightToLeft">
-            <h1 className="text-5xl md:text-4xl text-blue-700 font-bold">
+          <div className="lg:w-1/2 w-full flex flex-col gap-6 px-[2%] rightToLeft">
+            <h1 className="text-5xl lg:text-6xl md:text-4xl text-blue-700 font-bold">
               Supporting Your Teachers
             </h1>
             <p className="text-lg ">

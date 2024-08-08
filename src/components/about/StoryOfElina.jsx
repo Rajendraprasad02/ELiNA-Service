@@ -15,17 +15,16 @@ const StoryOfElina = ({ storyOfElina }) => {
             <div className="w-[100%] md:w-[50%] ">
               <img
                 className={`${
-                  item.ImgDirection === "left"
-                    ? "items-end leftToRight"
-                    : "items-end rightToLeft"
-                } rounded-3xl animationHero w-full md:w-[573px] md:h-[356px]`}
+                  item.ImgDirection === "left" ? " ml-auto " : ""
+                } rounded-3xl  w-full md:w-[573px] md:h-[356px]`}
                 src={item.src}
+                alt=""
               />
             </div>
             <div
               className={`${
-                item.ImgDirection === "left" ? "rightToLeft" : "leftToRight"
-              } w-[100%] md:w-[50%] lg:p-0 font-medium text-base md:text-lg lg:text-xl`}
+                item.ImgDirection === "left" ? "rightToLefta" : "leftToRighta"
+              } w-[100%] md:w-[50%] lg:p-0 font-medium text-base lg:text-justify md:text-lg lg:text-xl`}
             >
               <p>{item.p}</p>
             </div>

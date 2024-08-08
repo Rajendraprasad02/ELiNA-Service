@@ -6,6 +6,7 @@ import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import Author from "../reuseable/Author";
+import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogThree = () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ const BlogThree = () => {
       </>
       <div className="lg:ml-[10%] mx-[1%] flex flex-row-reverse">
         <RecentBlog BlogContent={BlogContent} />
-        <div className="blog2 w-[80%]">
+        <div className="blog2 w-full lg:w-[80%]">
           <section>
             <h1>Introduction</h1>
             <p>
@@ -245,6 +246,7 @@ const BlogThree = () => {
               kinder to one another. This makes us welcome all kinds of people
               and their special ways.
             </p>
+            <BlogButtons BlogContent={BlogContent} />
           </section>
         </div>
       </div>
