@@ -212,14 +212,14 @@ export default function Test() {
               >
                 <div
                   className={`bg-gray-100 text-center font-bold flex justify-center items-center rounded-full w-[30px] h-[30px] ${
-                    currentStep === item.key ? "bg-blue-900 text-blue-900" : ""
+                    currentStep === item.key ? "bg-blue-900 text-blue-900 " : ""
                   }`}
                 >
                   {item.key}
                 </div>
                 <div
                   className={`font-black text-xs lg:text-sm ${
-                    currentStep === item.key ? "text-blue-900 " : ""
+                    currentStep === item.key ? "text-blue-900 underline" : ""
                   }`}
                 >
                   {item.h1}

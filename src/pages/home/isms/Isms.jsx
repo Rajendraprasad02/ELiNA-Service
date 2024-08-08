@@ -22,6 +22,9 @@ import access from "../../../images/easy-access.png";
 import activity from "../../../images/isms/activity.jpg";
 import calender from "../../../images/isms/calender.png";
 import manage from "../../../images/isms/manage.jpg";
+import track from "../../../images/isms/track.png";
+import managment from "../../../images/isms/managment.png";
+import activityManage from "../../../images/isms/activityManage.png";
 
 const CarouselContent = [
   {
@@ -69,7 +72,7 @@ const HowItWorksContent = [
     ],
   },
   {
-    video: activity,
+    video: managment,
     h1: "Therapy Session Management",
     li: [
       "Individualized Session Planning",
@@ -81,7 +84,7 @@ const HowItWorksContent = [
     ImgDirection: "left",
   },
   {
-    video: activity,
+    video: activityManage,
     h1: "Integrated Child Activity Management and Parent Engagement System",
     li: [
       "Structured Activities for Home",
@@ -97,7 +100,7 @@ const HowItWorksContent = [
   },
 
   {
-    video: activity,
+    video: track,
     h1: "Integrated Tracking and Coordination System for All Stakeholders ",
     li: [
       "      Event Tracking Across the Organization",
@@ -210,7 +213,6 @@ const WhoCanUseContent = [
 const Imis = () => {
   return (
     <>
-      <NavBar />
       <IsmsHeroPage />
       <WhoCanUse
         KeyContent={KeyContent}
@@ -220,7 +222,6 @@ const Imis = () => {
       <Carousel CarouselContent={CarouselContent} />
       <HowItWorks HowItWorksContent={HowItWorksContent} />
       <WhatsNext />
-      <Footer />
     </>
   );
 };

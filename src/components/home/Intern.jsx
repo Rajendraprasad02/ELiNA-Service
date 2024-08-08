@@ -1,6 +1,6 @@
 import React from "react";
 import Quote from "./Quote";
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import internAnimation from "../../images/compressed/hero/intern.jpg";
 
 const Intern = () => {

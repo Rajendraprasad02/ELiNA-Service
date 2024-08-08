@@ -6,16 +6,17 @@ import Footer from "../../../components/Footer";
 import pic2 from "../../../images/about/team2.png";
 import pic3 from "../../../images/about/team3.png";
 import mem1 from "../../../images/about/mem1.png";
-import mem2 from "../../../images/about/mem2.jpeg";
+import mem2 from "../../../images/about/mem22.jpeg";
 import mem4 from "../../../images/about/mem4.jpg";
 import mem5 from "../../../images/about/mem5.jpeg";
 import mem6 from "../../../images/about/mem7.jpg";
 import mem7 from "../../../images/about/mem8.jpeg";
+import mem9 from "../../../images/about/mem9.jpeg";
 import StoryOfElina from "../../../components/about/StoryOfElina";
-import story1 from "../../../images/about/storyofelina/compressed/story (1).jpg";
-import story2 from "../../../images/about/storyofelina/compressed/story (2).jpg";
+import story1 from "../../../images/about/storyofelina/compressed/four.jpg";
+import story2 from "../../../images/about/storyofelina/compressed/two.jpg";
 import story3 from "../../../images/about/storyofelina/compressed/story (3).jpg";
-import story4 from "../../../images/about/storyofelina/compressed/story (4).jpg";
+import story4 from "../../../images/about/storyofelina/compressed/one.jpg";
 
 const teamElinaContent = [
   {
@@ -69,6 +70,12 @@ const teamElinaContent2 = [
     p: "(Digital Transformation Lead)",
     des: "Narmatha leads our digital transformation initiatives, ensuring that our technology solutions are cutting-edge and user-friendly. With expertise in physiotherapy and a keen interest in digital systems, Narmatha enhances our ability to provide seamless and accessible support to families and professionals alike.",
   },
+  {
+    pic: mem9,
+    h1: "Srividya",
+    p: "(Intervention Services Navigator)",
+    des: "Srividya brings her experience of working with teenagers in inclusive environments and her knowledge of various curricula to her role as Intervention Services Navigator. Her expertise allows her to provide precise recommendations regarding educational journeys and environment settings. Srividya ensures that each family has access to the resources and support they need.",
+  },
 ];
 
 const storyOfElina = [
@@ -95,14 +102,12 @@ const storyOfElina = [
 const About = () => {
   return (
     <>
-      <NavBar />
       <HeroAbout />
       <StoryOfElina storyOfElina={storyOfElina} />
       <TeamElina
         teamElinaContent={teamElinaContent}
         teamElinaContent2={teamElinaContent2}
       />
-      <Footer />
     </>
   );
 };

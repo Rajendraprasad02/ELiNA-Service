@@ -99,7 +99,7 @@ const According = () => {
               </h1>
               <div className=" grid grid-flow-row md:grid-cols-2 lg:p-10">
                 {compassContent.map((item) => (
-                  <details className=" py-8 bg-gray-200 m-2 cursor-pointer rounded-2xl self-start">
+                  <details className=" py-8 bg-gray-200 m-2 cursor-pointer  rounded-2xl self-start">
                     <summary className=" px-5 text-lg font-black">
                       {item.head}
                     </summary>

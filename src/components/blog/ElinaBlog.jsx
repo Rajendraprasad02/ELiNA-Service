@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRightIcon } from "@heroicons/react/outline";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
 const ElinaBlog = ({ BlogContent }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [blogPerPage] = useState(6); // Number of blogs per page
   const [blogContentPerPage, setBlogContentPerPage] = useState(1); // Initial page number
 

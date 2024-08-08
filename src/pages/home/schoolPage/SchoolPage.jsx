@@ -10,14 +10,12 @@ import According from "../../../components/school/According";
 const SchoolPage = () => {
   return (
     <>
-      <NavBar />
       <SchoolActualHero />
       <SchoolHero />
       <LeadYourTeacher />
       <According />
       <OurPrograms />
       <StepsSchools />
-      <Footer />
     </>
   );
 };

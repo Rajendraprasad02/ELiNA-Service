@@ -35,14 +35,12 @@ const HeroContent = [
 const Home = () => {
   return (
     <>
-      <NavBar />
       <Hero HeroContent={HeroContent} />
       <WhatWeDo />
       <OurVision />
       <Video />
       <OutComes />
       <Intern />
-      <Footer />
     </>
   );
 };

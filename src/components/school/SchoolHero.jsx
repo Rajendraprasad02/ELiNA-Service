@@ -22,7 +22,12 @@ const SchoolHero = () => {
         </p>
       </div>
       <div className="md:w-[50%] w-full flex justify-center items-center p-5 md:pr-[8%]">
-        <img src={hero} alt="Hero" className="max-h-screen rounded-3xl" />
+        <img
+          loading="lazy"
+          src={hero}
+          alt="Hero"
+          className="max-h-screen rounded-3xl"
+        />
       </div>
     </div>
   );

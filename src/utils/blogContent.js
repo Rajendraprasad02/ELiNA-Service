@@ -9,6 +9,9 @@ import pic8 from "../images/blog/blogHero/familyPlaying.jpg";
 import pic9 from "../images/blog/blogHero/parenting.jpg";
 import pic10 from "../images/blog/blogHero/author.jpg";
 import pic11 from "../images/blog/blogHero/eleven.jpg";
+import pic12 from "../images/blog/blogHero/twelve.jpg";
+import pic13 from "../images/blog/blogHero/thirteen.jpg";
+import pic14 from "../images/blog/blogHero/fourteen.jpg";
 
 // import pic9 from "../../../images/blog/blogHero/sleep.jpg"
 
@@ -115,7 +118,7 @@ const BlogContent = [
     //done
     id: 12,
     h1: "How much screen time is too much for a child's brain and its relevance to Adhd and Autism",
-    blogImg: pic11,
+    blogImg: pic12,
     des: "“Screen time” is a term used for activities done in front of any screen such as televisions, computers, I-pads or even video games. “Screen time is a sedentary activity meaning you are being physically inactive while sitting down. Very little energy is used during screen time”",
     author: "Niharika",
     gender: "female",
@@ -127,7 +130,7 @@ const BlogContent = [
     //done
     id: 13,
     h1: "LETTING LEARNING FLOURISH",
-    blogImg: pic11,
+    blogImg: pic13,
     des: "The key to understanding this is to acknowledge everyone needs support and help. As one of my facilitators at Elina put it- It is not a suggestion its a right of every student to recieve help and enthusiastic support from their teachers, parents and mentors. You might have been told from previous experiences that help or customised aid is preventing children from growing or learning the harshness of the real world but this couldn't be farther from the truth!",
     author: "Niharika",
     gender: "female",
@@ -138,7 +141,7 @@ const BlogContent = [
     //done
     id: 14,
     h1: "Equity In Education",
-    blogImg: pic11,
+    blogImg: pic14,
     des: "The key to understanding this is to acknowledge everyone needs support and help. As one of my facilitators at Elina put it- It is not a suggestion its a right of every student to recieve help and enthusiastic support from their teachers, parents and mentors. You might have been told from previous experiences that help or customised aid is preventing children from growing or learning the harshness of the real world but this couldn't be farther from the truth!",
     author: "Niharika",
     gender: "female",

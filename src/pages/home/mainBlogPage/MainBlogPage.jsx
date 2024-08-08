@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlogOne from "../../../components/mainBlogPage/BlogOne";
 import BlogTwo from "../../../components/mainBlogPage/BlogTwo";
 import BlogThree from "../../../components/mainBlogPage/BlogThree";
@@ -19,6 +19,9 @@ import BlogThirteen from "../../../components/mainBlogPage/BlogThirteen";
 import BlogFourteen from "../../../components/mainBlogPage/BlogFourteen";
 
 const MainBlogPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const params = useParams();
   const blog = [
     BlogOne,
@@ -39,12 +42,10 @@ const MainBlogPage = () => {
 
   return (
     <>
-      <NavBar />
       {blog.map((elem, index) => {
         if (blog.length < Number(params.id)) alert("error");
         if (index + 1 === Number(params.id)) return React.createElement(elem);
       })}
-      <Footer />
     </>
   );
 };

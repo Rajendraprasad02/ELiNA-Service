@@ -10,13 +10,11 @@ import Steps from "../../../components/professional/Steps";
 const ProfessionalsPage = () => {
   return (
     <>
-      <NavBar />
       <ProfessionalHero />
       <Professional2 />
       <SpecialNeedCare />
       <WeHelpKids />
       <Steps />
-      <Footer />
     </>
   );
 };

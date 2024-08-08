@@ -1,5 +1,5 @@
 import Comments from "../reuseable/Comments";
-import React from "react";
+import React, { useEffect } from "react";
 import one from "../../images/blog/blog4/1.png";
 import two from "../../images/blog/blog4/2.png";
 import three from "../../images/blog/blog4/3.png";
@@ -10,6 +10,9 @@ import BlogContent from "../../utils/blogContent";
 import Author from "../reuseable/Author";
 
 const BlogFour = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import blog1 from "../../images/blog/blog1/blog.jpg";
 import blog2 from "../../images/blog/blog1/blog1.jpg";
 import blog3 from "../../images/blog/blog1/blog2.jpg";
@@ -8,6 +8,9 @@ import BlogContent from "../../utils/blogContent.js";
 import Author from "../reuseable/Author.jsx";
 
 const BlogOne = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <>

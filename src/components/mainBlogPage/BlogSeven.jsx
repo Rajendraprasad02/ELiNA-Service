@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Comments from "../reuseable/Comments";
 import BlogContent from "../../utils/blogContent";
 import RecentBlog from "../reuseable/RecentBlog";
 import Author from "../reuseable/Author";
 
 const BlogSeven = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <>

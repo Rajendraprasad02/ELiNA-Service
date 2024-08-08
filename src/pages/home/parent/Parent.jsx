@@ -8,11 +8,9 @@ import Cards from "../../../components/parent/Cards";
 const Parent = () => {
   return (
     <>
-      <NavBar />
       <ParetnHero />
       <Programs />
       <Cards />
-      <Footer />
     </>
   );
 };

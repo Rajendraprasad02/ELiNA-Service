@@ -146,7 +146,8 @@ const Footer = () => {
               </span>
               <div class="flex items-center mt-1 space-x-3">
                 <a
-                  href="/"
+                  href="https://x.com/elina_service?t=XPIZjyRN0-GxJDrjAkKftw&s=09 "
+                  target="_blank"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg
@@ -158,7 +159,8 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/elinaservices?igsh=dWVjY3lrZXp2N3Z5"
+                  target="_blank"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg
@@ -171,7 +173,8 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="/"
+                  href="https://www.facebook.com/Elina.Edu?mibextid=ZbWKwL"
+                  target="_blank"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg
@@ -183,7 +186,8 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="/"
+                  href="https://www.linkedin.com/company/elina-services/"
+                  target="_blank"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg
@@ -196,7 +200,8 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="/"
+                  href="https://www.youtube.com/@elinaservices"
+                  target="_blank"
                   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <svg

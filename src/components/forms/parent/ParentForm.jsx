@@ -299,9 +299,7 @@ const ParentForm = () => {
                         : ""
                     } w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md`}
                   />
-                  <div className="text-red-600 text-sm font-semibold">
-                    Note: You can use this Email to login.
-                  </div>
+
                   {formik.errors.email && formik.touched.email ? (
                     <p className="text-sm font-semibold text-red-500">
                       {formik.errors.email}
@@ -309,6 +307,9 @@ const ParentForm = () => {
                   ) : (
                     ""
                   )}
+                  <div className="text-gray-500 text-sm font-black">
+                    Note: You can use this Email to login.
+                  </div>
                 </div>
                 {/* How do you know about us */}
                 <div class="w-full px-3 sm:w-1/2 mb-5">
@@ -459,7 +460,7 @@ const ParentForm = () => {
                       )}
                   </div>
                 </div>
-                <div className="ml-3 text-red-600 text-sm font-semibold">
+                <div className="ml-3 text-gray-600 text-sm font-black">
                   Note : Please ensure the accuracy of the email address and
                   password before proceeding.
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import pic1 from "../../images/about/team1.png";
+import pic1 from "../../images/about/team1.jpg";
 
 const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
   return (
@@ -48,7 +48,7 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
                   {item.p}
                 </p>
                 <div className="absolute opacity-0 ease-in-out delay-150 hover:opacity-100 duration-300">
-                  <p className=" w-[200px] h-[200px] py-5 px-4 ease-in-out delay-150 text-xs font-light text-white text-center flex items-center rounded-full hover:bg-black-rgba ">
+                  <p className=" w-[200px] h-[200px] p-5 ease-in-out delay-150 text-xs font-light text-white text-center flex items-center rounded-full hover:bg-black-rgba ">
                     {item.des}
                   </p>
                 </div>

@@ -8,11 +8,9 @@ import PartnershipCarousel from "../../../components/partnership/PartnershipCaro
 const PartnershipPageContent = () => {
   return (
     <>
-      <NavBar />
       <PartnershipHero />
       <PartnershipContent />
       <PartnershipCarousel />
-      <Footer />
     </>
   );
 };

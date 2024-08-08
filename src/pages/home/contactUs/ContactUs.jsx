@@ -24,12 +24,10 @@ const blogContent = [
 const ContactUs = () => {
   return (
     <>
-      <NavBar />
       <ContactUsHero />
       <FAQsContactUs blogContent={blogContent} />
       <ContactUsForm />
       <SignUp />
-      <Footer />
     </>
   );
 };

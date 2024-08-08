@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Author from "../reuseable/Author";
 import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
@@ -6,10 +6,13 @@ import BlogContent from "../../utils/blogContent";
 import one from "../../images/blog/blog13/one.jpg";
 
 const BlogThirteen = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <>
-        <div className="bgBlog10">
+        <div className="bgBlog13">
           <div className="lg:h-screen h-fit bg-black-bg">
             <div className="h-screen flex items-center justify-center p-4">
               <Author />

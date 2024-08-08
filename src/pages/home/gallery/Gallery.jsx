@@ -144,10 +144,8 @@ const picButtons = [
 const Gallery = () => {
   return (
     <>
-      <NavBar />
       <GalleryHero />
       <GalleryPhoto GalleryPicContent={GalleryObj} picButtons={picButtons} />
-      <Footer />
     </>
   );
 };
