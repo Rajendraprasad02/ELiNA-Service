@@ -9,6 +9,7 @@ import IP from "../../images/professional/cardImg/IntegratedPerspective2.png";
 import CS from "../../images/professional/cardImg/CollaborativeSuccess.png";
 import EV from "../../images/professional/cardImg/EnhancedVisibility.png";
 import CT from "../../images/professional/cardImg/CommunicationandTracking.png";
+import hos from "../../images/professional/cardImg/holistic.png";
 import SC from "../../images/professional/cardImg/seemlesscommunication.png";
 import card5 from "../../images/professional/5.jpg";
 import card6 from "../../images/professional/6.jpg";
@@ -44,7 +45,7 @@ const weHelpKidContent = [
         ensuring that every aspect of the child's development is addressed.
       </span>
     ),
-    src: SR,
+    src: hos,
   },
   {
     h1: "Effective Intervention: Converging Efforts for Maximum Impact",
@@ -57,6 +58,21 @@ const weHelpKidContent = [
       </span>
     ),
     src: card7,
+  },
+  {
+    h1: "Technology-Based Enhancement: Utilizing the ISMS Tool",
+    decs: (
+      <span>
+        <span className="text-pink-600 font-bold">
+          Flexibility and Accessibility:
+        </span>
+        The ISMS tool allows for flexible collaboration, accommodating
+        professionals and children receiving support from varied locations. This
+        flexibility ensures that geographic limitations do not hinder the
+        quality of care or the effectiveness of interventions.
+      </span>
+    ),
+    src: IP,
   },
   {
     h1: "Technology-Based Enhancement: Utilizing the ISMS Tool",
@@ -74,21 +90,6 @@ const weHelpKidContent = [
       </span>
     ),
     src: CS,
-  },
-  {
-    h1: "Technology-Based Enhancement: Utilizing the ISMS Tool",
-    decs: (
-      <span>
-        <span className="text-pink-600 font-bold">
-          Flexibility and Accessibility:
-        </span>
-        The ISMS tool allows for flexible collaboration, accommodating
-        professionals and children receiving support from varied locations. This
-        flexibility ensures that geographic limitations do not hinder the
-        quality of care or the effectiveness of interventions.
-      </span>
-    ),
-    src: IP,
   },
   {
     h1: "Enhanced Visibility: Understanding the Broader Scope of Care",

@@ -56,7 +56,7 @@ const SpecialNeedCare = () => {
             <ul className="grid lg:grid-cols-4 grid-cols-2 gap-5 lg:gap-5  w-full">
               {professionalLiContent.map((item) => (
                 <div className="flex flex-col">
-                  <li className="lg:text-xl text-base font-black text-blue-950">
+                  <li className="lg:text-xl text-base font-black text-pink-600">
                     {item.li}
                   </li>
                   <p className="lg:text-base text-sm">{item.p}</p>

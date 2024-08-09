@@ -44,7 +44,7 @@ const Professional2 = () => {
               </button>
             </a>
           </div>
-          <div className="flex w-full lg:w-1/2 py-5 lg:pl-5 ">
+          <div className="flex w-full lg:w-1/2 py-5 lg:pl- ">
             <img className="rounded-3xl" src={professional2} alt="" />
           </div>
         </div>

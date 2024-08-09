@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import logo from "../images/elinalogoSaturation.png";
+// import logo from "../images/elinalogoSaturation.png";
+import logo from "../images/7.png";
+
 import {
   MenuIcon,
   XIcon,

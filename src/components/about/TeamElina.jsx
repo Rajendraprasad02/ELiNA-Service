@@ -15,7 +15,7 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
                 className="rounded-full w-[200px] h-[200px] "
                 src={pic1}
               ></img>
-              <h1 className="text-center text-lg font-bold">
+              <h1 className="text-center text-lg font-bold lg:pt-[1%]">
                 Ramalakshmi Kannan
               </h1>
               <p className="mx-auto font-medium text-base text-gray-500">
@@ -43,8 +43,10 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
                   className="rounded-full w-[200px] h-[200px] "
                   src={item.pic}
                 ></img>
-                <h1 className="text-center text-lg font-bold">{item.h1}</h1>
-                <p className="mx-auto font-medium text-base text-gray-500">
+                <h1 className="text-center text-lg font-bold lg:pt-[3%]">
+                  {item.h1}
+                </h1>
+                <p className="mx-auto font-medium text-base text-gray-500 ">
                   {item.p}
                 </p>
                 <div className="absolute opacity-0 ease-in-out delay-150 hover:opacity-100 duration-300">
@@ -67,7 +69,9 @@ const TeamElina = ({ teamElinaContent, teamElinaContent2 }) => {
                   className="flex rounded-full w-[250px] h-[250px]"
                   src={item.pic}
                 ></img>
-                <h1 className="text-center text-lg font-bold">{item.h1}</h1>
+                <h1 className="text-center text-lg font-bold lg:pt-[3%]">
+                  {item.h1}
+                </h1>
                 <p className="mx-auto px-10 font-medium text-sm text-center text-gray-500">
                   {item.p}
                 </p>

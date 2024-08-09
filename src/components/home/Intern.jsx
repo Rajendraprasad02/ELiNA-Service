@@ -24,8 +24,8 @@ const Intern = () => {
   return (
     <>
       <div className="HeroBg2">
-        <div className="flex flex-col md:flex-row items-center lg:gap-10 py-[10%] md:px-[10%] lg:px-[10%] md:py-[5%] lg:py-[8%]">
-          <div className="w-full md:w-1/2 flex flex-col gap-10 md:gap-5 px-[]">
+        <div className="flex flex-col md:flex-row  lg:gap-10 py-[10%] md:px-[10%] lg:px-[10%] md:py-[5%] lg:py-[8%]">
+          <div className="w-full md:w-1/2 flex flex-col justify-around gap-10 md:gap-5 px-[]">
             <h1 className="text-5xl text-blue-700 md:text-left text-center font-semibold">
               Join Us As An <span className="font-black">INTERN </span>
               Now!

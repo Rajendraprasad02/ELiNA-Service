@@ -52,11 +52,11 @@ const According = () => {
     <>
       <div className="HeroBg2">
         <div className="mx-0 lg:mx-[16%] lg:py-[5%]">
-          <h1 className="flex justify-center text-5xl text-center font-black text-blue-950 py-20">
+          <h1 className="flex justify-center text-5xl text-center  font-black text-blue-950 py-20">
             Personalized Support Plans for Every Student
           </h1>
           <div className="">
-            <h1 className="font-bold text-base px-10">
+            <h1 className="font-bold text-base px-3 lg:px-10">
               <span className="font-black text-xl text-blue-950">
                 Our Specialized Program Plan:
               </span>{" "}
@@ -79,7 +79,7 @@ const According = () => {
           </div>
 
           <div>
-            <h1 className="font-medium text-base px-10">
+            <h1 className="font-medium text-base px-3 lg:px-10">
               <span className="font-black text-xl text-blue-950">
                 SAIL Program:
               </span>{" "}
@@ -103,7 +103,7 @@ const According = () => {
             </div>
           </div>
           <div>
-            <h1 className="font-medium text-base px-10">
+            <h1 className="font-medium text-base px-3 lg:px-10">
               <span className="font-black text-xl text-blue-950">
                 CoMPASS Program:
               </span>{" "}

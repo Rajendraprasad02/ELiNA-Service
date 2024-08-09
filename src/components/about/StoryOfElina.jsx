@@ -8,7 +8,7 @@ const StoryOfElina = ({ storyOfElina }) => {
           <div
             className={`p-16  lg:h-screen flex flex-col lg:flex-row ${
               item.ImgDirection === "left" ? "" : "lg:flex-row-reverse"
-            } justify-center gap-10 md:gap-[5%] px-8  md:px-20 items-center ${
+            } justify-center gap-10 md:gap-[5%] px-8  md:px-20 ${
               item.ImgDirection === "left" ? "HeroBg" : "HeroBg2"
             }`}
           >

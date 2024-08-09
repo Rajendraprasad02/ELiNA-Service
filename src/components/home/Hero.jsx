@@ -46,7 +46,7 @@ const Hero = ({ HeroContent }) => {
 
         <div className=" flex flex-col  lg:flex-row mx:[4%] lg:mx-[6%]   md:pt-[3%]  lg:pb-10 ">
           <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:pr-10 lg:m-0">
-            <h1 className=" text-4xl font-black text-gray-800 md:text-4xl lg:text-5xl">
+            <h1 className=" text-4xl font-black text-indigo-600 md:text-4xl lg:text-5xl">
               Welcome to Elina's World:
               <br />
               <span className="text-5xl  text-pink-600 md:text-6xl lg:text-5xl">

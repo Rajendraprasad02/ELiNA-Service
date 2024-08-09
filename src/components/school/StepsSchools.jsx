@@ -68,7 +68,7 @@ const StepsSchools = () => {
             Getting Started is Simple
           </h1>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center lg:pb-[5%]">
           <div className="flex lg:flex-row flex-col w-[90%] gap-5  flex-wrap  justify-center text-center ">
             {stepsContent?.map((item, index) => (
               <div className="lg:w-[32%] w-full flex flex-col gap-5  bg-blue-600 bg-opacity-10 rounded-3xl p-10">
