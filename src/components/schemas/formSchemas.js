@@ -3,21 +3,46 @@ import "yup-phone";
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-export const gettingStartedForm = yup.object().shape({
+export const parentFormAnimated = yup.object().shape({
   childName: yup.string().required("This field is required"),
   dob: yup.date().required("This field is required"),
-  parentName: yup.string().required("This field is required"),
+  gender: yup.string().required("Select any one option"),
+
   fatherName: yup.string().required("This field is required"),
-  address: yup.string().required("This field is required"),
-  schoolName: yup.string().required("This field is required"),
-  expectation: yup.string().required("This field is required"),
+  motherName: yup.string().required("This field is required"),
+  alternativephoneNumber: yup
+    .string()
+    .matches(phoneRegExp, "Alternative phone number is not valid")
+    .min(10, "Must be exactly 10 digits")
+    .max(10, "Must be exactly 10 digits")
+    .required("This field is required"),
   phoneNumber: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
     .min(10, "Must be exactly 10 digits")
     .max(10, "Must be exactly 10 digits")
     .required("This field is required"),
-  alternativephoneNumber: yup
+  email: yup
+    .string()
+    .email("please enter valid email address")
+    .required("This field is required"),
+  schoolName: yup.string().required("This field is required"),
+  howdoyouknow: yup.string().required("Select an option"),
+  expectation: yup.string().required("This field is required"),
+  password: yup.string().required("This field is required"),
+  confirmPassword: yup.string().required("This field is required"),
+  captcha: yup.string().required("Captcha is required"),
+  agree: yup.string().required("This field is required"),
+});
+
+export const gettingStartedForm = yup.object().shape({
+  childName: yup.string().required("This field is required"),
+  dob: yup.date().required("This field is required"),
+  gender: yup.string().required("Select any one option"),
+  reason: yup.string().required("Select an option"),
+  parentName: yup.string().required("This field is required"),
+
+  phoneNumber: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
     .min(10, "Must be exactly 10 digits")
@@ -28,27 +53,72 @@ export const gettingStartedForm = yup.object().shape({
     .email("please enter valid email address")
     .required("This field is required"),
   howdoyouknow: yup.string().required("Select an option"),
-  gender: yup.string().required("Select any one option"),
-  relation: yup.string().required("Select an option"),
-  expectation: yup.string().required("Select an option"),
-  password: yup
-    .string()
-    .min(5, "Password should be minimum 5 characters")
-    .required("This field is required"),
-  confirmPassword: yup
-    .string()
-    .oneOf(
-      [yup.ref("password"), null],
-      "password and confirm password not matching"
-    ),
-  agree: yup
-    .bool()
-    .oneOf([true], "You need to accept the terms and conditions")
-    .required("You need to accept the terms and conditions"),
+
   captcha: yup.string().required("Captcha is required"),
 });
 
-export const parentPageForm = yup.object().shape({
+// export const parentPageForm = yup.object().shape({
+//   schoolName: yup.string().required("This field is required"),
+//   principalName: yup.string().required("This field is required"),
+//   buildingName: yup.string().required("This field is required"),
+//   buildingAddress: yup.string().required("This field is required"),
+//   buildingState: yup.string().required("This field is required"),
+//   yearEstablishment: yup
+//     .number()
+//     .integer()
+//     .max(9999, "Year of establishment must be 4 digits")
+//     .required("This field is required"),
+//   buildingContact: yup.string().required("This field is required"),
+//   administrationContact: yup.string().required("This field is required"),
+//   phoneNumber: yup
+//     .string()
+//     .matches(phoneRegExp, "Phone number is not valid")
+//     .min(10, "Must be exactly 10 digits")
+//     .max(10, "Must be exactly 10 digits")
+//     .required("This field is required"),
+//   telephoneNumber: yup
+//     .string()
+//     .matches(phoneRegExp, "Phone number is not valid")
+//     .min(10, "Must be exactly 10 digits")
+//     .max(10, "Must be exactly 10 digits")
+//     .required("This field is required"),
+//   email: yup
+//     .string()
+//     .email("Please entry valid email address")
+//     .required("This field is required"),
+//   studentPopulation: yup.number().integer().required("This field is required"),
+//   teacherPopulation: yup.number().integer().required("This field is required"),
+//   // studentRatio: yup.string().required("This field is required"),
+//   captcha: yup.string().required("Captcha is required"),
+//   schoolType: yup
+//     .array()
+//     .min(1, "This field is required")
+//     .of(yup.string())
+//     .required("This field is required"),
+//   studentTeacherRatio: yup
+//     .array()
+//     .min(1, "This field is required")
+//     .of(yup.string())
+//     .required("This field is required"),
+//   infrastructureFacility: yup
+//     .array()
+//     .min(1, "This field is required")
+//     .of(yup.string())
+//     .required("This field is required"),
+//   curriculamSupport: yup
+//     .array()
+//     .min(1, "This field is required")
+//     .of(yup.string())
+//     .required("This field is required"),
+//   schoolPolicy: yup
+//     .array()
+//     .min(1, "This field is required")
+//     .of(yup.string())
+//     .required("This field is required"),
+//   multidisciplinaryTeam: yup.string().required("This field is required"),
+//   inclusionPolicy: yup.string().required("This field is required"),
+// });
+export const parentPageFormstep1 = yup.object().shape({
   schoolName: yup.string().required("This field is required"),
   principalName: yup.string().required("This field is required"),
   buildingName: yup.string().required("This field is required"),
@@ -79,9 +149,37 @@ export const parentPageForm = yup.object().shape({
     .required("This field is required"),
   studentPopulation: yup.number().integer().required("This field is required"),
   teacherPopulation: yup.number().integer().required("This field is required"),
-  schoolType: yup.string().required("This field is required"),
-  studentRatio: yup.string().required("This field is required"),
-  captcha: yup.string().required("Captcha is required"),
+  schoolType: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
+  studentTeacherRatio: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
+});
+export const parentPageFormstep2 = yup.object().shape({
+  infrastructureFacility: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
+  curriculamSupport: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
+  schoolPolicy: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
+});
+export const parentPageFormstep3 = yup.object().shape({
+  multidisciplinaryTeam: yup.string().required("This field is required"),
+  inclusionPolicy: yup.string().required("This field is required"),
 });
 
 export const serviceProviderPageForm = yup.object().shape({
@@ -108,6 +206,11 @@ export const serviceProviderPageForm = yup.object().shape({
     .oneOf([true], "You need to accept the terms and conditions")
     .required("You need to accept the terms and conditions"),
   captcha: yup.string().required("Captcha is required"),
+  specialization: yup.string().required("Please select any option"),
+  modeOfOperation: yup.string().required("Please select any option"),
+  modeOfDelivery: yup.string().required("Please select any option"),
+  modeOfService: yup.string().required("Please select any option"),
+  professionalQualification: yup.string().required("Please select any option"),
 });
 
 export const internPageForm = yup.object().shape({

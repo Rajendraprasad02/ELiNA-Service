@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { serviceProviderPageForm } from "../../schemas/formSchemas";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 const serviceProviderContent1 = [
   {
@@ -82,23 +83,86 @@ const serviceProviderContent4 = [
 ];
 
 const ServiceProviderForm = () => {
+  const [recaptchaValue, setRecaptchaValue] = useState("");
+  const [isSubmitting, setSubmitting] = useState(true);
   const formik = useFormik({
     initialValues: {
       serviceName: "",
       universityName: "",
+      gender: "",
       professionalCharges: "",
       yearOfCompletion: "",
       specialistIn: "",
       yearEstablishment: "",
       workExperience: "",
       phoneNumber: "",
-      gender: "",
       email: "",
       agree: false,
       captcha: "",
+      specialization: [],
+      modeOfDelivery: "",
+      operation: "",
+      modeOfService: [],
+      professionalQualification: [],
     },
-    validationSchema: serviceProviderPageForm,
+
+    // validationSchema: serviceProviderPageForm,
+    onSubmit: async (values, actions) => {
+      console.log(values);
+
+      try {
+        const response = await axios.post(
+          "https://onlineappointment.onrender.com/serviceProvider",
+          {
+            name: values.serviceName,
+            gender: values.gender,
+            phone_number: values.phoneNumber,
+            email_address: values.email,
+            area_of_specializtion: values.specialization,
+            type_of_service: values.modeOfService,
+            providing_home_service: values.modeOfDelivery,
+            mode_of_service: values.operation,
+            profession_charges_per_session: values.professionalCharges,
+            universtiy_name: values.universityName,
+            profession_qualification: values.professionalQualification,
+            year_of_completion: values.yearOfCompletion,
+            specialist_in: values.specialistIn,
+            work_experience: values.workExperience,
+            agree_of_acknowledgement: values.agree,
+            organisation_name: null,
+            organisation_head_name: null,
+            organisation_email_address: null,
+            organisation_website_info: null,
+            specification_limitation_constraint: null,
+            "g-recaptcha-response": recaptchaValue,
+          }
+        );
+        actions.resetForm();
+        alert("Form submitted successfully");
+        console.log(response.data);
+      } catch (error) {
+        console.error("There was an error submitting the form!", error);
+        console.log(values);
+      }
+    },
   });
+  const handleRecaptcha = (value) => {
+    setRecaptchaValue(value);
+    console.log("value : ", value);
+    formik.setFieldValue("captcha", value);
+  };
+  const handleCheckboxChange = (event, field) => {
+    const { value, checked } = event.target;
+
+    if (checked) {
+      formik.setFieldValue(field, [...formik.values[field], value]);
+    } else {
+      formik.setFieldValue(
+        field,
+        formik.values[field].filter((item) => item !== value)
+      );
+    }
+  };
 
   return (
     <>
@@ -241,10 +305,18 @@ const ServiceProviderForm = () => {
                         <input
                           type="checkbox"
                           className="rounded-[25%]"
+                          name="selectedOptions"
                           id="specialization"
                           onBlur={formik.handleBlur}
-                          onChange={formik.handleChange}
-                          value={formik.values.specialization}
+                          // onChange={formik.handleChange}
+                          // value={formik.values.specialization}
+                          onChange={(e) =>
+                            handleCheckboxChange(e, "specialization")
+                          }
+                          value={item.li}
+                          checked={formik.values.specialization.includes(
+                            item.li
+                          )}
                           placeholder="Child name"
                           class={`${
                             formik.errors.specialization &&
@@ -381,14 +453,21 @@ const ServiceProviderForm = () => {
                               <input
                                 type="checkbox"
                                 className="rounded-[25%]"
-                                id="childName"
+                                id="modeOfService"
                                 onBlur={formik.handleBlur}
-                                onChange={formik.handleChange}
-                                value={formik.values.childName}
+                                // onChange={formik.handleChange}
+                                // value={formik.values.modeOfService}
+                                onChange={(e) =>
+                                  handleCheckboxChange(e, "modeOfService")
+                                }
+                                value={item.li}
+                                checked={formik.values.modeOfService.includes(
+                                  item.li
+                                )}
                                 placeholder="Child name"
                                 class={`${
-                                  formik.errors.childName &&
-                                  formik.touched.childName
+                                  formik.errors.modeOfService &&
+                                  formik.touched.modeOfService
                                     ? "border border-red-600"
                                     : " "
                                 }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
@@ -481,10 +560,20 @@ const ServiceProviderForm = () => {
                               <input
                                 type="checkbox"
                                 className="rounded-[25%]"
-                                id="childName"
+                                id="professionalQualification"
                                 onBlur={formik.handleBlur}
-                                onChange={formik.handleChange}
-                                value={formik.values.professionalQualification}
+                                // onChange={formik.handleChange}
+                                // value={formik.values.professionalQualification}
+                                onChange={(e) =>
+                                  handleCheckboxChange(
+                                    e,
+                                    "professionalQualification"
+                                  )
+                                }
+                                value={item.li}
+                                checked={formik.values.professionalQualification.includes(
+                                  item.li
+                                )}
                                 placeholder="Child name"
                                 class={`${
                                   formik.errors.professionalQualification &&
@@ -493,6 +582,7 @@ const ServiceProviderForm = () => {
                                     : " "
                                 }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
                               />
+
                               <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
                                 {item.li}
                               </label>
@@ -615,7 +705,11 @@ const ServiceProviderForm = () => {
               </>
             </div>
             <div id="captcha" className="pb-">
-              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+              <ReCAPTCHA
+                onChange={handleRecaptcha}
+                // sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3"
+                sitekey="6LcfLFUoAAAAACno3hdClnckkDsl4ERrkfhX7Alr"
+              />
               {formik.errors.captcha && formik.touched.captcha ? (
                 <p className="text-sm font-semibold text-red-500">
                   {formik.errors.captcha}
@@ -625,7 +719,10 @@ const ServiceProviderForm = () => {
               )}
             </div>
             <div className="flex justify-center">
-              <button className="md:w-[20%] w-[90%] p-3 bg-blue-950 border-blue-950 hover:text-blue-950 hover:bg-transparent">
+              <button
+                type="submit"
+                className="md:w-[20%] w-[90%] p-3 bg-blue-950 border-blue-950 hover:text-blue-950 hover:bg-transparent"
+              >
                 Submit
               </button>
             </div>

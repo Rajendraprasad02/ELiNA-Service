@@ -30,6 +30,7 @@ import User from "./layout/User";
 import Admin from "./layout/Admin";
 import Quote from "./components/adminScreen/Quote";
 import Testimonials from "./components/adminScreen/Testimonials";
+import NewsLetter from "./components/adminScreen/NewsLetter";
 
 const router = createHashRouter([
   {
@@ -114,6 +115,10 @@ const router = createHashRouter([
       {
         path: "/admin/testimonials",
         element: <Testimonials />,
+      },
+      {
+        path: "/admin/newsletter",
+        element: <NewsLetter />,
       },
     ],
   },

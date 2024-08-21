@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-import { parentPageForm } from "../../schemas/formSchemas";
+import {
+  parentPageFormstep1,
+  parentPageFormstep2,
+  parentPageFormstep3,
+} from "../../schemas/formSchemas";
 import ReCAPTCHA from "react-google-recaptcha";
 import BreadCrumbs from "../../reuseable/BreadCrumbs";
+import axios from "axios";
 
 const schoolPolicyContent1 = [
   {
@@ -106,10 +111,16 @@ const schoolDetailsContent2 = [
   },
 ];
 
-const onSubmit = async (values, actions) => {
-  setTimeout(() => actions.resetForm(), 1000);
+const validationSchemas = {
+  1: parentPageFormstep1,
+  2: parentPageFormstep2,
+  3: parentPageFormstep3,
 };
+
 const SchoolForm = () => {
+  const [step, setStep] = useState(1);
+  const [recaptchaValue, setRecaptchaValue] = useState("");
+  const [isSubmitting, setSubmitting] = useState(true);
   const formik = useFormik({
     initialValues: {
       schoolName: "",
@@ -117,35 +128,146 @@ const SchoolForm = () => {
       buildingName: "",
       buildingAddress: "",
       buildingState: "",
-      yearEstablishment: "",
       buildingContact: "",
+      yearEstablishment: "",
       administrationContact: "",
       phoneNumber: "",
       telephoneNumber: "",
       email: "",
       studentPopulation: "",
       teacherPopulation: "",
-      schoolType: "",
-      studentRatio: "",
       captcha: "",
+      schoolType: [],
+      studentTeacherRatio: [],
+      infrastructureFacility: [],
+      curriculamSupport: [],
+      schoolPolicy: [],
+      inclusionPolicy: "",
+      multidisciplinaryTeam: "",
     },
-    validationSchema: parentPageForm,
-    onSubmit,
+    // validationSchema: parentPageForm,
+    validationSchema: validationSchemas[step],
+    onSubmit: async (values, actions) => {
+      console.log("Form Values:", values); // Logging form values
+      // Handle form submission logic here
+      try {
+        const response = await axios.post(
+          "https://onlineappointment.onrender.com/schoolForm",
+          {
+            school_name: values.schoolName,
+            school_principal_name: values.principalName,
+            status: "null",
+            school_building_name: values.buildingName,
+            school_builiding_address: values.buildingAddress,
+            school_district: values.buildingState,
+            building_contract: values.buildingContact,
+            admin_contract: "9899879879",
+            phone_number: values.phoneNumber,
+            telephone_number: values.telephoneNumber,
+            school_email: values.email,
+            year_of_establishment: values.yearEstablishment,
+            totalstudent_population: values.studentPopulation,
+            totalteacher_population: values.teacherPopulation,
+            infra_facility: values.infrastructureFacility,
+            school_curriculam: values.curriculamSupport,
+            school_policy: values.schoolPolicy,
+            school_type: values.schoolType,
+            school_teacher_ratio: values.studentTeacherRatio,
+            // have_exclusion_policy: values.policy,
+            have_exclusion_policy: values.inclusionPolicy,
+            // multidisciplinary_team: values.multidisciplinary,
+            multidisciplinary_team: values.multidisciplinaryTeam,
+            multidisciplinary_team_desc: "bbg",
+            "g-recaptcha-response": recaptchaValue,
+          }
+        );
+        actions.resetForm();
+        alert("Form submitted successfully");
+        console.log(response.data);
+      } catch (error) {
+        console.error("There was an error submitting the form!", error);
+        console.log(values);
+      }
+    },
   });
+  const handleRecaptcha = (value) => {
+    setRecaptchaValue(value);
+    console.log("value : ", value);
+    formik.setFieldValue("captcha", value);
+  };
+  // const [step, setStep] = useState(1);
 
-  const [step, setStep] = useState(1);
+  // const handleNext = () => {
+  //   if (step >= 1 && step <= 2) {
+  //     setStep(step + 1);
+  //   }
+  // };
+  // const handlePrevious = () => {
+  //   if (step > 1) {
+  //     setStep(step - 1);
+  //   }
+  // };
+  // const [step, setStep] = useState(1);
 
-  const handleNext = () => {
-    if (step >= 1 && step <= 2) {
+  // const handleNext = () => {
+  //   setStep((prevStep) => prevStep + 1);
+  // };
+  const handleNext = async () => {
+    formik.setTouched({
+      // Specify touched fields based on the current step
+      schoolName: step === 1,
+      principalName: step === 1,
+      buildingName: step === 1,
+      buildingAddress: step === 1,
+      buildingState: step === 1,
+      yearEstablishment: step === 1,
+      buildingContact: step === 1,
+      administrationContact: step === 1,
+      phoneNumber: step === 1,
+      telephoneNumber: step === 1,
+      email: step === 1,
+      studentPopulation: step === 1,
+      teacherPopulation: step === 1,
+      schoolType: step === 1,
+      studentTeacherRatio: step === 1,
+
+      infrastructureFacility: step === 2,
+      curriculamSupport: step === 2,
+      schoolPolicy: step === 2,
+      multidisciplinaryTeam: step === 3,
+      inclusionPolicy: step === 3,
+      // Add other fields
+    });
+
+    const errors = await formik.validateForm();
+
+    if (!Object.keys(errors).length) {
+      // Proceed to next step if there are no validation errors
       setStep(step + 1);
-    }
-  };
-  const handlePrevious = () => {
-    if (step > 1) {
-      setStep(step - 1);
+    } else {
+      // Optionally, focus on the first error or scroll to top
+      // window.scrollTo(0, 0);
     }
   };
 
+  // Function to determine which fields to validate based on the current step
+
+  const handlePrevious = () => {
+    setStep((prevStep) => prevStep - 1);
+  };
+
+  const handleCheckboxChange = (event, fieldName) => {
+    const { value, checked } = event.target;
+    const currentValues = formik.values[fieldName];
+    if (checked) {
+      formik.setFieldValue(fieldName, [...currentValues, value]);
+    } else {
+      formik.setFieldValue(
+        fieldName,
+        currentValues.filter((item) => item !== value)
+      );
+    }
+  };
   return (
     <>
       <div className="md:ml-14 md:pt-5">
@@ -578,13 +700,20 @@ const SchoolForm = () => {
                             <input
                               type="checkbox"
                               className="rounded-[25%]    "
-                              id="checkBoxParentForm"
+                              id="schoolType"
                               onBlur={formik.handleBlur}
-                              onChange={formik.handleChange}
-                              value={formik.values.checkBoxParentForm}
+                              // onChange={formik.handleChange}
+                              // value={formik.values.schoolType}
+                              value={item.li}
+                              onChange={(event) =>
+                                handleCheckboxChange(event, "schoolType")
+                              }
+                              checked={formik.values.schoolType.includes(
+                                item.li
+                              )}
                               class={`${
-                                formik.errors.checkBoxParentForm &&
-                                formik.touched.checkBoxParentForm
+                                formik.errors.schoolType &&
+                                formik.touched.schoolType
                                   ? "border border-red-600"
                                   : " "
                               }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
@@ -594,6 +723,14 @@ const SchoolForm = () => {
                             </label>
                           </div>
                         ))}
+                        {formik.errors.schoolType &&
+                        formik.touched.schoolType ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.schoolType}
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                     <div class="px-3 w-full md:w-1/2">
@@ -607,13 +744,23 @@ const SchoolForm = () => {
                             <input
                               type="checkbox"
                               className="rounded-[25%] "
-                              id="checkBoxParentForm"
+                              id="studentTeacherRatio"
                               onBlur={formik.handleBlur}
-                              onChange={formik.handleChange}
-                              value={formik.values.checkBoxParentForm}
+                              // onChange={formik.handleChange}
+                              // value={formik.values.studentTeacherRatio}
+                              value={item.li}
+                              onChange={(event) =>
+                                handleCheckboxChange(
+                                  event,
+                                  "studentTeacherRatio"
+                                )
+                              }
+                              checked={formik.values.studentTeacherRatio.includes(
+                                item.li
+                              )}
                               class={`${
-                                formik.errors.checkBoxParentForm &&
-                                formik.touched.checkBoxParentForm
+                                formik.errors.studentTeacherRatio &&
+                                formik.touched.studentTeacherRatio
                                   ? "border border-red-600"
                                   : " "
                               }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
@@ -623,6 +770,14 @@ const SchoolForm = () => {
                             </label>
                           </div>
                         ))}
+                        {formik.errors.studentTeacherRatio &&
+                        formik.touched.studentTeacherRatio ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.studentTeacherRatio}
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                   </div>
@@ -648,13 +803,23 @@ const SchoolForm = () => {
                             <input
                               type="checkbox"
                               className="rounded-[25%]  "
-                              id="checkBoxParentForm"
+                              id="infrastructureFacility"
                               onBlur={formik.handleBlur}
-                              onChange={formik.handleChange}
-                              value={formik.values.checkBoxParentForm}
+                              // onChange={formik.handleChange}
+                              // value={formik.values.infrastructureFacility}
+                              value={item.li}
+                              onChange={(event) =>
+                                handleCheckboxChange(
+                                  event,
+                                  "infrastructureFacility"
+                                )
+                              }
+                              checked={formik.values.infrastructureFacility.includes(
+                                item.li
+                              )}
                               class={`${
-                                formik.errors.checkBoxParentForm &&
-                                formik.touched.checkBoxParentForm
+                                formik.errors.infrastructureFacility &&
+                                formik.touched.infrastructureFacility
                                   ? "border border-red-600"
                                   : " "
                               }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
@@ -664,6 +829,14 @@ const SchoolForm = () => {
                             </label>
                           </div>
                         ))}
+                        {formik.errors.infrastructureFacility &&
+                        formik.touched.infrastructureFacility ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.infrastructureFacility}
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </>
                     <>
@@ -678,14 +851,21 @@ const SchoolForm = () => {
                             <input
                               type="checkbox"
                               className="rounded-[25%]  "
-                              id="childName"
+                              id="curriculamSupport"
                               onBlur={formik.handleBlur}
-                              onChange={formik.handleChange}
-                              value={formik.values.childName}
+                              // onChange={formik.handleChange}
+                              // value={formik.values.curriculamSupport}
+                              value={item.li}
+                              onChange={(event) =>
+                                handleCheckboxChange(event, "curriculamSupport")
+                              }
+                              checked={formik.values.curriculamSupport.includes(
+                                item.li
+                              )}
                               placeholder="Child name"
                               class={`${
-                                formik.errors.childName &&
-                                formik.touched.childName
+                                formik.errors.curriculamSupport &&
+                                formik.touched.curriculamSupport
                                   ? "border border-red-600"
                                   : " "
                               }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
@@ -695,6 +875,14 @@ const SchoolForm = () => {
                             </label>
                           </div>
                         ))}
+                        {formik.errors.curriculamSupport &&
+                        formik.touched.curriculamSupport ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.curriculamSupport}
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </>
                     <>
@@ -708,14 +896,20 @@ const SchoolForm = () => {
                             <input
                               type="checkbox"
                               className="rounded-[25%]  "
-                              id="childName"
+                              id="schoolPolicy"
                               onBlur={formik.handleBlur}
-                              onChange={formik.handleChange}
-                              value={formik.values.childName}
-                              placeholder="Child name"
+                              // onChange={formik.handleChange}
+                              // value={formik.values.schoolPolicy}
+                              value={item.li}
+                              onChange={(event) =>
+                                handleCheckboxChange(event, "schoolPolicy")
+                              }
+                              checked={formik.values.schoolPolicy.includes(
+                                item.li
+                              )}
                               class={`${
-                                formik.errors.childName &&
-                                formik.touched.childName
+                                formik.errors.schoolPolicy &&
+                                formik.touched.schoolPolicy
                                   ? "border border-red-600"
                                   : " "
                               }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
@@ -726,12 +920,20 @@ const SchoolForm = () => {
                           </div>
                         ))}
                       </div>
+                      {formik.errors.schoolPolicy &&
+                      formik.touched.schoolPolicy ? (
+                        <p className="text-sm font-semibold text-red-500">
+                          {formik.errors.schoolPolicy}
+                        </p>
+                      ) : (
+                        ""
+                      )}
                     </>
                   </div>
                 </>
               </div>
             )}
-            {step === 3 && (
+            {/* {step === 3 && (
               <div className="step3">
                 <div className="">
                   <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
@@ -784,6 +986,106 @@ const SchoolForm = () => {
                         <div className="flex items-center gap-3">
                           <input
                             type="radio"
+                            id="multidisciplinary"
+                            name="multidisciplinaryTeam"
+                            value="yes"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={
+                              formik.values.multidisciplinaryTeam === "yes"
+                            }
+                            className="form-radio h-5 w-5 text-blue-600"
+                          />
+                          <label htmlFor="multidisciplinaryTeamYes">Yes</label>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <input
+                            type="radio"
+                            id="multidisciplinary"
+                            name="multidisciplinaryTeam"
+                            value="no"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={
+                              formik.values.multidisciplinaryTeam === "no"
+                            }
+                            className="form-radio h-5 w-5 text-blue-600"
+                          />
+                          <label htmlFor="multidisciplinaryTeamNo">No</label>
+                        </div>
+                        {formik.errors.multidisciplinary &&
+                        formik.touched.multidisciplinary ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.multidisciplinary}
+                          </p>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )} */}
+            {step === 3 && (
+              <div className="step3">
+                <div className="">
+                  <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
+                    School Policy
+                  </h1>
+                  <div className="flex flex-col gap-5 mb-10">
+                    <div className="mb-5">
+                      <h1 className="font-bold text-lg md:text-xl mb-5">
+                        1. Does the School have an Inclusion Policy that
+                        specifies action for including children with special
+                        needs?
+                      </h1>
+                      <div className="flex gap-5 items-center">
+                        <div className="flex items-center gap-3">
+                          <input
+                            type="radio"
+                            id="inclusionPolicyYes"
+                            name="inclusionPolicy"
+                            value="yes"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={formik.values.inclusionPolicy === "yes"}
+                            className="form-radio h-5 w-5 text-blue-600"
+                          />
+                          <label htmlFor="inclusionPolicyYes">Yes</label>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <input
+                            type="radio"
+                            id="inclusionPolicyNo"
+                            name="inclusionPolicy"
+                            value="no"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={formik.values.inclusionPolicy === "no"}
+                            className="form-radio h-5 w-5 text-blue-600"
+                          />
+                          <label htmlFor="inclusionPolicyNo">No</label>
+                        </div>
+                        {formik.errors.inclusionPolicy &&
+                        formik.touched.inclusionPolicy ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.inclusionPolicy}
+                          </p>
+                        ) : null}
+                      </div>
+                    </div>
+
+                    <div className="mb-5">
+                      <h1 className="font-bold text-lg md:text-xl mb-5">
+                        2. Is a Multidisciplinary team approach in your school
+                        to provide alternatives to suspension or expulsion for
+                        students with complex needs?
+                      </h1>
+                      <div className="flex gap-5 items-center">
+                        <div className="flex items-center gap-3">
+                          <input
+                            type="radio"
                             id="multidisciplinaryTeamYes"
                             name="multidisciplinaryTeam"
                             value="yes"
@@ -811,27 +1113,37 @@ const SchoolForm = () => {
                           />
                           <label htmlFor="multidisciplinaryTeamNo">No</label>
                         </div>
+                        {formik.errors.multidisciplinaryTeam &&
+                        formik.touched.multidisciplinaryTeam ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.multidisciplinaryTeam}
+                          </p>
+                        ) : null}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             )}
-          </form>
-          {step === 3 && (
-            <div id="captcha" className="pb-5">
-              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
-              {formik.errors.captcha && formik.touched.captcha ? (
-                <p className="text-sm font-semibold text-red-500">
-                  {formik.errors.captcha}
-                </p>
-              ) : (
-                ""
-              )}
-            </div>
-          )}
 
-          <div
+            {step === 3 && (
+              <div id="captcha" className="pb-5">
+                <ReCAPTCHA
+                  onChange={handleRecaptcha}
+                  // sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3"
+                  sitekey="6LcfLFUoAAAAACno3hdClnckkDsl4ERrkfhX7Alr"
+                />
+                {formik.errors.captcha && formik.touched.captcha ? (
+                  <p className="text-sm font-semibold text-red-500">
+                    {formik.errors.captcha}
+                  </p>
+                ) : (
+                  ""
+                )}
+              </div>
+            )}
+
+            {/* <div
             className={`${
               step === 2 || step === 3 ? "justify-between" : "justify-end"
             } flex`}
@@ -847,11 +1159,43 @@ const SchoolForm = () => {
 
             <button
               onClick={handleNext}
+              type={step === 3 ? "submit" : "button"}
               className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none"
             >
               {step === 3 ? "Submit" : "Next"}
             </button>
-          </div>
+          </div> */}
+            <div className="flex justify-between">
+              {step > 1 && (
+                <button
+                  type="button"
+                  onClick={handlePrevious}
+                  className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none"
+                >
+                  Previous
+                </button>
+              )}
+              {step < 3 && (
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className={`${
+                    step === 2 || step === 3 ? "justify-between" : "justify-end"
+                  }  hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none`}
+                >
+                  Next
+                </button>
+              )}
+              {step === 3 && (
+                <button
+                  className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              )}
+            </div>
+          </form>
         </div>
       </div>
     </>

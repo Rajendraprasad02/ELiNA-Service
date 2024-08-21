@@ -31,7 +31,7 @@ const Video = () => {
         </div>
         <div className="rightToLeft lg:py-10">
           <p className="text-sm lg:text-lg lg:font-semibold lg:pb-5">
-            ELiNA was was conceived as a powerful concept of inclusion within{" "}
+            ELiNA was conceived as a powerful concept of inclusion within{" "}
             <span>
               <a className=" underline cursor-pointer text-blue-950">HLC</a>
             </span>
@@ -48,10 +48,12 @@ const Video = () => {
             organisations, offering transformative programs like SAIL, CoMPASS,
             ANCHOR, and BUOYANCY.
           </p>
-          <button className="text-xs hover:text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000] font-normal p-2 mt-5 lg:w-[30%] lg:h-8 flex justify-center  items-center lg:gap-2 bg-[#FF0000]  lg:text-2xl lg:p-6 lg:rounded-3xl lg:m-0">
-            YouTube
-            <PlayIcon className="w-5 lg:w-8" />
-          </button>
+          <a href="https://www.youtube.com/@elinaservices" target="blank">
+            <button className="text-xs hover:text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000] font-normal p-2 mt-5 lg:w-[30%] lg:h-8 flex justify-center  items-center lg:gap-2 bg-[#FF0000]  lg:text-2xl lg:p-6 lg:rounded-3xl lg:m-0">
+              YouTube
+              <PlayIcon className="w-5 lg:w-8" />
+            </button>
+          </a>
         </div>
       </div>
     </div>
