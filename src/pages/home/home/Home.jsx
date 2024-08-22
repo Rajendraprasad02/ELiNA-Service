@@ -7,6 +7,8 @@ import Video from "../../../components/home/Video";
 import Footer from "../../../components/Footer";
 import Intern from "../../../components/home/Intern";
 import OutComes from "../../../components/home/OutComes";
+import Testimonials from "../../../components/home/Testimonials";
+import Quote from "../../../components/home/Quote";
 
 const HeroContent = [
   {
@@ -45,6 +47,8 @@ const Home = () => {
       <Video />
       <OutComes />
       <Intern />
+      <Testimonials />
+      <Quote />
     </>
   );
 };

@@ -3,23 +3,23 @@ import Quote from "./Quote";
 import Carousel from "../Isms/Carousel";
 // import Lottie from "lottie-react";
 import internAnimation from "../../images/compressed/hero/intern.jpg";
-const CarouselContent = [
-  {
-    icon: "",
-    h1: "Elina's journey has been a guiding and helpful experience throughout theassessment process of my child. It helped me understand the strengths and lacking areas of development of my child. Systematic and simple assessment activities were given to my child to assess the child's level of development in every areas of development. We had done SAIL's assessment activities in our home without much difficulty. Interactions with the Elina team was always been seemless.",
-    p: "- Sugitha Vidyasagar, mother of Vidyuth",
-  },
-  {
-    icon: "",
-    h1: "Hi all, I just wanted to share my experience with Elina and how it helped me to figure out which method of learning helps my son to move forward. Their assessment pattern was very elaborate which covers all the skills which I've never experienced anywhere. As per their advice I've changed his mode of learning and I feel it's helping him a lot.The SAIL program and it's detailed report was very helpful. Thank you so much to the team for their constant support throughout the program and guiding me in the proper streamline.",
-    p: "Priyadarshini, Mother of Pranav Sathya.",
-  },
-  {
-    icon: "",
-    h1: "App is very good. It is definitely a useful and quick learning guide for kids which we can use at any point in time when we don't have study books. Anywhere we can operate and kids will enjoy the learning.",
-    p: "Parent of a 6 year old Kid with Autism.",
-  },
-];
+// const CarouselContent = [
+//   {
+//     icon: "",
+//     h1: "Elina's journey has been a guiding and helpful experience throughout theassessment process of my child. It helped me understand the strengths and lacking areas of development of my child. Systematic and simple assessment activities were given to my child to assess the child's level of development in every areas of development. We had done SAIL's assessment activities in our home without much difficulty. Interactions with the Elina team was always been seemless.",
+//     p: "- Sugitha Vidyasagar, mother of Vidyuth",
+//   },
+//   {
+//     icon: "",
+//     h1: "Hi all, I just wanted to share my experience with Elina and how it helped me to figure out which method of learning helps my son to move forward. Their assessment pattern was very elaborate which covers all the skills which I've never experienced anywhere. As per their advice I've changed his mode of learning and I feel it's helping him a lot.The SAIL program and it's detailed report was very helpful. Thank you so much to the team for their constant support throughout the program and guiding me in the proper streamline.",
+//     p: "Priyadarshini, Mother of Pranav Sathya.",
+//   },
+//   {
+//     icon: "",
+//     h1: "App is very good. It is definitely a useful and quick learning guide for kids which we can use at any point in time when we don't have study books. Anywhere we can operate and kids will enjoy the learning.",
+//     p: "Parent of a 6 year old Kid with Autism.",
+//   },
+// ];
 const Intern = () => {
   return (
     <>
@@ -51,8 +51,8 @@ const Intern = () => {
             {/* <Lottie animationData={internAnimation}></Lottie> */}
           </div>
         </div>
-        <Carousel CarouselContent={CarouselContent} />
-        <Quote />
+        {/* <Carousel CarouselContent={CarouselContent} /> */}
+        {/* <Quote /> */}
       </div>
     </>
   );

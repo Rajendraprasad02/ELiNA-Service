@@ -93,7 +93,6 @@ const ServiceProviderForm = () => {
       professionalCharges: "",
       yearOfCompletion: "",
       specialistIn: "",
-      yearEstablishment: "",
       workExperience: "",
       phoneNumber: "",
       email: "",
@@ -101,45 +100,46 @@ const ServiceProviderForm = () => {
       captcha: "",
       specialization: [],
       modeOfDelivery: "",
-      operation: "",
+      modeOfOperation: "",
       modeOfService: [],
-      professionalQualification: [],
+      professionalQualification: "",
     },
 
-    // validationSchema: serviceProviderPageForm,
+    validationSchema: serviceProviderPageForm,
     onSubmit: async (values, actions) => {
       console.log(values);
+
+      const postData = {
+        name: values.serviceName,
+        gender: values.gender,
+        phone_number: values.phoneNumber,
+        email_address: values.email,
+        area_of_specializtion: values.specialization,
+        type_of_service: values.modeOfOperation,
+        providing_home_service: values.modeOfDelivery,
+        mode_of_service: values.modeOfService,
+        profession_charges_per_session: values.professionalCharges,
+        universtiy_name: values.universityName,
+        profession_qualification: values.professionalQualification,
+        year_of_completion: values.yearOfCompletion,
+        specialist_in: values.specialistIn,
+        work_experience: values.workExperience,
+        agree_of_acknowledgement: "Agreed",
+        organisation_name: null,
+        organisation_head_name: null,
+        organisation_email_address: null,
+        organisation_website_info: null,
+        specification_limitation_constraint: null,
+        "g-recaptcha-response": recaptchaValue,
+      };
 
       try {
         const response = await axios.post(
           "https://onlineappointment.onrender.com/serviceProvider",
-          {
-            name: values.serviceName,
-            gender: values.gender,
-            phone_number: values.phoneNumber,
-            email_address: values.email,
-            area_of_specializtion: values.specialization,
-            type_of_service: values.modeOfService,
-            providing_home_service: values.modeOfDelivery,
-            mode_of_service: values.operation,
-            profession_charges_per_session: values.professionalCharges,
-            universtiy_name: values.universityName,
-            profession_qualification: values.professionalQualification,
-            year_of_completion: values.yearOfCompletion,
-            specialist_in: values.specialistIn,
-            work_experience: values.workExperience,
-            agree_of_acknowledgement: values.agree,
-            organisation_name: null,
-            organisation_head_name: null,
-            organisation_email_address: null,
-            organisation_website_info: null,
-            specification_limitation_constraint: null,
-            "g-recaptcha-response": recaptchaValue,
-          }
+          postData
         );
-        actions.resetForm();
-        alert("Form submitted successfully");
-        console.log(response.data);
+        // actions.resetForm();
+        console.log("Response data", postData);
       } catch (error) {
         console.error("There was an error submitting the form!", error);
         console.log(values);
@@ -151,15 +151,15 @@ const ServiceProviderForm = () => {
     console.log("value : ", value);
     formik.setFieldValue("captcha", value);
   };
-  const handleCheckboxChange = (event, field) => {
+  const handleCheckboxChange = (event, fieldName) => {
     const { value, checked } = event.target;
-
+    const currentValues = formik.values[fieldName];
     if (checked) {
-      formik.setFieldValue(field, [...formik.values[field], value]);
+      formik.setFieldValue(fieldName, [...currentValues, value]);
     } else {
       formik.setFieldValue(
-        field,
-        formik.values[field].filter((item) => item !== value)
+        fieldName,
+        currentValues.filter((item) => item !== value)
       );
     }
   };
@@ -317,7 +317,6 @@ const ServiceProviderForm = () => {
                           checked={formik.values.specialization.includes(
                             item.li
                           )}
-                          placeholder="Child name"
                           class={`${
                             formik.errors.specialization &&
                             formik.touched.specialization
@@ -330,6 +329,14 @@ const ServiceProviderForm = () => {
                         </label>
                       </div>
                     ))}
+                    {formik.errors.specialization &&
+                    formik.touched.specialization ? (
+                      <p className="text-sm font-semibold text-red-500">
+                        {formik.errors.specialization}
+                      </p>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               </>
@@ -349,7 +356,7 @@ const ServiceProviderForm = () => {
                       <div class="my-auto">
                         <input
                           type="radio"
-                          id="modeOfOperation"
+                          id="modeOfOperation1"
                           name="modeOfOperation"
                           onChange={formik.handleChange}
                           value="individual"
@@ -359,7 +366,7 @@ const ServiceProviderForm = () => {
                           class="mr-2"
                         />
                         <label
-                          htmlFor="modeOfOperation"
+                          htmlFor="modeOfOperation1"
                           className="mr-5 text-[#07074D] font-medium"
                         >
                           Individual
@@ -555,39 +562,72 @@ const ServiceProviderForm = () => {
                           <span className="text-red-500">*</span>
                         </h1>
                         <div class="w-full px-3 grid grid-cols-2 md:grid-cols-4 ">
-                          {serviceProviderContent3.map((item) => (
-                            <div className="flex w-full items-center gap-3">
-                              <input
-                                type="checkbox"
-                                className="rounded-[25%]"
-                                id="professionalQualification"
-                                onBlur={formik.handleBlur}
-                                // onChange={formik.handleChange}
-                                // value={formik.values.professionalQualification}
-                                onChange={(e) =>
-                                  handleCheckboxChange(
-                                    e,
-                                    "professionalQualification"
-                                  )
-                                }
-                                value={item.li}
-                                checked={formik.values.professionalQualification.includes(
-                                  item.li
-                                )}
-                                placeholder="Child name"
-                                class={`${
-                                  formik.errors.professionalQualification &&
-                                  formik.touched.professionalQualification
-                                    ? "border border-red-600"
-                                    : " "
-                                }   bg-white  text-base font-medium text-green-600 outline-none focus:border-[#6A64F1] focus:shadow-md`}
-                              />
+                          <div className="flex w-full items-center gap-3">
+                            <input
+                              type="radio"
+                              className="rounded-[25%]"
+                              id="Diploma"
+                              name="professionalQualification"
+                              onChange={formik.handleChange}
+                              value="Diploma"
+                              checked={
+                                formik.values.professionalQualification ===
+                                "Diploma"
+                              }
+                            />
 
-                              <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
-                                {item.li}
-                              </label>
-                            </div>
-                          ))}
+                            <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
+                              Diploma
+                            </label>
+                            <input
+                              type="radio"
+                              className="rounded-[25%]"
+                              id="Bachelor"
+                              name="professionalQualification"
+                              onChange={formik.handleChange}
+                              value="Bachelor"
+                              checked={
+                                formik.values.professionalQualification ===
+                                "Bachelor"
+                              }
+                            />
+
+                            <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
+                              Bachelor
+                            </label>
+                            <input
+                              type="radio"
+                              className="rounded-[25%]"
+                              id="Master"
+                              name="professionalQualification"
+                              onChange={formik.handleChange}
+                              value="Master"
+                              checked={
+                                formik.values.professionalQualification ===
+                                "Master"
+                              }
+                            />
+
+                            <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
+                              Master
+                            </label>
+                            <input
+                              type="radio"
+                              className="rounded-[25%]"
+                              id="Phd"
+                              name="professionalQualification"
+                              onChange={formik.handleChange}
+                              value="Phd"
+                              checked={
+                                formik.values.professionalQualification ===
+                                "Phd"
+                              }
+                            />
+
+                            <label class="w-full block text-base md:text-lg font-medium text-[#161660]">
+                              Phd
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>

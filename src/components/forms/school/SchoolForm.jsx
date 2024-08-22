@@ -120,7 +120,7 @@ const validationSchemas = {
 const SchoolForm = () => {
   const [step, setStep] = useState(1);
   const [recaptchaValue, setRecaptchaValue] = useState("");
-  const [isSubmitting, setSubmitting] = useState(true);
+  const [isSubmitting, setSubmitting] = useState(false);
   const formik = useFormik({
     initialValues: {
       schoolName: "",
@@ -151,6 +151,7 @@ const SchoolForm = () => {
       console.log("Form Values:", values); // Logging form values
       // Handle form submission logic here
       try {
+        isSubmitting(true);
         const response = await axios.post(
           "https://onlineappointment.onrender.com/schoolForm",
           {
@@ -183,6 +184,7 @@ const SchoolForm = () => {
         );
         actions.resetForm();
         alert("Form submitted successfully");
+        setSubmitting(false);
         console.log(response.data);
       } catch (error) {
         console.error("There was an error submitting the form!", error);

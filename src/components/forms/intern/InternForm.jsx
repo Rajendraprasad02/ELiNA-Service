@@ -90,10 +90,10 @@ const InternForm = () => {
   const formik = useFormik({
     initialValues: {
       internName: "",
-      dob: "",
       phoneNumber: "",
-      parentName: "",
       email: "",
+      dob: "",
+      parentName: "",
       internDob: "",
       workinghour: "",
       agree: false,
@@ -102,7 +102,10 @@ const InternForm = () => {
       knowAboutElina: "",
       lookingAboutElina: "",
     },
-    validationSchema: internPageForm,
+    // validationSchema: internPageForm,
+    onSubmit: (values) => {
+      console.log(values);
+    },
   });
 
   return (
@@ -459,7 +462,11 @@ const InternForm = () => {
                         </p>
                       )}
                       <div id="captcha" className="py-5">
-                        <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
+                        {/* <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" /> */}
+                        <ReCAPTCHA
+                          // sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3"
+                          sitekey="6LcfLFUoAAAAACno3hdClnckkDsl4ERrkfhX7Alr"
+                        />
 
                         {formik.errors.captcha && formik.touched.captcha ? (
                           <p className="text-sm font-semibold text-red-500">

@@ -189,27 +189,31 @@ export const serviceProviderPageForm = yup.object().shape({
   professionalCharges: yup.string().required("This field is required"),
   yearOfCompletion: yup.date().required("This field is required"),
   specialistIn: yup.string().required("This field is required"),
-  yearEstablishment: yup.string().required("This field is required"),
   workExperience: yup.string().required("This field is required"),
   phoneNumber: yup
     .string()
-    .matches(phoneRegExp, "Phone number is not valid")
+    .required("This field is required")
     .min(10, "Must be exactly 10 digits")
     .max(10, "Must be exactly 10 digits")
-    .required("This field is required"),
+    .matches(phoneRegExp, "Phone number is not valid"),
   email: yup
     .string()
     .email("please enter valid email address")
     .required("This field is required"),
-  agree: yup
-    .bool()
-    .oneOf([true], "You need to accept the terms and conditions")
-    .required("You need to accept the terms and conditions"),
+  agree: yup.bool().required("This field is required"),
   captcha: yup.string().required("Captcha is required"),
-  specialization: yup.string().required("Please select any option"),
+  specialization: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
   modeOfOperation: yup.string().required("Please select any option"),
   modeOfDelivery: yup.string().required("Please select any option"),
-  modeOfService: yup.string().required("Please select any option"),
+  modeOfService: yup
+    .array()
+    .min(1, "This field is required")
+    .of(yup.string())
+    .required("This field is required"),
   professionalQualification: yup.string().required("Please select any option"),
 });
 

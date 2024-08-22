@@ -27,7 +27,7 @@ const ParentForm = () => {
       agree: false,
       captcha: "",
     },
-    // validationSchema: parentFormAnimated,
+    validationSchema: parentFormAnimated,
     onSubmit: async (values, actions) => {
       console.log(values);
 
