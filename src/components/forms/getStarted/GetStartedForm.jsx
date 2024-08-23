@@ -26,22 +26,25 @@ const GetStartedForm = () => {
     },
     validationSchema: gettingStartedForm,
     onSubmit: async (values, actions) => {
+      console.log("onclick", values);
+
       setLoading(true);
       setSubmissionStatus(null);
+      const c_dob = values.dob;
+
       const getStartedDB = {
         name: values.childName,
         parentname: values.parentName,
         gender: values.gender,
         childrelationship: values.relation,
-        child_dob: values.dob,
+        child_dob: c_dob.split("-").reverse().join("/"),
         contact_no: values.phoneNumber,
         child_school: values.schoolName,
         email_address: values.email,
         knowaboutUs: values.howdoyouknow,
         contact_reason: values.reason,
-        other_reason: "null",
-        age: "10",
-        date: new Date().toISOString().slice(0, 10),
+        other_reason: null,
+        age: 10,
         "g-recaptcha-response": recaptchaValue,
       };
       console.log(getStartedDB);
@@ -55,9 +58,11 @@ const GetStartedForm = () => {
 
         setSubmissionStatus("success");
         actions.resetForm();
+        alert("form submitted");
       } catch (error) {
         setSubmissionStatus("error");
         console.error("There was an error submitting the form!", error);
+        alert("form not submitted");
       } finally {
         setLoading(false);
       }

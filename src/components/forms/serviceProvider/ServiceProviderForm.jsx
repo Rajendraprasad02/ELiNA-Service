@@ -131,8 +131,8 @@ const ServiceProviderForm = () => {
 
       try {
         const response = await axios.post(
-          "https://onlineappointment.onrender.com/serviceProvider",
-          // "http://183.83.188.205:60162/api/serviveprovider/storedata",
+          // "https://onlineappointment.onrender.com/serviceProvider",
+          "http://183.83.188.205:60162/api/serviveprovider/storedata",
           postData
         );
         setSubmissionStatus("success");

@@ -40,8 +40,8 @@ const ParentForm = () => {
       try {
         // setSubmitting(false);
         const response = await axios.post(
-          "https://onlineappointment.onrender.com/parentForm",
-          // "http://183.83.188.205:60161/enrollement/store",
+          // "https://onlineappointment.onrender.com/parentForm",
+          "http://183.83.188.205:60161/enrollement/store",
 
           {
             selected_id: null,
