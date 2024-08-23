@@ -256,5 +256,22 @@ export const comments = yup.object().shape({
     .email("please enter valid email address")
     .required("This field is required"),
   comment: yup.string().required("This field is required"),
-  captcha: yup.string().required("Captcha is required"),
+  // captcha: yup.string().required("Captcha is required"),
+});
+
+export const contactUsForm = yup.object().shape({
+  floating_first_name: yup.string().required("This field is required"),
+  floating_last_name: yup.string().required("This field is required"),
+  floating_email: yup
+    .string()
+    .email("please enter valid email address")
+    .required("This field is required"),
+  floating_phone: yup
+    .string()
+    .matches(phoneRegExp, "Phone number is not valid")
+    .min(10, "Must be exactly 10 digits")
+    .max(10, "Must be exactly 10 digits")
+    .required("This field is required"),
+  message: yup.string().required("This field is required"),
+  captcha: yup.string().required("This field is required"),
 });

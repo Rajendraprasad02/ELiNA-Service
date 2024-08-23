@@ -1,21 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import { comments } from "../schemas/formSchemas";
+import axios from "axios";
 
 const Comments = () => {
+  // const [isSubmitting, setSubmitting] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
       phonenumber: "",
       email: "",
       comment: "",
-      captcha: "",
+      // captcha: "",
     },
     validationSchema: comments,
-    onSubmit: (values, actions) => {
-      actions.resetForm();
-      alert("Form submitted successfully");
+    onSubmit: async (values, actions) => {
+      const commentDB = {
+        name: values.name,
+        phone: values.phonenumber,
+        email: values.email,
+        subject: "subject",
+        comment: values.comment,
+        heading: "heading",
+      };
+      console.log(commentDB);
+
+      try {
+        const response = await axios.post(
+          // "https://onlineappointment.onrender.com/internship",
+          "http://183.83.188.205:60162/api/blog/comment/mail",
+          commentDB
+        );
+        alert("Form submitted successfully");
+        // setSubmitting(false);
+        actions.resetForm();
+      } catch (error) {
+        console.error("There was an error submitting the form!", error);
+        console.log("err", values);
+      }
     },
   });
   return (
@@ -114,7 +138,7 @@ const Comments = () => {
                 {formik.errors.comment}
               </p>
             )}
-            <div id="captcha" className="lg:py-5 py-2">
+            {/* <div id="captcha" className="lg:py-5 py-2">
               <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
 
               {formik.errors.captcha && formik.touched.captcha ? (
@@ -124,7 +148,7 @@ const Comments = () => {
               ) : (
                 ""
               )}
-            </div>
+            </div> */}
             <button
               type="submit"
               disabled={formik.isSubmitting}

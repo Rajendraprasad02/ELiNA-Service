@@ -9,14 +9,20 @@ const Carousel = () => {
   // Fetch data from API
   useEffect(() => {
     const fetchData = async () => {
+      const headers = {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      };
       try {
         const response = await axios.get(
-          //   "http://ttipl-uat.com:60162/api/testimonial/home"
-          "https://cors-anywhere.herokuapp.com/http://ttipl-uat.com:60162/api/testimonial/home"
+          "http://183.83.188.205:60162/api/testimonial/home"
+          // "http://localhost:60162/api/testimonial/home"
+          // { headers: headers }
+          // "https://onlineappointment.onrender.com/testimonial/home"
         );
         // Filter out inactive testimonials if needed
         const activeTestimonials = response.data.filter(
-          (item) => item.active_flag === 1
+          (item) => item.active_flag === 0
         );
         setCarouselContent(activeTestimonials);
       } catch (error) {
@@ -58,11 +64,11 @@ const Carousel = () => {
           >
             <div className="lg:h-[300px] md:p-2 py-10 flex flex-col justify-center items-center">
               <h1 className="text-center text-white md:text-base align-middle p-5">
-                {item.testimonial_content}
+                {item.testimonial_content || "Error on fetching data..."}
               </h1>
             </div>
             <p className="text-center text-white font-semibold md:text-lg p-5">
-              {item.testimonial_author}
+              {item.testimonial_author || "Error on fetching data..."}
             </p>
           </div>
         ))}

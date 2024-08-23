@@ -7,7 +7,8 @@ import axios from "axios";
 
 const ParentForm = () => {
   const [recaptchaValue, setRecaptchaValue] = useState("");
-  const [isSubmitting, setSubmitting] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const formik = useFormik({
     initialValues: {
@@ -29,12 +30,16 @@ const ParentForm = () => {
     },
     validationSchema: parentFormAnimated,
     onSubmit: async (values, actions) => {
+      setLoading(true);
+      setSubmissionStatus(null);
       console.log(values);
 
       try {
-        setSubmitting(false);
+        // setSubmitting(false);
         const response = await axios.post(
           "https://onlineappointment.onrender.com/parentForm",
+          // "http://183.83.188.205:60161/enrollement/store",
+
           {
             selected_id: null,
             btn_status: "Submitted",
@@ -62,13 +67,19 @@ const ParentForm = () => {
             "g-recaptcha-response": recaptchaValue,
           }
         );
-        if (response) setSubmitting(true);
-        actions.resetForm();
+        // if (response) setSubmitting(true);
+        setSubmissionStatus("success");
         alert("Form submitted successfully");
+        actions.resetForm();
         console.log(response.data);
       } catch (error) {
         console.error("There was an error submitting the form!", error);
         console.log(values);
+        setSubmissionStatus("error");
+
+        alert("Form not submitted ");
+      } finally {
+        setLoading(false);
       }
     },
   });
@@ -82,7 +93,19 @@ const ParentForm = () => {
       <div className="md:ml-14 md:pt-5">
         <BreadCrumbs />
       </div>
-      {isSubmitting ? (
+      {loading ? (
+        <div className="flex items-center justify-center p-5 md:p-12 HeroBg2">
+          <div className="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10 text-center">
+            <h1 className="text-xl font-bold">Submitting your form...</h1>
+            <div className="mt-5">
+              {/* Add your spinner component or any loading indicator here */}
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
         <div class="flex items-center justify-center p-5 md:p-12 HeroBg2">
           <div class="mx-auto max-w-[650px] lg:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10">
             <form onSubmit={formik.handleSubmit}>
@@ -190,8 +213,8 @@ const ParentForm = () => {
                       type="text"
                       id="schoolName"
                       onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                       value={formik.values.schoolName}
-                      placeholder="School name"
                       class={`${
                         formik.errors.schoolName && formik.touched.schoolName
                           ? "border border-red-600"
@@ -528,6 +551,7 @@ const ParentForm = () => {
                       name="agree"
                       checked={formik.values.agree}
                       onChange={formik.handleChange}
+                      required
                     ></input>
                     <label className="ml-3 text-[#07074D]">I Agree</label>
                     {formik.touched.agree && formik.errors.agree && (
@@ -552,19 +576,28 @@ const ParentForm = () => {
                   ""
                 )}
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-end">
                 <button
                   type="submit"
-                  class="hover:shadow-form w-full md:w-[30%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                  disabled={loading}
+                  className="hover:shadow-form w-full md:w-[40%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
                 >
-                  Submit
+                  {loading ? "Submitting..." : "Submit"}
                 </button>
               </div>
+              {submissionStatus === "success" && (
+                <div className="mt-5 text-green-500 text-center">
+                  Form submitted successfully!
+                </div>
+              )}
+              {submissionStatus === "error" && (
+                <div className="mt-5 text-red-500 text-center">
+                  There was an error submitting the form. Please contact admin.
+                </div>
+              )}
             </form>
           </div>
         </div>
-      ) : (
-        <h1>Loading</h1>
       )}
     </>
   );
