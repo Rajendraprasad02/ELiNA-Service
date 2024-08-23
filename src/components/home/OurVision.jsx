@@ -45,54 +45,54 @@ const OurVision = () => {
   const { innerWidth } = window;
   return (
     <>
-      <div className="HeroBg">
-        <h1 className=" text-center  text-5xl lg:text-6xl font-black text-indigo-600  p-5 lg:pt-[5%] lg:pb-[5%]">
+      <div className="flex justify-center md:HeroBg">
+        <h1 className="navBg text-center HeroBg text-5xl lg:text-6xl font-black text-indigo-600 animationHero p-5">
           Together For A Purpose
         </h1>
-        {OurVisionContent.map((item) => (
-          <div className="">
-            {item.leftImg && innerWidth > 430 ? (
-              <div class=" flex flex-col   lg:flex-row md:flex-col-reverse p-6 lg:w-[100%] lg:h-[30%]  ">
-                <div className="md:w-[60%] lg:w-[50%]  flex justify-center">
-                  <img
-                    class="object-cover w-full rounded-3xl    lg:h-[350px] lg:w-[600px]"
-                    src={item.photo}
-                    alt=""
-                  />
-                </div>
-                <div class=" flex flex-col md:p-0 leading-normal lg:w-[50%] md:w-full lg:pl-[2%] ">
-                  <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white lg:mb-4">
-                    {item.h1}
-                  </h1>
-                  <p class="mb-3 text-lg font-normal text-gray-700 dark:text-gray-400 lg:pt-[3%]">
-                    {item.p}
-                  </p>
-                  {/* <button className="">Learn more</button> */}
-                </div>
-              </div>
-            ) : (
-              <div class=" flex flex-col justify-around lg:flex-row p-6 lg:w-[100%] lg:h-[30%] ">
-                <div class=" flex flex-col  lg:p-0 leading-normal lg:w-[50%] md:w-full lg:pl-[5%]">
-                  <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white lg:mb-4">
-                    {item.h1}
-                  </h1>
-                  <p class="mb-3 text-lg font-normal text-gray-700 dark:text-gray-400 lg:pt-[2%]">
-                    {item.p}
-                  </p>
-                  {/* <button className="">Learn more</button> */}
-                </div>
-                <div className="md:w-[60%] lg:w-[50%]  flex justify-center">
-                  <img
-                    class="object-cover w-full rounded-2xl  md:h-auto md:w-full  lg:h-[350px] lg:w-[600px]"
-                    src={item.photo}
-                    alt=""
-                  />
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
       </div>
+      {OurVisionContent.map((item) => (
+        <div className="">
+          {item.leftImg && innerWidth > 430 ? (
+            <div class=" flex flex-col items-center justify-between lg:flex-row md:flex-col-reverse md:p-10 lg:w-[100%] lg:h-[30%] HeroBg2 ">
+              <div className="md:w-[60%] lg:w-[50%] leftToRight flex justify-center">
+                <img
+                  class="object-cover w-full rounded-3xl    lg:h-[350px] lg:w-[600px]"
+                  src={item.photo}
+                  alt=""
+                />
+              </div>
+              <div class=" flex flex-col justify-around lg:p-4 leading-normal lg:w-[50%] md:w-full lg:pr-[5%] rightToLeft">
+                <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {item.h1}
+                </h1>
+                <p class="mb-3 text-lg font-normal text-gray-700 dark:text-gray-400">
+                  {item.p}
+                </p>
+                {/* <button className="">Learn more</button> */}
+              </div>
+            </div>
+          ) : (
+            <div class=" flex flex-col items-center justify-around lg:flex-row p-0 md:p-10 lg:w-[100%] lg:h-[30%] HeroBg">
+              <div class="leftToRight flex flex-col justify-between p-4 leading-normal lg:w-[50%] md:w-full lg:pl-[5%]">
+                <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {item.h1}
+                </h1>
+                <p class="mb-3 text-lg font-normal text-gray-700 dark:text-gray-400">
+                  {item.p}
+                </p>
+                {/* <button className="">Learn more</button> */}
+              </div>
+              <div className="md:w-[60%] lg:w-[50%] rightToLeft flex justify-center">
+                <img
+                  class="object-cover w-full rounded-2xl  md:h-auto md:w-full  lg:h-[350px] lg:w-[600px]"
+                  src={item.photo}
+                  alt=""
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
     </>
   );
 };

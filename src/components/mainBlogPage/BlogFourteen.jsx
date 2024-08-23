@@ -5,7 +5,6 @@ import BlogContent from "../../utils/blogContent";
 import Comments from "../reuseable/Comments";
 import one from "../../images/blog/blog14/one.jpg";
 import two from "../../images/blog/blog14/two.jpg";
-import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogFourteen = () => {
   useEffect(() => {
@@ -207,7 +206,6 @@ content/uploads/2022/01/CWSN-April-2019.pdf"
                 </li>
               </div>
             </section>
-            <BlogButtons BlogContent={BlogContent} />
           </div>
         </div>
       </>

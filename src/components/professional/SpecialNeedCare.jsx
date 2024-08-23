@@ -56,7 +56,7 @@ const SpecialNeedCare = () => {
             <ul className="grid lg:grid-cols-4 grid-cols-2 gap-5 lg:gap-5  w-full">
               {professionalLiContent.map((item) => (
                 <div className="flex flex-col">
-                  <li className="lg:text-xl text-base font-black text-pink-600">
+                  <li className="lg:text-xl text-base font-black text-blue-950">
                     {item.li}
                   </li>
                   <p className="lg:text-base text-sm">{item.p}</p>
@@ -65,7 +65,7 @@ const SpecialNeedCare = () => {
             </ul>
           </div>
           <a href="/#/service-form">
-            <button className="p-3 rounded-2xl text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700 lg:px-5 lg:text-2xl">
+            <button className="p-3 rounded-2xl text-lg bg-blue-700 border-blue-700 text-white hover:bg-transparent hover:border-blue-700 hover:text-blue-700">
               Join our Therapy Team
             </button>
           </a>

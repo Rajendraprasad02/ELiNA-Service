@@ -8,7 +8,6 @@ import five from "../../images/blog/blog4/5.png";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import Author from "../reuseable/Author";
-import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogFour = () => {
   useEffect(() => {
@@ -248,7 +247,6 @@ const BlogFour = () => {
                 delays or special. Needs conditions, therefore emphasizing the
                 cruciality of early intervention.
               </p>
-              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

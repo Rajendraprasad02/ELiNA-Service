@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-// import logo from "../images/elinalogoSaturation.png";
-import logo from "../images/7.png";
-
+import logo from "../images/elinalogoSaturation.png";
 import {
   MenuIcon,
   XIcon,
@@ -269,7 +267,7 @@ const NavBar = () => {
                 >
                   <button
                     onClick={handleNavDropdownToggle}
-                    className="flex items-center justify-center w-16  lg:w-32 lg:p-[0.35rem] p-1 lg:gap-2 md:gap-0 text-xs lg:text-lg lg:font-extrabold bg-pink-500 text-white hover:text-pink-600 hover:bg-white hover:border-pink-600 border-pink-500"
+                    className="flex items-center justify-center w-16  lg:w-32 lg:p-[0.35rem] p-1 lg:gap-2 md:gap-0 text-xs lg:text-lg lg:font-extrabold bg-pink-500 text-white hover:text-pink-500 hover:bg-white hover:border-pink-600 border-pink-500"
                   >
                     Enroll <ChevronDownIcon className="w-3 lg:w-5" />
                   </button>

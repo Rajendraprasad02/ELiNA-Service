@@ -44,16 +44,16 @@ const Hero = ({ HeroContent }) => {
           </svg>
         </div>
 
-        <div className=" flex flex-col  lg:flex-row mx:[4%] lg:mx-[6%]   md:pt-[3%]  lg:pb-10 ">
+        <div className=" flex flex-col  lg:flex-row mx:[4%] lg:mx-[6%] lg:pxg-28  md:pt-[3%]  lg:pb-10 ">
           <div className=" flex flex-col justify-center text-start lg:text-start md:text-center gap-14 md:gap-6 my-6 mx-10 mt-7 md:mx-24 md:my-10  lg:pr-10 lg:m-0">
-            <h1 className=" text-4xl font-black text-indigo-600 md:text-4xl lg:text-5xl">
+            <h1 className=" text-4xl font-black text-gray-800 md:text-4xl lg:text-6xl">
               Welcome to Elina's World:
               <br />
-              <span className="text-5xl  text-pink-600 md:text-6xl lg:text-5xl">
+              <span className="text-5xl  text-indigo-600 md:text-6xl lg:text-6xl">
                 Empowering Families and Shaping Futures
               </span>
             </h1>
-            <p className="text-justify pb-10 text-sm md:pb-0  md:text-xl ">
+            <p className="text-pretty pb-10 text-sm md:pb-0  md:text-xl ">
               At Elina, we envision a world where every child is provided with
               the tools and support to realize their full potential. We are
               dedicated to offering comprehensive resources, guidance, and
@@ -88,7 +88,7 @@ const Hero = ({ HeroContent }) => {
           </> */}
           <>
             <img
-              className="hidden rounded-3xl object-cover lg:block lg:w-[45%]"
+              className="hidden rounded-3xl object-cover lg:block lg:w-[40%]"
               src={heroimg2}
               alt=""
             />

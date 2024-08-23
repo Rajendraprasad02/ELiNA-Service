@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import IsmsHeroPage from "../../../components/Isms/IsmsHeroPage";
 import Hero from "../../../components/home/Hero";
 import NavBar from "../../../components/NavBar";
@@ -18,14 +18,15 @@ import test from "../../../images/exam.png";
 import workfromhome from "../../../images/work-from-home.png";
 import comfort from "../../../images/working-woman.png";
 import access from "../../../images/easy-access.png";
-// import activity from "../../../images/isms/activity.jpg";
+
+import activity from "../../../images/isms/activity.jpg";
 import calender from "../../../images/isms/calender.png";
 import manage from "../../../images/isms/manage.jpg";
 import track from "../../../images/isms/track.png";
 import managment from "../../../images/isms/managment.png";
 import activityManage from "../../../images/isms/activityManage.png";
 
-export const CarouselContent = [
+const CarouselContent = [
   {
     icon: "",
     h1: "Elina's journey has been a guiding and helpful experience throughout theassessment process of my child. It helped me understand the strengths and lacking areas of development of my child. Systematic and simple assessment activities were given to my child to assess the child's level of development in every areas of development. We had done SAIL's assessment activities in our home without much difficulty. Interactions with the Elina team was always been seemless.",
@@ -210,9 +211,6 @@ const WhoCanUseContent = [
 ];
 
 const Imis = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <IsmsHeroPage />

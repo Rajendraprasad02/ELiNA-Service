@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "../../../components/NavBar";
 import Hero from "../../../components/home/Hero";
 import WhatWeDo from "../../../components/home/WhatWeDo";
@@ -7,8 +7,6 @@ import Video from "../../../components/home/Video";
 import Footer from "../../../components/Footer";
 import Intern from "../../../components/home/Intern";
 import OutComes from "../../../components/home/OutComes";
-import Testimonials from "../../../components/home/Testimonials";
-import Quote from "../../../components/home/Quote";
 
 const HeroContent = [
   {
@@ -35,20 +33,14 @@ const HeroContent = [
 ];
 
 const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <Hero HeroContent={HeroContent} />
       <WhatWeDo />
       <OurVision />
-
       <Video />
       <OutComes />
       <Intern />
-      <Testimonials />
-      <Quote />
     </>
   );
 };

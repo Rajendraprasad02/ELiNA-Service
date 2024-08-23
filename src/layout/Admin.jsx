@@ -4,28 +4,20 @@ import { Outlet, useParams } from "react-router-dom";
 import SideBar from "../components/adminScreen/SideBar";
 
 const Admin = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(2);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(3);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(isSidebarOpen === 2 ? 1 : 2);
+    setIsSidebarOpen(isSidebarOpen === 3 ? 2 : 3);
   };
   const params = useParams();
   return (
     <>
       <AdminNavBar toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} />
-      <div className="grid grid-cols-12">
-        <div
-          className={`transition-transform duration-500 ${
-            isSidebarOpen === 2 ? "col-span-2" : "col-span-1"
-          }`}
-        >
+      <div className={`grid grid-cols-12`}>
+        <div className={`col-span-${isSidebarOpen} `}>
           <SideBar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         </div>
-        <div
-          className={`transition-all duration-500 ${
-            isSidebarOpen === 2 ? "col-span-10" : "col-span-11"
-          }`}
-        >
+        <div className={`col-span-${isSidebarOpen === 3 ? 9 : 10}`}>
           <Outlet context={[isSidebarOpen]} />
         </div>
       </div>

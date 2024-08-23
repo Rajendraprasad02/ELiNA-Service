@@ -51,80 +51,66 @@ const According = () => {
   return (
     <>
       <div className="HeroBg2">
-        <div className="mx-0 lg:mx-[16%] lg:py-[5%]">
-          <h1 className="flex justify-center text-5xl text-center  font-black text-blue-950 py-20">
+        <div className="mx-0 lg:mx-[16%] ">
+          <h1 className="flex justify-center text-5xl text-center font-black text-blue-950 pt-20">
             Personalized Support Plans for Every Student
           </h1>
-          <div className="">
-            <h1 className="font-bold text-base px-3 lg:px-10">
-              <span className="font-black text-xl text-blue-950">
-                Our Specialized Program Plan:
-              </span>{" "}
-            </h1>
-            <div className="grid grid-flow-row md:grid-cols-2 lg:p-10">
-              {content.map((item, index) => (
-                <details
-                  key={index}
-                  className="py-8 bg-gray-200 m-2 cursor-pointer rounded-2xl self-start"
-                >
-                  <summary className="p-3 lg:p-5 text-lg font-black ">
-                    {item.head}
-                  </summary>
-                  <p className="mx-2 lg:mx-5 rounded-3xl p-5 bg-gray-50 font-semibold opacity-90">
-                    {item.des}
-                  </p>
-                </details>
-              ))}
-            </div>
+          <div className=" grid grid-flow-row md:grid-cols-2 lg:p-10">
+            {content.map((item) => (
+              <details className=" py-8 bg-gray-200 m-2 cursor-pointer rounded-2xl self-start">
+                <summary className="p-3  lg:p-5 text-lg font-black">
+                  {item.head}
+                </summary>
+                <p className="mx-2 lg:mx-5 rounded-3xl p-5 bg-gray-50  font-semibold opacity-90">
+                  {item.des}
+                </p>
+              </details>
+            ))}
           </div>
 
-          <div>
-            <h1 className="font-medium text-base px-3 lg:px-10">
-              <span className="font-black text-xl text-blue-950">
-                SAIL Program:
-              </span>{" "}
-              Essential for Identifying Student Challenges
-            </h1>
+          <>
+            <div className="">
+              <h1 className="font-medium text-base px-10">
+                <span className="font-black text-xl text-blue-950">
+                  SAIL Program:
+                </span>{" "}
+                Essential for Identifying Student Challenges{" "}
+              </h1>
 
-            <div className="grid grid-flow-row md:grid-cols-2 lg:p-10">
-              {sailContent.map((item, index) => (
-                <details
-                  key={index}
-                  className="py-8 bg-gray-200 m-2 cursor-pointer rounded-2xl self-start"
-                >
-                  <summary className="p-3 lg:p-5 text-lg font-black">
-                    {item.head}
-                  </summary>
-                  <p className="mx-2 lg:mx-5 rounded-3xl p-5 bg-gray-50 font-semibold opacity-90">
-                    {item.des}
-                  </p>
-                </details>
-              ))}
+              <div className=" grid grid-flow-row md:grid-cols-2 lg:p-10">
+                {sailContent.map((item) => (
+                  <details className=" py-8 bg-gray-200 m-2 cursor-pointer rounded-2xl self-start">
+                    <summary className="p-3 lg:p-5 text-lg   font-black">
+                      {item.head}
+                    </summary>
+                    <p className="mx-2 lg:mx-5 rounded-3xl p-5 bg-gray-50  font-semibold opacity-90">
+                      {item.des}
+                    </p>
+                  </details>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <h1 className="font-medium text-base px-3 lg:px-10">
-              <span className="font-black text-xl text-blue-950">
-                CoMPASS Program:
-              </span>{" "}
-              Continuous Support and Coordination
-            </h1>
-            <div className="grid grid-flow-row md:grid-cols-2 lg:p-10">
-              {compassContent.map((item, index) => (
-                <details
-                  key={index}
-                  className="py-8 bg-gray-200 m-2 cursor-pointer rounded-2xl self-start"
-                >
-                  <summary className="p-3 lg:p-5 text-lg font-black">
-                    {item.head}
-                  </summary>
-                  <p className="mx-2 lg:mx-5 rounded-3xl p-5 bg-gray-50 font-semibold opacity-90">
-                    {item.des}
-                  </p>
-                </details>
-              ))}
+            <div className="">
+              <h1 className="font-medium text-base px-10">
+                <span className="font-black text-xl text-blue-950">
+                  CoMPASS Program:
+                </span>{" "}
+                Continuous Support and Coordination{" "}
+              </h1>
+              <div className=" grid grid-flow-row md:grid-cols-2 lg:p-10">
+                {compassContent.map((item) => (
+                  <details className=" py-8 bg-gray-200 m-2 cursor-pointer  rounded-2xl self-start">
+                    <summary className=" px-5 text-lg font-black">
+                      {item.head}
+                    </summary>
+                    <p className="mx-2 lg:mx-5 rounded-3xl p-5 bg-gray-50  font-semibold opacity-90">
+                      {item.des}
+                    </p>
+                  </details>
+                ))}
+              </div>
             </div>
-          </div>
+          </>
         </div>
       </div>
     </>

@@ -42,7 +42,7 @@ const FooterLi = [
 
 const Footer = () => {
   return (
-    <div className="FooterBg">
+    <div className="HeroBg">
       <div class="px-4 pt-16 sm:max-w-xl content-center md:max-w-full lg:max-w-fit lg:px-24">
         <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           <div class="">

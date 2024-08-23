@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import GalleryPhoto from "../../../components/gallery/GalleryPhoto";
 import NavBar from "../../../components/NavBar";
 import Footer from "../../../components/Footer";
@@ -142,9 +142,6 @@ const picButtons = [
 ];
 
 const Gallery = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <GalleryHero />

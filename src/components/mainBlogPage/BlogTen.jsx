@@ -3,7 +3,6 @@ import Comments from "../reuseable/Comments";
 import BlogContent from "../../utils/blogContent";
 import RecentBlog from "../reuseable/RecentBlog";
 import Author from "../reuseable/Author";
-import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogTen = () => {
   useEffect(() => {
@@ -197,7 +196,6 @@ const BlogTen = () => {
                   </a>
                 </li>
               </div>
-              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

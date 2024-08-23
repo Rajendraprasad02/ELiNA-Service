@@ -42,7 +42,7 @@ const WhatWeDoContent = [
         community that understands your journey.
       </span>,
     ],
-    button: "Join us",
+    button: "Join with us",
     p1: "We equip you with the knowledge and tools to support your child's growth, helping them thrive both at home and beyond.",
   },
   {
@@ -78,7 +78,7 @@ const WhatWeDoContent = [
         activities and projects.
       </span>,
     ],
-    button: "Join us",
+    button: "Join with us",
     p1: "Our goal is to create a nurturing and inclusive environment where every child can succeed and feel valued.",
   },
   {
@@ -113,14 +113,14 @@ const WhatWeDoContent = [
         up-to-date resources tailored to your needs.
       </span>,
     ],
-    button: "Join us",
+    button: "Join with us",
     p1: "Join us in making a difference in the lives of children and their families by expanding your knowledge and skills.",
   },
 ];
 
 const WhatWeDo = () => {
   return (
-    <div className="WhatWeDoBg  lg:w-full content-center lg:py-7 HeroBg2">
+    <div className="WhatWeDoBg  lg:w-full content-center lg:py-6 HeroBg2">
       <div className="flex flex-col">
         <div className="lg:pb-5 text-center">
           <h1 className="text-5xl lg:text-6xl p-5 animationHero font-black text-indigo-600">
@@ -137,12 +137,11 @@ const WhatWeDo = () => {
               <img
                 className="w-[85%] h-auto lg:w-[350px] lg:h-[230px] rounded-3xl"
                 src={item.src}
-                alt=""
               ></img>
               <div className="p-5 lg:p-10 lg:text-base flex flex-col gap-2 text-gray-800">
                 <p className="font-bold">{item.p}</p>
                 {item.li.map((i) => (
-                  <p>{i}</p>
+                  <li>{i}</li>
                 ))}
               </div>
               <div className="mt-auto">
@@ -151,7 +150,7 @@ const WhatWeDo = () => {
                 </p>
               </div>
 
-              <button className="flex items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 lg:text-xl rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-10">
+              <button className="flex items-center bg-pink-500 hover:text-pink-600 border-pink-500 p-2 lg:gap-1 rounded-xl mt-auto mb-4 lg:p-2 lg:px-3 lg:mb-14">
                 <a href={item.href}>{item.button}</a>
                 <ArrowRightIcon className="w-4" />
               </button>

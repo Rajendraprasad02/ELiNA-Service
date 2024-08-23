@@ -3,7 +3,6 @@ import Comments from "../reuseable/Comments";
 import RecentBlog from "../reuseable/RecentBlog";
 import BlogContent from "../../utils/blogContent";
 import Author from "../reuseable/Author";
-import BlogButtons from "../reuseable/BlogButtons";
 
 const BlogSix = () => {
   useEffect(() => {
@@ -167,7 +166,6 @@ const BlogSix = () => {
                 this journey, parents become architects of neurodivergent
                 success.
               </p>
-              <BlogButtons BlogContent={BlogContent} />
             </section>
           </div>
         </div>

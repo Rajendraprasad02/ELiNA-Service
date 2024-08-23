@@ -25,23 +25,21 @@ const ParetnHero = () => {
     <>
       <BreadCrumbs />
       <div className="parentBg ">
-        <div className="lg:bg-black-bg1 bg-black-rgba">
-          <div className="flex flex-col lg:gap-5 items-center text-white px-5  lg:px-[10%] lg:pt-[10%] lg:pb-[6%]">
-            <div className="lg:bg-black-bg lg:p-10 md:p-5 my-5  lg:rounded-3xl">
-              <h1 className="text-6xl lg:text-[4.75rem] text-white py-5 md:py-0 text-center font-black">
-                No Parent Should feel alone EVER.
-              </h1>
-              <h2 className="text-lg text-center p-4 text-gray-200 lg:text-white lg:text-2xl">
-                "Empowering Your Child's Journey to a Brighter Future!"
-              </h2>
-              <p className="text-sm p-3 text-center text-gray-200 lg:text-white lg:text-lg">
-                <span className="underline font-bold cursor-pointer">
-                  <a href="/#/parent-form">Join us today!</a>
-                </span>{" "}
-                Get personalized plans and expert guidance to help your
-                neurodivergent child
-              </p>
-            </div>
+        <div className="bg-black-bg">
+          <div className=" flex flex-col lg:gap-5 items-center text-white px-5  lg:px-[10%] lg:pt-[10%] lg:pb-[6%]">
+            <h1 className="text-6xl lg:text-[4.75rem] text-white py-5 md:py-0 text-center font-black">
+              No Parent Should feel alone EVER.
+            </h1>
+            <h2 className="text-lg text-center p-4 text-gray-200 lg:text-white lg:text-2xl">
+              "Empowering Your Child's Journey to a Brighter Future!"
+            </h2>
+            <p className="text-sm p-3 text-center text-gray-200 lg:text-white lg:text-lg">
+              <span className="underline font-bold cursor-pointer">
+                <a href="/#/parent-form">Join us today!</a>
+              </span>{" "}
+              Get personalized plans and expert guidance to help your
+              neurodivergent child
+            </p>
           </div>
           <div className="flex justify-center pb-8">
             <a

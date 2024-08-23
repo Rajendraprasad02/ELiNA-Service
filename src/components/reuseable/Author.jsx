@@ -13,13 +13,13 @@ const Author = () => {
 
   return (
     <>
-      <div className=" group absolute inline-block left-[70%] top-[85%] md:left-[70%] md:top-[80%] lg:left-[80%] lg:top-[90%]">
+      <div className=" group absolute inline-block left-[60%] top-[30%] md:left-[80%] md:top-[30%] lg:left-[80%] lg:top-[40%]">
         <p className="font-black text-2xl">
           <div popovertarget="popup" className="">
             {data.gender === "male" ? (
-              <img src={men} alt="men" className="w-14 animate-pulse" />
+              <img src={men} className="w-14 animate-pulse" />
             ) : (
-              <img src={female} alt="female" className="w-14 animate-pulse" />
+              <img src={female} className="w-14 animate-pulse" />
             )}
           </div>
           <p className="text-xl  items-center group-hover:visible opacity-0 group-hover:opacity-100 transition absolute bottom-full left-5  transform -translate-x-1/2 mt-2 whitespace-nowrap bg-black text-white p-3 rounded-md">

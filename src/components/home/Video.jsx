@@ -5,7 +5,7 @@ import VideoPlayer from "react-video-js-player";
 
 const Video = () => {
   return (
-    <div className="pt-20 md:p-10 lg:py-20 HeroBg2">
+    <div className="pt-20 md:p-10 HeroBg">
       <h1 className="flex animationHero justify-center text-5xl lg:text-6xl font-black text-indigo-600 lg:pb-5">
         About ELiNA
       </h1>
@@ -29,9 +29,9 @@ const Video = () => {
             className="leftToRight mx-auto rounded-2xl lg:w-[35rem] lg:h-[20rem]"
           ></iframe> */}
         </div>
-        <div className="rightToLeft lg:py-10">
+        <div className="rightToLeft lg:pr-5">
           <p className="text-sm lg:text-lg lg:font-semibold lg:pb-5">
-            ELiNA was conceived as a powerful concept of inclusion within{" "}
+            ELiNA was was conceived as a powerful concept of inclusion within{" "}
             <span>
               <a className=" underline cursor-pointer text-blue-950">HLC</a>
             </span>
@@ -48,12 +48,10 @@ const Video = () => {
             organisations, offering transformative programs like SAIL, CoMPASS,
             ANCHOR, and BUOYANCY.
           </p>
-          <a href="https://www.youtube.com/@elinaservices" target="blank">
-            <button className="text-xs hover:text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000] font-normal p-2 mt-5 lg:w-[30%] lg:h-8 flex justify-center  items-center lg:gap-2 bg-[#FF0000]  lg:text-2xl lg:p-6 lg:rounded-3xl lg:m-0">
-              YouTube
-              <PlayIcon className="w-5 lg:w-8" />
-            </button>
-          </a>
+          <button className="text-xs hover:text-[#FF0000] border border-[#FF0000] hover:border-[#FF0000] font-normal p-2 mt-5 lg:w-[30%] lg:h-8 flex justify-center items-center lg:gap-2 bg-[#FF0000]  lg:text-lg lg:p-6 lg:rounded-3xl lg:m-0">
+            YouTube
+            <PlayIcon className="w-5 lg:w-8" />
+          </button>
         </div>
       </div>
     </div>
