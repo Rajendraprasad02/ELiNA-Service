@@ -103,8 +103,46 @@ const InternForm = () => {
       lookingAboutElina: "",
     },
     validationSchema: internPageForm,
-  });
+    onSubmit: async (values, actions) => {
+      const internDB = {
+        name: values.internName,
+        date_of_birth: values.dob,
+        contact_number: values.phoneNumber,
+        parent_guardian_contact_number: values.parentName,
+        start_date_with_elina: values.internDob,
+        hours_intern_elina_per_week: values.workinghour,
+        email_address: values.email,
+        agreement: "yess",
+        short_introduction: values.shortAboutElina,
+        about_elina: values.knowAboutElina,
+        intern_with_elina: values.lookingAboutElina,
+        "g-recaptcha-response": recaptchaValue,
+      };
+      console.log(internDB);
 
+      try {
+        // isSubmitting(true);
+        const response = await axios.post(
+          // "https://onlineappointment.onrender.com/internship",
+          "http://ttipl-uat.com:60161/internship",
+
+          internDB
+        );
+        alert("Form submitted successfully");
+        setSubmitting(false);
+        actions.resetForm();
+        console.log("success", response.data);
+      } catch (error) {
+        console.error("There was an error submitting the form!", error);
+        console.log("err", values);
+      }
+    },
+  });
+  const handleRecaptcha = (value) => {
+    setRecaptchaValue(value);
+    console.log("value : ", value);
+    formik.setFieldValue("captcha", value);
+  };
   return (
     <>
       <div className="md:ml-14 md:pt-5">

@@ -17,7 +17,26 @@ export const gettingStartedForm = yup.object().shape({
     .min(10, "Must be exactly 10 digits")
     .max(10, "Must be exactly 10 digits")
     .required("This field is required"),
-  alternativephoneNumber: yup
+  email: yup
+    .string()
+    .email("please enter valid email address")
+    .required("This field is required"),
+  schoolName: yup.string().required("This field is required"),
+  howdoyouknow: yup.string().required("Select an option"),
+  expectation: yup.string().required("This field is required"),
+  password: yup.string().required("This field is required"),
+  confirmPassword: yup.string().required("This field is required"),
+  captcha: yup.string().required("Captcha is required"),
+  agree: yup.string().required("This field is required"),
+});
+
+export const gettingStartedForm = yup.object().shape({
+  childName: yup.string().required("This field is required"),
+  dob: yup.date().required("This field is required"),
+  gender: yup.string().required("Select any one option"),
+  reason: yup.string().required("Select an option"),
+  parentName: yup.string().required("This field is required"),
+  phoneNumber: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
     .min(10, "Must be exactly 10 digits")
@@ -28,23 +47,7 @@ export const gettingStartedForm = yup.object().shape({
     .email("please enter valid email address")
     .required("This field is required"),
   howdoyouknow: yup.string().required("Select an option"),
-  gender: yup.string().required("Select any one option"),
   relation: yup.string().required("Select an option"),
-  expectation: yup.string().required("Select an option"),
-  password: yup
-    .string()
-    .min(5, "Password should be minimum 5 characters")
-    .required("This field is required"),
-  confirmPassword: yup
-    .string()
-    .oneOf(
-      [yup.ref("password"), null],
-      "password and confirm password not matching"
-    ),
-  agree: yup
-    .bool()
-    .oneOf([true], "You need to accept the terms and conditions")
-    .required("You need to accept the terms and conditions"),
   captcha: yup.string().required("Captcha is required"),
 });
 

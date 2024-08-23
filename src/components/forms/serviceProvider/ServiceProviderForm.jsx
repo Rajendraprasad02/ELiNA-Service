@@ -98,7 +98,71 @@ const ServiceProviderForm = () => {
       captcha: "",
     },
     validationSchema: serviceProviderPageForm,
+    onSubmit: async (values, actions) => {
+      console.log(values);
+      setLoading(true);
+      setSubmissionStatus(null);
+      const postData = {
+        name: values.serviceName,
+        gender: values.gender,
+        phone_number: values.phoneNumber,
+        email_address: values.email,
+        area_of_specializtion: values.specialization,
+        type_of_service: values.modeOfOperation,
+        providing_home_service: values.modeOfDelivery,
+        mode_of_service: values.modeOfService,
+        profession_charges_per_session: values.professionalCharges,
+        universtiy_name: values.universityName,
+        profession_qualification: values.professionalQualification,
+        year_of_completion: values.yearOfCompletion,
+        specialist_in: values.specialistIn,
+        work_experience: values.workExperience,
+        agree_of_acknowledgement: "Agreed",
+        organisation_name: null,
+        organisation_head_name: null,
+        organisation_email_address: null,
+        organisation_website_info: null,
+        specification_limitation_constraint: null,
+        "g-recaptcha-response": recaptchaValue,
+      };
+
+      try {
+        const response = await axios.post(
+          // "https://onlineappointment.onrender.com/serviceProvider",
+          "http://183.83.188.205:60162/api/serviveprovider/storedata",
+          postData
+        );
+        setSubmissionStatus("success");
+
+        actions.resetForm();
+        console.log("Response data", postData);
+      } catch (error) {
+        setSubmissionStatus("error");
+
+        console.error("There was an error submitting the form!", error);
+        console.log(values);
+      } finally {
+        setLoading(false);
+      }
+    },
   });
+  const handleRecaptcha = (value) => {
+    setRecaptchaValue(value);
+    console.log("value : ", value);
+    formik.setFieldValue("captcha", value);
+  };
+  const handleCheckboxChange = (event, fieldName) => {
+    const { value, checked } = event.target;
+    const currentValues = formik.values[fieldName];
+    if (checked) {
+      formik.setFieldValue(fieldName, [...currentValues, value]);
+    } else {
+      formik.setFieldValue(
+        fieldName,
+        currentValues.filter((item) => item !== value)
+      );
+    }
+  };
 
   return (
     <>

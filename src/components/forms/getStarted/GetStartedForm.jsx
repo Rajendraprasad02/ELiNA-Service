@@ -21,10 +21,47 @@ const GetStartedForm = () => {
       captcha: "",
     },
     validationSchema: gettingStartedForm,
-    onSubmit: (values, actions) => {
-      actions.resetForm();
-      alert("Form submitted successfully");
-      console.log("submitted");
+    onSubmit: async (values, actions) => {
+      console.log("onclick", values);
+
+      setLoading(true);
+      setSubmissionStatus(null);
+      const c_dob = values.dob;
+
+      const getStartedDB = {
+        name: values.childName,
+        parentname: values.parentName,
+        gender: values.gender,
+        childrelationship: values.relation,
+        child_dob: c_dob.split("-").reverse().join("/"),
+        contact_no: values.phoneNumber,
+        child_school: values.schoolName,
+        email_address: values.email,
+        knowaboutUs: values.howdoyouknow,
+        contact_reason: values.reason,
+        other_reason: null,
+        age: 10,
+        "g-recaptcha-response": recaptchaValue,
+      };
+      console.log(getStartedDB);
+
+      try {
+        const response = await axios.post(
+          // "http://183.83.188.205:60162/api/mayi_helpyou/mail",
+          "https://onlineappointment.onrender.com/getStarted",
+          getStartedDB
+        );
+
+        setSubmissionStatus("success");
+        actions.resetForm();
+        alert("form submitted");
+      } catch (error) {
+        setSubmissionStatus("error");
+        console.error("There was an error submitting the form!", error);
+        alert("form not submitted");
+      } finally {
+        setLoading(false);
+      }
     },
   });
 

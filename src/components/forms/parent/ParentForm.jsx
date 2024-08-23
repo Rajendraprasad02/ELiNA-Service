@@ -27,10 +27,66 @@ const ParentForm = () => {
       agree: false,
       captcha: "",
     },
-    validationSchema: gettingStartedForm,
-    onSubmit,
-  });
+    validationSchema: parentFormAnimated,
+    onSubmit: async (values, actions) => {
+      setLoading(true);
+      setSubmissionStatus(null);
+      console.log(values);
 
+      try {
+        // setSubmitting(false);
+        const response = await axios.post(
+          // "https://onlineappointment.onrender.com/parentForm",
+          "http://183.83.188.205:60161/enrollement/store",
+
+          {
+            selected_id: null,
+            btn_status: "Submitted",
+            child_name: values.childName,
+            child_dob: values.dob,
+            child_school_name_address: values.schoolName,
+            child_gender: values.gender,
+            child_father_guardian_name: values.fatherName,
+            child_mother_caretaker_name: values.motherName, // This needs to be populated if required
+            child_contact_email: values.email,
+            child_contact_phone: values.phoneNumber,
+            child_alter_phone: values.alternativephoneNumber,
+            child_contact_address: "", // Add address field if necessary
+            services_from_elina: ["NIl"], // Adjust if necessary
+            how_knowabt_elina: [values.howdoyouknow],
+            dor: new Date().toISOString().slice(0, 10), // Use current date or adjust as needed
+            email: values.email,
+            name: "null",
+            // Mobile_no: values.phoneNumber,
+            Mobile_no: "7898767877",
+            password: values.password, // Use appropriate password logic or input
+            password_confirmation: values.confirmPassword, // Confirm password logic
+            // declaration: values.agree ? "on" : "not agreed", // Adjust according to the form's requirements
+            declaration: "on",
+            "g-recaptcha-response": recaptchaValue,
+          }
+        );
+        // if (response) setSubmitting(true);
+        setSubmissionStatus("success");
+        alert("Form submitted successfully");
+        actions.resetForm();
+        console.log(response.data);
+      } catch (error) {
+        console.error("There was an error submitting the form!", error);
+        console.log(values);
+        setSubmissionStatus("error");
+
+        alert("Form not submitted ");
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
+  const handleRecaptcha = (value) => {
+    setRecaptchaValue(value);
+    console.log("value : ", value);
+    formik.setFieldValue("captcha", value);
+  };
   return (
     <>
       <div className="md:ml-14 md:pt-5">

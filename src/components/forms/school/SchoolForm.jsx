@@ -129,11 +129,70 @@ const SchoolForm = () => {
       studentRatio: "",
       captcha: "",
     },
-    validationSchema: parentPageForm,
-    onSubmit,
-  });
 
-  const [step, setStep] = useState(1);
+    // validationSchema: parentPageForm,
+    validationSchema: validationSchemas[step],
+    onSubmit: async (values, actions) => {
+      console.log("Form Values:", values); // Logging form values
+      // Handle form submission logic here
+      setLoading(true);
+      setSubmissionStatus(null);
+      const schoolDB = {
+        school_name: values.schoolName,
+        school_principal_name: values.principalName,
+        status: "null",
+        school_building_name: values.buildingName,
+        school_builiding_address: values.buildingAddress,
+        school_district: values.buildingState,
+        building_contract: values.buildingContact,
+        admin_contract: "9899879879",
+        phone_number: values.phoneNumber,
+        telephone_number: values.telephoneNumber,
+        school_email: values.email,
+        year_of_establishment: values.yearEstablishment,
+        totalstudent_population: values.studentPopulation,
+        totalteacher_population: values.teacherPopulation,
+        infra_facility: values.infrastructureFacility,
+        school_curriculam: values.curriculamSupport,
+        school_policy: values.schoolPolicy,
+        school_type: values.schoolType,
+        school_teacher_ratio: values.studentTeacherRatio,
+        // have_exclusion_policy: values.policy,
+        have_exclusion_policy: values.inclusionPolicy,
+        // multidisciplinary_team: values.multidisciplinary,
+        multidisciplinary_team: values.multidisciplinaryTeam,
+        multidisciplinary_team_desc: "bbg",
+        "g-recaptcha-response": recaptchaValue,
+      };
+      console.log(schoolDB);
+
+      try {
+        // isSubmitting(true);
+        const response = await axios.post(
+          // "https://onlineappointment.onrender.com/schoolForm",
+          "http://183.83.188.205:60162/api/schoolenrollment/storedata",
+          schoolDB
+        );
+        setSubmissionStatus("success");
+        alert("Form submitted successfully");
+        actions.resetForm();
+        console.log("success", response.data);
+      } catch (error) {
+        setSubmissionStatus("error");
+
+        console.error("There was an error submitting the form!", error);
+        console.log("err", values);
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
+  const handleRecaptcha = (value) => {
+    setRecaptchaValue(value);
+    console.log("value : ", value);
+    formik.setFieldValue("captcha", value);
+  };
+  // const [step, setStep] = useState(1);
 
   const handleNext = () => {
     if (step >= 1 && step <= 2) {
