@@ -4,9 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import BreadCrumbs from "../../reuseable/BreadCrumbs";
 
 import { internPageForm } from "../../schemas/formSchemas";
-const onSubmit = (values, actions) => {
-  setTimeout(() => actions.resetForm(), 1000);
-};
+import axios from "axios";
 
 const serviceProviderContent1 = [
   {
@@ -87,6 +85,9 @@ const serviceProviderContent4 = [
 ];
 
 const InternForm = () => {
+  const [recaptchaValue, setRecaptchaValue] = useState("");
+  const [isSubmitting, setSubmitting] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       internName: "",
@@ -123,8 +124,8 @@ const InternForm = () => {
       try {
         // isSubmitting(true);
         const response = await axios.post(
-          // "https://onlineappointment.onrender.com/internship",
-          "http://ttipl-uat.com:60161/internship",
+          "https://onlineappointment.onrender.com/internship",
+          // "http://ttipl-uat.com:60161/internship"
 
           internDB
         );
@@ -497,8 +498,11 @@ const InternForm = () => {
                         </p>
                       )}
                       <div id="captcha" className="py-5">
-                        <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
-
+                        <ReCAPTCHA
+                          onChange={handleRecaptcha}
+                          // sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3"
+                          sitekey="6LcfLFUoAAAAACno3hdClnckkDsl4ERrkfhX7Alr"
+                        />
                         {formik.errors.captcha && formik.touched.captcha ? (
                           <p className="text-sm font-semibold text-red-500">
                             {formik.errors.captcha}
@@ -513,7 +517,10 @@ const InternForm = () => {
               </>
             </div>
             <div className="flex justify-center">
-              <button className="md:w-[20%] w-[90%] p-3 bg-blue-950 border-blue-950 hover:text-blue-950 hover:bg-transparent">
+              <button
+                type="submit"
+                className="md:w-[20%] w-[90%] p-3 bg-blue-950 border-blue-950 hover:text-blue-950 hover:bg-transparent"
+              >
                 Submit
               </button>
             </div>

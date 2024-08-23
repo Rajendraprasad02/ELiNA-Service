@@ -110,6 +110,10 @@ const onSubmit = async (values, actions) => {
   setTimeout(() => actions.resetForm(), 1000);
 };
 const SchoolForm = () => {
+  const [step, setStep] = useState(1);
+  const [recaptchaValue, setRecaptchaValue] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
   const formik = useFormik({
     initialValues: {
       schoolName: "",
@@ -169,8 +173,8 @@ const SchoolForm = () => {
       try {
         // isSubmitting(true);
         const response = await axios.post(
-          // "https://onlineappointment.onrender.com/schoolForm",
-          "http://183.83.188.205:60162/api/schoolenrollment/storedata",
+          "https://onlineappointment.onrender.com/schoolForm",
+          // "http://183.83.188.205:60162/api/schoolenrollment/storedata",
           schoolDB
         );
         setSubmissionStatus("success");
@@ -790,7 +794,7 @@ const SchoolForm = () => {
                 </>
               </div>
             )}
-            {step === 3 && (
+            {/* {step === 3 && (
               <div className="step3">
                 <div className="">
                   <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
@@ -843,7 +847,7 @@ const SchoolForm = () => {
                         <div className="flex items-center gap-3">
                           <input
                             type="radio"
-                            id="multidisciplinaryTeamYes"
+                            id="multidisciplinary"
                             name="multidisciplinaryTeam"
                             value="yes"
                             onChange={formik.handleChange}
@@ -858,7 +862,7 @@ const SchoolForm = () => {
                         <div className="flex items-center gap-3">
                           <input
                             type="radio"
-                            id="multidisciplinaryTeamNo"
+                            id="multidisciplinary"
                             name="multidisciplinaryTeam"
                             value="no"
                             onChange={formik.handleChange}
@@ -870,27 +874,158 @@ const SchoolForm = () => {
                           />
                           <label htmlFor="multidisciplinaryTeamNo">No</label>
                         </div>
+                        {formik.errors.multidisciplinary &&
+                        formik.touched.multidisciplinary ? (
+                          <p className="text-sm font-semibold text-red-500">
+                            {formik.errors.multidisciplinary}
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            )}
-          </form>
-          {step === 3 && (
-            <div id="captcha" className="pb-5">
-              <ReCAPTCHA sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3" />
-              {formik.errors.captcha && formik.touched.captcha ? (
-                <p className="text-sm font-semibold text-red-500">
-                  {formik.errors.captcha}
-                </p>
-              ) : (
-                ""
-              )}
-            </div>
-          )}
+            )} */}
+            {loading ? (
+              <div className="flex items-center justify-center p-5 md:p-12 HeroBg2">
+                <div className="mx-auto max-w-[650px] md:max-w-[80%] bg-gray-200 rounded-3xl p-5 md:p-10 text-center">
+                  <h1 className="text-xl font-bold">Submitting your form...</h1>
+                  <div className="mt-5">
+                    {/* Add your spinner component or any loading indicator here */}
+                    <div className="spinner-border" role="status">
+                      <span className="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <>
+                {step === 3 && (
+                  <div className="step3">
+                    <div className="">
+                      <h1 className="text-center font-black text-4xl text-blue-950 pb-8 underline">
+                        School Policy
+                      </h1>
+                      <div className="flex flex-col gap-5 mb-10">
+                        <div className="mb-5">
+                          <h1 className="font-bold text-lg md:text-xl mb-5">
+                            1. Does the School have an Inclusion Policy that
+                            specifies action for including children with special
+                            needs?
+                          </h1>
+                          <div className="flex gap-5 items-center">
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                id="inclusionPolicyYes"
+                                name="inclusionPolicy"
+                                value="yes"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                checked={
+                                  formik.values.inclusionPolicy === "yes"
+                                }
+                                className="form-radio h-5 w-5 text-blue-600"
+                              />
+                              <label htmlFor="inclusionPolicyYes">Yes</label>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                id="inclusionPolicyNo"
+                                name="inclusionPolicy"
+                                value="no"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                checked={formik.values.inclusionPolicy === "no"}
+                                className="form-radio h-5 w-5 text-blue-600"
+                              />
+                              <label htmlFor="inclusionPolicyNo">No</label>
+                            </div>
+                            {formik.errors.inclusionPolicy &&
+                            formik.touched.inclusionPolicy ? (
+                              <p className="text-sm font-semibold text-red-500">
+                                {formik.errors.inclusionPolicy}
+                              </p>
+                            ) : null}
+                          </div>
+                        </div>
 
-          <div
+                        <div className="mb-5">
+                          <h1 className="font-bold text-lg md:text-xl mb-5">
+                            2. Is a Multidisciplinary team approach in your
+                            school to provide alternatives to suspension or
+                            expulsion for students with complex needs?
+                          </h1>
+                          <div className="flex gap-5 items-center">
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                id="multidisciplinaryTeamYes"
+                                name="multidisciplinaryTeam"
+                                value="yes"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                checked={
+                                  formik.values.multidisciplinaryTeam === "yes"
+                                }
+                                className="form-radio h-5 w-5 text-blue-600"
+                              />
+                              <label htmlFor="multidisciplinaryTeamYes">
+                                Yes
+                              </label>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                id="multidisciplinaryTeamNo"
+                                name="multidisciplinaryTeam"
+                                value="no"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                checked={
+                                  formik.values.multidisciplinaryTeam === "no"
+                                }
+                                className="form-radio h-5 w-5 text-blue-600"
+                              />
+                              <label htmlFor="multidisciplinaryTeamNo">
+                                No
+                              </label>
+                            </div>
+                            {formik.errors.multidisciplinaryTeam &&
+                            formik.touched.multidisciplinaryTeam ? (
+                              <p className="text-sm font-semibold text-red-500">
+                                {formik.errors.multidisciplinaryTeam}
+                              </p>
+                            ) : null}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {step === 3 && (
+                  <div id="captcha" className="pb-5">
+                    <ReCAPTCHA
+                      onChange={handleRecaptcha}
+                      // sitekey="6LceNQYqAAAAANmxHgRcfdU_e8KW_c05MKTOBai3"
+                      sitekey="6LcfLFUoAAAAACno3hdClnckkDsl4ERrkfhX7Alr"
+                    />
+                    {formik.errors.captcha && formik.touched.captcha ? (
+                      <p className="text-sm font-semibold text-red-500">
+                        {formik.errors.captcha}
+                      </p>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                )}
+              </>
+            )}
+            {/* <div
             className={`${
               step === 2 || step === 3 ? "justify-between" : "justify-end"
             } flex`}
@@ -910,7 +1045,49 @@ const SchoolForm = () => {
             >
               {step === 3 ? "Submit" : "Next"}
             </button>
-          </div>
+          </div> */}
+            <div className="flex justify-between">
+              {step > 1 && (
+                <button
+                  type="button"
+                  onClick={handlePrevious}
+                  className="hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none"
+                >
+                  Previous
+                </button>
+              )}
+              {step < 3 && (
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className={`${
+                    step === 2 || step === 3 ? "justify-between" : "justify-end"
+                  }  hover:shadow-form w-[30%] rounded-md border-blue-950 hover:border-blue-950 hover:text-blue-950 bg-blue-950 py-3 md:px-8 text-center text-base font-semibold text-white outline-none`}
+                >
+                  Next
+                </button>
+              )}
+              {step === 3 && (
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="hover:shadow-form w-full md:w-[40%] rounded-md bg-blue-950 border-blue-950 hover:border-blue-950 hover:text-blue-950 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                >
+                  {loading ? "Submitting..." : "Submit"}
+                </button>
+              )}
+            </div>
+            {submissionStatus === "success" && (
+              <div className="mt-5 text-green-500 text-center">
+                Form submitted successfully!
+              </div>
+            )}
+            {submissionStatus === "error" && (
+              <div className="mt-5 text-red-500 text-center">
+                There was an error submitting the form. Please contact admin.
+              </div>
+            )}
+          </form>
         </div>
       </div>
     </>
