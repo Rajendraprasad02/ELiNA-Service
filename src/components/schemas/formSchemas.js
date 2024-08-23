@@ -41,7 +41,6 @@ export const gettingStartedForm = yup.object().shape({
   gender: yup.string().required("Select any one option"),
   reason: yup.string().required("Select an option"),
   parentName: yup.string().required("This field is required"),
-
   phoneNumber: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
@@ -53,7 +52,7 @@ export const gettingStartedForm = yup.object().shape({
     .email("please enter valid email address")
     .required("This field is required"),
   howdoyouknow: yup.string().required("Select an option"),
-
+  relation: yup.string().required("Select an option"),
   captcha: yup.string().required("Captcha is required"),
 });
 

@@ -186,8 +186,8 @@ const SchoolForm = () => {
       try {
         // isSubmitting(true);
         const response = await axios.post(
-          "https://onlineappointment.onrender.com/schoolForm",
-          // "http://183.83.188.205:60162/api/schoolenrollment/storedata",
+          // "https://onlineappointment.onrender.com/schoolForm",
+          "http://183.83.188.205:60162/api/schoolenrollment/storedata",
           schoolDB
         );
         setSubmissionStatus("success");
