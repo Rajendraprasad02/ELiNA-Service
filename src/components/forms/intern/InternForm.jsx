@@ -125,7 +125,7 @@ const InternForm = () => {
         // isSubmitting(true);
         const response = await axios.post(
           // "https://onlineappointment.onrender.com/internship",
-          "http://ttipl-uat.com:60161/internship",
+          "http://183.83.188.205:60161/internship",
 
           internDB
         );

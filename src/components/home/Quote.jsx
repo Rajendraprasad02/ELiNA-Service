@@ -1,6 +1,26 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Quote = () => {
+  const [carouselContent, setCarouselContent] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://183.83.188.205:60162/api/dailyquotes"
+        );
+        // console.log("response", response.data);
+        const activeQuote = response.data.filter((i) => i.id === 2);
+        setCarouselContent(activeQuote);
+      } catch (err) {
+        console.log("err", err);
+      }
+    };
+    fetchData();
+  }, []);
+  // console.log(carouselContent.quotes_content);
+
   return (
     <>
       <div className="p-5 lg:py-[10%] md:p-0">
@@ -15,12 +35,10 @@ const Quote = () => {
             <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
           </svg>
           <p className=" text-center italic text-base font-bold pb-2 text md:text-xl md:pb-3 lg:text-2xl">
-            "Inclusion is not a strategy to help people fit into the systems and
-            structures that exist in our societies, it is about transforming
-            those systems and structures to make it better for everyone."{" "}
+            {carouselContent.map((i) => i.quotes_content)}
           </p>
           <h1 className="text-end mt-auto font-semibold text-white lg:font-bold lg:text-lg">
-            - DIANE RICHLER.
+            {carouselContent.map((i) => i.quote_author)}
           </h1>
         </div>
       </div>
